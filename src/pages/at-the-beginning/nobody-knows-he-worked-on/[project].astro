@@ -1,9 +1,7 @@
 ---
 import Default from '../../../layouts/Default.astro';
 import Project from '../../../components/Project.astro';
-import hboData from '../../../data/hbo.json';
-import hboMaxData from '../../../data/hbo-max.json';
-import cmllData from '../../../data/cmll.json';
+import { getEntry } from 'astro:content';
 
 interface ProjectEntry {
   slug: string;
@@ -17,11 +15,15 @@ interface ProjectEntry {
 
 // getStaticPaths() runs in an isolated scope, so all data it needs (besides
 // module imports) must be declared inside it rather than in the frontmatter above.
-export function getStaticPaths() {
+export async function getStaticPaths() {
   const SECTION_URL = '/at-the-beginning/nobody-knows-he-worked-on';
   const SECTION_TITLE = 'Nobody knows he worked on...';
   const NEXT_SECTION_URL = '/at-the-beginning/nor-where-to-find-him/';
   const NEXT_SECTION_TITLE = 'Nor where to find him...';
+
+  const hboMaxEntry = await getEntry('projects', 'hbo-max');
+  const hboEntry = await getEntry('projects', 'hbo');
+  const cmllEntry = await getEntry('projects', 'cmll');
 
   // Order drives prev/next navigation - keep in sync with the site's chronological project order.
   const projects: ProjectEntry[] = [
@@ -29,15 +31,15 @@ export function getStaticPaths() {
     { slug: 'saffron', title: 'Saffron', primaryColor: '#fe7200', secondaryColor: '#803900', coverBg: '/assets/images/projects/saffron-cover.jpg', projectBg: '/assets/images/projects/saffron-bg.jpg' },
     { slug: 'next-gen', title: 'Next Gen', projectTitle: 'NextGen', primaryColor: '#fe7200', secondaryColor: '#803900', coverBg: '/assets/images/projects/saffron-cover.jpg', projectBg: '/assets/images/projects/saffron-bg.jpg' },
     { slug: 'plastiq', title: 'Plastiq', primaryColor: '#1daeec', secondaryColor: '#00255b', coverBg: '/assets/images/projects/plastiq-cover.jpg', projectBg: '/assets/images/projects/plastiq-bg.jpg' },
-    { slug: 'hbo-max', title: 'HBO Max', projectTitle: hboMaxData.brief.title, primaryColor: '#7752b1', secondaryColor: '#34106d', coverBg: '/assets/images/projects/hbomax-cover.jpg', projectBg: '/assets/images/projects/hbomax-bg.jpg' },
-    { slug: 'hbo', title: 'HBO', projectTitle: hboData.brief.title, primaryColor: '#2bb0d8', secondaryColor: '#00394b', coverBg: '/assets/images/projects/hbo-cover.jpg', projectBg: '/assets/images/projects/hbo-bg.jpg' },
+    { slug: 'hbo-max', title: 'HBO Max', projectTitle: hboMaxEntry?.data.brief.title, primaryColor: '#7752b1', secondaryColor: '#34106d', coverBg: '/assets/images/projects/hbomax-cover.jpg', projectBg: '/assets/images/projects/hbomax-bg.jpg' },
+    { slug: 'hbo', title: 'HBO', projectTitle: hboEntry?.data.brief.title, primaryColor: '#2bb0d8', secondaryColor: '#00394b', coverBg: '/assets/images/projects/hbo-cover.jpg', projectBg: '/assets/images/projects/hbo-bg.jpg' },
     { slug: 'aeris', title: 'Aeris', primaryColor: '#067cfa', secondaryColor: '#002d5d', coverBg: '/assets/images/projects/aeris-cover.jpg', projectBg: '/assets/images/projects/aeris-bg.jpg' },
     { slug: 'citi-banamex', title: 'Citi Banamex', primaryColor: '#ed1c24', secondaryColor: '#630004', coverBg: '/assets/images/projects/citi-banamex-cover.jpg', projectBg: '/assets/images/projects/citi-banamex-bg.jpg' },
     { slug: 'johnson-and-johnson', title: 'Johnson & Johnson', primaryColor: '#f41e2e', secondaryColor: '#630008', coverBg: '/assets/images/projects/johnson-and-johnson-cover.jpg', projectBg: '/assets/images/projects/johnson-and-johnson-bg.jpg' },
     { slug: 'american-airlines', title: 'American Airlines', primaryColor: '#fff', secondaryColor: '#0078d2', coverBg: '/assets/images/projects/aa-cover.jpg', projectBg: '/assets/images/projects/aa-bg.jpg' },
     { slug: 'cars', title: 'Cars', primaryColor: '#a443ff', secondaryColor: '#49127d', coverBg: '/assets/images/projects/cars-cover.jpg', projectBg: '/assets/images/projects/cars-bg.jpg' },
     { slug: 'seccion-amarilla', title: 'Seccion Amarilla', projectTitle: 'Sección Amarilla', primaryColor: '#ffde01', secondaryColor: '#6f6000', coverBg: '/assets/images/projects/seccion-amarilla-cover.jpg', projectBg: '/assets/images/projects/seccion-amarilla-bg.jpg' },
-    { slug: 'cmll', title: 'CMLL', projectTitle: cmllData.brief.title, primaryColor: '#9b2424', secondaryColor: '#390000', coverBg: '/assets/images/projects/cmll-cover.jpg', projectBg: '/assets/images/projects/cmll-bg.jpg' },
+    { slug: 'cmll', title: 'CMLL', projectTitle: cmllEntry?.data.brief.title, primaryColor: '#9b2424', secondaryColor: '#390000', coverBg: '/assets/images/projects/cmll-cover.jpg', projectBg: '/assets/images/projects/cmll-bg.jpg' },
     { slug: 'aventuras-enmascaradas', title: 'Aventuras Enmascaradas', primaryColor: '#ffb700', secondaryColor: '#674a00', coverBg: '/assets/images/projects/aventuras-enmascaradas-cover.jpg', projectBg: '/assets/images/projects/aventuras-enmascaradas-bg.jpg' },
     { slug: 'club-atletico-de-madrid', title: 'Club Atletico de Madrid', primaryColor: '#e20530', secondaryColor: '#610013', coverBg: '/assets/images/projects/club-atletico-de-madrid-cover.jpg', projectBg: '/assets/images/projects/club-atletico-de-madrid-bg.jpg' },
     { slug: 'skiny', title: 'Skiny', primaryColor: '#ffffff', secondaryColor: '#515151', coverBg: '/assets/images/projects/skiny-cover.jpg', projectBg: '/assets/images/projects/skiny-bg.jpg' },

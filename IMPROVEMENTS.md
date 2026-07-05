@@ -18,13 +18,13 @@ feel), 2026-07-02. Grouped by priority. Check items off as they're done.
 
 ## Architecture
 
-- [ ] **Collapse the 20+ duplicated project pages into one dynamic route.**
+- [x] **Collapse the 20+ duplicated project pages into one dynamic route.**
       `src/pages/.../nobody-knows-he-worked-on/*.astro` is ~20 near-identical
       files (aeris.astro, hbo.astro, cars.astro, ...) that only differ by
       color, image paths, and prev/next links. Replace with a single
       `[project].astro` using `getStaticPaths()`, generating prev/next from an
       ordered list instead of hand-wiring it per file.
-- [ ] **Move `src/data/*.json` into Astro Content Collections with a Zod
+- [x] **Move `src/data/*.json` into Astro Content Collections with a Zod
       schema.** Gets typed, validated data instead of the current
       `project?: any` in `Project.astro` and the template-literal dynamic
       import (`import(`../data/${projectName}.json`)`) that defeats Vite's
