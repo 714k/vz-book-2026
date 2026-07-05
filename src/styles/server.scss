@@ -1,7 +1,7 @@
 @use 'mixins' as *;
-@import 'profile';
-@import 'academic-formation';
-@import 'courses';
+@use 'profile';
+@use 'academic-formation';
+@use 'courses';
 
 @include fontface('Mr Robot', 'mr-robot');
 @include fontface('Consola', 'consola');

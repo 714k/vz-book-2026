@@ -1,11 +1,11 @@
 @use 'mixins' as *;
 @use 'partials';
 
-@import 'knowledge';
-@import 'languages';
-@import 'programs';
-@import 'frameworks';
-@import 'cms';
+@use 'knowledge';
+@use 'languages';
+@use 'programs';
+@use 'frameworks';
+@use 'cms';
 
 @include fontface('Fixer', 'fixer');
 @include fontface('Arsenal', 'arsenal-regular');
