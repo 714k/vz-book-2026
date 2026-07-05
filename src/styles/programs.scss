@@ -1,3 +1,5 @@
+@use 'partials';
+
 $programsCovers: (
   '&.webstorm': -1200px 0px,
   '&.vscode': -1200px -106px,

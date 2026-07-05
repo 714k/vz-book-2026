@@ -1,8 +1,8 @@
 @use 'mixins' as *;
 
-@import 'contact-data';
-@import 'contact-message';
-@import 'contact-social-media';
+@use 'contact-data';
+@use 'contact-message';
+@use 'contact-social-media';
 
 @include fontface('Vermin Vibes', 'vermin-vibes');
 @include fontface('Spy Agency Laser', 'spy-agency-laser');
