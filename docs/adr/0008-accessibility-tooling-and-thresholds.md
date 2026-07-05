@@ -20,6 +20,13 @@ scoped to `impact === 'critical'` only.
   stale peer range (no crash, no broken rule behavior) before relying on
   it - added `eslintPluginAstro.configs['flat/jsx-a11y-recommended']` to
   `eslint.config.js`.
+- `--legacy-peer-deps` only affected that one local install - it doesn't
+  persist, so every subsequent plain `npm install`/`npm ci` (a fresh
+  clone, CI, the `post-merge` hook after pulling this change) failed with
+  `ERESOLVE` until `.npmrc` (`legacy-peer-deps=true`) was added so the
+  setting applies project-wide, automatically, for every npm invocation.
+  This was caught only after it broke `npm ci` in CI and the
+  `post-merge` hook for a real merge - see `fix/npm-install-eresolve`.
 - Fixed every violation it found rather than suppressing any: two
   unlabeled form controls, four redundant "Image of .../... image" alt
   text patterns, two redundant explicit ARIA roles duplicating implicit
