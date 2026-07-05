@@ -19,6 +19,18 @@ Self-hosted SonarQube Community Edition via `docker-compose.sonar.yml`
 to any VPS later - explicitly requested over SonarCloud. `sonar-project.properties`
 points at `src/` and the lcov report `test:coverage` already produces.
 
+```mermaid
+flowchart LR
+    Dev([Developer]) -->|npm run sonar:scan| Scanner["sonarsource/sonar-scanner-cli<br/>(docker run)"]
+    Scanner -->|analysis + coverage/lcov.info| SQ["sonarqube:community<br/>(port 9000)"]
+    SQ <--> DB[("postgres:16<br/>(postgresql_data volume)")]
+    Dev -->|browses| SQ
+```
+
+Same `docker-compose.sonar.yml` file, unchanged, whether this runs on a
+laptop or a VPS - only the reverse proxy/TLS layer in front of it differs
+between the two (see `docs/sonarqube.md`).
+
 ## Consequences
 
 - No SonarCloud account/billing dependency; full control over data and

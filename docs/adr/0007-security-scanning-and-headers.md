@@ -35,6 +35,27 @@ Node/Nginx layer to attach middleware-style headers to.
   authored - a code change, not just a header - so `'unsafe-inline'` was
   accepted as a scoped tradeoff rather than blocked on that refactor.
 
+```mermaid
+flowchart TD
+    subgraph Local["Local (developer machine)"]
+        PreCommit["pre-commit hook:<br/>gitleaks protect --staged<br/>(skips if not installed)"]
+    end
+    subgraph CIStage["CI (every push/PR)"]
+        GitleaksCI["gitleaks.yml<br/>gitleaks-action"]
+        CodeQLCI["codeql.yml<br/>javascript-typescript,<br/>security-extended queries"]
+    end
+    subgraph RuntimeStage["Runtime (Apache/HostGator)"]
+        Headers["public/.htaccess<br/>CSP, X-Frame-Options,<br/>X-Content-Type-Options,<br/>Referrer-Policy, Permissions-Policy"]
+    end
+
+    PreCommit --> GitleaksCI --> CodeQLCI --> Headers
+```
+
+Four independent layers, each catching what the one before it can't:
+secrets before they're even pushed, secrets/vulnerable-code-patterns
+before merge, and a runtime header layer that reduces blast radius for
+whatever gets through anyway.
+
 ## Consequences
 
 - A real secret committed from now on gets caught locally (if gitleaks is

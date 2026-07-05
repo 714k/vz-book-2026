@@ -5,6 +5,20 @@ of his career ("At the Beginning...", "No one knows...", "Nobody knows he
 worked on...", "Nor where to find him..."), built with
 [Astro](https://astro.build) and migrated from a Jekyll site.
 
+```mermaid
+flowchart LR
+    Author([Content author]) -->|edits JSON / .astro| Repo[(GitHub repo)]
+    Repo -->|PR| Quality[quality.yml]
+    Quality -->|status checks| Repo
+    Repo -->|push to main| Deploy[deploy.yml]
+    Deploy -->|needs: quality| Quality
+    Deploy -->|FTP| Host[HostGator / Apache]
+    Host -->|static HTML/CSS/JS| Visitor([Visitor's browser])
+```
+
+Full system diagrams (content pipeline, test strategy, quality gates over
+time) live in [`docs/architecture.md`](docs/architecture.md).
+
 ## Tech stack
 
 - **[Astro 5](https://astro.build)** - static site generation, file-based

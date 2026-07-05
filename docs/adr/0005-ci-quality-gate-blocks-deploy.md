@@ -17,6 +17,9 @@ noticed, because nothing had ever run the build in anger outside a local
 
 ## Decision
 
+See [`docs/architecture.md#quality-gates-over-time`](../architecture.md#quality-gates-over-time)
+for the full local-hook-to-deploy sequence this section describes.
+
 - `.github/workflows/quality.yml`: reusable workflow (`workflow_call`),
   runs on every PR - `lint`, `format:check`, `stylelint`, `typecheck`,
   `test:coverage`, `e2e` (all blocking), plus `audit` (non-blocking, see

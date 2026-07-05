@@ -16,6 +16,9 @@ files feeding them.
 
 ## Decision
 
+See [`docs/architecture.md#test-strategy`](../architecture.md#test-strategy)
+for the layer diagram this section describes.
+
 - **Unit**: Vitest with jsdom. Exported the previously-private pure
   functions from `validation.js` (`setError`, `setSuccess`,
   `validateEmailOnKeyUp`, ...) and `charts.js` (`generateYears`,
