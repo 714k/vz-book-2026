@@ -19,6 +19,29 @@ Git hooks (via Husky) run a subset of these automatically:
 - `pre-push`: `npm run typecheck`.
 - `post-merge`: reinstalls dependencies if `package-lock.json` changed.
 
+```mermaid
+sequenceDiagram
+    participant Dev as Developer
+    participant Hooks as Husky (local)
+    participant GH as GitHub
+    participant Quality as quality.yml
+    participant Deploy as deploy.yml
+
+    Dev->>Hooks: git commit
+    Hooks->>Hooks: pre-commit: lint-staged + gitleaks
+    Hooks->>Hooks: commit-msg: commitlint
+    Dev->>Hooks: git push
+    Hooks->>Hooks: pre-push: astro check
+    Dev->>GH: open PR
+    GH->>Quality: run lint, typecheck, test, e2e, audit
+    Quality-->>GH: pass/fail status checks
+    GH-->>Dev: merge (once green)
+    GH->>Deploy: push to main triggers deploy.yml
+    Deploy->>Quality: needs: quality (re-run as a gate)
+    Quality-->>Deploy: pass
+    Deploy->>Deploy: FTP to HostGator
+```
+
 ## Commit messages
 
 `<type>: <description>`, e.g. `fix: correct email validation regex`. Allowed
