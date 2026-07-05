@@ -1,0 +1,28 @@
+{
+  "toc": [
+    {
+      "title": "The profile",
+      "href": "profile",
+      "classes": "anchor-class",
+      "prefixText": "",
+      "sufixText": "",
+      "text": "The Server"
+    },
+    {
+      "title": "The adventures",
+      "href": "laboral-experiences",
+      "classes": "anchor-class",
+      "prefixText": "",
+      "sufixText": "",
+      "text": "The Navigator"
+    },
+    {
+      "title": "The skills",
+      "href": "skills",
+      "classes": "anchor-class",
+      "prefixText": "",
+      "sufixText": "",
+      "text": "The Fixer"
+    }
+  ]
+}

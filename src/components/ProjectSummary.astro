@@ -1,0 +1,95 @@
+---
+import BackToTop from './BackToTop.astro';
+
+interface Summary {
+  id: string;
+  classes: string;
+  title: string;
+  year: string;
+  industry: string;
+  technologies: string | string[];
+  link: {
+    href: string;
+    title: string;
+  };
+}
+
+interface Props {
+  summaries: Summary[];
+}
+
+const { summaries } = Astro.props;
+---
+
+{summaries.map((summary) => (
+  <section
+    id={summary.id}
+    class={summary.classes}>
+    <figure class="figure">
+      <img 
+        id={`${summary.id}-image`}
+        src={`/assets/images/projects/${summary.id}-thumb-b.jpg`}
+        alt={`Image of ${typeof summary.title === 'string' ? summary.title.replace(/<[^>]*>/g, '').trim() : summary.title}`}
+        width="380"
+        height="380"/><br />
+      <a 
+        href={`/at-the-beginning/nobody-knows-he-worked-on/${summary.link.href}`}
+        title={summary.link.title}>
+        See project
+      </a>
+      <figcaption class="figcaption">
+        {(() => {
+          const containsHTML = typeof summary.title === 'string' && (summary.title.includes('<') && summary.title.includes('>'));
+          return containsHTML ? (
+            <h2 set:html={summary.title} />
+          ) : (
+            <h2>{summary.title}</h2>
+          );
+        })()}
+        <p>
+          <strong class="year">Year: </strong>
+          <em class="year">{summary.year}</em><br />
+          <strong class="industry">Industry: </strong>
+          <em class="industry">{summary.industry}</em><br />
+          <strong class="technologies">Technologies: </strong>
+          {(() => {
+            const techString = Array.isArray(summary.technologies) 
+              ? summary.technologies.join('') 
+              : summary.technologies;
+            const containsHTML = typeof techString === 'string' && (techString.includes('<') && techString.includes('>'));
+            return containsHTML ? (
+              <em class="technologies" set:html={techString} />
+            ) : (
+              <em class="technologies">{techString}</em>
+            );
+          })()}
+        </p>
+      </figcaption>
+    </figure>
+    
+    <a 
+      class="icon brief" 
+      title="Brief"
+      href={`/at-the-beginning/nobody-knows-he-worked-on/${summary.link.href}#brief`}>
+      &nbsp;
+    </a>
+    <a 
+      class="icon desktop" 
+      title="Desktop gallery"
+      href={`/at-the-beginning/nobody-knows-he-worked-on/${summary.link.href}#gallery-desktop`}>
+      &nbsp;
+    </a>
+
+    {summary.classes.includes('mobile') && (
+      <a 
+        class="icon mobile" 
+        title="Mobile gallery"
+        href={`/at-the-beginning/nobody-knows-he-worked-on/${summary.link.href}#gallery-mobile`}>
+        &nbsp;
+      </a>
+    )}
+
+    <BackToTop />
+  </section>
+))}
+

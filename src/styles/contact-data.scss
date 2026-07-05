@@ -1,0 +1,103 @@
+#contact-data {
+  background-image: url(/assets/images/contact/contact-data-bg.jpg);
+  p {
+    // background-color: #ffffff10;
+    padding: 12px;
+    display: inline-flex;
+    flex-direction: column;
+    strong {
+      text-transform: lowercase;
+      font-size: 24px;
+      font-weight: 400;
+    }
+    br {
+      display: none;
+    }
+    a {
+      padding: 0;
+      background-color: transparent;
+      font-weight: 200;
+      text-transform: uppercase;
+      &:hover {
+        color: white;
+      }
+    }
+    &.name {
+      width: 244px;
+      height: 348px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: start;
+      margin: 0 auto;
+      background-image: url(/assets/images/contact/contact-data-badge-bg.png);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      .photo {
+        margin-top: 42px;
+        box-shadow: 0 0 6px 2px #ffffff69;
+        border: solid 3px #060515
+      }
+      .fn {
+        text-transform: none;
+        margin-top: 60px;
+        font-size: 30px;
+        font-weight: 500;
+      }
+      .org {
+        font-size: 24px;
+        font-style: normal;
+      }
+      .title {
+        font-size: 20px;
+        font-style: normal;
+        margin-top: 12px;
+      }
+      .adr {
+        font-size: 16px;
+      }
+    }
+    &.phone {
+      text-align: right;
+      float: right;
+      margin-right: 16px;
+      padding: 8px 48px 29px 12px;
+      background-image: url(/assets/images/contact/contact-data-phone-bg.png);
+      background-repeat: no-repeat;
+    }
+    &.email {
+      font-size: 20px;
+      font-weight: 400;
+      padding: 12px 24px 30px 12px;
+      margin-left: 16px;
+      display: inline-flex;
+      flex-direction: column;
+      background-image: url(/assets/images/contact/contact-data-mail-bg.png);
+      background-repeat: no-repeat;
+      a {
+        text-transform: lowercase;
+      }
+    }
+    &.cards {
+      background-color: transparent;
+      padding: 0;
+      margin: 24px auto;
+      width: 100%;
+      align-items: center;
+      strong {
+        margin-bottom: 16px;
+      }
+      .v_card,
+      .me_card {
+        padding: 44px 12px 48px 18px;
+        background-image: url(/assets/images/contact/contact-data-qr-bg.png);
+        background-repeat: no-repeat;
+        a {
+          display: block;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

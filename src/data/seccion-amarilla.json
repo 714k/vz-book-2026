@@ -1,0 +1,82 @@
+{
+  "brief": {
+    "title": "Sección Amarilla",
+    "year": 2014,
+    "company": "América Móvil",
+    "industry": "Advertising",
+    "work": "Design of Portal, Blog, WebApp. App for iOS, Android, Smart TV and Windows 8",
+    "technologies": [
+      "C# 5.0",
+      " <abbr title='Xtensible Application Markup Language'>XAML</abbr> 1.0",
+      " Java 1.7",
+      " Objective-C 5.0",
+      " <abbr title='Hypertext Pre-procesor'>PHP</abbr>",
+      " .Net 4.0",
+      " Web Standards",
+      " Accessibility",
+      " Usability",
+      " Responsive Web Design",
+      " Microformats",
+      " Web Optimization",
+      " <abbr title='Search Engine Optimization'>SEO</abbr>",
+      " Photoshop <abbr title='Creative Suite'>CS</abbr>6",
+      " Fireworks CS6",
+      " Illustrator CS6, Dreamweaver CS6",
+      " Visual Studio 2013, XCode 5, Eclipse Juno",
+      " Cocoa 10.4"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "http://www.seccionamarilla.com.mx/",
+        "title": "Visit Portal",
+        "text": "Portal"
+      },
+      {
+        "href": "http://blog.seccionamarilla.com.mx/",
+        "title": "Visit Blog",
+        "text": "Blog"
+      },
+      {
+        "href": "http://m.seccionamarilla.com.mx/",
+        "title": "Visit WebApp",
+        "text": "WebApp"
+      }
+    ],
+    "apps": [
+      {
+        "href": "http://www.samsung.com/mx/microsite/smarthub/mobile/smartHubMobile/apps/seccionamarilla/",
+        "title": "Download App for App for Android",
+        "text": "App for Android"
+      },
+      {
+        "href": "https://play.google.com/store/apps/details?id=com.seccion.amarilla",
+        "title": "Download App for Smart TV",
+        "text": "Smart TV"
+      },
+      {
+        "href": "http://apps.microsoft.com/windows/es-mx/app/seccion-amarilla/08dcf586-7b43-4dbf-a6b7-a85837d6103b",
+        "title": "Download App for Windows 8",
+        "text": "Windows 8"
+      },
+      {
+        "href": "http://www.windowsphone.com/en-us/store/app/secci%C3%B3n-amarilla/f1064a32-d695-40c3-9169-56254b4a37de",
+        "title": "Download App for Windows Phone 8",
+        "text": "Windows Phone 8"
+      }
+    ]
+  },
+  "projectsNavigation": {
+    "current": "Seccion Amarilla",
+    "next": "Cars",
+    "previous": "CMLL"
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    },
+    {
+      "title": "Mobile"
+    }
+  ]
+}

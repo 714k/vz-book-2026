@@ -1,0 +1,21 @@
+---
+import Default from '../../../layouts/Default.astro';
+import Project from '../../../components/Project.astro';
+---
+
+<Default
+  title="Johnson & Johnson"
+  primaryColor="#f41e2e"
+  secondaryColor="#630008"
+  classNames="project-n "
+  coverBg="/assets/images/projects/johnson-and-johnson-cover.jpg"
+  projectBg="/assets/images/projects/johnson-and-johnson-bg.jpg"
+  previousPage="/at-the-beginning/nobody-knows-he-worked-on/citi-banamex/"
+  nextPage="/at-the-beginning/nobody-knows-he-worked-on/american-airlines/"
+  previousTitle="Citi Banamex"
+  nextTitle="American Airlines"
+  currentUrl={Astro.url.pathname}
+>
+  <Project title="Johnson & Johnson" projectName="johnson-and-johnson" />
+</Default>
+

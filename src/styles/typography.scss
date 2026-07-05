@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'Share Tech Mono';
+  src: url('/assets/fonts/ShareTechMono-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Exo 2 Regular';
+  src: url('/assets/fonts/Exo2-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Lobster Regular';
+  src: url('/assets/fonts/Lobster-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Russo One';
+  src: url('/assets/fonts/RussoOne-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Skulls and Crossbones';
+  src: url('/assets/fonts/Skullsandcrossbones-RppKM.ttf');
+}
+
+@font-face {
+  font-family: 'Pirata One Regular';
+  src: url('/assets/fonts/PirataOne-Regular.ttf');
+}
+
+h2, h3, h4, a {
+  font-family:'Share Tech Mono', Courier, monospace;
+  font-weight: 500;
+}

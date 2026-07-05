@@ -1,0 +1,21 @@
+---
+import Default from '../../../layouts/Default.astro';
+import Project from '../../../components/Project.astro';
+---
+
+<Default
+  title="Skiny"
+  primaryColor="#ffffff"
+  secondaryColor="#515151"
+  classNames="project-n "
+  coverBg="/assets/images/projects/skiny-cover.jpg"
+  projectBg="/assets/images/projects/skiny-bg.jpg"
+  previousPage="/at-the-beginning/nobody-knows-he-worked-on/club-atletico-de-madrid/"
+  nextPage="/at-the-beginning/nobody-knows-he-worked-on/tops-and-bottoms/"
+  previousTitle="Club Atletico de Madrid"
+  nextTitle="Tops & Bottoms"
+  currentUrl={Astro.url.pathname}
+>
+  <Project title="Skiny" projectName="skiny" />
+</Default>
+

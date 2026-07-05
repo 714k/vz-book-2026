@@ -1,0 +1,59 @@
+{
+  "brief": {
+    "title": "Plastiq",
+    "timeline": "2021",
+    "role": "Web UI Developer",
+    "company": "Plastiq",
+    "industry": "Digital Payments",
+    "scope": "Web UI Developer",
+    "work": "<abbr title='Application Programming Interface'>API</abbr> for Payments",
+    "technologies": [
+      "Agile",
+      " Leadership, Mentoring",
+      " <abbr title='Application Programming Interface'>API</abbr> Design",
+      " Design System",
+      " ReactJS",
+      " React MUI",
+      " Redux",
+      " Storybook",
+      " Styled Components",
+      " GraphQL, Apollo Client, SQL, MongoDB",
+      " Python",
+      " Microservices, NodeJS, Postman",
+      " Microservices, Docker, Kubernetes",
+      " Design Patterns",
+      " Accessibility",
+      " <abbr title='Hypertext Markup Language'>HTML</abbr> 5",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+      " Unit, Integration, and e2e Testing",
+      " <abbr title='React Testing Library'>RTL</abbr>",
+      " Web Standards",
+      " Mobile First",
+      " Browserstack, LucidChart",
+      " Typescript",
+      " Webstorm, IntelliJ IDEA, VS Code",
+      " Git, NPM, Yarn, Rollup, Lerna"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.plastiq.com/",
+        "title": "Visit Website",
+        "text": "Plastiq"
+      }
+    ]
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    },
+    {
+      "title": "Mobile"
+    }
+  ],
+  "projectsNavigation": {
+    "current": "Plastiq",
+    "next": "Next Gen",
+    "previous": "HBO Max"
+  }
+}

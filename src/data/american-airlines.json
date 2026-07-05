@@ -1,0 +1,45 @@
+{
+  "title": "<abbr title='American Airlines'>AA</abbr>",
+  "brief": {
+    "title": "American Airlines",
+    "year": 2015,
+    "company": "American Airlines",
+    "industry": "Aviation",
+    "work": "Redesign & Maintenance of the Portal",
+    "technologies": [
+      "Agile",
+      " AngularJS",
+      " <abbr title='HyperText Markup Language'>HTML</abbr> 5",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+      " Less",
+      " Javascript 1.8.5",
+      " Ruby",
+      " Ruby on Rails",
+      " MongoDB, Robo3T",
+      " Postman",
+      " Unit Testing",
+      " Jasmine, Mocha, Chai",
+      " Responsive Web Design",
+      " IntelliJ IDEA, Sublime Text",
+      " Git, NPM"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.aa.com",
+        "title": "Visit Website",
+        "text": "American Airlines"
+      }
+    ]
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    }
+  ],
+  "projectsNavigation": {
+    "current": "American Airlines",
+    "next": "Johnson and Johnson",
+    "previous": "Cars"
+  }
+}

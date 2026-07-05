@@ -1,0 +1,46 @@
+{
+  "brief": {
+    "title": "Johnson & Johnson",
+    "year": 2017,
+    "company": "Johnson & Johnson",
+    "industry": "Healthcare Products",
+    "work": "Redesign & Maintenance of the Portal",
+    "technologies": [
+      "Agile",
+      " AngularJS",
+      " <abbr title='Hypertext Preprocessor'>PHP</abbr>",
+      " Symfony",
+      " MySQL",
+      " Web Standards",
+      " Responsive Web Design",
+      " Accessibility",
+      " Unit Testing",
+      " Mocha, Chai",
+      " MySQL Workbench",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+      " Sublime Text, IntelliJ IDEA",
+      " Git, NPM"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.jnj.com/",
+        "title": "Visit Website",
+        "text": "Johnson & Johnson"
+      }
+    ]
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    },
+    {
+      "title": "Mobile"
+    }
+  ],
+  "projectsNavigation": {
+    "current": "Johnson and Johnson",
+    "next": "Citi Banamex",
+    "previous": "American Airlines"
+  }
+}

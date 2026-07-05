@@ -1,0 +1,40 @@
+{
+  "brief": {
+    "title": "<abbr lang='es-mx' title='Consejo Mundial de Lucha Libre - World Wrestling Council'>CMLL</abbr>",
+    "year": 2013,
+    "company": "CMLL",
+    "industry": "Wrestling",
+    "work": "App design for iOS, Android and Windows 8",
+    "technologies": [
+      "C# 5.0",
+      " <abbr title='Xtensible Application Markup Language'>XAML</abbr> 1.0",
+      " Java 1.7",
+      " Objective-C 5.0",
+      " <abbr title='Hypertext Pre-procesor'>PHP</abbr>",
+      " .Net 4.0",
+      " Web Standards",
+      " Accessibility",
+      " <abbr title='User Experience'>UX</abbr>",
+      " Usability",
+      " Responsive Web Design",
+      " Web Optimization",
+      " <abbr title='Search Engine Optimization'>SEO</abbr>",
+      " Photoshop <abbr title='Creative Suite'>CS</abbr>6",
+      " Fireworks CS6",
+      " Illustrator CS6, Dreamweaver CS6",
+      " Visual Studio 2012, XCode 4, Eclipse Juno",
+      " Cocoa 10.4"
+    ],
+    "status": ""
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    }
+  ],
+  "projectsNavigation": {
+    "current": "CMLL",
+    "next": "Seccion Amarilla",
+    "previous": "Aventuras Enmascaradas"
+  }
+}

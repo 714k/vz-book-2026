@@ -1,0 +1,48 @@
+---
+interface Props {
+  data: Array<{
+    href: string;
+    classes?: string;
+    title: string;
+    prefixText?: string;
+    text: string;
+    sufix?: string;
+    sufixText?: string;
+  }>;
+}
+
+const { data } = Astro.props;
+---
+
+<nav id="tableOfContent" role="navigation" class="vz-toc">
+  <p>In this section:</p>
+  <ul role="list">
+    {data.map((item) => (
+      <li role="listitem">
+        <a 
+          href={`#${item.href}`}
+          class={item.classes || ''} 
+          title={item.title}>
+          {item.prefixText && (
+            <span class="prefix-text">{item.prefixText} </span>
+          )}
+          
+          {(() => {
+            const containsHTML = typeof item.text === 'string' && (item.text.includes('<') && item.text.includes('>'));
+            return containsHTML ? (
+              <span class="text" set:html={item.text} />
+            ) : (
+              <span class="text">{item.text}</span>
+            );
+          })()}
+          
+          {item.sufix && item.sufixText && (
+            <span class="sufix-text">{item.sufixText} </span>
+          )}
+        </a>
+      </li>
+    ))}
+  </ul>
+</nav>
+<span class="decorative close-toc"></span>
+

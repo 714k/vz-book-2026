@@ -1,0 +1,22 @@
+---
+import Default from '../../../layouts/Default.astro';
+import Project from '../../../components/Project.astro';
+import cmllData from '../../../data/cmll.json';
+---
+
+<Default
+  title="CMLL"
+  primaryColor="#9b2424"
+  secondaryColor="#390000"
+  classNames="project-n "
+  coverBg="/assets/images/projects/cmll-cover.jpg"
+  projectBg="/assets/images/projects/cmll-bg.jpg"
+  previousPage="/at-the-beginning/nobody-knows-he-worked-on/seccion-amarilla/"
+  nextPage="/at-the-beginning/nobody-knows-he-worked-on/aventuras-enmascaradas/"
+  previousTitle="Seccion Amarilla"
+  nextTitle="Aventuras Enmascaradas"
+  currentUrl={Astro.url.pathname}
+>
+  <Project title={cmllData.brief.title} projectName="cmll" />
+</Default>
+

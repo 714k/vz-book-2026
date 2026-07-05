@@ -1,0 +1,21 @@
+---
+import Default from '../../../layouts/Default.astro';
+import Project from '../../../components/Project.astro';
+---
+
+<Default
+  title="Sonora"
+  primaryColor="#dc7f37"
+  secondaryColor="#471f00"
+  classNames="project-n "
+  coverBg="/assets/images/projects/sonora-cover.jpg"
+  projectBg="/assets/images/projects/sonora-bg.jpg"
+  previousPage="/at-the-beginning/nobody-knows-he-worked-on/rutas-de-mexico/"
+  nextPage="/at-the-beginning/nobody-knows-he-worked-on/nissan-latinoamerica/"
+  previousTitle="Rutas de Mexico"
+  nextTitle="Nissan Latinoamerica"
+  currentUrl={Astro.url.pathname}
+>
+  <Project title="Sonora" projectName="sonora" />
+</Default>
+

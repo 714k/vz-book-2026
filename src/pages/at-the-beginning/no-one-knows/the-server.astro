@@ -1,0 +1,474 @@
+---
+import Default from '../../../layouts/Default.astro';
+import TOC from '../../../components/TOC.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+import Courses from '../../../components/Courses.astro';
+import { initCharts } from '../../../scripts/charts.js';
+import theServer from '../../../data/the-server.json';
+
+const currentYear = new Date().getFullYear();
+const yearsSince2022 = currentYear - 2022;
+const yearsSince2006 = currentYear - 2006;
+const yearsSince2012 = currentYear - 2012;
+---
+
+<Default
+  title="The Server"
+  primaryColor="#7cff00"
+  secondaryColor="#2B6000"
+  previousPage="/at-the-beginning/no-one-knows/"
+  nextPage="/at-the-beginning/no-one-knows/the-navigator/"
+  previousTitle="No one knows..."
+  nextTitle="The Navigator"
+  currentUrl={Astro.url.pathname}
+>
+  <header class="cover">
+    <h1>The Server</h1>
+  </header>
+
+  <TOC data={theServer.toc} />
+
+  <section id="profile" class="vcard">
+    <h2 data-section="1.1_">Hello Friend!</h2>
+    <img
+      class="photo sr-only"
+      src="/assets/images/contact/victor-zamudio.jpg"
+      width="88"
+      height="112"
+      alt="Víctor Zamudio profile"
+    />
+    <p data-sp="hello-friend">
+      <span class="view bg-attached" data-id="hello-friend-first">
+        <span data-sp="hello-friend-first">Hello friend,</span></span
+      >&nbsp;
+      <span class="view bg-attached" data-id="hello-friend-second">
+        <span data-sp="hello-friend-second">hello friend?</span>
+      </span>
+    </p>
+
+    <p>
+      <span class="view bg-attached" data-id="game-first">
+        <span data-sp="lets">Let's game,</span>&nbsp;
+      </span>
+      <span class="view bg-attached" data-id="game-second">
+        <span data-sp="maybe">maybe</span>&nbsp;
+      </span>
+      <span class="view bg-attached" data-id="game-third">
+        <span data-sp="give-you"> I should give you</span>&nbsp;
+      </span>
+      <span class="view bg-attached" data-id="game-fourth">
+        <span data-sp="my-name"> my name.</span>&nbsp;
+      </span>
+    </p>
+
+    <p>
+      <span class="view bg-attached" data-id="my-name">
+        <span data-sp="my-name-is">My name is</span>
+        <span class="fn" data-sp="victor-zamudio">V&iacute;ctor Zamudio</span
+        >&nbsp;
+      </span>
+      <span class="view bg-attached" data-id="im-uxe">
+        <span data-sp="im-a">and I'm a</span>&nbsp;
+        <span data-sp="uxe"
+          >Senior <abbr title="User Experience">UX</abbr> Engineer</span
+        >&nbsp;
+      </span>
+      <span class="view bg-attached" data-id="at-thomson-reuters">
+        <span data-sp="at">at</span>&nbsp;
+        <span class="org sp">
+          <a
+            data-sp="thomson-reuters"
+            href="http://www.thomsonreuters.com"
+            target="_blank"
+            title="Visit the Website of Thomson Reuters"
+            >Thomson Reuters</a
+          ></span
+        > </span
+      >&nbsp;
+      <span class="view bg-attached" data-id="at-thomson-reuters-since">
+        <span data-sp="since">since</span>&nbsp;
+        <span data-sp="september"
+          >September <span data-sp="2022">2022</span>
+          <span data-sp="remainig"
+            >({yearsSince2022} years ago)</span
+          >
+          <span class="hide">.</span></span
+        >
+      </span>
+    </p>
+
+    <p class="view" data-id="born-and-raised">
+      <span data-sp="born">Born</span>&nbsp; <span data-sp="and">and</span>&nbsp;
+      <span data-sp="raised">raised</span>&nbsp;
+      <span data-sp="in">in</span>&nbsp;
+      <span class="adr" data-sp="mexico"
+        ><span class="country-name">
+          <span data-color="green">Me</span>
+          <span data-color="white">xi</span>
+          <span data-color="red">co</span>,</span
+        ></span
+      >&nbsp;<span data-sp="my">my</span>&nbsp;
+      <span data-sp="beloved">be <span data-color="deep-red">love</span>d </span>
+      <span data-sp="country">country.</span>
+    </p>
+
+    <p>
+      <span class="view" data-id="around-the-web">
+        <span data-sp="been">I've been</span>&nbsp;
+        <span data-sp="around">around</span>&nbsp;
+        <span data-sp="the">the</span>&nbsp;
+        <span data-sp="web">web</span>
+        <span data-sp="since">since</span>&nbsp;
+        <span data-sp="june-2006">June 2006</span>&nbsp;
+        <span data-sp="n-years"
+          >({yearsSince2006} years ago),</span
+        >&nbsp;
+      </span>
+      <span class="view" data-id="working-with-brands">
+        <span data-sp="and">and</span>&nbsp;
+        <span data-sp="working">working</span>&nbsp;
+        <span data-sp="with">with</span>&nbsp;
+        <span data-sp="brands">brands</span>&nbsp;
+        <span data-sp="like">like:</span>
+      </span>
+      <span class="view" data-id="warner-media">
+        <span data-sp="warner">Warner</span>
+        <span data-sp="media">Media</span></span
+      ><span class="sr-only">,</span>
+      <span class="view" data-id="jnj">
+        <abbr data-sp="j&j" title="Johnson and Johnson">J&J</abbr>
+      </span>
+      <span class="sr-only">,&nbsp;</span>
+      <span class="view" data-id="google">
+        <span data-sp="google">
+          <span data-color="blue">G</span>
+          <span data-color="red">o</span>
+          <span data-color="yellow">o</span>
+          <span data-color="green">g</span>
+          <span data-color="red">l</span>
+          <span data-color="blue">e</span>
+        </span>
+      </span>
+      <span class="sr-only">,&nbsp;</span>
+      <span class="view" data-id="ibm">
+        <abbr data-sp="ibm" title="International Business Machines">IBM</abbr>
+      </span>
+      <span class="view" data-id="microsoft">
+        <span class="sr-only">,&nbsp;</span><span data-sp="and">and</span>
+        <span class="sr-only">,&nbsp;</span>
+        <span data-sp="micro">Micro</span>
+        <span data-sp="soft">soft</span>
+        <span class="sr-only">,&nbsp;</span>
+      </span>
+      <span class="view" data-id="among-others">
+        <span data-sp="among">among</span>&nbsp;
+        <span data-sp="others">others</span>
+        <span data-sp="last">the last</span>&nbsp;
+        <span data-sp="n-years">{yearsSince2012} </span>
+        <span data-sp="years">years.</span></span
+      >&nbsp;
+    </p>
+
+    <p>
+      <span class="view" data-id="remember">
+        <span data-sp="have-to">We have to</span>&nbsp;
+        <span data-sp="remember">remember</span>&nbsp;
+        <span data-sp="that">that...</span> </span
+      >&nbsp;
+      <span class="view" data-id="my-sheet">
+        <span data-sp="this-is">this is</span>&nbsp;
+        <span data-sp="my">my </span>
+        <a
+          data-sp="sheet"
+          href="/assets/docs/victor-zamudio-resume.pdf"
+          target="_blank"
+          title="Download my resume in PDF format."
+          >sheet</a
+        >
+        <span class="sr-only" data-sp="dot">.</span>
+      </span>
+    </p>
+  </section>
+
+  <BackToTop />
+
+  <section id="professional-interest">
+    <h2 data-section="1.2_">Professional Interest</h2>
+    <p data-id="mr-robot">
+      I have a deep interest in emerging technologies that will reshape digital
+      interactions, especially in semantic web development and haptic
+      <abbr title="User Interfaces">UI</abbr> technologies.
+    </p>
+    <p data-id="elliot">
+      I am a fervent follower of
+      <a
+        href="/at-the-beginning/no-one-knows/the-fixer#knowledge"
+        title="See my knowledge on Web Standards"
+        >Web Standards</a
+      >,
+      <a
+        href="/at-the-beginning/no-one-knows/the-fixer#knowledge"
+        title="See my knowledge on Semantic Web"
+        >Accessibility</a
+      >, and customer-obsessed approach due to the countless benefits they
+      provide.
+    </p>
+    <p data-id="mr-robot-and-elliot">
+      I have always been passionate about the idea of merging the sensitive
+      imagery of design and the logical reasoning of programming because it allows
+      to create highly functional and aesthetically appealing objects.
+    </p>
+    <p>
+      These are the most significant professional interests that I actively
+      incorporate into my daily work:
+    </p>
+    <dl>
+      <dt>Accessibility</dt>
+      <dd>
+        The design of products, services, and environments to be usable by people
+        with the widest range of abilities, including those with disabilities.
+      </dd>
+      <dt>Semantic Web</dt>
+      <dd>
+        A vision for extending the current World Wide Web by adding a layer of
+        machine-readable data (metadata) that allows computers to understand the
+        meaning of information, not just the words.
+      </dd>
+      <dt>Customer Obsessed</dt>
+      <dd>
+        A business strategy that prioritizes the customer's experience and needs
+        above all else, making them the center of every business decision.
+      </dd>
+      <dt>Atomic Design</dt>
+      <dd>
+        A design methodology by Brad Frost that structures user interfaces into
+        five levels —atoms, molecules, organisms, templates, and pages— to promote
+        reusability, consistency, and a modular approach to building complex
+        systems.
+      </dd>
+      <dt>Mobile First</dt>
+      <dd>
+        A strategy in website and application development that prioritizes the
+        user experience on mobile devices.
+      </dd>
+      <dt>User Experience (UX)</dt>
+      <dd>
+        Refers to a user's overall feelings and perceptions when interacting with
+        a product, system, or service.
+      </dd>
+      <dt>Web Performance</dt>
+      <dd>
+        Represents to how quickly a website loads, renders content, and responds
+        to user interactions
+      </dd>
+      <dt>Design Systems</dt>
+      <dd>
+        A comprehensive set of standards, reusable components, and guidelines that
+        enable teams to design and build digital products consistently and
+        efficiently.
+      </dd>
+      <dt>Web Components</dt>
+      <dd>
+        A set of APIs for building reusable, self-contained custom HTML elements
+        with isolated logic and styling.
+      </dd>
+      <dt>Content Strategy</dt>
+      <dd>
+        A comprehensive plan that guides the creation, delivery, and management of
+        content to achieve specific business goals and meet audience need
+      </dd>
+      <dt>Responsive design</dt>
+      <dd>
+        A development strategy that adapts website layout and content to various
+        screen sizes, ensuring a consistent, user-friendly experience across
+        devices.
+      </dd>
+      <dt>Code Conventions & Best Practices</dt>
+      <dd>
+        Shared rules that guide developers to write clean, consistent, and
+        reliable code—making it easier to read, maintain, collaborate on, and
+        scale across teams and projects.
+      </dd>
+    </dl>
+    <p>And I practice others in my free time:</p>
+    <dl>
+      <dt>Haptic <abbr title="User Interface">UI</abbr></dt>
+      <dd>
+        Haptic (from the Greek haptesthai, meaning "to touch"). Technology that
+        interfaces with the user through the sense of touch to enhance user
+        interaction with digital devices.
+      </dd>
+      <dt>Visual Storytelling</dt>
+      <dd>
+        The art of conveying narratives and messages using visual elements like
+        images, videos, illustrations, and infographics.
+      </dd>
+      <dt>Augmented Reality (AR)</dt>
+      <dd>
+        Is a technology that overlays digital content —like images, sounds, or
+        data— onto the real world in real time, enhancing how users perceive and
+        interact with their physical environment.
+      </dd>
+      <dt>Virtual Reality (VR)</dt>
+      <dd>
+        Is a digital simulation that immerses users in a 3D environment, allowing
+        interaction and presence as if they were physically present through
+        devices like headsets and motion trackers.
+      </dd>
+      <dt>Kinetic Typography</dt>
+      <dd>
+        The art of bringing text to life through animation mixing motion and text
+        to express ideas, create an emotional connection, and make your content
+        more visually appealing.
+      </dd>
+      <dt>Motion Graphics</dt>
+      <dd>
+        The art of bringing graphic design to life through animation and visual
+        effects, often used to convey information, tell stories, or enhance visual
+        appeal in various media.
+      </dd>
+      <dt>Micro Frontends</dt>
+      <dd>
+        An architectural approach for breaking down large, monolithic front-end
+        applications (a big website) into smaller parts that work on their own.
+        Different teams can build each part separately, and then brought together
+        to create one smooth experience.
+      </dd>
+      <dt>Web Apps Development</dt>
+      <dd>
+        The process of creating software that runs on web servers and is accessed
+        through web browsers.
+      </dd>
+      <dt>Mobile Apps Development (Android and iOS)</dt>
+      <dd>
+        The process of creating software applications designed to run on mobile
+        devices like smartphones and tablets.
+      </dd>
+      <dt>Videogames Development</dt>
+      <dd>
+        Is the creative process of designing, building, and launching games
+        combining concept creation, mechanics, rewards, and level design to foster
+        engaging player experiences.
+      </dd>
+      <dt>Progressive Web Apps (PWA)</dt>
+      <dd>
+        Web applications that offer a user experience similar to native mobile
+        apps.
+      </dd>
+      <dt>Static Site Generation (SSG)</dt>
+      <dd>
+        A web development technique where the HTML pages of a website are
+        pre-built at build time, rather than dynamically generated on each user
+        request.
+      </dd>
+      <dt>Server-Side Rendering (SSR)</dt>
+      <dd>
+        The practice of generating HTML content on the server and sending it to
+        the client.
+      </dd>
+      <dt>Search Engine Optimization (SEO)</dt>
+      <dd>
+        The process of improve a website's visibility in unpaid search results by
+        helping search engines understand it's content and match it to what users
+        are looking for.
+      </dd>
+    </dl>
+  </section>
+
+  <BackToTop />
+
+  <section id="academic-formation">
+    <h2 data-section="1.3_">Academic Formation</h2>
+    <p id="bachelor-degree">
+      <span id="uam"
+        >I performed my studies at the Metropolitan Autonomous University,</span
+      >
+      <span id="xochimilco-unit">Xochimilco unit,</span>
+      <span id="graphic-communication-designer"
+        >where I was certified with the bachelor degree of
+        <strong>"Graphic Communication Designer", </strong></span
+      >
+      <span id="specialty-editorial-design"
+        >with a specialty in <strong>Editorial Design</strong> in June
+        <strong>2006</strong>.</span
+      >
+      <span class="grid decorative">
+        <span class="photo decorative" aria-hidden="true"></span>
+        <span class="baseline decorative" aria-hidden="true"></span>
+        <span class="col-3" aria-hidden="true"></span>
+        <span class="col-3" aria-hidden="true"></span>
+        <span class="col-3" aria-hidden="true"></span>
+      </span>
+    </p>
+    <p id="newsletter-college">
+      <span id="newsletter-college-tagline" class="newsletter-college"
+        >I was on the</span
+      >
+      <span id="newsletter-college-title" class="newsletter-college"
+        >university's design newsletter</span
+      >
+      <span id="newsletter-college-endtag" class="newsletter-college"
+        >during my last year of college,</span
+      >
+      <span id="newsletter-college-text" class="newsletter-college"
+        >where I carried out activities that would lay the
+        <strong>foundations</strong> for my knowledge in
+        <strong>web design</strong> such as:</span
+      >
+      <span id="newsletter-college-list" class="newsletter-college">
+        <span class="col-2">
+          <span>grid system<span class="hide-visually">, </span></span>
+          <span>prototypes<span class="hide-visually">, </span></span>
+          <span>content page structure<span class="hide-visually">, </span></span>
+          <span>UX<span class="hide-visually">, </span></span>
+          <span>cover design<span class="hide-visually">, </span></span>
+          <span>page index<span class="hide-visually">, </span></span>
+        </span>
+        <span class="col-2">
+          <span>headers<span class="hide-visually">, </span></span>
+          <span>footers<span class="hide-visually">, </span></span>
+          <span>articles<span class="hide-visually">, </span></span>
+          <span>editorial markup<span class="hide-visually">, and</span></span>
+          <span>others.</span>
+        </span>
+      </span>
+      <span class="grid decorative" aria-hidden="true">
+        <span class="col-2" aria-hidden="true">
+          <span class="photo photo-1 decorative" aria-hidden="true"></span>
+        </span>
+        <span class="col-2" aria-hidden="true">
+          <span class="photo photo-2 decorative" aria-hidden="true"></span>
+        </span>
+      </span>
+    </p>
+    <p id="self-taught">
+      <span class="text text-1">Later</span>
+      <span class="text text-2">I had the opportunity to</span>
+      <span class="text text-3">learn</span>
+      <span class="text text-4">about the potential</span>
+      <span class="text text-5">of the</span>
+      <abbr class="text text-6" title="International Network">Internet</abbr>
+      <span class="text text-7">and I continued my training</span>
+      <span class="text text-8"
+        >through <strong>self-taught</strong> dark arts</span
+      >
+      <span class="text text-9">and both</span>
+      <span class="text text-10">virtual &</span>
+      <span class="text text-11">face-to-face</span>
+      <a href="#courses" title="See my all the courses I have been taken."
+        >courses</a
+      >.
+      <span class="decorative barcode"></span>
+    </p>
+  </section>
+
+  <BackToTop />
+  <Courses courses={theServer.courses} />
+  <BackToTop />
+</Default>
+
+<script>
+  import { initCharts } from '../../../scripts/charts.js';
+  initCharts();
+</script>
+

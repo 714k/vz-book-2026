@@ -1,0 +1,42 @@
+{
+  "brief": {
+    "title": "Skiny",
+    "year": 2012,
+    "company": "Avante Textil",
+    "industry": "Underwear",
+    "work": "Website Redesign",
+    "technologies": [
+      "<abbr title='HyperText Markup Languaje'>HTML</abbr> 5",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+      " JQuery 1.7.2",
+      " Razor",
+      " Microsoft SQL Server",
+      " Web Standards",
+      " Accessibility",
+      " Usability",
+      " <abbr title='Search Engine Optimization'>SEO</abbr>",
+      " Photoshop <abbr title='Creative Suite'>CS</abbr>6",
+      " Fireworks CS6",
+      " Illustrator CS6, Dreamweaver CS6",
+      " Visual Studio 2010, WebMatrix 3, and Orchard 1.4.2"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://skiny.com.mx/",
+        "title": "Visit Website",
+        "text": "Website"
+      }
+    ]
+  },
+  "projectsNavigation": {
+    "current": "Skiny",
+    "next": "Club Atletico de Madrid",
+    "previous": "Tops and Bottoms"
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    }
+  ]
+}

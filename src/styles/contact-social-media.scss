@@ -1,0 +1,299 @@
+@mixin makeStar($bgColor, $shadowColor) {
+  background-color: $bgColor;
+  box-shadow: 0 0 20px 7px $shadowColor;
+}
+
+#social-media {
+  position: relative;
+  left: 0;
+  padding-left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url(/assets/images/contact/social-media-bg.jpg);
+  .social-network {
+    position: absolute;
+    z-index: 2;
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+      text-align: center;
+      line-height: 20px;
+      @include makeStar(#fff, grey);
+    }
+    &:hover {
+      z-index: 1;
+      width: 100%;
+      height: 67vh;
+      h3,
+      .fragment,
+      .see {
+        display: block;
+      }
+    }
+    h3 {
+      margin: 0;
+      display: none;
+    }
+    br {
+      display: none;
+    }
+    .title {
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .sprite {
+      position: absolute;
+    }
+    .fragment {
+      display: none;
+      background-repeat: no-repeat;
+      background-size: contain;
+      padding: 8px;
+      margin: 0;
+      strong {
+        display: block;
+      }
+      em {
+        display: block;
+        font-style: normal;
+      }
+      a {
+        padding: 0;
+        background-color: transparent;
+        text-transform: uppercase;
+        &:hover {
+          color: white;
+          background-color: transparent;
+          //text-decoration: underline;
+        }
+      }
+    }
+    > a {
+      display: none;
+      padding: 8px 16px;
+      background-color: rgba(0, 0, 0, .5);
+      &:hover {
+        background-color: var(--color-primary);
+        color: var(--color-secondary);
+      }
+    }
+    .see {
+      top: 88%;
+      left: 0;
+      display: none;
+      margin: 0;
+      a {
+        padding: 8px 16px;
+        background-color: transparent;
+        box-shadow: inset 0 0 20px 20px #ffffff1a;
+        text-transform: uppercase;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+  #linkedin {
+    top: 22%;
+    left: 5%;
+    &::before {
+      @include makeStar(#1daeec96, #1daeec96);
+      content: 'in';
+      font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    h3 {
+      top: 16px;
+    }
+    .profile {
+      width: 280px;
+      top: 0;
+      left: 15%;
+      background-image: url(/assets/images/contact/linkedln-profile-bg.png);
+      background-size: 295px 75px;
+    }
+    .jobs {
+      width: 290px;
+      top: 16%;
+      left: 8%;
+      padding-left: 12px;
+      background-image: url(/assets/images/contact/linkedln-jobs-bg.png);
+    }
+    .education {
+      width: 260px;
+      top: 37%;
+      left: 15%;
+      background-image: url(/assets/images/contact/linkedln-education-bg.png);
+      background-size: 270px;
+    }
+    .groups {
+      width: 320px;
+      top: 59%;
+      left: 3%;
+      background-image: url(/assets/images/contact/linkedln-groups-bg.png);
+      background-size: 330px;
+    }
+    .see {
+      top: 82%;
+      left: 10%;
+    }
+  }
+  #behance {
+    right: 15%;
+    top: 30%;
+    &:hover {
+      width: 100%;
+      right: 0;
+      top: 18%;
+      &::before {
+        right: 36px;
+        top: 91px;
+      }
+      h3 {
+        top: calc(20% + 16px);
+        right: 5%;
+      }
+    }
+    &::before {
+      @include makeStar(black, #ffffff73);
+      content: 'Bē';
+      font-size: 11px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;      
+    }
+    .profile {
+      width: 280px;
+      top: 1%;
+      right: 1%;
+      background-image: url(/assets/images/contact/linkedln-profile-bg.png);
+      background-size: 295px 75px;
+    }
+    .work {
+      width: 230px;
+      right: 30%;
+      top: 17%;
+      background-image: url(/assets/images/contact/behance-work-bg.png);
+      img {
+        display: block;
+        background-color: lightgrey;
+        width: 200px;
+        height: 100px;
+      }
+    }
+    .inspiration {
+      width: 200px;
+      right: 9%;
+      top: 62%;
+      background-image: url(/assets/images/contact/behance-work-bg.png);
+      img {
+        display: block;
+        background-color: lightgrey;
+        width: 200px;
+        height: 100px;
+      }
+    }
+    .see {
+      top: 55%;
+      left: auto;
+      right: 25%;
+    }
+  }
+  #dribbble {
+    bottom: 45%;
+    left: 25%;
+    &::before {
+      @include makeStar(#b2215a, #e74d89);
+      background-image: url(/assets/svg/icon-dribbble.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &:hover {
+      bottom: auto;
+      left: 0;
+      top: 18%;
+      &::before {
+        top: auto;
+        bottom: 32.3%;
+        left: 25%;
+      }
+      h3 {
+        top: auto;
+        bottom: 32%;
+      }
+    }
+    h3 {
+      top: 50%;
+      left: 10%;
+    }
+    .profile {
+      bottom: 15%;
+      left: 35%;
+      width: 175px;
+      padding-bottom: 30px;
+      background-image: url(/assets/images/contact/behance-work-bg.png);
+      em {
+        padding-top: 12px;
+      }
+    }
+    .work {
+      bottom: 43%;
+      left: 2%;
+      width: 230px;
+      background-image: url(/assets/images/contact/behance-work-bg.png);
+      img {
+        display: block;
+        background-color: lightgrey;
+        width: 200px;
+        height: 100px;
+      }
+    }
+    .see {
+      left: 10%;
+    }
+  }
+  #pinterest {
+    right: 25%;
+    bottom: 40%;
+    &::before {
+      @include makeStar(#e60023, #e60023);
+      background-image: url(/assets/svg/icon-pinterest.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    &:hover {
+      bottom: auto;
+      right: auto;
+      left: 0;
+      top: 18%;
+      &::before {
+        bottom: 24%;
+        right: 20%;
+      }
+    }
+    h3 {
+      bottom: 29%;
+      right: 7%;
+    }
+    .profile {
+      bottom: 17%;
+      right: 27%;
+      width: 230px;
+      background-image: url(/assets/images/contact/linkedln-groups-bg.png);
+      background-size: 330px;
+    }
+    .boards {
+      bottom: 38%;
+      width: 280px;
+      right: 7%;
+      background-image: url(/assets/images/contact/behance-work-bg.png);
+    }
+    .see {
+      left: auto;
+      right: 15%; 
+    }
+  }
+}

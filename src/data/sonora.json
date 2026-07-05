@@ -1,0 +1,42 @@
+{
+  "brief": {
+    "title": "Sonora",
+    "year": 2010,
+    "company": "Government of the State of Sonora",
+    "industry": "Government",
+    "work": "Redesign and Portal Maintenance",
+    "technologies": [
+      "<abbr title='Extensible Hypertext Markup Languaje'>XHTML</abbr> 1.0 strict",
+      " <abbr title='Extensible Markup Languaje'>XML</abbr> 1.0",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
+      " Javascript 1.5",
+      " Dojo",
+      " <abbr title='Content Management System'>CMS</abbr> (<abbr title='Semantic Web Builder'>SWB</abbr> 4.0)",
+      " Web Standards",
+      " Accessibility",
+      " Usability",
+      " <abbr title='Search Engine Optimization'>SEO</abbr>",
+      " Photoshop <abbr title='Creative Suite'>CS</abbr>4",
+      " Flash CS4, Fireworks CS4",
+      " Illustrator CS4, Dreamweaver CS4"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.sonora.gob.mx/",
+        "title": "Visit Website",
+        "text": "Website"
+      }
+    ]
+  },
+  "projectsNavigation": {
+    "current": "Sonora",
+    "next": "Rutas de Mexico",
+    "previous": "Nissan Latinoamerica"
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    }
+  ]
+}

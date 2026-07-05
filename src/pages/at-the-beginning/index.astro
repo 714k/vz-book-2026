@@ -1,0 +1,131 @@
+---
+import Default from '../../layouts/Default.astro';
+import TOC from '../../components/TOC.astro';
+import atTheBeginning from '../../data/at-the-beginning.json';
+import theServer from '../../data/the-server.json';
+import theNavigator from '../../data/the-navigator.json';
+import theFixer from '../../data/the-fixer.json';
+---
+
+<Default
+  title="At the Beginning..."
+  description="Case study about a design system"
+  image="/projects/cover.png"
+  keywords="frontend, design system, astro"
+  siteTitle="Victor Zamudio"
+  primaryColor="#ff6600"
+  secondaryColor="#572200"
+  nextPage="no-one-knows/"
+  nextTitle="No one knows..."
+  currentUrl={Astro.url.pathname}
+>
+  <header class="cover">
+    <h1>At the Beginning...</h1>
+    <TOC data={atTheBeginning.toc} />
+  </header>
+
+  <section id="profile">
+    <h2>The Server</h2>
+    <p>
+      {theServer.coverline}
+      
+      <span class="links">
+        <a href="/at-the-beginning/no-one-knows/the-server" title="See full profile">See my profile</a><span> &bull;</span>
+        <a href="/at-the-beginning/no-one-knows/" title="See all info">See all info</a>
+      </span>
+    </p>
+  </section>
+
+  <section id="laboral-experience">
+    <h2>The Navigator</h2>
+    <p>{theNavigator.coverline}
+    
+      <span class="links">
+        <a href="/at-the-beginning/no-one-knows/the-navigator" title="See all experience">See my adventures</a><span> &bull;</span>
+        <a href="/at-the-beginning/no-one-knows/" title="See all info">See all info</a>
+      </span>
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2>The Fixer</h2>
+    <p>
+      {theFixer.coverline}
+
+      <span class="links">
+        <a href="/at-the-beginning/no-one-knows/the-fixer" title="See my skills">See my skills</a><span> &bull;</span>
+        <a href="/at-the-beginning/no-one-knows/" title="See all info">See all info</a>
+      </span>
+    </p>
+  </section>
+
+  <section id="hbo">
+    <div class="summary">
+      <h2><span>HBO</span></h2>
+      <figure class="figure">
+        <span class="sample">
+          <img id="projects-image-01" src="/assets/images/projects/hbo-desktop-01.jpg" width="100%" height="auto" alt="Image to show HBO project"/><br />
+        </span>
+        <figcaption class="figcaption">
+          <p>
+            <span class="info"><span class="year">Year: </span>
+              <em class="year">2019</em><br />
+            <span class="work">Work: </span>
+              <em class="work">Redesign & Accessibility implementation to the Website</em><br />
+            <span class="technologies">Technologies: </span><em class="technologies">Agile, Leadership, Mentoring, Accessibility, ReactJS, React MUI...</em><br /></span>
+            <span class="links">
+              <a href="/at-the-beginning/nobody-knows-he-worked-on/hbo/" title="See project">See project</a><span> &bull;</span>
+              <a href="/at-the-beginning/nobody-knows-he-worked-on/" title="See all projects">See all projects</a><br /></span>
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="hbo-max">
+    <div class="summary">
+      <h2><span>HBO Max</span></h2>
+      <figure class="figure">
+        <span class="sample">
+          <img id="projects-image-02" src="/assets/images/projects/hbo-max-desktop-03.jpg" width="100%" height="auto" alt="Image to show HBO Max project"/><br />
+        </span>
+        <figcaption class="figcaption">
+          <p><span class="info"><span class="year">Year: </span>
+            <em class="year">2020</em><br />
+          <span class="project-type">Work: </span>
+            <em class="project-type">Design System for Website</em><br />
+          <span class="technologies">Technologies: </span>
+            <em class="technologies">Agile, Leadership, Mentoring, Design System, ReactJS, React MUI,...</em><br /></span>
+          <span class="links">
+            <a href="/at-the-beginning/nobody-knows-he-worked-on/hbo-max/" title="See project">See project</a><span> &bull;</span>
+            <a href="/at-the-beginning/nobody-knows-he-worked-on/" title="See all projects">See all projects</a><br /></span>
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section id="aeris">
+    <div class="summary">
+      <h2><span>Aeris</span></h2>
+      <figure class="figure">
+        <span class="sample">
+          <img id="project-image-03" src="/assets/images/projects/aeris-desktop-04.jpg" width="100%" height="auto" alt="Sample of project Plastiq"/><br />
+        </span>
+        <figcaption class="figcaption">
+          <p><span class="info"><span class="year">Year: </span>
+            <em class="year">2021</em><br />
+          <span class="work">Work: </span>
+            <em class="work">Maintenance of the Website, and Application to track vehicles (Aertrak Connect)</em><br />
+          <span class="technologies">Technologies: </span>
+            <em class="technologies">Agile Development, ReactJS, Redux, Java, Kotlin, MySQL...</em><br /></span>
+          <span class="links">
+            <a href="/at-the-beginning/nobody-knows-he-worked-on/aeris/" title="See project">See project</a><span> &bull;</span>
+            <a href="/at-the-beginning/nobody-knows-he-worked-on/" title="See all projects">See all projects</a><br /></span>
+          </p>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+</Default>
+

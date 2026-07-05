@@ -1,0 +1,21 @@
+---
+import Default from '../../../layouts/Default.astro';
+import Project from '../../../components/Project.astro';
+---
+
+<Default
+  title="Seccion Amarilla"
+  primaryColor="#ffde01"
+  secondaryColor="#6f6000"
+  classNames="project-n "
+  coverBg="/assets/images/projects/seccion-amarilla-cover.jpg"
+  projectBg="/assets/images/projects/seccion-amarilla-bg.jpg"
+  previousPage="/at-the-beginning/nobody-knows-he-worked-on/cars/"
+  nextPage="/at-the-beginning/nobody-knows-he-worked-on/cmll/"
+  previousTitle="Cars"
+  nextTitle="CMLL"
+  currentUrl={Astro.url.pathname}
+>
+  <Project title="Sección Amarilla" projectName="seccion-amarilla" />
+</Default>
+

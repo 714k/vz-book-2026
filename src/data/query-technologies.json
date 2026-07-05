@@ -1,0 +1,32 @@
+{
+  "brief": {
+    "title": "Query Technologies",
+    "year": 2009,
+    "company": "Query Technologies",
+    "industry": "Telecommunications",
+    "work": "Redesign & Maintennance of th Website",
+    "technologies": [
+      "<abbr title='Extensible Hypertext Markup Languaje'>XHTML</abbr> 1.0 strict",
+      " <abbr title='Extensible Markup Languaje'>XML</abbr> 1.0",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
+      " Actionscript 2.0",
+      " Web Standards",
+      " Information Architecture",
+      " Accessibility",
+      " Usability",
+      " Photoshop <abbr title='Creative Suite'>CS</abbr>2",
+      " Illustrator CS2, Dreamweaver CS2",
+      " Flash CS2, After Effects CS2, Premiere CS2"
+    ]
+  },
+  "projectsNavigation": {
+    "current": "Query Technologies",
+    "next": "Nissan Latinoamerica",
+    "previous": ""
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+---
+import Default from '../../../layouts/Default.astro';
+import Project from '../../../components/Project.astro';
+---
+
+<Default
+  title="Tops & Bottoms"
+  primaryColor="#f74697"
+  secondaryColor="#6c0031"
+  classNames="project-n "
+  coverBg="/assets/images/projects/tops-and-bottoms-cover.jpg"
+  projectBg="/assets/images/projects/tops-and-bottoms-bg.jpg"
+  previousPage="/at-the-beginning/nobody-knows-he-worked-on/skiny/"
+  nextPage="/at-the-beginning/nobody-knows-he-worked-on/optima-cotton-wear/"
+  previousTitle="Skiny"
+  nextTitle="Optima Cotton Wear"
+  currentUrl={Astro.url.pathname}
+>
+  <Project title="Tops & Bottoms" projectName="tops-and-bottoms" />
+</Default>
+

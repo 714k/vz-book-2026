@@ -1,0 +1,405 @@
+@use 'mixins' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
+
+
+@include fontface('Book Antiqua', 'book-antiqua');
+@include fontface('Hatten', 'hatten');
+
+#academic-formation {
+  position: relative;
+  top: 0;
+  width: 100%;
+  height: calc(100vh - var(--spacing-18));
+  height: calc(300vh + 96px);
+  padding: 0;
+  background-image: url(/assets/images/info/server/academic-formation/bg-mobile.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  h2 {
+    // background-color: #0000003f;
+    // backdrop-filter: blur(6px);
+    // background-color: black;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: auto;
+    display: block;
+    width: 100%;
+    height: calc(300vh + 96px);
+    background-color: rgba(255, 255, 255, 0.9);
+    opacity: 0.9;
+    color: black;
+  }
+  #bachelor-degree,
+  #newsletter-college,
+  #self-taught {
+    position: sticky;
+    z-index: 0;
+    top: 0px;
+    margin: 0;
+    left: 0;
+    // width: calc(100%);
+    // height: calc(100vh - 144px);
+    width: 100%;
+    height: 100vh;
+    color: black;
+  }
+  #bachelor-degree {
+    #uam {
+      position: absolute;
+      top: 104px;
+      left: 20px;
+      z-index: 1;
+      font-family: 'Saira Extra Condensed', Impact, sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      letter-spacing: -1px;
+      line-height: 28px;
+      text-transform: uppercase;
+    }
+    #xochimilco-unit {
+      position: absolute;
+      bottom: 42%;
+      left: 20px;
+      width: calc(100% - 40px);
+      text-align: center;
+      z-index: 1;
+      display: block;
+      font-family: 'Book antiqua', 'Times New Roman', Times, serif;
+      font-size: 60px;
+      font-weight: 700;
+      font-style: italic;
+      line-height: 40px;
+      text-align: center;
+    }
+    #graphic-communication-designer {
+      position: absolute;
+      bottom: 152px;
+      left: 20px;
+      z-index: 1;
+      display: inline-grid;
+      width: calc(66.6% - 30px);
+      font-family: 'Book antiqua', 'Times New Roman', Times, serif;
+      font-size: 25px;
+      line-height: 1.1;
+      text-align: right;
+    }
+    #specialty-editorial-design {
+      position: absolute;
+      z-index: 1;
+      right: 20px;
+      bottom: 152px;
+      width: calc(33.3% - 20px);
+      font-family: 'Book antiqua', 'Times New Roman', Times, serif;
+      font-size: 18px;
+      font-style: italic;
+      line-height: 1.2;
+      text-align: left;
+    }
+    .photo {
+      top: 132px;
+      z-index: 1;
+      display: block;
+      width: 100%;
+      height: 160px;
+      background-image: url(/assets/images/info/server/academic-formation/bg-mobile.jpg);
+      background-position: center -246px;
+      background-size: 116% auto;
+    }
+  }
+  #newsletter-college {
+    background-color: white;
+    &::before {
+      content: '';
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      width: 0;
+      height: 0;
+      border-bottom: 700px solid transparent;
+      border-left: 360px solid #00ff1f;
+      mix-blend-mode: multiply;
+    }
+    .grid {
+      grid-template-columns: 1fr 1fr;
+      top: 145px;
+      bottom: 60px;
+      background-image: none;
+      border: none;
+      .col-2 {
+        position: relative;
+        border: none;
+        .photo {
+          position: absolute;
+          top: auto;
+          bottom: 250px;
+          width: 100%;
+          height: 140px;
+          background-image: url(/assets/images/info/server/academic-formation/bg-mobile.jpg);
+          background-position: -36px 40%;
+          background-repeat: no-repeat;
+          &-2 {
+            background-position: calc(100% + 42px) 40%;
+          }
+        }
+      }
+    }
+    &.newsletter-college {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+    &-tagline,
+    &-title,
+    &-endtag,
+    &-text,
+    &-list {
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+    }
+    &-tagline {
+      top: 176px;
+      height: 40px;
+      line-height: 40px;
+      padding: 0 10px;
+      font-family: 'Times New Roman', Times, serif;
+      font-size: 24px;
+      font-style: italic;
+      font-weight: 700;
+      background-color: #333;
+      color: white;
+    }
+    &-title {
+      top: 230px;
+      font-family: 'Kumar One', serif;
+      font-size: 30px;
+      line-height: 30px;
+      text-transform: uppercase;
+      color: #333;
+    }
+    &-endtag {
+      top: 320px;
+      text-transform: uppercase;
+      color: #333;
+    }
+    &-text {
+      top: auto;
+      bottom: 240px;
+      left: 20px;
+      right: 20px;
+      font-family: 'Barlow Condensed', 'Franklin Gothic Medium', 'Arial Narrow',
+        Arial, sans-serif;
+      font-size: 24px;
+      line-height: 20px;
+    }
+    &-list {
+      top: calc(50% + 150px);
+      top: auto;
+      bottom: 80px;
+      left: 30px;
+      right: 20px;
+      // bottom: 80px;
+      font-family: 'Barlow Condensed', 'Franklin Gothic Medium', 'Arial Narrow',
+        Arial, sans-serif;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      line-height: 20px;
+      font-size: 22px;
+      text-indent: -14px;
+      .col-2 {
+        > span {
+          display: block;
+          &::before {
+            content: '\2022';
+            margin: 0 4px;
+          }
+        }
+      }
+    }
+  }
+  #self-taught {
+    position: relative;
+    background: url(/assets/images/info/server/academic-formation/bg-mobile.jpg),
+      linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.2) 25%,
+        rgba(0, 0, 0, 0.2) 26%,
+        rgba(0, 0, 0, 0.2) 74%,
+        rgba(0, 0, 0, 0.2) 75%,
+        rgba(0, 0, 0, 1) 100%
+      );
+    background-blend-mode: multiply;
+    background-size: cover;
+    height: calc(100vh + 24px);
+    .text {
+      position: absolute;
+      top: 150px;
+      left: 20px;
+      z-index: 2;
+      color: white;
+      text-transform: uppercase;
+      font-family: 'Bebas Neue', Haettenschweiler, 'Arial Narrow Bold',
+        sans-serif;
+      font-size: 30px;
+      &-1 {
+        top: 170px;
+        left: 10px;
+      }
+      &-2 {
+        top: 198px;
+        left: 10px;
+      }
+      &-3 {
+        top: 232px;
+        font-size: 72px;
+        width: 141px;
+        line-height: 72px;
+        right: 210px;
+        left: auto;
+        color: rgba(255, 216, 0, 0.7);
+      }
+      &-4 {
+        top: 250px;
+        font-size: 32px;
+        width: 112px;
+        line-height: 26px;
+        right: 98px;
+        left: auto;
+        color: rgba(255, 216, 0, 0.7);
+      }
+      &-5 {
+        top: 314px;
+        font-size: 40px;
+        width: 112px;
+        line-height: 26px;
+        right: 200px;
+        left: auto;
+        color: rgba(255, 216, 0, 0.9);
+      }
+      &-6 {
+        left: auto;
+        right: 0;
+        top: 320px;
+        font-size: 72px;
+        font-family: 'Silkscreen', Courier, monospace;
+        font-style: normal;
+        color: white !important;
+        letter-spacing: -12px;
+        text-shadow: 0 0 12px #ffffff;
+      }
+      &-7 {
+        top: 390px;
+        left: 10px;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 32px;
+        line-height: 20px;
+        color: #ffd800;
+        text-transform: none;
+        width: 150px;
+        text-shadow: 2px -2px black;
+      }
+      &-8 {
+        top: auto;
+        bottom: 230px;
+        right: 20px;
+        font-size: 48px;
+        line-height: 32px;
+        text-align: center;
+        text-shadow: 0 0 12px #ffffff;
+        strong {
+          position: relative;
+          z-index: -1;
+          display: block;
+          color: rgb(255 216 0 / 70%);
+          text-shadow: 0 0 8px rgb(255 186 0 / 60%);
+        }
+      }
+      &-9 {
+        top: auto;
+        left: auto;
+        bottom: 180px;
+        right: 132px;
+        font-size: 24px;
+      }
+      &-10 {
+        top: auto;
+        left: auto;
+        bottom: 134px;
+        right: 20px;
+        font-size: 60px;
+        line-height: 48px;
+        text-align: right;
+        color: rgb(255 216 0 / 50%);
+        text-shadow: 0 0 8px rgb(255 186 0 / 60%);
+      }
+      &-11 {
+        top: auto;
+        left: auto;
+        bottom: 90px;
+        right: 20px;
+        font-size: 60px;
+        line-height: 48px;
+        text-align: right;
+        color: rgb(255 216 0 / 80%);
+      }
+    }
+    a {
+      position: absolute;
+      z-index: 2;
+      bottom: 60px;
+      right: 16px;
+      background-color: transparent;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  .decorative {
+    position: absolute;
+    bottom: 0px;
+    padding: 0;
+    right: 0px;
+    left: 0px;
+    top: 0px;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+    display: block;
+  }
+  .grid {
+    position: absolute;
+    display: grid;
+    left: 20px;
+    bottom: 153px;
+    top: 72px;
+    width: calc(100% - 40px);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100%;
+    gap: 10px;
+    border: solid 1px rgb(153 51 255 / 20%);
+    border-top: none;
+    background-image: url(/assets/images/info/server/academic-formation/guias-base.png);
+    background-repeat: repeat-x;
+    background-position: 0 bottom;
+    .col-2,
+    .col-3 {
+      border: solid 1px #9933ff;
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "brief": {
+    "title": "Club Atlético de Madrid",
+    "year": 2013,
+    "company": "Club Atlético de Madrid",
+    "industry": "Sports",
+    "work": "Website Redesign",
+    "technologies": [
+      "<abbr title='HyperText Markup Languaje'>HTML</abbr> 5",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+      " JQuery 1.8",
+      " Web Standards",
+      " Accessibility",
+      " <abbr title='User Experience'>UX</abbr>",
+      " Usability",
+      " <abbr title='Search Engine Optimization'>SEO</abbr>",
+      " Photoshop <abbr title='Creative Suite'>CS</abbr>6",
+      " Fireworks CS6",
+      " Illustrator CS6, Dreamweaver CS6",
+      " Joomla 2.5"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.atleticodemadrid.com/",
+        "title": "Visit Website",
+        "text": "Website"
+      }
+    ]
+  },
+  "projectsNavigation": {
+    "current": "Club Atletico de Madrid",
+    "next": "Aventuras Enmascaradas",
+    "previous": "Skiny"
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    }
+  ]
+}

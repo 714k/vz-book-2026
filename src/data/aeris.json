@@ -1,0 +1,63 @@
+{
+  "brief": {
+    "title": "Aeris",
+    "year": 2018,
+    "company": "Aeris",
+    "industry": "<abbr title='Internet of Things'>IoT</abbr>",
+    "work": "Maintenance of the Website, and Application to track vehicles (Aertrak Connect)",
+    "technologies": [
+      "Agile",
+      " ReactJS",
+      " React Native",
+      " React MUI",
+      " Redux",
+      " Storybook",
+      " React Logic",
+      " Java",
+      " Kotlin",
+      " Python",
+      " MySQL",
+      " Postman",
+      " Design Patterns",
+      " <abbr title='Hypertext Markup Language'>HTML</abbr> 5",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+      " Unit, and Integration Testing",
+      " Jest, Enzyme",
+      " Web Standards",
+      " Mobile First",
+      " Accessibility",
+      " SQuirreL SQL, DBeaver",
+      " MySQL Workbench",
+      " Webstorm, IntelliJ IDEA",
+      " Git, NPM"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.aeris.com/",
+        "title": "Visit Website",
+        "text": "Aeris"
+      }
+    ],
+    "apps": [
+      {
+        "href": "https://play.google.com/store/apps/details?id=com.aertrakconsumerapp.whitelabel&hl=en_IE&pli=1",
+        "title": "Download the Aertrak Android App",
+        "text": "Aertrak Android App"
+      }
+    ]
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    },
+    {
+      "title": "Mobile"
+    }
+  ],
+  "projectsNavigation": {
+    "current": "Aeris",
+    "next": "HBO",
+    "previous": "Citi Banamex"
+  }
+}

@@ -1,0 +1,151 @@
+<section id="message" class="subsection">
+  <h2>Message</h2>
+
+  <form 
+    name="form-message"
+    id="formMessage"
+    method="post"
+    action="./validation.php"
+    autocomplete="off">
+    <p class="form-input">
+      <label for="firstName">First Name*:</label><br>
+      <input 
+        type="text" 
+        name="firstName" 
+        id="firstName" 
+        class="text required" 
+        required
+        minlength="3"
+        placeholder="Jane"/>
+      <span id="nameError" class="error" role="alert" aria-hidden="true"></span>
+    </p>
+    
+    <p class="form-input">
+      <label for="lastName">Last Name*:</label><br>
+      <input 
+        type="text" 
+        name="lastName" 
+        id="lastName" 
+        class="text required"
+        aria-required="true"
+        required
+        minlength="3"
+        placeholder="Doe"/>
+      <span class="error" role="alert" aria-hidden="true"></span>
+    </p>
+    
+    <p class="form-input">
+      <label for="email">Email*:</label><br>
+      <input 
+        type="email"
+        name="email" 
+        id="email" 
+        class="text required"
+        aria-required="true"
+        required 
+        placeholder="jane.doe@somewhere.com"/>
+      <span class="error" role="alert" aria-hidden="true"></span>
+    </p>
+    
+    <p class="form-input">
+      <label for="phone">Phone Number:</label><br>
+      <input 
+        type="tel" 
+        name="phone" 
+        id="phone" 
+        class="number" 
+        placeholder="(52+) 55 80 100 325"/><br>
+    </p> 
+    
+    <p class="form-input">    
+      <label>Ext:</label><br>
+      <input 
+        type="tel" 
+        name="extension" 
+        id="extension" 
+        class="number" 
+        placeholder="2548"/>
+    </p>
+    
+    <p class="form-input">
+      <label for="mobile">Mobile:</label><br>
+      <input 
+        type="tel" 
+        name="mobile" 
+        id="mobile"  
+        class="number"
+        placeholder="(+52) 55 80 100 958"/><br>
+    </p>
+    
+    <p class="form-input">
+      <label for="reason">Reason*:</label><br>
+      <span class="select">
+        <select name="reason" id="reason" class="required" required aria-required="true"><br />
+          <option value='' disabled selected>Select a reason</option><br />
+          <option value='Just passing to say Hi!'>Just passing to say Hi!</option><br />
+          <option value='Project quote'>Project quote</option><br />
+          <option value='Web consulting'>Web consulting</option><br />
+          <option value='Job offer'>Job offer</option><br />
+          <option value='Feedback on the website'>Feedback on the website</option>   
+        </select>
+        <span class="error" role="alert" aria-hidden="true"></span>
+      </span>
+    </p>
+  
+    <p class="form-input">
+      <label for="messageField">Message*:</label><br>
+      <textarea 
+        name="messageField" 
+        id="messageField" 
+        class="required"
+        cols="44" 
+        rows="10" 
+        minlength="2"
+        maxlength="4000"
+        aria-required="true"
+        required
+        placeholder="Type your ideas here"></textarea>
+      <span class="error" role="alert" aria-hidden="true"></span>
+    </p>
+    
+    <p class="privacy">
+      <label for="policy" class="label-checkbox">
+        <input type="checkbox" name="policy" id="policy" class="required" value="1" required aria-required="true"/>
+        I have read and accept the <a href="/contact/policy.html" target="_blank">privacy</a> policies.
+      </label>
+        <span class="error" role="alert" aria-hidden="true"></span>
+    </p>
+    
+    <p class="buttons">
+      <button type="reset" name="clear" id="clear">Clear</button>
+      <button type="submit" name="submitBtn" id="submitBtn">Submit</button>
+    </p>
+  </form>
+  
+  <span class="decorative">
+    <span class="ship-position">&nbsp;</span>
+    <span class="screen-top">&nbsp;</span>
+    <span class="grid">&nbsp;</span>
+    <span class="date">
+      <span class="hours">&nbsp;</span>
+      <span class="minutes">&nbsp;</span>
+      <span class="hour">&nbsp;</span>
+      <span class="day-number">&nbsp;</span>
+      <span class="day">&nbsp;</span>
+      <span class="month">&nbsp;</span>
+      <span class="year">&nbsp;</span></span>
+    <span class="comms">
+      <span class="onda1 wave-1">&nbsp;</span>
+      <span class="wave-2">&nbsp;</span>
+      <span class="wave-3">&nbsp;</span></span>
+    <span class="environment"><span class="water">&nbsp;</span><span class="oxygen">&nbsp;</span><span class="temperatura">&nbsp;</span><span class="gravedad">&nbsp;</span></span>
+    <span class="energy-cells">&nbsp;</span>
+    <span class="screen-left">&nbsp;</span>
+    <span class="screen-center">&nbsp;</span>
+    <span class="screen-bottom">&nbsp;</span>
+    <span class="screen-out">&nbsp;</span>
+    <span class="jupiter"><span class="data1">&nbsp;</span></span>
+    <span class="space-station"><span class="data2">&nbsp;</span></span>
+  </span>
+</section>
+

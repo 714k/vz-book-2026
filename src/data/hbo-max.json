@@ -1,0 +1,87 @@
+{
+  "brief": {
+    "title": "<abbr title='Home Box Office'>HBO</abbr> Max",
+    "timeline": "2019 - 2020",
+    "company": "HBO Max",
+    "industry": "Entertainment",
+    "work": "Design System for Website",
+    "scope": "Streaming platform (Web & TV) within a multi-team product environment, contributing to frontend architecture and design system implementation.",
+    "problem": "The platform needed to scale its interface across multiple teams and devices while maintaining consistency, performance, and accessibility.",
+    "key_challenges": [
+      "Maintaining UI consistency across distributed teams",
+      "Balancing design system constraints with product needs",
+      "Ensuring performance in high-traffic environments"
+    ],
+    "product_team": [
+      "Product Managers",
+      "Frontend Engineers",
+      "Backend Engineers",
+      "Designers (Product & Design System)",
+      "QA / Accessibility specialists"
+    ],
+    "product_team_text": "Worked in a cross-functional environment with shared ownership of UI quality and system consistency.",
+    "key_contributions": [
+      "Implemented and extended design system components within the product",
+      "Defined component composition patterns for scalable UI development",
+      "Improved accessibility across key user flows"
+    ],
+    "technical_focus": [
+      "Design system integration (enterprise → product level)",
+      "Component architecture and composition",
+      "Frontend performance and accessibility"
+    ],
+    "system_impact": [
+      "Increased consistency across product surfaces",
+      "Reduced UI fragmentation between teams",
+      "Improved maintainability of frontend components"
+    ],
+    "learnings": [
+      "Design systems only scale when teams align on usage, not just implementation",
+      "Product-level architecture requires balancing system constraints with real user needs",
+      "Reinforced my transition from UI implementation to system-level thinking"
+    ],
+    "technologies": [
+      "Agile",
+      " Leadership, Mentoring",
+      " Design System",
+      " ReactJS",
+      " React MUI",
+      " React Hook Forms",
+      " Redux",
+      " Storybook",
+      " Styled Components",
+      " Drupal",
+      " NextJS",
+      " Django",
+      " Microservices, NodeJS",
+      " Docker, Kubernetes",
+      " Postman",
+      " Design Patterns",
+      " <abbr title='Hypertext Markup Language'>HTML</abbr> 5",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+      " Unit Testing, Integration Testing",
+      " Jest, Enzyme",
+      " Web Standards",
+      " Mobile First",
+      " Augmented Reality",
+      " Accessibility",
+      " Browserstack",
+      " FlowJS",
+      " Webstorm, IntelliJ IDEA, VS Code",
+      " Git, NPM, Yarn, Lerna"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.hbomax.com/",
+        "title": "Visit Website",
+        "text": "HBO Max"
+      }
+    ]
+  },
+  "projectsNavigation": {
+    "current": "HBO Max",
+    "next": "Plastiq",
+    "previous": "HBO"
+  }
+}

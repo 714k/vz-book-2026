@@ -1,0 +1,71 @@
+---
+import Default from '../../../layouts/Default.astro';
+import TOC from '../../../components/TOC.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+import noOneKnows from '../../../data/no-one-knows.json';
+import theServer from '../../../data/the-server.json';
+import theNavigator from '../../../data/the-navigator.json';
+import theFixer from '../../../data/the-fixer.json';
+---
+
+<Default
+  title="No one knows..."
+  siteTitle="At the beginning..."
+  primaryColor="#ffbc00"
+  secondaryColor="rgb(111, 80, 0)"
+  coverBg="/assets/images/info/cover-bg.jpg"
+  previousPage="/at-the-beginning"
+  nextPage="/at-the-beginning/no-one-knows/the-server/"
+  previousTitle="At the beginning..."
+  nextTitle="The Server"
+  currentUrl={Astro.url.pathname}
+>
+  <header class="cover">
+    <h1>
+      <span>No </span>
+      <span>one </span>
+      <span>knows </span>
+      <span class="elipsis">...</span>
+    </h1>
+  </header>
+
+  <TOC data={noOneKnows.toc} />
+    
+  <section id="profile" class="teaser"> 
+    <h2 class="title"><span>The</span> Server</h2>
+    <p class="sprite balloon">{theServer.coverline}<br>
+      <a href="/at-the-beginning/no-one-knows/the-server">See my profile</a>
+    </p>
+    <span class="decorative sprite elliot"></span>
+    <span class="decorative sprite mr-robot"></span>
+    <span class="decorative sprite face-mask"></span>
+  </section>
+
+  <section id="laboral-experience" class="teaser">
+    <h2 class="title"><span>The</span> Navigator</h2>
+    <p class="sprite balloon">{theNavigator.coverline}<br>
+      <a href="/at-the-beginning/no-one-knows/the-navigator">See my adventures</a>
+    </p>	
+    <span class="decorative sprite">
+      <span class="sprite nube1">&nbsp;</span>
+      <span class="sprite nube2">&nbsp;</span>
+      <span class="sprite ave1">&nbsp;</span>
+      <span class="sprite ave2">&nbsp;</span>
+      <span class="sprite perlaNegra">&nbsp;</span>
+      <span class="sprite sparrow">&nbsp;</span>
+    </span>
+  </section>
+
+  <section id="skills" class="teaser">
+    <h2 class="title"><span>The</span> Fixer</h2>
+    <p class="sprite balloon">{theFixer.coverline}<br>
+      <a href="/at-the-beginning/no-one-knows/the-fixer">See my skills</a></p>
+    <span class="decorative sprite">
+      <span class="sprite hitman-a">&nbsp;</span>
+      <span class="sprite hitman-b"><span class="sprite firegun">&nbsp;</span></span>
+    </span>	
+  </section>
+
+  <BackToTop />
+</Default>
+

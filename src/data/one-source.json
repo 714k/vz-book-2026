@@ -1,0 +1,53 @@
+{
+  "brief": {
+    "title": "One Source",
+    "year": 2023,
+    "company": "Thomson Reuters",
+    "industry": "Legal; Tax and Accounting; and News & Media",
+    "work": "Design System to normalize the brand of the Company",
+    "technologies": [
+      "Agile,",
+      " Leadership, Mentoring,",
+      " Data Visualization",
+      " Angular,",
+      " Custom Components,",
+      " <abbr title='Hypertext Markup Language'>HTML</abbr> 5,",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3,",
+      " Typescript, D3,",
+      " Unit, Integration, and e2e Testing",
+      " Playwright,",
+      " Accessibility,",
+      " <abbr title='User Experience'>UX</abbr>,",
+      " Design Patterns,",
+      " Web Standards,",
+      " Mobile First,",
+      " Azure DevOps,",
+      " Less,",
+      " Figma,",
+      " Browserstack, LucidChart",
+      " Webstorm, VS Code",
+      " Git, NPM, Rush, Yarn, Rollup."
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.onesourcetax.com/",
+        "title": "Visit Website",
+        "text": "One Source"
+      }
+    ]
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    },
+    {
+      "title": "Mobile"
+    }
+  ],
+  "projectsNavigation": {
+    "current": "One Source",
+    "next": "",
+    "previous": "Saffron"
+  }
+}

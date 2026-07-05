@@ -1,0 +1,20 @@
+---
+import Logo from './Logo.astro';
+import SkipLink from './SkipLink.astro';
+import MainNavigation from './MainNavigation.astro';
+
+interface Props {
+  currentUrl?: string;
+  primaryColor?: string;
+  secondaryColor?: string;
+}
+
+const { currentUrl, primaryColor, secondaryColor } = Astro.props;
+---
+
+<header role="banner" id="main-header">
+  <Logo primaryColor={primaryColor} secondaryColor={secondaryColor} />
+  <SkipLink />
+  <MainNavigation currentUrl={currentUrl} />
+</header>
+

@@ -1,0 +1,39 @@
+{
+  "title": "Nissan <abbr title='Latinoamerica y el Caribe'>LAT</abbr>",
+  "brief": {
+    "title": "Nissan Latinoamérica",
+    "year": 2009,
+    "company": "Nissan México",
+    "industry": "Automotive",
+    "work": "Redesign of the Portal",
+    "technologies": [
+      "<abbr title='Extensible Hypertext Markup Languaje'>XHTML</abbr> 1.0 strict",
+      " <abbr title='Extensible Markup Languaje'>XML</abbr> 1.0",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
+      " ActionScript 3.0",
+      " Dojo",
+      " <abbr title='Content Manager System'>CMS</abbr>",
+      " Photoshop <abbr title='Creative Suite'>CS</abbr34",
+      " Flash Professional CS3, Fireworks CS3",
+      " Illustrator CS4, Dreamweaver CS3"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.nissanlatam.com/",
+        "title": "Visit Website",
+        "text": "Website"
+      }
+    ]
+  },
+  "projectsNavigation": {
+    "current": "Nissan Latinoamerica",
+    "next": "Sonora",
+    "previous": "Query Technologies"
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    }
+  ]
+}

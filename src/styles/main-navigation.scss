@@ -1,0 +1,245 @@
+#menuToggle {
+  display: none;
+
+  &:checked ~ .navigation-wrapper {
+    top: 0;
+    transition: top 0.5s ease-in-out 0s;
+  }
+
+  &:checked ~ .menu-icon {
+    &::before {
+      transform: rotate(135deg) translateX(8px);
+      animation: 0.5s linear bar1;
+      background-color: var(--color-primary);
+    }
+
+    &::after {
+      transform: rotate(-135deg) translateX(8px);
+      animation: 0.5s linear bar2;
+      background-color: var(--color-primary);
+    }
+  }
+}
+
+.menu-icon {
+  width: 1.5rem;
+  height: 1rem;
+  position: fixed;
+  padding: 0.5rem;
+  z-index: 101;
+  top: 1.3em;
+  right: 1em;
+  cursor: pointer;
+  mix-blend-mode: exclusion;
+  transform: scale(1.25);
+  transition: all 0.3s ease-in-out;
+
+  &::before,
+  &::after {
+    background-color: var(--color-primary);
+    position: absolute;
+    transition: 0.2s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+    width: 100%;
+    height: 4px;
+  }
+
+  &::before {
+    content: '';
+    width: 1.5rem;
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+
+  &::after {
+    content: '';
+    bottom: 0.5rem;
+    width: 1.5rem;
+    left: 0.5rem;
+  }
+}
+
+.navigation-wrapper {
+  position: fixed;
+  overflow-y: auto;
+  z-index: 100;
+  top: -400%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0 0 0 / 0.5);
+  backdrop-filter: blur(5px);
+  transition: top 0.5s ease-in-out 0s;
+
+  .main-navigation {
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    ul {
+      list-style: none;
+      text-align: right;
+      width: 100%;
+      padding: 0;
+      margin: 100px 0 0px 0;
+      li {
+        margin: 2.5rem 0;
+        padding: 0.25rem 20px;
+        ul {
+          position: static;
+          margin: 0;
+          width: 100%;
+          li {
+            padding: 0;
+            margin: 0;
+            a {
+              font-family: 'Share Tech Mono', Courier, monospace;
+              padding: 0 1rem 0 0;
+              font-size: 1.5rem;
+              line-height: 2rem;
+              color: var(--color-primary);
+              text-shadow: 0 0 8px var(--color-primary);
+              background-color: black;
+              &.current-subnavigation {
+                background-color: white;
+                color: black;
+                text-shadow: 0 0 8px black;
+                &::before {
+                  content: '> ';
+                  font-size: 1.5rem;
+                  line-height: 2rem;
+                  display: inline;
+                  color: black;
+                  cursor: pointer;
+                }
+                &:hover {
+                  cursor: default;
+                  &::before {
+                    cursor: default;
+                  }
+                }
+              }
+              &:hover {
+                color: white;
+                text-shadow: 0 0 8px white;
+                padding-right: 0.5rem;
+                cursor: pointer;
+                &::before {
+                  content: '> ';
+                  font-size: 1.5rem;
+                  line-height: 2rem;
+                  display: inline;
+                  color: white;
+                  cursor: pointer;
+                }
+              }
+              &::before {
+                content: none;
+              }
+            }
+          }
+        }
+        a {
+          text-decoration: none;
+          background-color: rgba(255 255 255 / 0.5);
+          font-family: 'Russo One';
+          font-size: 2.5rem;
+          font-weight: 500;
+          padding: 1rem 0;
+          color: black;
+          line-height: 3.5rem;
+          text-shadow: 0 0 10px black;
+          transition: all 0.3s ease;
+          &.current {
+            background-color: black;
+            color: white;
+            text-shadow: 0 0 10px white;
+            transition: all 0.3s ease;
+            cursor: default;
+            pointer-events: none;
+
+            &::before {
+              color: var(--color-primary);
+            }
+          }
+          &::before {
+            position: relative;
+            margin-left: 0.5rem;
+            display: block;
+            font-family: 'Share Tech Mono', Courier, monospace;
+            font-size: 0.6rem;
+            line-height: 0;
+            color: white;
+            content: attr(data-before);
+            text-shadow: none;
+            text-transform: uppercase;
+          }
+          &:hover {
+            background-color: black;
+            color: white;
+            text-shadow: 0 0 10px white;
+            transition: all 0.3s ease;
+            &::before {
+              line-height: 0;
+              color: var(--color-primary);
+              cursor: default;
+              text-shadow: 0 0 10px black;
+              transition: color 0.3s linear;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes bar1 {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+
+  25%,
+  60% {
+    transform: rotate(45deg) translateX(-2px);
+    height: 0.6rem;
+    opacity: 0.5;
+  }
+
+  85% {
+    transform: rotate(90deg) translateX(0px);
+    height: 0.6rem;
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: rotate(135deg) translateX(8px);
+    opacity: 1;
+  }
+}
+
+@keyframes bar2 {
+  0% {
+    transform: rotate(0deg) translateY(0);
+  }
+
+  25%,
+  60% {
+    transform: rotate(-45deg) translateX(-2px);
+    height: 0.6rem;
+  }
+
+  85% {
+    transform: rotate(-90deg) translateX(0px);
+    height: 0.6rem;
+  }
+
+  100% {
+    transform: rotate(-135deg) translateX(8px);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-icon {
+    transform: scale(2);
+  }
+}

@@ -1,0 +1,27 @@
+---
+import Default from '../../../layouts/Default.astro';
+import TOC from '../../../components/TOC.astro';
+import ProjectSummary from '../../../components/ProjectSummary.astro';
+import nobodyKnowsHeWorkedOn from '../../../data/nobody-knows-he-worked-on.json';
+---
+
+<Default
+  title="Nobody knows he worked on..."
+  primaryColor="#ffff00"
+  secondaryColor="#606200"
+  previousPage="/at-the-beginning/no-one-knows/the-fixer"
+  nextPage="/at-the-beginning/nobody-knows-he-worked-on/one-source/"
+  previousTitle="The Fixer"
+  nextTitle="One Source"
+  currentUrl={Astro.url.pathname}
+>
+  <header class="cover">
+    <h1>
+      Nobody knows he worked on...
+    </h1>
+  </header>
+  <TOC data={nobodyKnowsHeWorkedOn.toc} />
+
+  <ProjectSummary summaries={nobodyKnowsHeWorkedOn.summaries} />
+</Default>
+

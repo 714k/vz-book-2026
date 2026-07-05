@@ -1,0 +1,52 @@
+---
+import TOC from './TOC.astro';
+import ProjectBrief from './ProjectBrief.astro';
+import ProjectGallery from './ProjectGallery.astro';
+import projectData from '../data/project.json';
+
+interface Props {
+  title: string;
+  projectName: string;
+  project?: any;
+}
+
+const { title, projectName, project: projectProp } = Astro.props;
+
+// Import project data - we'll pass it from the page
+let project = projectProp;
+if (!project) {
+  // Fallback: try to import statically
+  try {
+    const projectModule = await import(`../data/${projectName}.json`);
+    project = projectModule.default;
+  } catch (e) {
+    console.error(`Could not load project data for ${projectName}:`, e);
+  }
+}
+
+let toc = projectData.toc;
+if (project?.galleries && project.galleries.length === 1) {
+  toc = projectData.toc.slice(0, 2);
+}
+---
+
+<header class="cover">
+  {(() => {
+    const containsHTML = typeof title === 'string' && (title.includes('<') && title.includes('>'));
+    return containsHTML ? (
+      <h1 set:html={title} />
+    ) : (
+      <h1>{title}</h1>
+    );
+  })()}
+</header>
+<!-- <TOC data={toc} /> -->
+
+<ProjectBrief data={project.brief} />
+
+<!-- <ProjectGallery 
+  galleries={project.galleries}
+  galleriesImages={projectData.galleries}
+  projectsNavigation={project.projectsNavigation}
+/> -->
+

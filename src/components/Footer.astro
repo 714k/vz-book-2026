@@ -1,0 +1,43 @@
+---
+import Logo from './Logo.astro';
+
+interface Props {
+  previousPage?: string;
+  previousTitle?: string;
+  nextPage?: string;
+  nextTitle?: string;
+  primaryColor?: string;
+  secondaryColor?: string;
+}
+
+const { 
+  previousPage, 
+  previousTitle, 
+  nextPage, 
+  nextTitle,
+  primaryColor,
+  secondaryColor 
+} = Astro.props;
+
+const alignEnd = !previousPage ? 'align-end' : '';
+const currentYear = new Date().getFullYear();
+---
+
+<footer id="footer">
+  <p class={`site-navigation ${alignEnd}`}>
+    {previousPage && (
+      <a class="left" href={previousPage}>&laquo; {previousTitle}</a>
+    )}
+
+    <span class="hide"> | </span>
+    {nextPage && (
+      <a class="right" href={nextPage}>{nextTitle} &raquo;</a>
+    )}
+  </p>
+  <Logo primaryColor={primaryColor} secondaryColor={secondaryColor} />
+  <span>Designed & Developed by Victor Zamudio,</span> 
+  <span>Staff Software Engineer</span><span class="hide"> • </span>
+  <span>Mexico City</span><span class="hide"> • </span>
+  <span> 2006 - {currentYear}</span>
+</footer>
+

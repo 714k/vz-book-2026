@@ -1,0 +1,58 @@
+{
+  "brief": {
+    "title": "<abbr title='Home Box Office'>HBO</abbr>",
+    "year": 2019,
+    "company": "HBO",
+    "industry": "Entertainment",
+    "work": "Redesign & Accessibility implementation to the Website",
+    "technologies": [
+      "Agile",
+      " Leadership, Mentoring",
+      " Accessibility",
+      " ReactJS",
+      " React MUI",
+      " React Bootstrap",
+      " Redux",
+      " Storybook",
+      " Styled Components",
+      " <abbr title='Adobe Experience Manager'>AEM</abbr>",
+      " GraphQL, Apollo Client",
+      " Python, Spring Boot",
+      " Microservices, NodeJS",
+      " Docker, Kubernetes",
+      " Postman",
+      " Design Patterns",
+      " <abbr title='Hypertext Markup Language'>HTML</abbr> 5",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+      " Unit Testing, Integration Testing",
+      " Jest, Enzyme",
+      " Web Standards",
+      " Mobile First",
+      " Browserstack",
+      " FlowJS",
+      " Webstorm, IntelliJ IDEA, VS Code",
+      " Git, NPM, Yarn, Lerna"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.hbo.com/",
+        "title": "Visit Website",
+        "text": "HBO"
+      }
+    ]
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    },
+    {
+      "title": "Mobile"
+    }
+  ],
+  "projectsNavigation": {
+    "current": "HBO",
+    "next": "HBO Max",
+    "previous": "Aeris"
+  }
+}

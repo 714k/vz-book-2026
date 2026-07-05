@@ -1,0 +1,168 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import '../styles/main.scss';
+
+interface Props {
+  title?: string;
+  siteTitle?: string;
+  primaryColor?: string;
+  secondaryColor?: string;
+  contentColor?: string;
+  coverBg?: string;
+  projectBg?: string;
+  classNames?: string;
+  previousPage?: string;
+  previousTitle?: string;
+  nextPage?: string;
+  nextTitle?: string;
+  scripts?: string;
+  currentUrl?: string;
+  description?: string;
+  image?: string;
+  canonical?: string;
+  noindex?: boolean;
+  keywords?: string;
+  author?: string;
+}
+
+const {
+  title = '',
+  siteTitle = 'Victor Zamudio',
+  primaryColor = '#ffbc00',
+  secondaryColor = 'rgb(111, 80, 0)',
+  contentColor,
+  coverBg,
+  projectBg,
+  classNames = '',
+  previousPage,
+  previousTitle,
+  nextPage,
+  nextTitle,
+  scripts = '',
+  currentUrl = Astro.url.pathname
+} = Astro.props;
+
+// Generate body class from title (strip HTML tags first)
+const titleForClass = typeof title === 'string' 
+  ? title.replace(/<[^>]*>/g, '').trim()
+  : String(title);
+const titleClass = titleForClass
+  .replace(/\.\.\./g, '')
+  .replace(/\./g, '')
+  .replace(/&/g, 'and')
+  .split(' ')
+  .join('-')
+  .toLowerCase();
+
+const bodyClass = `${classNames}${titleClass}`;
+
+// Strip HTML from title for page title tag
+const titleForPageTitle = typeof title === 'string' 
+  ? title.replace(/<[^>]*>/g, '').trim()
+  : title;
+
+// Build CSS variables string
+const cssVars = [
+  `--color-primary: ${primaryColor};`,
+  `--color-secondary: ${secondaryColor};`,
+  contentColor ? `--color-content: ${contentColor};` : '',
+  coverBg ? `--cover-bg: url(${coverBg});` : '',
+  projectBg ? `--project-bg: url(${projectBg});` : ''
+].filter(Boolean).join('\n        ');
+const cssContent = `:root {\n        ${cssVars}\n      }`;
+const {
+  description = 'Portfolio of Victor Zamudio',
+  image = '/og.png',
+  canonical,
+  noindex = false,
+  keywords = '',
+  author = siteTitle,
+} = Astro.props;
+const baseUrl = Astro.site ?? 'https://victorzamudio.dev';
+const fullUrl = canonical 
+  ? canonical 
+  : new URL(currentUrl, baseUrl).toString();
+
+const fullImage = image.startsWith('http')
+  ? image
+  : new URL(image, baseUrl).toString();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{titleForPageTitle ? `${titleForPageTitle} | ${siteTitle}` : siteTitle}</title>
+    <style set:html={cssContent}></style>
+    <!-- Basic SEO -->
+    <meta name="description" content={description} />
+    {keywords && <meta name="keywords" content={keywords} />}
+    <meta name="author" content={author} />
+
+    <!-- Robots -->
+    {noindex ? (
+      <meta name="robots" content="noindex, nofollow" />
+    ) : (
+      <meta name="robots" content="index, follow" />
+    )}
+
+    <!-- Canonical -->
+    <link rel="canonical" href={fullUrl} />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={titleForPageTitle || siteTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={fullUrl} />
+    <meta property="og:image" content={fullImage} />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={titleForPageTitle || siteTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={fullImage} />
+    <script type="application/ld+json">
+      {JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": siteTitle,
+        "url": baseUrl,
+        "image": fullImage,
+        "description": description
+      })}
+    </script>
+  </head>
+  <body class={bodyClass}>
+    <Header 
+      currentUrl={currentUrl}
+      primaryColor={primaryColor}
+      secondaryColor={secondaryColor}
+    />
+    <main>
+      <article id="main">
+        <slot />
+      </article>
+    </main>
+
+    <hr />
+    <Footer 
+      previousPage={previousPage}
+      previousTitle={previousTitle}
+      nextPage={nextPage}
+      nextTitle={nextTitle}
+      primaryColor={primaryColor}
+      secondaryColor={secondaryColor}
+    />
+
+    {import.meta.env.PROD && (
+      <script src="/my-analytics-script.js"></script>
+    )}
+    {scripts && (
+      <Fragment set:html={scripts} />
+    )}
+  </body>
+</html>
+

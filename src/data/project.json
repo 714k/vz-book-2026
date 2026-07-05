@@ -1,0 +1,106 @@
+{
+  "toc": [
+    {
+      "title": "The brief of the project",
+      "href": "brief",
+      "classes": "anchor-class",
+      "text": "Brief"
+    },
+    {
+      "title": "Desktop gallery of the project",
+      "href": "gallery-desktop",
+      "text": "Gallery Desktop"
+    },
+    {
+      "title": "Mobile gallery of the project",
+      "href": "gallery-mobile",
+      "text": "Gallery Mobile"
+    }
+  ],
+  "galleries": [
+    {
+      "title": "Desktop",
+      "links": [
+        {
+          "title": "See Desktop image 01",
+          "href": "image-desktop-01",
+          "text": "01",
+          "separator": "~"
+        },
+        {
+          "title": "See Desktop image 02",
+          "href": "image-desktop-02",
+          "text": "02",
+          "separator": "~"
+        },
+        {
+          "title": "See Desktop image 03",
+          "href": "image-desktop-03",
+          "text": "03",
+          "separator": "~"
+        },
+        {
+          "title": "See Desktop image 04",
+          "href": "image-desktop-04",
+          "text": "04",
+          "separator": "~"
+        },
+        {
+          "title": "See Desktop image 05",
+          "href": "image-desktop-05",
+          "text": "05",
+          "separator": ""
+        }
+      ]
+    },
+    {
+      "title": "Mobile",
+      "links": [
+        {
+          "title": "See Mobile image 01",
+          "href": "image-mobile-01",
+          "text": "01",
+          "separator": "~"
+        },
+        {
+          "title": "See Mobile image 02",
+          "href": "image-mobile-02",
+          "text": "02",
+          "separator": "~"
+        },
+        {
+          "title": "See Mobile image 03",
+          "href": "image-mobile-03",
+          "text": "03",
+          "separator": "~"
+        },
+        {
+          "title": "See Mobile image 04",
+          "href": "image-mobile-04",
+          "text": "04",
+          "separator": "~"
+        },
+        {
+          "title": "See Mobile image 05",
+          "href": "image-mobile-05",
+          "text": "05",
+          "separator": ""
+        }
+      ]
+    }
+  ],
+  "galleryTypes": [
+    {
+      "title": "See Desktop gallery",
+      "href": "galleryDesktop",
+      "text": "Desktop",
+      "separator": "|"
+    },
+    {
+      "title": "See Mobile gallery",
+      "href": "galleryMobile",
+      "text": "Mobile",
+      "separator": "|"
+    }
+  ]
+}

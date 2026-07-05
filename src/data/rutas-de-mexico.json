@@ -1,0 +1,41 @@
+{
+  "brief": {
+    "title": "Rutas de México",
+    "year": 2012,
+    "company": "Ministry of Tourism",
+    "industry": "Tourism",
+    "work": "Website Design",
+    "technologies": [
+      "<abbr title='Hypertext Markup Language'>HTML</abbr> 4.0",
+      " <abbr title='Extensible Markup Language'>XML</abbr> 1.0",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 2.1",
+      " Javascript 1.5",
+      " <abbr title='Content Management System'>CMS</abbr> (<abbr title='Semantic Web Builder'>SWB</abbr> 4.0)",
+      " Web Standards",
+      " Accessibility",
+      " Usability",
+      " <abbr title='Search Engine Optimization'>SEO</abbr>",
+      " Photoshop <abbr title='Creative Suite'>CS</abbr>5",
+      " Fireworks CS5",
+      " Illustrator CS5, Dreamweaver CS5"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.mexicodesconocido.com.mx/rutas-y-expediciones/rutas-de-mexico",
+        "title": "Visit Website",
+        "text": "Website"
+      }
+    ]
+  },
+  "projectsNavigation": {
+    "current": "Rutas de Mexico",
+    "next": "Optima Cotton Wear",
+    "previous": "Sonora"
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    }
+  ]
+}

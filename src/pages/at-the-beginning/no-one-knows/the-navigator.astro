@@ -1,0 +1,28 @@
+---
+import Default from '../../../layouts/Default.astro';
+import TOC from '../../../components/TOC.astro';
+import Adventures from '../../../components/Adventures.astro';
+import theNavigator from '../../../data/the-navigator.json';
+---
+
+<Default
+  title="The Navigator"
+  primaryColor="#7d0069"
+  secondaryColor="#280023"
+  previousPage="/at-the-beginning/no-one-knows/the-server/"
+  nextPage="/at-the-beginning/no-one-knows/the-fixer/"
+  previousTitle="The Server"
+  nextTitle="The Fixer"
+  currentUrl={Astro.url.pathname}
+>
+  <header class="cover">
+    <h1>
+      The Navigator
+    </h1>
+  </header>
+
+  <TOC data={theNavigator.toc} />
+
+  <Adventures adventures={theNavigator.adventures} toc={theNavigator.toc} />
+</Default>
+

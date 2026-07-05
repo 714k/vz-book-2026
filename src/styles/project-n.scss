@@ -1,0 +1,364 @@
+@use 'mixins' as *;
+@font-face {
+  font-family: 'Exo';
+  src: url('/assets/fonts/exo.eot');
+  src: url('/assets/fonts/exo.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/exo.woff2') format('woff2'),
+       url('/assets/fonts/exo.woff') format('woff'),
+       url('/assets/fonts/exo.svg#exothin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Libre Caslon Bold';
+  src: url('/assets/fonts/libre-caslon-bold.eot');
+  src: url('/assets/fonts/libre-caslon-bold.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/libre-caslon-bold.woff2') format('woff2'),
+       url('/assets/fonts/libre-caslon-bold.woff') format('woff'),
+       url('/assets/fonts/libre-caslon-bold.svg#libre_caslon_textbold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+  font-family: 'Libre Caslon Italic';
+  src: url('/assets/fonts/libre-caslon-italic.eot');
+  src: url('/assets/fonts/libre-caslon-italic.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/libre-caslon-italic.woff2') format('woff2'),
+       url('/assets/fonts/libre-caslon-italic.woff') format('woff'),
+       url('/assets/fonts/libre-caslon-italic.svg#libre_caslon_textitalic') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Libre Caslon Regular';
+  src: url('/assets/fonts/libre-caslon-regular.eot');
+  src: url('/assets/fonts/libre-caslon-regular.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/libre-caslon-regular.woff2') format('woff2'),
+       url('/assets/fonts/libre-caslon-regular.woff') format('woff'),
+       url('/assets/fonts/libre-caslon-regular.svg#libre_caslon_textregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.project-n {
+  position: absolute;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  z-index: 0;
+  top: 0;
+  background-color: transparent;
+  color: #121621;
+  background-image: var(--project-bg);
+  background-size: cover;
+  background-attachment: fixed;
+  .cover {
+    @include cover;
+    h1 {
+      font-family: 'Exo', 'Arial Narrow', Arial, sans-serif;
+      font-size: 90px;
+      text-transform: lowercase;
+      color: white;
+      span.long-title {
+        font-size: 80px;
+        display: none;
+      }
+    }
+  }
+  #tableOfContent {
+    ul {
+      z-index: 0;
+      background-color: transparent;
+      width: calc(var(--spacing-10) + var(--spacing-2));
+      left: 0;
+      right: 0;
+      padding-bottom: 90px;
+      li {
+        width: 100%;
+        height: 50px;
+        margin-top: 8px;
+        a {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          padding: 0;
+          background-color: black;
+          span {
+            display: none;
+          }
+          &:hover {
+            background-color: var(--color-primary);
+            color: white;
+            &:before {
+              background-color: black;
+            }
+          }
+          &::before {
+            content: '';
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-position: center;
+            mask-position: center;
+          }
+          &[href="#brief"] {
+            &::before {
+              mask-image: url(/assets/svg/icon-brief.svg);
+              -webkit-mask-image: url(/assets/svg/icon-brief.svg);
+            }
+          }
+          &[href="#gallery-desktop"] {
+            &::before {
+              mask-image: url(/assets/svg/icon-desktop.svg);
+              -webkit-mask-image: url(/assets/svg/icon-desktop.svg);
+            }
+          }
+          &[href="#gallery-mobile"] {
+            &::before {
+              mask-image: url(/assets/svg/icon-mobile.svg);
+              -webkit-mask-image: url(/assets/svg/icon-mobile.svg);
+            }
+          }
+        }
+      }
+    }
+    &::before {
+      background-color: black;
+    }
+    &::after {
+      background-color: var(--color-primary);
+    }
+    &:hover {
+      &::before,
+      &::after {
+        opacity: 1;
+      }
+      + .close-toc {
+        z-index: 5;
+      }
+    }
+    + .close-toc {
+      z-index: 0;
+      bottom: 24px;
+      background-color: black;
+      &::before {
+        bottom: 32px;
+        background-color: var(--color-primary);
+      }
+    }
+  }
+  section {
+    padding-top: 0;
+  }
+  h2 {
+    font-family: 'Libre Caslon Italic', 'Times New Roman', Times, serif;
+    font-size: 48px;
+    width: 75%;
+    line-height: 1;
+    color: white;
+    text-transform: lowercase;
+    margin: 0;
+    mix-blend-mode: difference;
+  }
+  #brief {
+    padding: 0 16px 10vh 16px;
+    background-image: var(--project-bg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    mix-blend-mode: difference;
+    h2 {
+      padding: 80px 0 48px 0;
+      mix-blend-mode: difference;
+    }
+    strong {
+      font-family: 'Libre Caslon Bold', 'Times New Roman', Times, serif;
+      font-size: 28px;
+      font-style: italic;
+    }
+    em {
+      font-style: normal;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+  }
+  #gallery {
+    position: relative;
+    .gallery {
+      position: relative;
+      width: 100%;
+      height: 500vh;
+      background-image: var(--project-bg);
+      background-attachment: local;
+      background-repeat: no-repeat;
+      background-size: contain;
+      h2 {
+        padding: 80px 16px;
+      }
+      figure {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: var(--project-bg);
+        background-attachment: local;
+        background-repeat: no-repeat;
+        background-size: cover;
+        &[id*="01"] {
+          bottom: 400vh;
+        }
+        &[id*="02"] {
+          bottom: 300vh;
+        }
+        &[id*="03"] {
+          bottom: 200vh;
+        }
+        &[id*="04"] {
+          bottom: 100vh;
+        }
+        &[id*="05"] {
+          bottom: 0vh;
+        }
+        &::before {
+          content: 'gallery';
+          display: block;
+          position: sticky;
+          top: 80px;
+          left: 16px;
+          height: 56px;
+          font-family: 'Libre Caslon Italic', 'Times New Roman', Times, serif;
+          font-size: 48px;
+          width: 75%;
+          line-height: 1;
+          color: white;
+          text-transform: lowercase;
+          margin: 0;
+          mix-blend-mode: difference;
+        }
+        img {
+          position: absolute;
+          left: 0;
+          right: 0;
+          width: 93%;
+          margin: 0 auto;
+          bottom: 26.5%;
+        }
+      }
+      nav {
+        position: absolute;
+        z-index: 2;
+        bottom: 63vh;
+        text-align: center;
+        width: 100%;
+        a, .current {
+          font-family: 'Exo', 'Arial Narrow', Arial, sans-serif;
+          font-weight: 900;
+          display: inline-block;
+          padding: 0;
+          line-height: 48px;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+        }
+        a {
+          background-color: black;
+          color: white;
+          transition: all .5s;
+          &:hover {
+            background-color: white;
+            color: black;
+            box-shadow: 0 0 14px 7px rgba(0, 0, 0, 0.5);
+          }
+        }
+        .current {
+          background-color: white;
+          color: black;
+          box-shadow: 0 0 14px 7px rgba(0, 0, 0, 0.5);
+        }
+        p {
+          display: none;
+        }
+      }
+    }
+    #gallery-desktop {
+      figure {
+        &::before {
+          content: 'desktop gallery';
+        }
+        img {
+          bottom: 0;
+          background-image: url(/assets/images/projects/mac-desktop.png);
+          background-position: center 100%;
+          background-repeat: no-repeat;
+          background-size: cover;
+          padding: 21% 3% 46% 3%;
+        }
+        nav {
+          bottom: 62%;
+        }        
+      }
+    }
+    #gallery-mobile {
+      figure {
+        &::before {
+          content: 'mobile gallery';
+        }
+        .device {
+          position: absolute;
+          display: block;
+          bottom: 3vh;
+          z-index: 1;
+          height: 70vh;
+          width: auto;
+          left: 0;
+          right: 0;
+          margin: 0 auto;
+          img {
+            height: inherit;
+            width: auto;
+            bottom: 0;
+            transform: translateY(1.75vh);
+          }
+          &::before {
+            content: '';
+            position: absolute;
+            z-index: 2;
+            width: 100%;
+            height: 73vh;
+            display: block;
+            background-image: url(/assets/images/projects/vz-phone.png);
+            background-position: center 100%;
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+        nav {
+          display: flex;
+          flex-direction: column;
+          bottom: 15vh;
+          top: auto;
+          right: 1%;
+          width: 48px;
+          a, span {
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+  #projects-navigation-top,
+  #projects-navigation-bottom,
+  .back-to-top {
+    display: none;
+  }
+  footer {
+    padding: 16px;
+  }
+}

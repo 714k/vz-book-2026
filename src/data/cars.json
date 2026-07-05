@@ -1,0 +1,47 @@
+{
+  "brief": {
+    "title": "Cars",
+    "year": 2015,
+    "company": "Cars",
+    "industry": "Automotive",
+    "work": "Redesign & Maintenance of the Portal",
+    "technologies": [
+      "Agile",
+      " AngularJS",
+      " <abbr title='Search Engine Optimization'>SEO</abbr>",
+      " <abbr title='Search Engine Marketing'>SEM</abbr>",
+      " Javascript 1.8.5",
+      " Microformats",
+      " Open Graph",
+      " Accessibility",
+      " Responsive Web Design",
+      " <abbr title='HyperText Markup Language'>HTML</abbr> 5",
+      " <abbr title='Cascading Style Sheets'>CSS</abbr> 3",
+      " <abbr title='eXtensible Markup Language'>XML</abbr>",
+      " Atom, Apache NetBeans",
+      " Yeoman, Bower, Grunt",
+      " Git, NPM"
+    ],
+    "status": "Active",
+    "links": [
+      {
+        "href": "https://www.cars.com/",
+        "title": "Visit Website",
+        "text": "Cars"
+      }
+    ]
+  },
+  "galleries": [
+    {
+      "title": "Desktop"
+    },
+    {
+      "title": "Mobile"
+    }
+  ],
+  "projectsNavigation": {
+    "current": "Cars",
+    "next": "American Airlines",
+    "previous": "Seccion Amarilla"
+  }
+}

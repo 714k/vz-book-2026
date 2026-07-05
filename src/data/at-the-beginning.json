@@ -1,0 +1,43 @@
+{
+  "toc": [
+    {
+      "title": "The profile of Victor Zamudio",
+      "href": "profile",
+      "classes": "anchor-class",
+      "prefixText": "01",
+      "sufixText": "",
+      "text": "The Server"
+    },
+    {
+      "title": "The laboral experience of Victor Zamudio",
+      "href": "laboral-experience",
+      "prefixText": "02",
+      "text": "The Navigator"
+    },
+    {
+      "title": "The skills of Victor Zamudio",
+      "href": "skills",
+      "classes": "active",
+      "prefixText": "03",
+      "text": "The Fixer"
+    },
+    {
+      "title": "The HBO Project",
+      "href": "hbo",
+      "prefixText": "04",
+      "text": "HBO"
+    },
+    {
+      "title": "The HBO Max Project",
+      "href": "hbo-max",
+      "prefixText": "05",
+      "text": "HBO Max"
+    },
+    {
+      "title": "The Aeris Project",
+      "href": "aeris",
+      "prefixText": "06",
+      "text": "Aeris"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(timeout 100 npx playwright install chromium 2>&1)",
+      "Bash(rm -f /tmp/claude-1000/-home-tlak-projects-vz-book-2026/317c18f3-84d8-4acb-b344-23fb5446510a/scratchpad/pw-install.log)",
+      "Bash(timeout 45 env DEBUG=pw:install npx playwright install chromium)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(timeout 20 curl -o /tmp/test-chromium.zip -w \"speed:%{speed_download} size:%{size_download} http:%{http_code}\\\\n\" -sSL \"https://playwright.azureedge.net/builds/chromium/1187/chromium-linux.zip\")",
+      "Bash(timeout 20 curl -o /tmp/claude-1000/-home-tlak-projects-vz-book-2026/317c18f3-84d8-4acb-b344-23fb5446510a/scratchpad/test-chromium.zip -w 'speed:%{speed_download} size:%{size_download} http:%{http_code}\\\\n' -sSL https://playwright.azureedge.net/builds/chromium/1187/chromium-linux.zip)",
+      "Bash(curl -v -o /tmp/claude-1000/-home-tlak-projects-vz-book-2026/317c18f3-84d8-4acb-b344-23fb5446510a/scratchpad/test-chromium.zip https://playwright.azureedge.net/builds/chromium/1187/chromium-linux.zip)",
+      "Bash(timeout 60 curl -sS -o /tmp/claude-1000/-home-tlak-projects-vz-book-2026/317c18f3-84d8-4acb-b344-23fb5446510a/scratchpad/test-chromium.zip -w '\\\\nspeed:%{speed_download} size:%{size_download} http:%{http_code} time:%{time_total}\\\\n' https://playwright.azureedge.net/builds/chromium/1187/chromium-linux.zip)"
+    ]
+  }
+}

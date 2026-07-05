@@ -1,0 +1,40 @@
+---
+import Default from '../../../layouts/Default.astro';
+import TOC from '../../../components/TOC.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+import ContactData from '../../../components/ContactData.astro';
+import ContactMessage from '../../../components/ContactMessage.astro';
+import ContactSocialMedia from '../../../components/ContactSocialMedia.astro';
+import norWhereToFindHim from '../../../data/nor-where-to-find-him.json';
+---
+
+<Default
+  title="Nor where to find him."
+  primaryColor="#27a7ef"
+  secondaryColor="#00436a"
+  previousPage="/at-the-beginning/nobody-knows-he-worked-on/query-technologies/"
+  previousTitle="Query Technologies"
+  currentUrl={Astro.url.pathname}
+>
+  <header class="cover">
+    <h1>
+      Nor where to find him.
+    </h1>
+  </header>
+  <TOC data={norWhereToFindHim.toc} />
+
+  <ContactData />
+
+  <BackToTop />
+
+  <ContactMessage />
+
+  <BackToTop />
+
+  <ContactSocialMedia />
+</Default>
+
+<script>
+  import '../../../scripts/validation.js';
+</script>
+

@@ -1,0 +1,27 @@
+---
+import Default from '../../../layouts/Default.astro';
+import TOC from '../../../components/TOC.astro';
+import Ammos from '../../../components/Ammos.astro';
+import theFixer from '../../../data/the-fixer.json';
+---
+
+<Default
+  title="The Fixer"
+  primaryColor="#ff0000"
+  secondaryColor="#5b0000"
+  previousPage="/at-the-beginning/no-one-knows/the-navigator"
+  nextPage="/at-the-beginning/nobody-knows-he-worked-on/"
+  previousTitle="The Navigator"
+  nextTitle="Nobody knows he worked on..."
+  currentUrl={Astro.url.pathname}
+>
+  <header class="cover">
+    <h1>
+      The Fixer
+    </h1>
+  </header>
+  <TOC data={theFixer.toc} />
+
+  <Ammos ammos={theFixer.ammos} toc={theFixer.toc} />
+</Default>
+

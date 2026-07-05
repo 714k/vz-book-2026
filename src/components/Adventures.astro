@@ -1,0 +1,178 @@
+---
+import NavigationLinks from './NavigationLinks.astro';
+import BackToTop from './BackToTop.astro';
+
+interface Adventure {
+  adventureNumber: number;
+  title: string;
+  period: string;
+  company: string;
+  industry: string;
+  role: string;
+  summary: {
+    activities: Array<{
+      title: string;
+      links: Array<{
+        href: string;
+        title: string;
+        text: string;
+      }>;
+    }>;
+    accounts: Array<{
+      title: string;
+      text?: string;
+      links?: Array<{
+        href?: string;
+        title: string;
+        text: string;
+      }>;
+    }>;
+  };
+}
+
+interface Props {
+  adventures: Adventure[];
+  toc: Array<{
+    href: string;
+    title: string;
+    text: string;
+  }>;
+}
+
+const { adventures, toc } = Astro.props;
+---
+
+<div id="adventures">
+  {adventures.map((adventure) => (
+    <section
+      id={`adventure-${adventure.adventureNumber}`}
+      class="adventure view">
+    
+      <h2>{adventure.title}</h2>
+      <span class="decorative pirate-head"></span>
+    
+      <p class="period">
+        <strong>Period</strong><br />
+        <span>{adventure.period}</span>				
+      </p>
+    
+      <p class="company">
+        <strong>Company</strong><br />
+        <span>{adventure.company}</span>				
+      </p>
+    
+      <p class="industry">
+        <strong>Industry</strong><br />
+        <span>{adventure.industry}</span>
+      </p>
+          
+      <p class="role">
+        <strong>Role</strong><br />
+        <span>{adventure.role}</span><br />
+      </p>
+    
+      <div class="summary">
+        <div class="activities">
+          <h3>Activities</h3>
+          {adventure.summary.activities.map((activity) => {
+            const titleContainsHTML = typeof activity.title === 'string' && (activity.title.includes('<') && activity.title.includes('>'));
+            return (
+              <>
+                {titleContainsHTML ? (
+                  <span set:html={activity.title} />
+                ) : (
+                  activity.title
+                )}
+                {' '}(See 
+                {activity.links.map((link, linkIndex) => (
+                  <>
+                    <a 
+                      href={link.href}
+                      title={link.title}
+                      >{link.text}</a>
+                    {linkIndex === activity.links.length - 1 ? '.' : ','}
+                  </>
+                ))}
+              </>
+            );
+          })}
+        </div>
+    
+        <div class="accounts">
+          <h3>Accounts</h3>
+          {adventure.summary.accounts.map((account) => {
+            const accountTextContainsHTML = account.text && typeof account.text === 'string' && (account.text.includes('<') && account.text.includes('>'));
+            return (
+              <span class={account.title.toLowerCase().replace(' & ', ' ')}>
+                <strong>{account.title}: </strong>
+                {!account.links ? (
+                  account.title === 'Administration & Maintenance' ? (
+                    accountTextContainsHTML ? (
+                      <span set:html={account.text} />
+                    ) : (
+                      account.text
+                    )
+                  ) : null
+                ) : (
+                  account.links.map((link, linkIndex) => {
+                    const linkTextContainsHTML = typeof link.text === 'string' && (link.text.includes('<') && link.text.includes('>'));
+                    return (
+                      <>
+                        {link.href ? (
+                          linkTextContainsHTML ? (
+                            <a
+                              href={link.href}
+                              title={link.title}
+                              set:html={link.text}
+                            />
+                          ) : (
+                            <a
+                              href={link.href}
+                              title={link.title}
+                            >{link.text}</a>
+                          )
+                        ) : (
+                          linkTextContainsHTML ? (
+                            <span set:html={link.text} />
+                          ) : (
+                            <span>{link.text}</span>
+                          )
+                        )}
+                        {linkIndex === account.links!.length - 1 ? '.' : ','}
+                      </>
+                    );
+                  })
+                )}
+                <br />
+              </span>
+            );
+          })}
+        </div>
+      </div>
+    
+      <NavigationLinks 
+        classes="sprite adventures-links"
+        links={toc}
+        id={adventure}
+        type="adventure"
+      />
+    
+      <BackToTop />
+    
+      <span class="decorative">
+        <span class="sp sprite sparrow">&nbsp;</span>
+        <span class="sp sprite barco perlaNegra">&nbsp;</span>
+        <span class="sp sprite islaTortuga">&nbsp;</span>
+        <span class="sp sprite luna">&nbsp;</span>
+        <span class="sp sprite nubes nube1">&nbsp;</span>
+        <span class="sp sprite nubes nube2">&nbsp;</span>
+        <span class="sp sprite nubes nube3">&nbsp;</span>
+        <span class="sp sprite aves ave1">&nbsp;</span>
+        <span class="sp sprite aves ave2">&nbsp;</span>
+        <span class="sp sprite aves ave3">&nbsp;</span>
+      </span>
+    
+    </section>
+  ))}
+</div>
+

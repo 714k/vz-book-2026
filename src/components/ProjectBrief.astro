@@ -1,0 +1,127 @@
+---
+import BackToTop from './BackToTop.astro';
+
+interface BriefData {
+  title: string;
+  year: string;
+  company: string;
+  industry: string;
+  work: string;
+  technologies: string | string[];
+  status?: string;
+  links?: Array<{
+    href: string;
+    title: string;
+    text: string;
+  }>;
+  apps?: Array<{
+    href: string;
+    title: string;
+    text: string;
+  }>;
+}
+
+interface Props {
+  data: BriefData;
+}
+
+const { data } = Astro.props;
+---
+
+<section id="brief">
+  <!-- <h2>Brief</h2> -->
+  <div>
+    <p>
+      <strong>Project</strong><br />
+      {(() => {
+        const containsHTML = typeof data.title === 'string' && (data.title.includes('<') && data.title.includes('>'));
+        return containsHTML ? (
+          <em class="title" set:html={data.title} />
+        ) : (
+          <em class="title">{data.title}</em>
+        );
+      })()}
+    </p>
+    
+    <p>
+      <strong>Year</strong><br />
+      <em>{data.year}</em>
+    </p>
+
+    <p>
+      <strong>Company</strong><br />
+      <em>{data.company}</em>
+    </p>
+
+    <p>
+      <strong>Industry</strong><br />
+      <em>{data.industry}</em>
+    </p>
+
+    <p>
+      <strong>Work</strong><br />
+      <em>{data.work}</em>
+    </p>
+
+    <p>
+      <strong>Technologies</strong><br />
+      {(() => {
+        const techString = Array.isArray(data.technologies) 
+          ? data.technologies.join('') 
+          : data.technologies;
+        const containsHTML = typeof techString === 'string' && (techString.includes('<') && techString.includes('>'));
+        return containsHTML ? (
+          <em set:html={techString} />
+        ) : (
+          <em>{techString}</em>
+        );
+      })()}
+    </p>
+
+    {data.status && (
+      <p>
+        <strong>Status</strong><br />  
+        <em class="status">{data.status}</em>
+      </p>
+    )}
+
+    {data.links && (
+      <p>
+        <strong><abbr title="Uniform Resource Locator">URL</abbr>s</strong><br />
+        <em class="url"><span>Visit </span>
+          {data.links.map((link, index) => (
+            <>
+              <a
+                href={link.href}
+                target="_blank"
+                title={`${link.title} (It will be displayed in another window or tab)`}
+              >{link.text}</a>
+              {index === data.links!.length - 1 ? '.' : ','}
+            </>
+          ))}
+        </em><br class="block" /> 
+      </p>
+    )}
+
+    {data.apps && (
+      <p>
+        <strong><abbr title="Applications">Apps</abbr></strong><br />
+        <em class="url last">Download 
+          {data.apps.map((app, index) => (
+            <>
+              <a
+                href={app.href}
+                target="_blank"
+                title={`${app.title} (It will be displayed in another window or tab)`}
+              >{app.text}</a>
+              {index === data.apps!.length - 1 ? '.' : ','}
+            </>
+          ))}
+        </em>
+      </p> 
+    )}
+  </div>
+</section>
+
+<BackToTop />
+

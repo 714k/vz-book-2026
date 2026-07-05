@@ -1,0 +1,35 @@
+---
+interface Props {
+  classes?: string;
+  type?: string;
+  links: Array<{
+    href: string;
+    title: string;
+    text: string;
+  }>;
+  id: {
+    title: string;
+  };
+  gallery?: {
+    title: string;
+  };
+}
+
+const { classes = '', type = '', links, id, gallery } = Astro.props;
+---
+
+<nav class={`navigation-links ${classes}`}>
+  <p class="hide-mobile">Navigate to {type}:</p>
+  {links.map((link) => (
+    link.title !== id.title ? (
+      <a 
+        href={`#${link.href.replace('desktop', gallery ? gallery.title.toLowerCase() : '')}`} 
+        title={link.title}>
+        {link.text}
+      </a>
+    ) : (
+      <span class="current">{link.text}</span>
+    )
+  ))}
+</nav>
+
