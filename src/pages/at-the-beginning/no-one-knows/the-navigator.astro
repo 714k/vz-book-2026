@@ -2,9 +2,9 @@
 import Default from '../../../layouts/Default.astro';
 import TOC from '../../../components/TOC.astro';
 import Adventures from '../../../components/Adventures.astro';
-import { getEntry } from 'astro:content';
+import { getRequiredEntry } from '../../../lib/content';
 
-const theNavigator = (await getEntry('theNavigator', 'data')).data;
+const theNavigator = (await getRequiredEntry('theNavigator', 'data')).data;
 ---
 
 <Default
@@ -18,13 +18,10 @@ const theNavigator = (await getEntry('theNavigator', 'data')).data;
   currentUrl={Astro.url.pathname}
 >
   <header class="cover">
-    <h1>
-      The Navigator
-    </h1>
+    <h1>The Navigator</h1>
   </header>
 
   <TOC data={theNavigator.toc} />
 
   <Adventures adventures={theNavigator.adventures} toc={theNavigator.toc} />
 </Default>
-

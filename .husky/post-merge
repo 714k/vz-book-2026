@@ -1,0 +1,10 @@
+changed_files="$(git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD)"
+
+check_changed() {
+  echo "$changed_files" | grep --quiet "$1"
+}
+
+if check_changed "package-lock.json"; then
+  echo "package-lock.json changed, running npm install"
+  npm install
+fi

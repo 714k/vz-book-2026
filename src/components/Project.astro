@@ -1,7 +1,5 @@
 ---
-import TOC from './TOC.astro';
 import ProjectBrief from './ProjectBrief.astro';
-import ProjectGallery from './ProjectGallery.astro';
 import { getEntry } from 'astro:content';
 
 interface Props {
@@ -11,29 +9,20 @@ interface Props {
 
 const { title, projectName } = Astro.props;
 
-const projectLayoutEntry = await getEntry('projectLayout', 'data');
 const projectEntry = await getEntry('projects', projectName);
 if (!projectEntry) {
   throw new Error(`No project content found for "${projectName}" in the "projects" collection`);
 }
 const project = projectEntry.data;
-const projectData = projectLayoutEntry.data;
-
-let toc = projectData.toc;
-if (project.galleries && project.galleries.length === 1) {
-  toc = projectData.toc.slice(0, 2);
-}
 ---
 
 <header class="cover">
-  {(() => {
-    const containsHTML = typeof title === 'string' && (title.includes('<') && title.includes('>'));
-    return containsHTML ? (
-      <h1 set:html={title} />
-    ) : (
-      <h1>{title}</h1>
-    );
-  })()}
+  {
+    (() => {
+      const containsHTML = typeof title === 'string' && title.includes('<') && title.includes('>');
+      return containsHTML ? <h1 set:html={title} /> : <h1>{title}</h1>;
+    })()
+  }
 </header>
 <!-- <TOC data={toc} /> -->
 
@@ -44,4 +33,3 @@ if (project.galleries && project.galleries.length === 1) {
   galleriesImages={projectData.galleries}
   projectsNavigation={project.projectsNavigation}
 /> -->
-

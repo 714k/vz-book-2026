@@ -2,9 +2,9 @@
 import Default from '../../../layouts/Default.astro';
 import TOC from '../../../components/TOC.astro';
 import ProjectSummary from '../../../components/ProjectSummary.astro';
-import { getEntry } from 'astro:content';
+import { getRequiredEntry } from '../../../lib/content';
 
-const nobodyKnowsHeWorkedOn = (await getEntry('nobodyKnowsHeWorkedOn', 'data')).data;
+const nobodyKnowsHeWorkedOn = (await getRequiredEntry('nobodyKnowsHeWorkedOn', 'data')).data;
 ---
 
 <Default
@@ -18,12 +18,9 @@ const nobodyKnowsHeWorkedOn = (await getEntry('nobodyKnowsHeWorkedOn', 'data')).
   currentUrl={Astro.url.pathname}
 >
   <header class="cover">
-    <h1>
-      Nobody knows he worked on...
-    </h1>
+    <h1>Nobody knows he worked on...</h1>
   </header>
   <TOC data={nobodyKnowsHeWorkedOn.toc} />
 
   <ProjectSummary summaries={nobodyKnowsHeWorkedOn.summaries} />
 </Default>
-

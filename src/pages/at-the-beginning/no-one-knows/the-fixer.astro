@@ -2,9 +2,9 @@
 import Default from '../../../layouts/Default.astro';
 import TOC from '../../../components/TOC.astro';
 import Ammos from '../../../components/Ammos.astro';
-import { getEntry } from 'astro:content';
+import { getRequiredEntry } from '../../../lib/content';
 
-const theFixer = (await getEntry('theFixer', 'data')).data;
+const theFixer = (await getRequiredEntry('theFixer', 'data')).data;
 ---
 
 <Default
@@ -18,12 +18,9 @@ const theFixer = (await getEntry('theFixer', 'data')).data;
   currentUrl={Astro.url.pathname}
 >
   <header class="cover">
-    <h1>
-      The Fixer
-    </h1>
+    <h1>The Fixer</h1>
   </header>
   <TOC data={theFixer.toc} />
 
   <Ammos ammos={theFixer.ammos} toc={theFixer.toc} />
 </Default>
-

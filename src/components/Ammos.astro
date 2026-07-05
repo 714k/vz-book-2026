@@ -6,11 +6,12 @@ interface AmmoData {
   name: string;
   isLibrary?: boolean;
   isFramework?: boolean;
-  [key: string]: any;
+  [key: string]: string | boolean | undefined;
 }
 
 interface Ammo {
   id: string;
+  title: string;
   caption: string;
   data: AmmoData[];
 }
@@ -30,98 +31,93 @@ const getCurrentYear = () => new Date().getFullYear();
 ---
 
 <div id="ammos">
-  {ammos.map((ammo) => {
-    const captionContainsHTML = typeof ammo.caption === 'string' && (ammo.caption.includes('<') && ammo.caption.includes('>'));
-    return (
-      <section id={ammo.id} class="ammo">
-        {captionContainsHTML ? (
-          <h2 set:html={ammo.caption} />
-        ) : (
-          <h2>{ammo.caption}</h2>
-        )}
+  {
+    ammos.map((ammo) => {
+      const captionContainsHTML =
+        typeof ammo.caption === 'string' &&
+        ammo.caption.includes('<') &&
+        ammo.caption.includes('>');
+      return (
+        <section id={ammo.id} class="ammo">
+          {captionContainsHTML ? <h2 set:html={ammo.caption} /> : <h2>{ammo.caption}</h2>}
 
-      <table class="sprite">
-        <thead>
-          <tr>
-            {ammo.data[0] && Object.keys(ammo.data[0]).map((key) => (
-              <th scope="col" class={key}>
-                {key.replace('percentage', '%').replace('decorative', '')}
-              </th>
-            ))}
-          </tr>
-        </thead>
-
-        <tbody>
-          {ammo.data.map((data) => {
-            // Strip HTML tags from name for class name generation
-            const nameForClass = typeof data.name === 'string' 
-              ? data.name.replace(/<[^>]*>/g, '').trim()
-              : String(data.name);
-            const classNames = data.isLibrary 
-              ? `${nameForClass.toLowerCase().replace(/\s+/g, '-')} library`
-              : `${nameForClass.toLowerCase().replace(/\s+/g, '')} framework`;
-            
-            return (
-              <tr class={classNames}>
-                {Object.entries(data).map(([key, value]) => {
-                  let styleValue = '';
-                  let dataType = '';
-                  
-                  if (key === 'percentage') {
-                    styleValue = `--percentage: ${value}`;
-                    dataType = String(value);
-                  } else if (key === 'name' && data.isLibrary) {
-                    styleValue = '--type: library';
-                    dataType = 'library';
-                  } else if (key === 'name' && data.isFramework) {
-                    styleValue = '--type: framework';
-                    dataType = 'framework';
-                  }
-                  
-                  const displayValue = key === 'years' 
-                    ? getCurrentYear() - Number(value)
-                    : String(value).replace('name', 'language');
-                  
-                  // Check if value contains HTML tags
-                  const containsHTML = typeof value === 'string' && (value.includes('<') && value.includes('>'));
-                  const shouldRenderHTML = containsHTML || key === 'decorative';
-
-                  if (shouldRenderHTML) {
-                    return (
-                      <td
-                        class={key}
-                        style={styleValue || undefined}
-                        data-type={dataType}
-                        set:html={String(value)}
-                      />
-                    );
-                  } else {
-                    return (
-                      <td
-                        class={key}
-                        style={styleValue || undefined}
-                        data-type={dataType}
-                      >
-                        {displayValue}
-                      </td>
-                    );
-                  }
-                })}
+          <table class="sprite">
+            <thead>
+              <tr>
+                {ammo.data[0] &&
+                  Object.keys(ammo.data[0]).map((key) => (
+                    <th scope="col" class={key}>
+                      {key.replace('percentage', '%').replace('decorative', '')}
+                    </th>
+                  ))}
               </tr>
-            );
-          })}
-        </tbody>
-      </table>
+            </thead>
 
-      <NavigationLinks 
-        classes="sprite ammo-links"
-        links={toc}
-        id={ammo}
-        type="ammo"
-      />
-      <BackToTop />
-    </section>
-    );
-  })}
+            <tbody>
+              {ammo.data.map((data) => {
+                // Strip HTML tags from name for class name generation
+                const nameForClass =
+                  typeof data.name === 'string'
+                    ? data.name.replace(/<[^>]*>/g, '').trim()
+                    : String(data.name);
+                const classNames = data.isLibrary
+                  ? `${nameForClass.toLowerCase().replace(/\s+/g, '-')} library`
+                  : `${nameForClass.toLowerCase().replace(/\s+/g, '')} framework`;
+
+                return (
+                  <tr class={classNames}>
+                    {Object.entries(data).map(([key, value]) => {
+                      let styleValue = '';
+                      let dataType = '';
+
+                      if (key === 'percentage') {
+                        styleValue = `--percentage: ${value}`;
+                        dataType = String(value);
+                      } else if (key === 'name' && data.isLibrary) {
+                        styleValue = '--type: library';
+                        dataType = 'library';
+                      } else if (key === 'name' && data.isFramework) {
+                        styleValue = '--type: framework';
+                        dataType = 'framework';
+                      }
+
+                      const displayValue =
+                        key === 'years'
+                          ? getCurrentYear() - Number(value)
+                          : String(value).replace('name', 'language');
+
+                      // Check if value contains HTML tags
+                      const containsHTML =
+                        typeof value === 'string' && value.includes('<') && value.includes('>');
+                      const shouldRenderHTML = containsHTML || key === 'decorative';
+
+                      if (shouldRenderHTML) {
+                        return (
+                          <td
+                            class={key}
+                            style={styleValue || undefined}
+                            data-type={dataType}
+                            set:html={String(value)}
+                          />
+                        );
+                      } else {
+                        return (
+                          <td class={key} style={styleValue || undefined} data-type={dataType}>
+                            {displayValue}
+                          </td>
+                        );
+                      }
+                    })}
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+
+          <NavigationLinks classes="sprite ammo-links" links={toc} id={ammo} type="ammo" />
+          <BackToTop />
+        </section>
+      );
+    })
+  }
 </div>
-
