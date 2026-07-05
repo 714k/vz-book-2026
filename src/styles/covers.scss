@@ -12,6 +12,7 @@
     margin: var(--spacing-0) auto var(--spacing-0) auto;
     height: 50vh;
   }
+
   &::after {
     position: relative;
     padding-top: calc(var(--spacing-10) * 2.5);
@@ -24,11 +25,10 @@
     font-size: 14px;
     text-align: center;
     background-color: white;
+
     // background-image: url(/assets/svg/scroll-down.svg);
     background-position: center top;
     background-repeat: no-repeat;
-    mask-image: url(/assets/svg/scroll-down.svg);
-    -webkit-mask-image: url(/assets/svg/scroll-down.svg);
-
+    mask-image: url('/assets/svg/scroll-down.svg');
   }
 }

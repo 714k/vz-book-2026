@@ -1,8 +1,8 @@
-
 @mixin inputForm {
   font-family: 'Auchanted X Space', Arial, Helvetica, sans-serif;
   font-size: 24px;
   width: calc(100% - 16px);
+
   // width: 100%;
   padding: 0 8px;
   height: 48px;
@@ -12,53 +12,67 @@
   background-size: 100% 56px;
   color: white;
   border: none;
+
   // border-left: solid 3px rgba(255, 255, 255, .6);
   &::placeholder {
-    color: #FFFFFF50;
+    color: #ffffff50;
   }
+
   &:focus {
     // background-color: white;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="48" xml:space="preserve"><path fill="%23FFF" fill-opacity="1" stroke="%23FFF" stroke-miterlimit="10" stroke-opacity="1" d="M376.375 40H0V0h384v30z"/></svg>');
     color: var(--color-secondary);
-    outline: none;    
+    outline: none;
   }
+
   &.invalid {
     color: white;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="48" xml:space="preserve"><path fill="red" fill-opacity=".1" stroke="red" stroke-miterlimit="10" stroke-opacity="1" d="M376.375 40H0V0h384v30z"/></svg>');
-  }  
+  }
+
   &:required ~ .invalid {
     display: block;
     color: white;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="48" xml:space="preserve"><path fill="red" fill-opacity=".1" stroke="red" stroke-miterlimit="10" stroke-opacity="1" d="M376.375 40H0V0h384v30z"/></svg>');
-}
-  
+  }
 }
 
 .nor-where-to-find-him #message {
-  background-image: url(/assets/images/contact/message-bg.jpg);
+  background-image: url('/assets/images/contact/message-bg.jpg');
+
   #formMessage {
     margin: 0 16px;
   }
+
   label {
     font-size: 24px;
-    text-shadow: 0 0 10px white, 0 0 10px white;
+    text-shadow:
+      0 0 10px white,
+      0 0 10px white;
+
     a {
       background-color: transparent;
-      text-shadow: 0 0 10px var(--color-primary), 0 0 10px var(--color-primary);
+      text-shadow:
+        0 0 10px var(--color-primary),
+        0 0 10px var(--color-primary);
     }
   }
+
   input {
     font-family: 'Auchanted X Space', Arial, Helvetica, sans-serif;
-    &[type=text],
-    &[type=email],
-    &[type=tel] {
-      @include inputForm();
+
+    &[type='text'],
+    &[type='email'],
+    &[type='tel'] {
+      @include inputForm;
     }
   }
+
   .select {
     position: relative;
     display: block;
     overflow: hidden;
+
     &::after {
       content: '\25BC';
       position: absolute;
@@ -66,60 +80,71 @@
       right: 0;
       padding: 11px;
       color: #ffffff50;
+
       // background-color: #34495e;
-      transition: .25s all ease;
+      transition: 0.25s all ease;
       pointer-events: none;
     }
+
     select {
       // &:invalid {
       //   color: red;
       //   // background-color: red;
       //   // background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="48" xml:space="preserve"><path fill="red" fill-opacity=".1" stroke="red" stroke-miterlimit="10" stroke-opacity="1" d="M376.375 40H0V0h384v30z"/></svg>');
       // }
-      appearance: none;
+
       /* safari */
-      -webkit-appearance: none;
-      outline: none;
+      appearance: none;
       flex: 1;
+
       // background-image: none;
       cursor: pointer;
       width: 100%;
       color: var(--border-color-input);
       outline: none;
-      @include inputForm();
+      @include inputForm;
+
       &::-ms-expand {
         display: none;
       }
+
       &:focus {
         background-color: var(--color-primary);
       }
+
       option {
         background-color: var(--color-secondary);
         color: white;
+
         &:focus {
           background-color: var(--color-primary);
-          box-shadow: 0 0 10px 100px #1882A8 inset;
+          box-shadow: 0 0 10px 100px #1882a8 inset;
         }
       }
     }
   }
+
   textarea {
     color: white;
     height: 80px;
     padding-top: 8px;
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="80" xml:space="preserve"><path fill="%23FFF" fill-opacity="0.1" stroke="%23FFF" stroke-miterlimit="10" stroke-opacity=".6" d="M351.539 79H1V1h382v48.75z"/></svg>');
     background-size: 100% 80px;
-    @include inputForm();
+    @include inputForm;
+
     &.invalid {
       background-size: 100% 105px;
     }
+
     &:focus {
       background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="80" xml:space="preserve"><path fill="%23FFF" stroke="%23FFF" stroke-miterlimit="10" stroke-opacity=".6" d="M351.539 79H1V1h382v48.75z"/></svg>');
     }
   }
+
   .form-input {
     margin-bottom: 36px;
   }
+
   .privacy {
     label {
       // display: grid;
@@ -127,16 +152,17 @@
       // gap: 0.5em;
       // display: flex;
       font-size: 18px;
-      input[type="checkbox"] {
-        /* Add if not using autoprefixer */
-        -webkit-appearance: none;
+
+      input[type='checkbox'] {
         /* Remove most all native input styles */
         appearance: none;
+
         /* For iOS < 15 */
         background-color: var(--form-background);
+
         /* Not removed via appearance */
         margin: 0;
-        color: currentColor;
+        color: currentcolor;
         width: 22px;
         height: 22px;
         border: 1px solid var(--border-color-input);
@@ -146,8 +172,9 @@
         place-content: center;
         float: left;
         margin-right: 12px;
+
         &::before {
-          content: "";
+          content: '';
           width: 12px;
           height: 12px;
           clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
@@ -155,16 +182,20 @@
           transform-origin: bottom left;
           transition: 120ms transform ease-in-out;
           box-shadow: inset 1em 1em var(--color-primary);
+
           /* Windows High Contrast Mode */
           background-color: CanvasText;
         }
+
         &:checked::before {
           transform: scale(1);
         }
+
         &:focus {
           // outline: max(2px, 1px) solid var(--color-primary);
           // outline-offset: max(2px, 1px);
         }
+
         &.invalid {
           color: white;
           background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="384" height="48" xml:space="preserve"><path fill="red" fill-opacity=".1" stroke="red" stroke-miterlimit="10" stroke-opacity="1" d="M376.375 40H0V0h384v30z"/></svg>');
@@ -172,8 +203,10 @@
       }
     }
   }
+
   .buttons {
     margin-top: 24px;
+
     button {
       font-family: 'Auchanted X Space', Arial, Helvetica, sans-serif;
       font-size: 20px;
@@ -188,16 +221,19 @@
       background-size: 100% 45px;
       color: white;
       cursor: pointer;
+
       &:hover {
         background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="40" xml:space="preserve"><path fill-rule="evenodd" clip-rule="evenodd" fill="%2327a7ef" d="M1 1h98v29.909l-8.064 8.114H1V1z"/></svg>');
         color: var(--color-secondary);
       }
     }
   }
+
   .error {
     display: none;
     color: #ff3e5f;
     font-weight: bold;
+
     &.visible {
       display: block;
     }
