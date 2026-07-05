@@ -16,7 +16,13 @@
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "stylelint": "stylelint \"src/**/*.scss\"",
-    "stylelint:fix": "stylelint \"src/**/*.scss\" --fix"
+    "stylelint:fix": "stylelint \"src/**/*.scss\" --fix",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,ts,astro}": "eslint --fix",
+    "*.{js,ts,astro,scss,json,md}": "prettier --write",
+    "*.scss": "stylelint --fix"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.9",
@@ -26,12 +32,16 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.0",
     "@eslint/js": "^10.0.1",
     "astro-eslint-parser": "^1.4.0",
     "eslint": "^10.6.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-astro": "^1.7.0",
     "globals": "^17.7.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
     "prettier": "^3.9.4",
     "prettier-plugin-astro": "^0.14.1",
     "stylelint": "^17.14.0",
