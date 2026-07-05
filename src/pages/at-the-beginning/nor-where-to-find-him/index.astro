@@ -5,9 +5,9 @@ import BackToTop from '../../../components/BackToTop.astro';
 import ContactData from '../../../components/ContactData.astro';
 import ContactMessage from '../../../components/ContactMessage.astro';
 import ContactSocialMedia from '../../../components/ContactSocialMedia.astro';
-import { getEntry } from 'astro:content';
+import { getRequiredEntry } from '../../../lib/content';
 
-const norWhereToFindHim = (await getEntry('norWhereToFindHim', 'data')).data;
+const norWhereToFindHim = (await getRequiredEntry('norWhereToFindHim', 'data')).data;
 ---
 
 <Default
@@ -19,9 +19,7 @@ const norWhereToFindHim = (await getEntry('norWhereToFindHim', 'data')).data;
   currentUrl={Astro.url.pathname}
 >
   <header class="cover">
-    <h1>
-      Nor where to find him.
-    </h1>
+    <h1>Nor where to find him.</h1>
   </header>
   <TOC data={norWhereToFindHim.toc} />
 
@@ -39,4 +37,3 @@ const norWhereToFindHim = (await getEntry('norWhereToFindHim', 'data')).data;
 <script>
   import '../../../scripts/validation.js';
 </script>
-

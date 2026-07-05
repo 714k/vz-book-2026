@@ -1,5 +1,5 @@
 ---
-import { getEntry } from 'astro:content';
+import { getRequiredEntry } from '../lib/content';
 
 interface Props {
   currentUrl?: string;
@@ -7,7 +7,7 @@ interface Props {
 
 const { currentUrl = '' } = Astro.props;
 
-const mainNavigationEntry = await getEntry('mainNavigation', 'data');
+const mainNavigationEntry = await getRequiredEntry('mainNavigation', 'data');
 const mainNavigation = mainNavigationEntry.data;
 ---
 
@@ -17,30 +17,35 @@ const mainNavigation = mainNavigationEntry.data;
 <div class="navigation-wrapper">
   <nav role="navigation" class="main-navigation">
     <ul class="nav">
-      {mainNavigation.map((anchor) => (
-        <li class="nav-item">
-          <a
-            class={currentUrl === anchor.href ? 'current' : ''}
-            data-before={anchor.prefixText}
-            href={anchor.href}
-            title={anchor.title}>
-            {anchor.text}
-          </a>
-          {anchor.subsections && (
-            <ul>
-              {anchor.subsections.map((anchorSubsection) => (
-                <li class="nav-item sub-navigation">
-                  <a
-                    class={currentUrl === anchorSubsection.href ? 'current' : ''}
-                    title={anchorSubsection.title} 
-                    href={anchorSubsection.href}>{anchorSubsection.text}</a>
-                </li>
-              ))}
-            </ul>
-          )}
-        </li>
-      ))}
+      {
+        mainNavigation.map((anchor) => (
+          <li class="nav-item">
+            <a
+              class={currentUrl === anchor.href ? 'current' : ''}
+              data-before={anchor.prefixText}
+              href={anchor.href}
+              title={anchor.title}
+            >
+              {anchor.text}
+            </a>
+            {anchor.subsections && (
+              <ul>
+                {anchor.subsections.map((anchorSubsection) => (
+                  <li class="nav-item sub-navigation">
+                    <a
+                      class={currentUrl === anchorSubsection.href ? 'current' : ''}
+                      title={anchorSubsection.title}
+                      href={anchorSubsection.href}
+                    >
+                      {anchorSubsection.text}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </li>
+        ))
+      }
     </ul>
   </nav>
 </div>
-
