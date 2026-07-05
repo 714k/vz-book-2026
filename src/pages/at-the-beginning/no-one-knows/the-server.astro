@@ -4,7 +4,9 @@ import TOC from '../../../components/TOC.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 import Courses from '../../../components/Courses.astro';
 import { initCharts } from '../../../scripts/charts.js';
-import theServer from '../../../data/the-server.json';
+import { getEntry } from 'astro:content';
+
+const theServer = (await getEntry('theServer', 'data')).data;
 
 const currentYear = new Date().getFullYear();
 const yearsSince2022 = currentYear - 2022;

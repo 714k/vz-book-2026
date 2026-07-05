@@ -2,7 +2,9 @@
 import Default from '../../../layouts/Default.astro';
 import TOC from '../../../components/TOC.astro';
 import ProjectSummary from '../../../components/ProjectSummary.astro';
-import nobodyKnowsHeWorkedOn from '../../../data/nobody-knows-he-worked-on.json';
+import { getEntry } from 'astro:content';
+
+const nobodyKnowsHeWorkedOn = (await getEntry('nobodyKnowsHeWorkedOn', 'data')).data;
 ---
 
 <Default

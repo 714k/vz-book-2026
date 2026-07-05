@@ -1,10 +1,12 @@
 ---
 import Default from '../../layouts/Default.astro';
 import TOC from '../../components/TOC.astro';
-import atTheBeginning from '../../data/at-the-beginning.json';
-import theServer from '../../data/the-server.json';
-import theNavigator from '../../data/the-navigator.json';
-import theFixer from '../../data/the-fixer.json';
+import { getEntry } from 'astro:content';
+
+const atTheBeginning = (await getEntry('atTheBeginning', 'data')).data;
+const theServer = (await getEntry('theServer', 'data')).data;
+const theNavigator = (await getEntry('theNavigator', 'data')).data;
+const theFixer = (await getEntry('theFixer', 'data')).data;
 ---
 
 <Default

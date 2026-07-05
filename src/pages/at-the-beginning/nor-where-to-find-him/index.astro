@@ -5,7 +5,9 @@ import BackToTop from '../../../components/BackToTop.astro';
 import ContactData from '../../../components/ContactData.astro';
 import ContactMessage from '../../../components/ContactMessage.astro';
 import ContactSocialMedia from '../../../components/ContactSocialMedia.astro';
-import norWhereToFindHim from '../../../data/nor-where-to-find-him.json';
+import { getEntry } from 'astro:content';
+
+const norWhereToFindHim = (await getEntry('norWhereToFindHim', 'data')).data;
 ---
 
 <Default

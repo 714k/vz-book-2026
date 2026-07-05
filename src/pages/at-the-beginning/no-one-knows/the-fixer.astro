@@ -2,7 +2,9 @@
 import Default from '../../../layouts/Default.astro';
 import TOC from '../../../components/TOC.astro';
 import Ammos from '../../../components/Ammos.astro';
-import theFixer from '../../../data/the-fixer.json';
+import { getEntry } from 'astro:content';
+
+const theFixer = (await getEntry('theFixer', 'data')).data;
 ---
 
 <Default

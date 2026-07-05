@@ -1,11 +1,14 @@
 ---
-import mainNavigation from '../data/main-navigation.json';
+import { getEntry } from 'astro:content';
 
 interface Props {
   currentUrl?: string;
 }
 
 const { currentUrl = '' } = Astro.props;
+
+const mainNavigationEntry = await getEntry('mainNavigation', 'data');
+const mainNavigation = mainNavigationEntry.data;
 ---
 
 <input type="checkbox" id="menuToggle" />

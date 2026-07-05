@@ -2,7 +2,9 @@
 import Default from '../../../layouts/Default.astro';
 import TOC from '../../../components/TOC.astro';
 import Adventures from '../../../components/Adventures.astro';
-import theNavigator from '../../../data/the-navigator.json';
+import { getEntry } from 'astro:content';
+
+const theNavigator = (await getEntry('theNavigator', 'data')).data;
 ---
 
 <Default

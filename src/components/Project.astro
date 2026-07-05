@@ -2,30 +2,25 @@
 import TOC from './TOC.astro';
 import ProjectBrief from './ProjectBrief.astro';
 import ProjectGallery from './ProjectGallery.astro';
-import projectData from '../data/project.json';
+import { getEntry } from 'astro:content';
 
 interface Props {
   title: string;
   projectName: string;
-  project?: any;
 }
 
-const { title, projectName, project: projectProp } = Astro.props;
+const { title, projectName } = Astro.props;
 
-// Import project data - we'll pass it from the page
-let project = projectProp;
-if (!project) {
-  // Fallback: try to import statically
-  try {
-    const projectModule = await import(`../data/${projectName}.json`);
-    project = projectModule.default;
-  } catch (e) {
-    console.error(`Could not load project data for ${projectName}:`, e);
-  }
+const projectLayoutEntry = await getEntry('projectLayout', 'data');
+const projectEntry = await getEntry('projects', projectName);
+if (!projectEntry) {
+  throw new Error(`No project content found for "${projectName}" in the "projects" collection`);
 }
+const project = projectEntry.data;
+const projectData = projectLayoutEntry.data;
 
 let toc = projectData.toc;
-if (project?.galleries && project.galleries.length === 1) {
+if (project.galleries && project.galleries.length === 1) {
   toc = projectData.toc.slice(0, 2);
 }
 ---
