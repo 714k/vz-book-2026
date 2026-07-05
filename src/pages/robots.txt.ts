@@ -1,14 +1,14 @@
 export function GET() {
   return new Response(
-`User-agent: *
+    `User-agent: *
 Allow: /
 
 Sitemap: https://victorzamudio.dev/sitemap-index.xml
 `,
     {
       headers: {
-        'Content-Type': 'text/plain'
-      }
-    }
+        'Content-Type': 'text/plain',
+      },
+    },
   );
 }

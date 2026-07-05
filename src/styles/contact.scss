@@ -10,21 +10,21 @@
 
 @mixin subTitle {
   font-size: 24px;
-  padding: 18px 16px 37px 16px;
-  background-image: url(/assets/images/contact/contact-data-title-bg.png);
+  padding: 18px 16px 37px;
+  background-image: url('/assets/images/contact/contact-data-title-bg.png');
   background-repeat: no-repeat;
-  margin: 0 0 24px 0;
+  margin: 0 0 24px;
   font-family: 'Spy Agency Laser', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 @mixin bgCover {
-  background-image: url(/assets/images/contact/contact-bg.jpg);
+  background-image: url('/assets/images/contact/contact-bg.jpg');
   background-size: cover;
   background-attachment: fixed;
 }
 
 :root {
-  --border-color-input: #FFFFFF90;
+  --border-color-input: #ffffff90;
 }
 
 .nor-where-to-find-him {
@@ -33,53 +33,64 @@
   padding-bottom: 0;
   font-family: 'Auchanted X Space', Arial, Helvetica, sans-serif;
   color: white;
-  @include bgCover();
+  @include bgCover;
+
   #main {
-     overflow: hidden; 
+    overflow: hidden;
   }
+
   .cover {
     @include cover;
   }
+
   #tableOfContent {
     &::after {
       background-color: white;
       transform: rotate(0deg);
       transition: all 0.5s;
     }
+
     ul {
       opacity: 0;
-        left: auto;
-        max-height: none;  
-        height: calc(100vh - 134px);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        transform: scale(.001) rotate(45deg) translate(170px, -224px);
-        overflow: hidden;
-        @include bgCover();
-        transition: all .25s;
+      left: auto;
+      max-height: none;
+      height: calc(100vh - 134px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      transform: scale(0.001) rotate(45deg) translate(170px, -224px);
+      overflow: hidden;
+      @include bgCover;
+
+      transition: all 0.25s;
+
       a {
         background-color: transparent;
-        font-family: 'Spy Agency Laser', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-family:
+          'Spy Agency Laser', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         font-size: 24px;
         text-shadow: 0 0 20px #00aeff;
-        transition: all .5s;
+        transition: all 0.5s;
+
         &::before {
           content: '{ ';
         }
+
         &::after {
           content: ' }';
         }
+
         &:hover {
           transform: scale(1.5);
           color: white;
           text-shadow: 0 0 20px white;
-          transition: all .5s;
+          transition: all 0.5s;
         }
-        &[href="#social-media"] {
+
+        &[href='#social-media'] {
           line-height: 35px;
-          background-image: url(/assets/images/contact/contact-toc-social-bg.png);
+          background-image: url('/assets/images/contact/contact-toc-social-bg.png');
           background-repeat: no-repeat;
           background-position: center -4px;
           padding: 24px 16px;
@@ -87,45 +98,56 @@
         }
       }
     }
+
     &:hover {
       transition: all 0.5s;
+
       ul {
         opacity: 1;
         transform: scale(1);
       }
+
       &::before {
         background-color: var(--color-primary);
       }
+
       &::after {
         transform: rotate(45deg);
         transition: all 0.5s;
       }
+
       + .close-toc {
         z-index: 5;
       }
     }
+
     + .close-toc {
       z-index: 0;
       bottom: 24px;
+
       &::before {
         bottom: 32px;
         background-color: white;
       }
     }
-  } 
+  }
+
   section {
     padding: var(--spacing-20) 0 16px 0;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
   }
+
   h1 {
     font-family: 'Vermin Vibes', 'Times New Roman', Times, serif;
     text-shadow: 0 0 15px white;
   }
+
   h2 {
-    @include subTitle();
+    @include subTitle;
   }
+
   .back-to-top {
     position: absolute;
     right: 0;
@@ -137,13 +159,15 @@
   padding: 0;
   margin: 0;
   height: 100vh;
-  background-image: url(/assets/images/contact/message-bg.jpg);
+  background-image: url('/assets/images/contact/message-bg.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+
   main {
     margin: 0;
     padding: 0;
+
     #main {
       position: relative;
       top: 0;
@@ -151,14 +175,18 @@
       margin: 0;
       padding: 0;
       height: 100vh;
+
       section {
         padding: 80px 0;
+
         &#message {
           background-image: none;
         }
+
         h2 {
-          @include subTitle();
+          @include subTitle;
         }
+
         .thanks {
           padding: 16px;
           margin-top: 90px;
@@ -169,8 +197,10 @@
       }
     }
   }
+
   .back-link {
     text-align: center;
+
     a:not(.vz-logo) {
       display: inline-block;
       padding: 8px 16px;

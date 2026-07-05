@@ -66,7 +66,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0 0 0 / 0.5);
+  background-color: rgb(0 0 0 / 50%);
   backdrop-filter: blur(5px);
   transition: top 0.5s ease-in-out 0s;
 
@@ -76,22 +76,27 @@
     top: 0%;
     left: 0;
     width: 100%;
+
     ul {
       list-style: none;
       text-align: right;
       width: 100%;
       padding: 0;
-      margin: 100px 0 0px 0;
+      margin: 100px 0 0;
+
       li {
         margin: 2.5rem 0;
         padding: 0.25rem 20px;
+
         ul {
           position: static;
           margin: 0;
           width: 100%;
+
           li {
             padding: 0;
             margin: 0;
+
             a {
               font-family: 'Share Tech Mono', Courier, monospace;
               padding: 0 1rem 0 0;
@@ -100,10 +105,12 @@
               color: var(--color-primary);
               text-shadow: 0 0 8px var(--color-primary);
               background-color: black;
+
               &.current-subnavigation {
                 background-color: white;
                 color: black;
                 text-shadow: 0 0 8px black;
+
                 &::before {
                   content: '> ';
                   font-size: 1.5rem;
@@ -112,18 +119,22 @@
                   color: black;
                   cursor: pointer;
                 }
+
                 &:hover {
                   cursor: default;
+
                   &::before {
                     cursor: default;
                   }
                 }
               }
+
               &:hover {
                 color: white;
                 text-shadow: 0 0 8px white;
                 padding-right: 0.5rem;
                 cursor: pointer;
+
                 &::before {
                   content: '> ';
                   font-size: 1.5rem;
@@ -133,16 +144,18 @@
                   cursor: pointer;
                 }
               }
+
               &::before {
                 content: none;
               }
             }
           }
         }
+
         a {
           text-decoration: none;
-          background-color: rgba(255 255 255 / 0.5);
-          font-family: 'Russo One';
+          background-color: rgb(255 255 255 / 50%);
+          font-family: 'Russo One', sans-serif;
           font-size: 2.5rem;
           font-weight: 500;
           padding: 1rem 0;
@@ -150,6 +163,7 @@
           line-height: 3.5rem;
           text-shadow: 0 0 10px black;
           transition: all 0.3s ease;
+
           &.current {
             background-color: black;
             color: white;
@@ -162,6 +176,7 @@
               color: var(--color-primary);
             }
           }
+
           &::before {
             position: relative;
             margin-left: 0.5rem;
@@ -174,11 +189,13 @@
             text-shadow: none;
             text-transform: uppercase;
           }
+
           &:hover {
             background-color: black;
             color: white;
             text-shadow: 0 0 10px white;
             transition: all 0.3s ease;
+
             &::before {
               line-height: 0;
               color: var(--color-primary);
@@ -206,7 +223,7 @@
   }
 
   85% {
-    transform: rotate(90deg) translateX(0px);
+    transform: rotate(90deg) translateX(0);
     height: 0.6rem;
     opacity: 0.5;
   }
@@ -229,7 +246,7 @@
   }
 
   85% {
-    transform: rotate(-90deg) translateX(0px);
+    transform: rotate(-90deg) translateX(0);
     height: 0.6rem;
   }
 
@@ -238,7 +255,7 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (width >= 768px) {
   .menu-icon {
     transform: scale(2);
   }

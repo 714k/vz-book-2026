@@ -9,7 +9,6 @@ This project was migrated from Jekyll to Astro.js.
 3. Run dev server: `npm run dev`
 4. Build: `npm run build`
 
-
 ## Project Structure
 
 - `src/pages/` - Astro pages (routes)

@@ -45,15 +45,13 @@ body {
   background-color: #0f1012;
   font-size: 20px;
   font-weight: 500;
-  line-height: 24px;
   line-height: 1.2;
   font-family: 'Exo 2 Regular', 'Arial Narrow', Arial, sans-serif;
-  padding: var(--spacing-4);
   padding: 1em;
-  margin: var(--spcaing-0);
+  margin: var(--spacing-0);
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.2;
+
   .vz-logo {
     position: fixed;
     top: 1em;
@@ -61,6 +59,7 @@ body {
     z-index: 200;
     mix-blend-mode: exclusion;
   }
+
   .sr-only {
     position: absolute;
     width: 1px;
@@ -71,6 +70,7 @@ body {
     clip: rect(0, 0, 0, 0);
     border: 0;
   }
+
   a:not(.vz-logo) {
     text-decoration: none;
     padding: 0 4px;
@@ -81,16 +81,17 @@ body {
       background-color: var(--color-primary);
       color: var(--color-secondary);
     }
+
     &.current {
       background-color: var(--color-primary);
       color: var(--color-secondary);
       cursor: default;
       pointer-events: none;
     }
-    &.skip-link:not(:focus):not(:active) {
+
+    &.skip-link:not(:focus, :active) {
       border: 0;
       clip: rect(0 0 0 0);
-      -webkit-clip-path: inset(100%);
       clip-path: inset(100%);
       height: 1px;
       overflow: hidden;
@@ -98,6 +99,7 @@ body {
       position: absolute;
       white-space: nowrap;
       width: 1px;
+
       &:active,
       &:focus {
         left: 0;
@@ -107,6 +109,7 @@ body {
       }
     }
   }
+
   #main-header {
     &::before {
       content: '';
@@ -119,39 +122,49 @@ body {
       backdrop-filter: blur(3px);
     }
   }
+
   #main {
     padding-top: calc(var(--spacing-9) * 2);
   }
+
   section {
     padding-top: var(--spacing-18);
+
     h2 {
       margin-bottom: 4px;
       line-height: 1;
       font-size: 36px;
     }
+
     p {
       margin-top: 6px;
     }
+
     figure {
       margin: 0;
     }
   }
+
   .back-to-top {
     text-align: right;
-    margin: 48px 0 0 0;
+    margin: 48px 0 0;
   }
+
   hr {
     margin: 0;
-    border: dashed 1px rgb(67, 75, 91);
+    border: dashed 1px rgb(67 75 91);
   }
+
   #footer {
     position: relative;
     z-index: 2;
     text-align: center;
     margin-bottom: 80px;
+
     .site-navigation {
       display: grid;
       margin-top: 0;
+
       a {
         display: inline-block;
         padding: 8px 0;
@@ -159,50 +172,62 @@ body {
         background-color: transparent;
         width: auto;
         transition: padding 0.3s;
+
         &.left {
           margin-right: auto;
         }
+
         &.right {
           margin-left: auto;
         }
+
         &:hover {
           padding: 8px 16px;
           background-color: var(--color-primary);
         }
       }
     }
+
     .vz-logo {
       position: static;
       margin-bottom: 12px;
       display: inline-grid;
     }
+
     .sitemap {
-      padding: 24px 0 0 0;
+      padding: 24px 0 0;
       text-align: left;
+
       > strong {
         font-size: 20px;
       }
+
       ul {
         list-style: none;
         padding-left: 0;
       }
     }
+
     .site-navigation {
       text-align: left;
       margin-bottom: 60px;
     }
+
     span {
       display: block;
+
       &.hide {
         display: none;
       }
     }
   }
+
   .hide,
   .hide-mobile {
     display: none;
   }
-  .sr-only:not(:focus):not(:active) {
+
+  .sr-only:not(:focus, :active) {
     clip: rect(0 0 0 0);
     clip-path: inset(50%);
     height: 1px;
@@ -213,15 +238,18 @@ body {
   }
 
   /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
+  @media only screen and (width >= 768px) {
     max-width: 768px;
     font-size: 30px;
+
     .vz-logo {
       width: 2em;
       height: 2em;
     }
+
     .navigation-wrapper .main-navigation ul {
       text-align: right;
+
       li {
         margin-right: 40px;
       }
@@ -229,7 +257,7 @@ body {
   }
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
-  @media only screen and (min-width: 1200px) {
+  @media only screen and (width >= 1200px) {
     max-width: 1920px;
     font-size: 30px;
   }
@@ -247,6 +275,7 @@ body {
 
 .adventure {
   padding-top: 80px;
+
   .period,
   .company,
   .industry,
@@ -255,33 +284,42 @@ body {
   .redesign,
   .administration {
     margin-bottom: 12px;
+
     strong {
       font-size: 24px;
     }
   }
+
   h2 {
     margin-bottom: 12px;
   }
+
   h3 {
     font-size: 28px;
   }
+
   p {
     margin-bottom: 4px;
   }
+
   .summary {
     margin-top: 30px;
+
     h3 {
       margin-bottom: 4px;
     }
+
     .accounts {
       h3 {
         margin-top: 30px;
       }
+
       br {
         margin-bottom: 12px;
       }
     }
   }
+
   .navigation-links {
     display: none;
   }
@@ -292,16 +330,19 @@ body {
     width: 100%;
     border-collapse: collapse;
     text-align: left;
+
     thead {
-      background-color: #ffffff;
+      background-color: #fff;
       color: #0f1012;
       font-style: normal;
       font-weight: 400;
+
       th {
         padding: 4px 0;
         text-indent: 4px;
       }
     }
+
     th,
     td {
       &.type,
@@ -312,10 +353,12 @@ body {
         display: none;
       }
     }
+
     tr:nth-child(even) {
       background-color: #2d3037;
     }
   }
+
   .ammo-links {
     display: none;
   }
@@ -326,28 +369,33 @@ body {
     width: 100%;
     height: auto;
   }
+
   figure {
     position: relative;
+
     a {
       position: absolute;
       bottom: -30px;
       left: 0;
       z-index: 3;
+
       // font-size: 28px;
       padding: 8px 16px;
       background-color: var(--color-primary);
       color: var(--color-secondary);
+
       &:hover {
         background-color: var(--color-secondary);
         color: var(--color-primary);
       }
     }
+
     figcaption {
       position: absolute;
       bottom: 0;
       padding-left: 8px;
       background-color: var(--color-secondary);
-      background-color: rgba(0, 0, 0, 0.85);
+      background-color: rgb(0 0 0 / 85%);
       color: #adb6c5;
       backdrop-filter: opacity(0.4);
     }
@@ -359,15 +407,18 @@ body {
   .gallery {
     padding-top: 80px;
   }
+
   #brief {
     strong {
       // font-size: 24px;
     }
   }
+
   .gallery {
     figure {
       padding-top: 80px;
     }
+
     .navigation-links {
       a {
         display: inline-block;
@@ -383,30 +434,37 @@ body {
   #contact-data {
     font-size: 24px;
     line-height: 1.2;
+
     .name {
       margin-bottom: 40px;
+
       .fn {
         font-size: 30px;
       }
     }
+
     .cards {
       strong {
         display: inline-block;
         margin-bottom: 12px;
         margin-top: 24px;
       }
+
       .v_card {
         display: inline-block;
         margin-bottom: 30px;
       }
     }
   }
+
   #message {
     font-size: 20px;
+
     label {
       display: inline-block;
       margin-bottom: 4px;
     }
+
     .text,
     .number,
     select,
@@ -417,10 +475,12 @@ body {
       text-indent: 8px;
       border: none;
     }
+
     select {
       text-indent: 0;
       padding-left: 8px;
     }
+
     input[type='checkbox'] {
       transform: scale(1.5);
       border: none;
@@ -430,6 +490,7 @@ body {
       width: 16px;
       height: 16px;
     }
+
     button {
       font-size: inherit;
       font-weight: 400;
@@ -440,15 +501,18 @@ body {
       background-color: var(--color-primary);
       color: var(--color-secondary);
     }
+
     .error {
       color: #ef2727;
     }
   }
+
   #social-media {
     h3 {
       font-size: 28px;
       margin-bottom: 0;
     }
+
     .social-network {
       margin-bottom: 60px;
     }

@@ -7,12 +7,13 @@
   h2::after {
     background-position: -1763px -336px;
   }
+
   table {
     height: 768px;
     overflow-x: auto;
     font-family: 'Roboto Mono', 'Courier New', Courier, monospace;
+
     tbody {
-      display: flex;
       flex-direction: column;
       position: relative;
       min-width: 1280px;
@@ -20,14 +21,16 @@
       display: block;
       margin: 0 auto;
       background-size: cover;
-      background-image: url(/assets/images/info/fixer/cms/fixer-cms-bg-section.jpg);
+      background-image: url('/assets/images/info/fixer/cms/fixer-cms-bg-section.jpg');
     }
+
     tr {
       background-image: none;
       display: flex;
       flex-direction: column;
       width: 50px;
       height: 100px;
+
       // margin-bottom: 120px;
       // position: absolute;
       &::before {
@@ -40,8 +43,9 @@
         height: 100px;
         vertical-align: middle;
         background-color: transparent;
-        background-image: url(/assets/svg/fixer/fixer-bg-cms-icon.svg);
+        background-image: url('/assets/svg/fixer/fixer-bg-cms-icon.svg');
       }
+
       &::after {
         content: '';
         position: absolute;
@@ -53,107 +57,126 @@
         background-repeat: no-repeat;
         background-size: cover;
       }
+
       &.joomla {
         &::before {
           top: 24%;
           left: 58%;
         }
+
         &::after {
           top: 24%;
           left: 58%;
-          background-image: url(/assets/svg/fixer/cms-joomla-logo.svg);
+          background-image: url('/assets/svg/fixer/cms-joomla-logo.svg');
         }
       }
+
       &.wordpress {
         &::before {
           top: 14%;
           left: 3%;
         }
+
         &::after {
           top: 14%;
           left: 3%;
-          background-image: url(/assets/svg/fixer/fixer-cms-wordpress-logo.svg);
+          background-image: url('/assets/svg/fixer/fixer-cms-wordpress-logo.svg');
         }
       }
+
       &.orchard {
         &::before {
           top: 30%;
           left: 20%;
         }
+
         &::after {
           top: 30%;
           left: 20%;
-          background-image: url(/assets/svg/fixer/cms-orchard-logo.svg);
+          background-image: url('/assets/svg/fixer/cms-orchard-logo.svg');
         }
       }
+
       &.magento {
         &::before {
           top: 20%;
           left: 80%;
         }
+
         &::after {
           top: 20%;
           left: 80%;
-          background-image: url(/assets/svg/fixer/cms-magento-logo.svg);
+          background-image: url('/assets/svg/fixer/cms-magento-logo.svg');
         }
       }
+
       &.drupal {
         &::before {
           top: 48%;
           left: 10%;
         }
+
         &::after {
           top: 48%;
           left: 10%;
           height: 46px;
-          background-image: url(/assets/svg/fixer/cms-drupal-logo.svg);
+          background-image: url('/assets/svg/fixer/cms-drupal-logo.svg');
         }
       }
+
       &.oscommerce {
         &::before {
           top: 15%;
           left: 28%;
         }
+
         &::after {
           top: 15%;
           left: 28%;
           height: 46px;
-          background-image: url(/assets/svg/fixer/cms-os-commerce-logo.svg);
+          background-image: url('/assets/svg/fixer/cms-os-commerce-logo.svg');
         }
       }
+
       &.opencart {
         &::before {
           top: 41%;
           left: 37%;
         }
+
         &::after {
           top: 41%;
           left: 37%;
-          background-image: url(/assets/svg/fixer/cms-opencart-logo.svg);
+          background-image: url('/assets/svg/fixer/cms-opencart-logo.svg');
         }
       }
+
       &.webbuilder {
         &::before {
           top: 40%;
           left: 88%;
         }
+
         &::after {
           top: 40%;
           left: 88%;
-          background-image: url(/assets/images/info/fixer/cms/semantic-web-builder-logo.png);
+          background-image: url('/assets/images/info/fixer/cms/semantic-web-builder-logo.png');
         }
       }
+
       &.backbase {
         &::before {
           top: 52%;
           left: 52%;
         }
+
         &::after {
           top: 52%;
           left: 52%;
-          background-image: url(/assets/svg/fixer/cms-backbase-logo.svg);
+          background-image: url('/assets/svg/fixer/cms-backbase-logo.svg');
         }
       }
+
       td {
         display: flex;
         align-items: center;
@@ -161,22 +184,11 @@
         margin-bottom: 12px;
         text-transform: uppercase;
         background: #6c0303;
-        background: -webkit-linear-gradient(
-          90deg,
-          rgba(108, 3, 3, 1) 0%,
-          rgba(108, 3, 3, 0) 100%
-        );
-        background: -moz-linear-gradient(
-          90deg,
-          rgba(108, 3, 3, 1) 0%,
-          rgba(108, 3, 3, 0) 100%
-        );
-        background: linear-gradient(
-          90deg,
-          rgba(108, 3, 3, 1) 0%,
-          rgba(108, 3, 3, 0) 100%
-        );
+        background: linear-gradient(90deg, rgb(108 3 3 / 100%) 0%, rgb(108 3 3 / 0%) 100%);
+        background: linear-gradient(90deg, rgb(108 3 3 / 100%) 0%, rgb(108 3 3 / 0%) 100%);
+        background: linear-gradient(90deg, rgb(108 3 3 / 100%) 0%, rgb(108 3 3 / 0%) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#6C0303", endColorstr="#6C0303", GradientType=1);
+
         &::before {
           content: '';
           display: flex;
@@ -185,11 +197,12 @@
           height: 32px;
           margin-right: 12px;
           background-color: white;
-          mask-image: url(/assets/images/info/fixer/type-frameworks-icon.svg);
+          mask-image: url('/assets/images/info/fixer/type-frameworks-icon.svg');
           mask-repeat: no-repeat;
           mask-position: center;
           mask-size: 100%;
         }
+
         &::after {
           // display: block;
           // width: 32px;
@@ -198,11 +211,13 @@
           // left: calc(5% + 12px);
           // border: solid 1px white;
         }
+
         &.name {
           font-weight: 700;
           font-size: 30px;
           text-decoration: line-through;
-          &::afters {
+
+          &::after {
             position: absolute;
             left: 64px;
             content: '';
@@ -212,6 +227,7 @@
             border-bottom: solid 1px white;
           }
         }
+
         &.name,
         &.percentage,
         &.years,
@@ -219,14 +235,17 @@
         &.level {
           display: none;
         }
+
         &.years {
           &::before {
-            mask-image: url(/assets/images/info/fixer/time-frameworks-icon.svg);
+            mask-image: url('/assets/images/info/fixer/time-frameworks-icon.svg');
           }
+
           &::after {
             content: '\00a0years';
           }
         }
+
         &.percentage {
           position: relative;
           padding: 0;
@@ -235,6 +254,7 @@
           padding-top: 40px;
           font-family: 'Reddit Mono', 'Courier New', Courier, monospace;
           font-weight: 100;
+
           &::before {
             width: 100%;
             position: absolute;
@@ -244,6 +264,7 @@
             border: solid 1px white;
             mask-image: none;
           }
+
           &::after {
             content: '';
             display: block;
@@ -253,18 +274,21 @@
             position: absolute;
             top: 4px;
             left: 4px;
-            background-image: url(/assets/svg/fixer/fixer-cms-bullet.svg);
+            background-image: url('/assets/svg/fixer/fixer-cms-bullet.svg');
             background-repeat: repeat-x;
             background-size: auto;
           }
         }
+
         &.use::before {
-          mask-image: url(/assets/images/info/fixer/use-frameworks-icon.svg);
+          mask-image: url('/assets/images/info/fixer/use-frameworks-icon.svg');
         }
+
         &.level::before {
-          mask-image: url(/assets/images/info/fixer/level-frameworks-icon.svg);
+          mask-image: url('/assets/images/info/fixer/level-frameworks-icon.svg');
         }
       }
+
       &:hover {
         position: fixed;
         top: 120px;
@@ -272,6 +296,7 @@
         transform: translate(-50%, 50px);
         z-index: 3;
         width: calc(100vw - 40px);
+
         &::before {
           top: 0;
           left: 0;
@@ -281,15 +306,18 @@
           backdrop-filter: blur(6px);
           z-index: -1;
         }
+
         &::after {
           display: none;
         }
+
         td {
           display: flex;
         }
       }
     }
   }
+
   .back-to-top {
     display: none;
   }
