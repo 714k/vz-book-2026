@@ -5,7 +5,7 @@ async function loadECharts() {
   }
 }
 
-function generateRandomData(startYear, endYear, min = 1, max = 10) {
+export function generateRandomData(startYear, endYear, min = 1, max = 10) {
   const data = [];
   for (let year = startYear; year <= endYear; year++) {
     const value = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -14,7 +14,7 @@ function generateRandomData(startYear, endYear, min = 1, max = 10) {
   return data;
 }
 
-function generateGrowingData(startYear, endYear, startValue = 4, maxStep = 2) {
+export function generateGrowingData(startYear, endYear, startValue = 4, maxStep = 2) {
   const data = [];
   let currentValue = startValue;
 
@@ -26,7 +26,7 @@ function generateGrowingData(startYear, endYear, startValue = 4, maxStep = 2) {
   return data;
 }
 
-function generateYears(start, end) {
+export function generateYears(start, end) {
   const years = [];
   for (let year = start; year <= end; year++) {
     years.push(year);
@@ -99,11 +99,11 @@ export async function initCharts() {
     },
     tooltip: {
       trigger: 'item',
+      ...tooltip,
     },
     legend: {
       show: false,
     },
-    tooltip,
     grid,
     series: [
       {
@@ -167,9 +167,7 @@ export async function initCharts() {
     }
   });
 
-  const coursesByYearChart = echarts.init(
-    document.getElementById('coursesByYearChart')
-  );
+  const coursesByYearChart = echarts.init(document.getElementById('coursesByYearChart'));
   const coursesByYearOptions = {
     title: {
       text: 'Courses By Year',
@@ -260,9 +258,7 @@ export async function initCharts() {
     CTIC: 'CTIC',
   };
 
-  const coursesByAcademyChart = echarts.init(
-    document.getElementById('coursesByAcademyChart')
-  );
+  const coursesByAcademyChart = echarts.init(document.getElementById('coursesByAcademyChart'));
   const coursesByAcademyOptions = {
     title: {
       text: 'Courses By Academy',
@@ -436,4 +432,3 @@ export async function initCharts() {
 
   chartByType.setOption(optionsByType);
 }
-

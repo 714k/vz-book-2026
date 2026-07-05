@@ -21,5 +21,20 @@ export default tseslint.config(
       },
     },
   },
+  {
+    files: ['test/**/*.{js,ts}'],
+    languageOptions: {
+      globals: {
+        ...globals.browser,
+        ...globals.node,
+      },
+    },
+  },
+  {
+    files: ['*.config.{js,ts}'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
   eslintConfigPrettier,
 );

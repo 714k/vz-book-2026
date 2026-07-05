@@ -49,7 +49,7 @@ function checkFormValid() {
   return isValid;
 }
 
-function validateNotNull(element) {
+export function validateNotNull(element) {
   if (!element.value) {
     setError(element, 'can not be empty');
   } else {
@@ -80,8 +80,8 @@ function handleChange(event) {
   }
 }
 
-function validateEmailOnKeyUp(element) {
-  const validEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
+export function validateEmailOnKeyUp(element) {
+  const validEmail = /^[\w-.]+@([\w-]+\.)+[\w-]{2,}$/;
 
   if (element.type === 'email' && !element.value.match(validEmail)) {
     setError(element, 'is not valid');
@@ -90,7 +90,7 @@ function validateEmailOnKeyUp(element) {
   }
 }
 
-function validateSelect(event) {
+export function validateSelect(event) {
   const element = event.target;
 
   if (element.value.trim() === '') {
@@ -108,7 +108,7 @@ function validateCheckbox(element) {
   }
 }
 
-function setError(element, message) {
+export function setError(element, message) {
   let errorContainer = element.nextElementSibling;
 
   if (element.type === 'checkbox') {
@@ -131,7 +131,7 @@ function setError(element, message) {
   element.focus();
 }
 
-function setSuccess(element) {
+export function setSuccess(element) {
   let errorContainer;
 
   if (element.type === 'checkbox') {
@@ -147,4 +147,3 @@ function setSuccess(element) {
   }
   element.classList.remove('invalid');
 }
-
