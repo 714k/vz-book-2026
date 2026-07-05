@@ -157,9 +157,6 @@ const fullImage = image.startsWith('http')
       secondaryColor={secondaryColor}
     />
 
-    {import.meta.env.PROD && (
-      <script src="/my-analytics-script.js"></script>
-    )}
     {scripts && (
       <Fragment set:html={scripts} />
     )}
