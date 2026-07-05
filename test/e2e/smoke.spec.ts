@@ -40,13 +40,24 @@ for (const route of routes) {
     expect(pageErrors, `uncaught page errors on ${route}`).toEqual([]);
   });
 
-  test(`${route} has no critical accessibility violations`, async ({ page }) => {
+  test(`${route} has no critical accessibility violations`, async ({ page }, testInfo) => {
     await page.goto(route);
     await page.waitForLoadState('networkidle');
 
     const results = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa']).analyze();
-    const critical = results.violations.filter((violation) => violation.impact === 'critical');
 
+    // Attach every violation (any severity) as a report, but only fail the
+    // build on 'critical' ones - e.g. per-project accent colors currently
+    // fail 'serious' color-contrast checks, which needs a deliberate design
+    // pass across ~8 projects' brand colors, not a quick code fix.
+    if (results.violations.length) {
+      await testInfo.attach('axe-violations', {
+        body: JSON.stringify(results.violations, null, 2),
+        contentType: 'application/json',
+      });
+    }
+
+    const critical = results.violations.filter((violation) => violation.impact === 'critical');
     expect(critical, JSON.stringify(critical, null, 2)).toEqual([]);
   });
 }
