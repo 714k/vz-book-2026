@@ -1,0 +1,12 @@
+<IfModule mod_headers.c>
+  # script-src/style-src need 'unsafe-inline': Astro inlines one page's
+  # <script type="module"> directly into the HTML (nor-where-to-find-him),
+  # and a few components use inline style="" attributes (Courses.astro
+  # chart containers). Tightening those further means changing how those
+  # are authored, not just adding a header - out of scope here.
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; connect-src 'self'"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set X-Frame-Options "DENY"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
