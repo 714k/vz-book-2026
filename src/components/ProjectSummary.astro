@@ -29,7 +29,11 @@ const { summaries } = Astro.props;
           <img
             id={`${summary.id}-image`}
             src={`/assets/images/projects/${summary.id}-thumb-b.jpg`}
-            alt={`Image of ${typeof summary.title === 'string' ? summary.title.replace(/<[^>]*>/g, '').trim() : summary.title}`}
+            alt={
+              typeof summary.title === 'string'
+                ? summary.title.replace(/<[^>]*>/g, '').trim()
+                : summary.title
+            }
             width="380"
             height="380"
           />

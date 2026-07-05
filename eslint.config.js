@@ -9,6 +9,7 @@ export default tseslint.config(
   eslint.configs.recommended,
   ...tseslint.configs.strict,
   ...eslintPluginAstro.configs['flat/recommended'],
+  ...eslintPluginAstro.configs['flat/jsx-a11y-recommended'],
   {
     ignores: ['dist/**', '.astro/**', 'node_modules/**'],
   },

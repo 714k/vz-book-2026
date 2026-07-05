@@ -16,10 +16,10 @@ const { data } = Astro.props;
 
 <nav id="tableOfContent" role="navigation" class="vz-toc">
   <p>In this section:</p>
-  <ul role="list">
+  <ul>
     {
       data.map((item) => (
-        <li role="listitem">
+        <li>
           <a href={`#${item.href}`} class={item.classes || ''} title={item.title}>
             {item.prefixText && <span class="prefix-text">{item.prefixText} </span>}
 
