@@ -22,6 +22,9 @@
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
+    "sonar:up": "docker compose -f docker-compose.sonar.yml up -d",
+    "sonar:down": "docker compose -f docker-compose.sonar.yml down",
+    "sonar:scan": "docker run --rm --network=vz-book-sonar_default -v \"$(pwd):/usr/src\" -e SONAR_HOST_URL=http://sonarqube:9000 -e SONAR_TOKEN sonarsource/sonar-scanner-cli",
     "prepare": "husky"
   },
   "lint-staged": {
