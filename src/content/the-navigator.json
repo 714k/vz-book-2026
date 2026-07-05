@@ -1,986 +1,984 @@
 {
-  "toc":[
-     {
-        "title": "The current adventure",
-        "href": "adventure-7",
-        "classes": "anchor-class",
-        "prefixText": 7,
-        "sufixText": " ",
-        "separator": "§",
-        "text": "And his current adventure"
-     },
-     {
-        "title": "The sixth adventure",
-        "href": "adventure-6",
-        "classes": "anchor-class",
-        "prefixText": 6,
-        "sufixText": " ",
-        "separator": "§",
-        "text": "And his sixth adventure"
-     },
-     {
-        "title": "The fifth adventure",
-        "href": "adventure-5",
-        "classes": "anchor-class",
-        "prefixText": 5,
-        "sufixText": "",
-        "separator": "§",
-        "text": "And his fifth adventure"
-     },
-     {
-        "title": "The fourth adventure",
-        "href": "adventure-4",
-        "classes": "anchor-class",
-        "prefixText": 4,
-        "sufixText": "",
-        "separator": "§",
-        "text": "And his fourth adventure"
-     },
-     {
-        "title": "The third adventure",
-        "href": "adventure-3",
-        "classes": "anchor-class",
-        "prefixText": 3,
-        "sufixText": "",
-        "separator": "§",
-        "text":"And his third adventure"
-     },
-     {
-        "title": "The second adventure",
-        "href": "adventure-2",
-        "classes": "anchor-class",
-        "prefixText": "2",
-        "sufixText": "",
-        "separator": "§",
-        "text": "And his second adventure"
-     },
-     {
-        "title": "The first adventure",
-        "href": "adventure-1",
-        "classes": "anchor-class",
-        "prefixText": 1,
-        "sufixText": "",
-        "text": "And his first adventure"
-     }
+  "toc": [
+    {
+      "title": "The current adventure",
+      "href": "adventure-7",
+      "classes": "anchor-class",
+      "prefixText": 7,
+      "sufixText": " ",
+      "separator": "§",
+      "text": "And his current adventure"
+    },
+    {
+      "title": "The sixth adventure",
+      "href": "adventure-6",
+      "classes": "anchor-class",
+      "prefixText": 6,
+      "sufixText": " ",
+      "separator": "§",
+      "text": "And his sixth adventure"
+    },
+    {
+      "title": "The fifth adventure",
+      "href": "adventure-5",
+      "classes": "anchor-class",
+      "prefixText": 5,
+      "sufixText": "",
+      "separator": "§",
+      "text": "And his fifth adventure"
+    },
+    {
+      "title": "The fourth adventure",
+      "href": "adventure-4",
+      "classes": "anchor-class",
+      "prefixText": 4,
+      "sufixText": "",
+      "separator": "§",
+      "text": "And his fourth adventure"
+    },
+    {
+      "title": "The third adventure",
+      "href": "adventure-3",
+      "classes": "anchor-class",
+      "prefixText": 3,
+      "sufixText": "",
+      "separator": "§",
+      "text": "And his third adventure"
+    },
+    {
+      "title": "The second adventure",
+      "href": "adventure-2",
+      "classes": "anchor-class",
+      "prefixText": "2",
+      "sufixText": "",
+      "separator": "§",
+      "text": "And his second adventure"
+    },
+    {
+      "title": "The first adventure",
+      "href": "adventure-1",
+      "classes": "anchor-class",
+      "prefixText": 1,
+      "sufixText": "",
+      "text": "And his first adventure"
+    }
   ],
-  "adventures":[
-     {
-        "adventureNumber": 7,
-        "title":"The current adventure",
-        "period": "Sep 2022 -",
-        "company": "Thomson Reuters",
-        "industry": "Legal, Tax and Accounting, and News & Media",
-        "role": "Senior Lead Engineer",
-        "summary": {
-            "activities": [
-               {
-                  "title": "Leading <abbr title='Point Of Delivery - A small group of people to deliver a product'>POD</abbr> of 12 members",
-                  "links": [
-                     {
-                        "title": "See my knowledge about Leadership",
-                        "text": "Leadership",
-                        "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                     }
-                  ]
-               }, 
-               {
-                  "title": "Mentoring Senior Engineers",
-                  "links": [
-                     {
-                        "title": "See my knowledge about Mentoring",
-                        "text": "Mentoring",
-                        "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                     }
-                  ]
-               },
-               {
-                  "title": "Practicing Agile Methodlogy -Kanban & Scrum-",
-                  "links": [
-                     {
-                        "title": "See my knowledge about Agile Methodlogy",
-                        "text": "Agile Methodlogy",
-                        "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                     }
-                  ]
-               },
-               {
-                  "title": "Developing with good practices",
-                  "links": [
-                     {
-                        "title": "See my knowledge about Good Practices & Design Patters",
-                        "text": "Design Patters",
-                        "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                     }
-                  ]
-               },
-               {
-                  "title": "Creating WebApps with Angular, React, and Vue",
-                  "links": [
-                     {
-                        "title": "See my knowledge about Frameworks & Libraries",
-                        "text": "Frameworks & Libraries",
-                        "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                     }
-                  ]
-               },
-               {
-                  "title": "Building Accessible Features",
-                  "links": [
-                     {
-                        "title": "See my knowledge about Accessibility",
-                        "text": "Accessibility",
-                        "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                     }
-                  ]
-               },
-               {
-                  "title": "Creation of Design system for the Company",
-                  "links": [
-                     {
-                        "title": "See my knowledge about Design Systems",
-                        "text": "Design Systems",
-                        "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                     }
-                  ]
-               },
-               {
-                  "title": "Performing Unit, Integration, and e2e Testing",
-                  "links": [
-                     {
-                        "title": "See my knowledge about Software Testing",
-                        "text": "Software Testing",
-                        "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                     }
-                  ]
-               },
-               {
-                  "title": "Supporting the <abbr title='User Experience'>UX</abbr> with fullstack topics",
-                  "links": [
-                     {
-                        "title": "See my knowledge about Fullstack",
-                        "text": "Fullstack",
-                        "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                     }
-                  ]
-               }
-            ],
-            "accounts": [
-               {
-                  "title": "Design",
-                  "text": "",
-                  "links": [
-                     {
-                        "title": "See Project of Saffron",
-                        "text": "Saffron",
-                        "href": "/at-the-beginning/nobody-knows-he-worked-on/saffron"
-                     }
-                  ]
-               },
-               {
-                  "title": "Redesign",
-                  "text": "",
-                  "links": [
-                     {
-                        "title": "See Project of NextGen",
-                        "text": "NextGen",
-                        "href": "/at-the-beginning/nobody-knows-he-worked-on/next-gen"
-                     }                  
-                  ]
-               },
-               {
-                  "title": "Administration & Maintenance",
-                  "text": "All of the above",
-                  "links": [
-                     {
-                        "title": "See Project of One Source",
-                        "text": "One Source",
-                        "href": "/at-the-beginning/nobody-knows-he-worked-on/one-source"
-                     },
-                     {
-                        "title": "See Project of Audit",
-                        "text": "Audit"
-                     },
-                     {
-                        "title": "See Project of Open Banking",
-                        "text": "Open Banking",
-                        "href": "/at-the-beginning/nobody-knows-he-worked-on/open-banking"
-                     },
-                     {
-                        "title": "See Project of Bento",
-                        "text": "Bento",
-                        "href": "/at-the-beginning/nobody-knows-he-worked-on/bento"
-                     }
-                  ]
-               }
+  "adventures": [
+    {
+      "adventureNumber": 7,
+      "title": "The current adventure",
+      "period": "Sep 2022 -",
+      "company": "Thomson Reuters",
+      "industry": "Legal, Tax and Accounting, and News & Media",
+      "role": "Senior Lead Engineer",
+      "summary": {
+        "activities": [
+          {
+            "title": "Leading <abbr title='Point Of Delivery - A small group of people to deliver a product'>POD</abbr> of 12 members",
+            "links": [
+              {
+                "title": "See my knowledge about Leadership",
+                "text": "Leadership",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
             ]
-         }         
-     },
-     {
-        "adventureNumber": 6,
-        "title":"The sixth adventure",
-        "period": "Nov 2015 - Sep 2022",
-        "company": "Globant",
-        "industry": "Technology",
-        "role": "Senior Lead Engineer",
-        "summary": {
-         "activities": [
-            {
-               "title": "Leading <abbr title='Point Of Delivery - A small group of people to deliver a product'>POD</abbr> of 5 members",
-               "links": [
-                  {
-                     "title": "See my knowledge about Leadership",
-                     "text": "Leadership",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                  }
-               ]
-            }, 
-            {
-               "title": "Mentoring Junior, and Semi-Senior Engineers",
-               "links": [
-                  {
-                     "title": "See my knowledge about Mentoring",
-                     "text": "Mentoring",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                  }
-               ]
-            },
-            {
-               "title": "Practicing Agile Methodlogy (Kanban & Scrum)",
-               "links": [
-                  {
-                     "title": "See my knowledge about Agile Methodlogy",
-                     "text": "Agile Methodlogy",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                  }
-               ]
-            },
-            {
-               "title": "Developing with good practices",
-               "links": [
-                  {
-                     "title": "See my knowledge about Good Practices & Design Patters",
-                     "text": "Design Patters",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                  }
-               ]
-            },
-            {
-               "title": "Creating WebApps with React",
-               "links": [
-                  {
-                     "title": "See my knowledge about Frameworks & Libraries",
-                     "text": "Frameworks & Libraries",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                  }
-               ]
-            },
-            {
-               "title": "Performing Unit, and Integration Testing",
-               "links": [
-                  {
-                     "title": "See my knowledge about Software Testing",
-                     "text": "Software Testing",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                  }
-               ]
-            },
-            {
-               "title": "Supporting the product team with <abbr title='User Experience'>UX</abbr> topics",
-               "links": [
-                  {
-                     "title": "See my knowledge about UX",
-                     "text": "UX",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                  }
-               ]
-            },
-            {
-               "title": "Building NPM Packages",
-               "links": [
-                  {
-                     "title": "See my knowledge about NPM Packages",
-                     "text": "NPM Packages",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                  }
-               ]
-            },
-            {
-               "title": "Implementing Microservices",
-               "links": [
-                  {
-                     "title": "See my knowledge about Node, Docker & Kubernetes",
-                     "text": "Node, Docker & Kubernetes",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                  }
-               ]
-            },
-            {
-               "title": "Consuming API services & Databases",
-               "links": [
-                  {
-                     "title": "See my knowledge about MySQL, MongoDB, and GraphQL",
-                     "text": "MySQL, MongoDB, and GraphQL",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                  }
-               ]
-            },
-            {
-               "title": "Creation of Add-Ons for Chrome & Firefox",
-               "links": [
-                  {
-                     "title": "See my knowledge about Browser Extensions",
-                     "text": "Browser Extensions",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
-                  }
-               ]
-            }
-           ],
-           "accounts": [
-            {
-               "title": "Design",
-               "text": "",
-               "links": [
-                  {
-                     "title": "See Project of HBO Max",
-                     "text": "HBO Max",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/hbo-max"
-                  },
-                  {
-                     "title": "See Project of Aeris",
-                     "text": "Aeris",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/aeris"
-                  }
-               ]
-            },
-            {
-               "title": "Redesign",
-               "text": "",
-               "links": [
-                  {
-                     "title": "See Project of Plastiq",
-                     "text": "Plastiq",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/plastiq"
-                  },
-                  {
-                     "title": "See Project of Cars.com",
-                     "text": "Cars",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/cars"
-                  }
-               ]
-            },
-            {
-               "title": "Administration & Maintenance",
-               "text": "All of the above",
-               "links": [
-                  {
-                     "title": "See Project of HBO",
-                     "text": "HBO",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/hbo"
-                  },
-                  {
-                     "title": "See Project of Johnson & Johnson",
-                     "text": "Johnson & Johnson",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/johnson-and-johnson"
-                  },
-                  {
-                     "title": "See Project of American Airlines",
-                     "text": "American Airlines",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/american-airlines"
-                  },
-                  {
-                     "title": "See Project of HipChat",
-                     "text": "HipChat"
-                  },
-                  {
-                     "title": "See Project of Citi Banamex",
-                     "text": "Citi Banamex",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/citi-banamex"
-                  },
-                  {
-                     "title": "See Project of Scotiabank",
-                     "text": "Scotiabank"
-                  },
-                  {
-                     "title": "See Project of Santander",
-                     "text": "Santander"
-                  }
-               ]
-            }
-         ]
-     }
-     },
-     {
-        "adventureNumber": 5,
-        "title":"The fifth adventure",
-        "period": "Sep 2013 - Nov 2015",
-        "company": "Seccion Amarilla",
-        "industry": "Advertising",
-        "role": "Web Designer & Developer Senior",
-        "summary": {
-         "activities": [
-            {
-               "title": "Projects conception, meetings with clients, and Benchmarking",
-               "links": [
-                  {
-                     "title": "See my knowledge about Web Consulting",
-                     "text": "Web Consulting",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "Blueprints, Wireframes, and Prototypes",
-               "links": [
-                  {
-                     "title": "See my knowledge about Information Architecture",
-                     "text": "Information Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "Layouts, semantic and responsive layout, Web Accessibility, microformats, animations and frontend functionalities",
-               "links": [
-                  {
-                     "title": "See my knowledge about Visual Architecture",
-                     "text": "Visual Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "Administration, maintenance and development of plugins and themes for Content Managers. Database and content management. Development and implementation of Web Services",
-               "links": [
-                  {
-                     "title": "See my knowledge about Web Consulting",
-                     "text": "Web Consulting",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },
-            {
-               "title": "Maintenance of Apps (Android, Windows Phone and iOS) and Web Apps",
-               "links": [
-                  {
-                     "title": "See my knowledge about Solutions Architecture",
-                     "text": "Solutions Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },
-            {
-               "title": "Search Engine Optimization",
-               "links": [
-                  {
-                     "title": "See my knowledge about SEO",
-                     "text": "<abbr title='Search Engine Optimization'>SEO</abbr>",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            }
-           ],
-           "accounts": [
-            {
-               "title": "Design",
-               "text": "",
-               "links": [
-                  {
-                     "title": "See the project of Sección Amarilla Blog",
-                     "text": "Sección Amarilla Blog",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/seccion-amarilla"
-                  },
-                  {
-                     "text": "Menumania Blog"
-                  }
-               ]
-            },
-            {
-               "title": "Redesign",
-               "text": "",
-               "links": [
-                  {
-                     "title": "See Project of Sección Amarilla Portal",
-                     "text": "Sección Amarilla Portal",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/seccion-amarilla"
-                  },
-                  {
-                     "text": "Menumania Portal"
-                  },
-                  {
-                     "title": "See Project of De Compras",
-                     "text": "De Compras"
-                  }
-               ]
-            },
-            {
-               "title": "Administration & Maintenance",
-               "text": "All of the above",
-               "links": [
-                  {
-                     "text": "Sanborns"
-                  },
-                  {
-                     "text": "Telmex"
-                  },
-                  {
-                     "text": "Sears"
-                  }
-               ]
-            }
-         ]
-        }
-     },
-     {
-        "adventureNumber": 4,
-        "title":"The fourth adventure",
-        "period": "Jan 2012 - Sep 2013",
-        "company": "EC Global Network",
-        "industry": "Advertising",
-        "role": "Web Designer & Developer Senior",
-        "summary": {
-         "activities": [
-            {
-               "title": "Projects conception, meetings with clients, and Benchmarking",
-               "links": [
-                  {
-                     "title": "See my knowledge about Web Consulting",
-                     "text": "Web Consulting",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "Blueprints, Wireframes, and Prototypes",
-               "links": [
-                  {
-                     "title": "See my knowledge about Information Architecture",
-                     "text": "Information Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "Layouts, Web layout, Banners and interactive",
-               "links": [
-                  {
-                     "title": "See my knowledge about Visual Architecture",
-                     "text": "Visual Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "Administration, maintenance, plugins and themes for Content Managers. Database and content management. Development of Apps and Videogames for multi-devices",
-               "links": [
-                  {
-                     "title": "See my knowledge about Web Consulting",
-                     "text": "Solutions Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },
-            {
-               "title": "Publishing, optimization and social media strategies",
-               "links": [
-                  {
-                     "title": "See my knowledge about Social Media Strategy",
-                     "text": "Social Media Strategy",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            }
-           ],
-           "accounts": [
-            {
-               "title": "Design",
-               "text": "",
-               "links": [
-                  {
-                     "title": "See Project Aventuras Enmascaradas",
-                     "text": "Aventuras Enmascaradas",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/aventuras-enmascaradas"
-                  },
-                  {
-                     "text": "Koomkin"
-                  },
-                  {
-                     "text": "Embajadas Latinoamericanas"
-                  },
-                  {
-                     "title": "See Project Tops & Bottoms",
-                     "text": "Tops & Bottoms",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/tops-and-bottoms"
-                  },
-                  {
-                     "text": "Cantina La Ribera"
-                  }
-               ]
-            },
-            {
-               "title": "Redesign",
-               "text": "",
-               "links": [
-                  {
-                     "title": "See Projects from Hospital Español",
-                     "text": "Hospital Español"
-                  },
-                  {
-                     "title": "See Projects from Club Atletico de Madrid",
-                     "text": "Club Atletico de Madrid"
-                  },
-                  {
-                     "title": "See Projects from Skiny",
-                     "text": "Skiny"
-                  },
-                  {
-                     "title": "See Projects from Cuarto de Maquinas",
-                     "text": "Cuarto de Maquinas"
-                  },
-                  {
-                     "title": "See Projects from Lithopac",
-                     "text": "Lithopac"
-                  },
-                  {
-                     "title": "See Projects from Optima Cotton Wear",
-                     "text": "Optima Cotton Wear",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/optima-cotton-wear"
-                  }
-               ]
-            },
-            {
-               "title": "Administration & Maintenance",
-               "text": "All of the above.",
-               "links": [
-
-               ]
-            }
-         ]
-        }
-     },
-     {
-        "adventureNumber": 3,
-        "title":"The third adventure",
-        "period": "Jun 2009 - Dec 2011",
-        "company": "Infotec",
-        "industry": "Research Center",
-        "role": "Web Designer Senior",
-        "summary": {
-         "activities": [
-            {
-               "title": "Projects conception, meetings with clients, and Benchmarking",
-               "links": [
-                  {
-                     "title": "See my knowledge about Web Consulting",
-                     "text": "Web Consulting",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "Blueprints, Wireframes, and Prototypes",
-               "links": [
-                  {
-                     "title": "See my knowledge about Information Architecture",
-                     "text": "Information Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "Layouts, Web layout, Banners and interactive",
-               "links": [
-                  {
-                     "title": "See my knowledge about Visual Architecture",
-                     "text": "Visual Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "Administration of Content Managers and maintenance of Web Sites and Portals",
-               "links": [
-                  {
-                     "title": "See my knowledge about Web Consulting",
-                     "text": "Solutions Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },
-            {
-               "title": "Standardization of Portals with Priority 1, 2 and 3",
-               "links": [
-                  {
-                     "title": "See my knowledge about Social Media Strategy",
-                     "text": "Social Media Strategy",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            }
-           ],
-           "accounts": [
-            {
-               "title": "Design",
-               "text": "",
-               "links": [
-                  {
-                     "title": "See the project of Rutas de Mexico",
-                     "text": "Rutas de Mexico",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/rutas-de-mexico"
-                  },
-                  {
-                     "text": "El Máscara"
-                  },
-                  {
-                     "text": "<abbr title='Poder Judicial del Distrito Federal'>PJDF</abbr>"
-                  },
-                  {
-                     "title": "See the project of Sonora Government",
-                     "text": "Sonora Government",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/sonora"
-                  },
-                  {
-                     "text": "Tulum Municipality"
-                  },
-                  {
-                     "text": "Cajeme Municipality"
-                  },
-                  {
-                     "text": "Reynosa Municipality"
-                  },
-                  {
-                     "text": "Tourism SMEs"
-                  }
-               ]
-            },
-            {
-               "title": "Redesign",
-               "text": "",
-               "links": [
-                  {
-                     "text": "Employment Portal"
-                  },
-                  {
-                     "text": "<abbr lang='es-mx' title='Centro de Investigación e Innovación en Tecnologías de la Información y Comunicación'>Infotec</abbr>"
-                  },
-                  {
-                     "text": "Labor Observatory"
-                  }
-               ]
-            },
-            {
-               "title": "Administration & Maintenance",
-               "text": "All of the above.",
-               "links": []
-            }
-         ]
-        }
-     },
-     {
-        "adventureNumber": 2,
-        "title":"The second adventure",
-        "period": "Jan 2009 - May 2009",
-        "company": "Cacto Arte e Ideas",
-        "industry": "Advertising",
-        "role": "Web Designer",
-        "summary": {
-         "activities": [
-            {
-               "title": "Projects conception, meetings with clients, and Benchmarking",
-               "links": [
-                  {
-                     "title": "See my knowledge about Web Consulting",
-                     "text": "Web Consulting",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },                          
-            {
-               "title": "Layouts, Web layout, Banners and interactive",
-               "links": [
-                  {
-                     "title": "See my knowledge about Visual Architecture",
-                     "text": "Visual Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "Administration and maintenance of Websites",
-               "links": [
-                  {
-                     "title": "See my knowledge about Web Consulting",
-                     "text": "Solutions Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            }
-           ],
-           "accounts": [
-            {
-               "title": "Design",
-               "text": "",
-               "links": [
-                  {
-                     "title": "See the project of Query Technologies",
-                     "text": "Query Technologies",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/query-technologies"
-                  }
-               ]
-            },
-            {
-               "title": "Redesign",
-               "text": "",
-               "links": [
-                  {
-                     "title": "See the project of Nissan Latinoamérica y El Caribe",
-                     "text": "Nissan Latinoamérica y El Caribe",
-                     "href": "/at-the-beginning/nobody-knows-he-worked-on/nissan-latinoamerica"
-                  },
-                  {
-                     "text": "Nissan México"
-                  }
-               ]
-            },
-            {
-               "title": "Administration & Maintenance",
-               "text": "All of the above.",
-               "links": []
-            }
-         ]
-        }        
-     },
-     {
-        "adventureNumber": 1,
-        "title":"The first adventure",
-        "period": "Jun 2006 - Jan 2009",
-        "company": "Red Enlaces",
-        "industry": "Technology",
-        "role": "Web Designer Junior",
-        "summary": {
-         "activities": [
-            {
-               "title": "Projects conception, meetings with clients, and Benchmarking",
-               "links": [
-                  {
-                     "title": "See my knowledge about Web Consulting",
-                     "text": "Web Consulting",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "Blueprints, Wireframes, and Prototypes",
-               "links": [
-                  {
-                     "title": "See my knowledge about Information Architecture",
-                     "text": "Information Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "Layouts, Web layout, Banners and interactive",
-               "links": [
-                  {
-                     "title": "See my knowledge about Visual Architecture",
-                     "text": "Visual Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },       
-            {
-               "title": "PHP, Javascript and database management functionalities",
-               "links": [
-                  {
-                     "title": "See my knowledge about Solutions Architecture",
-                     "text": "Solutions Architecture",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            },
-            {
-               "title": "Manuales y objetos editoriales",
-               "links": [
-                  {
-                     "title": "See my knowledge about Editorial Design",
-                     "text": "Editorial Design",
-                     "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
-                  }
-               ]
-            }
-           ],
-           "accounts": [
-            {
-               "title": "Design",
-               "text": "",
-               "links": [
-                  {
-                     "text": "Honda Miramontes"
-                  },
-                  {
-                     "text": "Honda Tezontle"
-                  },
-                  {
-                     "text": "Peugeot Dealers"
-                  },
-                  {
-                     "text": "Fial Pedregal"
-                  },
-                  {
-                     "text": "Tulum Municipality"
-                  },
-                  {
-                     "text": "CAMSA Group"
-                  }
-               ]
-            },
-            {
-               "title": "Redesign",
-               "text": "",
-               "links": [
-                  {
-                     "text": "Toyota Universidad"
-                  },
-                  {
-                     "text": "Toyota Guerrero"
-                  },
-                  {
-                     "text": "Centro de Servicio TSM"
-                  },
-                  {
-                     "text": "Ford CAMSA"
-                  },
-                  {
-                     "text": "Lincoln Universidad"
-                  },
-                  {
-                     "text": "Superautos Group"
-                  },
-                  {
-                     "text": "Honda Universidad"
-                  },
-                  {
-                     "text": "Honda Pedregal"
-                  },
-                  {
-                     "text": "Honda Magno"
-                  },
-                  {
-                     "text": "Acura Pedregal"
-                  },
-                  {
-                     "text": "IMBRA Armored"
-                  }
-               ]
-            },
-            {
-               "title": "Administration & Maintenance",
-               "text": "All of the above.",
-               "links": []
-            }
-         ]            
-        }
-     }
+          },
+          {
+            "title": "Mentoring Senior Engineers",
+            "links": [
+              {
+                "title": "See my knowledge about Mentoring",
+                "text": "Mentoring",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Practicing Agile Methodlogy -Kanban & Scrum-",
+            "links": [
+              {
+                "title": "See my knowledge about Agile Methodlogy",
+                "text": "Agile Methodlogy",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Developing with good practices",
+            "links": [
+              {
+                "title": "See my knowledge about Good Practices & Design Patters",
+                "text": "Design Patters",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Creating WebApps with Angular, React, and Vue",
+            "links": [
+              {
+                "title": "See my knowledge about Frameworks & Libraries",
+                "text": "Frameworks & Libraries",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Building Accessible Features",
+            "links": [
+              {
+                "title": "See my knowledge about Accessibility",
+                "text": "Accessibility",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Creation of Design system for the Company",
+            "links": [
+              {
+                "title": "See my knowledge about Design Systems",
+                "text": "Design Systems",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Performing Unit, Integration, and e2e Testing",
+            "links": [
+              {
+                "title": "See my knowledge about Software Testing",
+                "text": "Software Testing",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Supporting the <abbr title='User Experience'>UX</abbr> with fullstack topics",
+            "links": [
+              {
+                "title": "See my knowledge about Fullstack",
+                "text": "Fullstack",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          }
+        ],
+        "accounts": [
+          {
+            "title": "Design",
+            "text": "",
+            "links": [
+              {
+                "title": "See Project of Saffron",
+                "text": "Saffron",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/saffron"
+              }
+            ]
+          },
+          {
+            "title": "Redesign",
+            "text": "",
+            "links": [
+              {
+                "title": "See Project of NextGen",
+                "text": "NextGen",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/next-gen"
+              }
+            ]
+          },
+          {
+            "title": "Administration & Maintenance",
+            "text": "All of the above",
+            "links": [
+              {
+                "title": "See Project of One Source",
+                "text": "One Source",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/one-source"
+              },
+              {
+                "title": "See Project of Audit",
+                "text": "Audit"
+              },
+              {
+                "title": "See Project of Open Banking",
+                "text": "Open Banking",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/open-banking"
+              },
+              {
+                "title": "See Project of Bento",
+                "text": "Bento",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/bento"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "adventureNumber": 6,
+      "title": "The sixth adventure",
+      "period": "Nov 2015 - Sep 2022",
+      "company": "Globant",
+      "industry": "Technology",
+      "role": "Senior Lead Engineer",
+      "summary": {
+        "activities": [
+          {
+            "title": "Leading <abbr title='Point Of Delivery - A small group of people to deliver a product'>POD</abbr> of 5 members",
+            "links": [
+              {
+                "title": "See my knowledge about Leadership",
+                "text": "Leadership",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Mentoring Junior, and Semi-Senior Engineers",
+            "links": [
+              {
+                "title": "See my knowledge about Mentoring",
+                "text": "Mentoring",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Practicing Agile Methodlogy (Kanban & Scrum)",
+            "links": [
+              {
+                "title": "See my knowledge about Agile Methodlogy",
+                "text": "Agile Methodlogy",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Developing with good practices",
+            "links": [
+              {
+                "title": "See my knowledge about Good Practices & Design Patters",
+                "text": "Design Patters",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Creating WebApps with React",
+            "links": [
+              {
+                "title": "See my knowledge about Frameworks & Libraries",
+                "text": "Frameworks & Libraries",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Performing Unit, and Integration Testing",
+            "links": [
+              {
+                "title": "See my knowledge about Software Testing",
+                "text": "Software Testing",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Supporting the product team with <abbr title='User Experience'>UX</abbr> topics",
+            "links": [
+              {
+                "title": "See my knowledge about UX",
+                "text": "UX",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Building NPM Packages",
+            "links": [
+              {
+                "title": "See my knowledge about NPM Packages",
+                "text": "NPM Packages",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Implementing Microservices",
+            "links": [
+              {
+                "title": "See my knowledge about Node, Docker & Kubernetes",
+                "text": "Node, Docker & Kubernetes",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Consuming API services & Databases",
+            "links": [
+              {
+                "title": "See my knowledge about MySQL, MongoDB, and GraphQL",
+                "text": "MySQL, MongoDB, and GraphQL",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          },
+          {
+            "title": "Creation of Add-Ons for Chrome & Firefox",
+            "links": [
+              {
+                "title": "See my knowledge about Browser Extensions",
+                "text": "Browser Extensions",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledge"
+              }
+            ]
+          }
+        ],
+        "accounts": [
+          {
+            "title": "Design",
+            "text": "",
+            "links": [
+              {
+                "title": "See Project of HBO Max",
+                "text": "HBO Max",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/hbo-max"
+              },
+              {
+                "title": "See Project of Aeris",
+                "text": "Aeris",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/aeris"
+              }
+            ]
+          },
+          {
+            "title": "Redesign",
+            "text": "",
+            "links": [
+              {
+                "title": "See Project of Plastiq",
+                "text": "Plastiq",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/plastiq"
+              },
+              {
+                "title": "See Project of Cars.com",
+                "text": "Cars",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/cars"
+              }
+            ]
+          },
+          {
+            "title": "Administration & Maintenance",
+            "text": "All of the above",
+            "links": [
+              {
+                "title": "See Project of HBO",
+                "text": "HBO",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/hbo"
+              },
+              {
+                "title": "See Project of Johnson & Johnson",
+                "text": "Johnson & Johnson",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/johnson-and-johnson"
+              },
+              {
+                "title": "See Project of American Airlines",
+                "text": "American Airlines",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/american-airlines"
+              },
+              {
+                "title": "See Project of HipChat",
+                "text": "HipChat"
+              },
+              {
+                "title": "See Project of Citi Banamex",
+                "text": "Citi Banamex",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/citi-banamex"
+              },
+              {
+                "title": "See Project of Scotiabank",
+                "text": "Scotiabank"
+              },
+              {
+                "title": "See Project of Santander",
+                "text": "Santander"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "adventureNumber": 5,
+      "title": "The fifth adventure",
+      "period": "Sep 2013 - Nov 2015",
+      "company": "Seccion Amarilla",
+      "industry": "Advertising",
+      "role": "Web Designer & Developer Senior",
+      "summary": {
+        "activities": [
+          {
+            "title": "Projects conception, meetings with clients, and Benchmarking",
+            "links": [
+              {
+                "title": "See my knowledge about Web Consulting",
+                "text": "Web Consulting",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Blueprints, Wireframes, and Prototypes",
+            "links": [
+              {
+                "title": "See my knowledge about Information Architecture",
+                "text": "Information Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Layouts, semantic and responsive layout, Web Accessibility, microformats, animations and frontend functionalities",
+            "links": [
+              {
+                "title": "See my knowledge about Visual Architecture",
+                "text": "Visual Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Administration, maintenance and development of plugins and themes for Content Managers. Database and content management. Development and implementation of Web Services",
+            "links": [
+              {
+                "title": "See my knowledge about Web Consulting",
+                "text": "Web Consulting",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Maintenance of Apps (Android, Windows Phone and iOS) and Web Apps",
+            "links": [
+              {
+                "title": "See my knowledge about Solutions Architecture",
+                "text": "Solutions Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Search Engine Optimization",
+            "links": [
+              {
+                "title": "See my knowledge about SEO",
+                "text": "<abbr title='Search Engine Optimization'>SEO</abbr>",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          }
+        ],
+        "accounts": [
+          {
+            "title": "Design",
+            "text": "",
+            "links": [
+              {
+                "title": "See the project of Sección Amarilla Blog",
+                "text": "Sección Amarilla Blog",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/seccion-amarilla"
+              },
+              {
+                "text": "Menumania Blog"
+              }
+            ]
+          },
+          {
+            "title": "Redesign",
+            "text": "",
+            "links": [
+              {
+                "title": "See Project of Sección Amarilla Portal",
+                "text": "Sección Amarilla Portal",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/seccion-amarilla"
+              },
+              {
+                "text": "Menumania Portal"
+              },
+              {
+                "title": "See Project of De Compras",
+                "text": "De Compras"
+              }
+            ]
+          },
+          {
+            "title": "Administration & Maintenance",
+            "text": "All of the above",
+            "links": [
+              {
+                "text": "Sanborns"
+              },
+              {
+                "text": "Telmex"
+              },
+              {
+                "text": "Sears"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "adventureNumber": 4,
+      "title": "The fourth adventure",
+      "period": "Jan 2012 - Sep 2013",
+      "company": "EC Global Network",
+      "industry": "Advertising",
+      "role": "Web Designer & Developer Senior",
+      "summary": {
+        "activities": [
+          {
+            "title": "Projects conception, meetings with clients, and Benchmarking",
+            "links": [
+              {
+                "title": "See my knowledge about Web Consulting",
+                "text": "Web Consulting",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Blueprints, Wireframes, and Prototypes",
+            "links": [
+              {
+                "title": "See my knowledge about Information Architecture",
+                "text": "Information Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Layouts, Web layout, Banners and interactive",
+            "links": [
+              {
+                "title": "See my knowledge about Visual Architecture",
+                "text": "Visual Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Administration, maintenance, plugins and themes for Content Managers. Database and content management. Development of Apps and Videogames for multi-devices",
+            "links": [
+              {
+                "title": "See my knowledge about Web Consulting",
+                "text": "Solutions Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Publishing, optimization and social media strategies",
+            "links": [
+              {
+                "title": "See my knowledge about Social Media Strategy",
+                "text": "Social Media Strategy",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          }
+        ],
+        "accounts": [
+          {
+            "title": "Design",
+            "text": "",
+            "links": [
+              {
+                "title": "See Project Aventuras Enmascaradas",
+                "text": "Aventuras Enmascaradas",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/aventuras-enmascaradas"
+              },
+              {
+                "text": "Koomkin"
+              },
+              {
+                "text": "Embajadas Latinoamericanas"
+              },
+              {
+                "title": "See Project Tops & Bottoms",
+                "text": "Tops & Bottoms",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/tops-and-bottoms"
+              },
+              {
+                "text": "Cantina La Ribera"
+              }
+            ]
+          },
+          {
+            "title": "Redesign",
+            "text": "",
+            "links": [
+              {
+                "title": "See Projects from Hospital Español",
+                "text": "Hospital Español"
+              },
+              {
+                "title": "See Projects from Club Atletico de Madrid",
+                "text": "Club Atletico de Madrid"
+              },
+              {
+                "title": "See Projects from Skiny",
+                "text": "Skiny"
+              },
+              {
+                "title": "See Projects from Cuarto de Maquinas",
+                "text": "Cuarto de Maquinas"
+              },
+              {
+                "title": "See Projects from Lithopac",
+                "text": "Lithopac"
+              },
+              {
+                "title": "See Projects from Optima Cotton Wear",
+                "text": "Optima Cotton Wear",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/optima-cotton-wear"
+              }
+            ]
+          },
+          {
+            "title": "Administration & Maintenance",
+            "text": "All of the above.",
+            "links": []
+          }
+        ]
+      }
+    },
+    {
+      "adventureNumber": 3,
+      "title": "The third adventure",
+      "period": "Jun 2009 - Dec 2011",
+      "company": "Infotec",
+      "industry": "Research Center",
+      "role": "Web Designer Senior",
+      "summary": {
+        "activities": [
+          {
+            "title": "Projects conception, meetings with clients, and Benchmarking",
+            "links": [
+              {
+                "title": "See my knowledge about Web Consulting",
+                "text": "Web Consulting",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Blueprints, Wireframes, and Prototypes",
+            "links": [
+              {
+                "title": "See my knowledge about Information Architecture",
+                "text": "Information Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Layouts, Web layout, Banners and interactive",
+            "links": [
+              {
+                "title": "See my knowledge about Visual Architecture",
+                "text": "Visual Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Administration of Content Managers and maintenance of Web Sites and Portals",
+            "links": [
+              {
+                "title": "See my knowledge about Web Consulting",
+                "text": "Solutions Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Standardization of Portals with Priority 1, 2 and 3",
+            "links": [
+              {
+                "title": "See my knowledge about Social Media Strategy",
+                "text": "Social Media Strategy",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          }
+        ],
+        "accounts": [
+          {
+            "title": "Design",
+            "text": "",
+            "links": [
+              {
+                "title": "See the project of Rutas de Mexico",
+                "text": "Rutas de Mexico",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/rutas-de-mexico"
+              },
+              {
+                "text": "El Máscara"
+              },
+              {
+                "text": "<abbr title='Poder Judicial del Distrito Federal'>PJDF</abbr>"
+              },
+              {
+                "title": "See the project of Sonora Government",
+                "text": "Sonora Government",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/sonora"
+              },
+              {
+                "text": "Tulum Municipality"
+              },
+              {
+                "text": "Cajeme Municipality"
+              },
+              {
+                "text": "Reynosa Municipality"
+              },
+              {
+                "text": "Tourism SMEs"
+              }
+            ]
+          },
+          {
+            "title": "Redesign",
+            "text": "",
+            "links": [
+              {
+                "text": "Employment Portal"
+              },
+              {
+                "text": "<abbr lang='es-mx' title='Centro de Investigación e Innovación en Tecnologías de la Información y Comunicación'>Infotec</abbr>"
+              },
+              {
+                "text": "Labor Observatory"
+              }
+            ]
+          },
+          {
+            "title": "Administration & Maintenance",
+            "text": "All of the above.",
+            "links": []
+          }
+        ]
+      }
+    },
+    {
+      "adventureNumber": 2,
+      "title": "The second adventure",
+      "period": "Jan 2009 - May 2009",
+      "company": "Cacto Arte e Ideas",
+      "industry": "Advertising",
+      "role": "Web Designer",
+      "summary": {
+        "activities": [
+          {
+            "title": "Projects conception, meetings with clients, and Benchmarking",
+            "links": [
+              {
+                "title": "See my knowledge about Web Consulting",
+                "text": "Web Consulting",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Layouts, Web layout, Banners and interactive",
+            "links": [
+              {
+                "title": "See my knowledge about Visual Architecture",
+                "text": "Visual Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Administration and maintenance of Websites",
+            "links": [
+              {
+                "title": "See my knowledge about Web Consulting",
+                "text": "Solutions Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          }
+        ],
+        "accounts": [
+          {
+            "title": "Design",
+            "text": "",
+            "links": [
+              {
+                "title": "See the project of Query Technologies",
+                "text": "Query Technologies",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/query-technologies"
+              }
+            ]
+          },
+          {
+            "title": "Redesign",
+            "text": "",
+            "links": [
+              {
+                "title": "See the project of Nissan Latinoamérica y El Caribe",
+                "text": "Nissan Latinoamérica y El Caribe",
+                "href": "/at-the-beginning/nobody-knows-he-worked-on/nissan-latinoamerica"
+              },
+              {
+                "text": "Nissan México"
+              }
+            ]
+          },
+          {
+            "title": "Administration & Maintenance",
+            "text": "All of the above.",
+            "links": []
+          }
+        ]
+      }
+    },
+    {
+      "adventureNumber": 1,
+      "title": "The first adventure",
+      "period": "Jun 2006 - Jan 2009",
+      "company": "Red Enlaces",
+      "industry": "Technology",
+      "role": "Web Designer Junior",
+      "summary": {
+        "activities": [
+          {
+            "title": "Projects conception, meetings with clients, and Benchmarking",
+            "links": [
+              {
+                "title": "See my knowledge about Web Consulting",
+                "text": "Web Consulting",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Blueprints, Wireframes, and Prototypes",
+            "links": [
+              {
+                "title": "See my knowledge about Information Architecture",
+                "text": "Information Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Layouts, Web layout, Banners and interactive",
+            "links": [
+              {
+                "title": "See my knowledge about Visual Architecture",
+                "text": "Visual Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "PHP, Javascript and database management functionalities",
+            "links": [
+              {
+                "title": "See my knowledge about Solutions Architecture",
+                "text": "Solutions Architecture",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          },
+          {
+            "title": "Manuales y objetos editoriales",
+            "links": [
+              {
+                "title": "See my knowledge about Editorial Design",
+                "text": "Editorial Design",
+                "href": "/at-the-beginning/no-one-knows/the-fixer#knowledges"
+              }
+            ]
+          }
+        ],
+        "accounts": [
+          {
+            "title": "Design",
+            "text": "",
+            "links": [
+              {
+                "text": "Honda Miramontes"
+              },
+              {
+                "text": "Honda Tezontle"
+              },
+              {
+                "text": "Peugeot Dealers"
+              },
+              {
+                "text": "Fial Pedregal"
+              },
+              {
+                "text": "Tulum Municipality"
+              },
+              {
+                "text": "CAMSA Group"
+              }
+            ]
+          },
+          {
+            "title": "Redesign",
+            "text": "",
+            "links": [
+              {
+                "text": "Toyota Universidad"
+              },
+              {
+                "text": "Toyota Guerrero"
+              },
+              {
+                "text": "Centro de Servicio TSM"
+              },
+              {
+                "text": "Ford CAMSA"
+              },
+              {
+                "text": "Lincoln Universidad"
+              },
+              {
+                "text": "Superautos Group"
+              },
+              {
+                "text": "Honda Universidad"
+              },
+              {
+                "text": "Honda Pedregal"
+              },
+              {
+                "text": "Honda Magno"
+              },
+              {
+                "text": "Acura Pedregal"
+              },
+              {
+                "text": "IMBRA Armored"
+              }
+            ]
+          },
+          {
+            "title": "Administration & Maintenance",
+            "text": "All of the above.",
+            "links": []
+          }
+        ]
+      }
+    }
   ],
   "coverline": "I'm an old sea wolf who has sailed the seven seas..."
 }

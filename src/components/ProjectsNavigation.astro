@@ -12,52 +12,46 @@ const classTopOrBottom = isBottom ? 'bottom' : 'top';
 ---
 
 <div id={`projects-navigation-${classTopOrBottom}`}>
-  {previous && (
-    <>
-      <span class="left-angle-qoute">
-        &laquo;
-      </span>&nbsp;
-      
+  {
+    previous && (
+      <>
+        <span class="left-angle-qoute">&laquo;</span>&nbsp;
+        <span>
+          <em>Previous project: </em>
+          <a
+            class={`previous ${previousKebab}`}
+            href={`/at-the-beginning/nobody-knows-he-worked-on/${previousKebab}`}
+            title={`Presentation of ${previous} project`}
+          >
+            <span class="icon-wrap" />
+            <span class="info-wrap">
+              <strong>{previous}</strong>
+            </span>
+          </a>
+        </span>
+      </>
+    )
+  }
+
+  {previous && next && <span>&nbsp;|&nbsp;</span>}
+
+  {
+    next && (
       <span>
-        <em>Previous project: </em>
-        <a 
-          class={`previous ${previousKebab}`}
-          href={`/at-the-beginning/nobody-knows-he-worked-on/${previousKebab}`}
-          title={`Presentation of ${previous} project`}>
-          <span class="icon-wrap"></span>
+        <em>Next project: </em>
+        <a
+          class={`next ${nextKebab}`}
+          href={`/at-the-beginning/nobody-knows-he-worked-on/${nextKebab}`}
+          title={`Presentation of ${next} project`}
+        >
+          <span class="icon-wrap" />
           <span class="info-wrap">
-            <strong>
-              {previous}
-            </strong>
+            <strong>{next}</strong>
           </span>
         </a>
+        &nbsp;
+        <span class="left-angle-qoute">&raquo;</span>
       </span>
-    </>
-  )}
-  
-  {previous && next && (
-    <span>&nbsp;|&nbsp;</span>
-  )}
-
-  {next && (
-    <span>
-      <em>Next project: </em>
-      <a 
-        class={`next ${nextKebab}`}
-        href={`/at-the-beginning/nobody-knows-he-worked-on/${nextKebab}`}
-        title={`Presentation of ${next} project`}>
-        <span class="icon-wrap"></span>
-        <span class="info-wrap">
-          <strong>
-            {next}
-          </strong>
-        </span>
-      </a>&nbsp;
-      <span 
-        class="left-angle-qoute">
-        &raquo;
-      </span>
-    </span>
-  )}
+    )
+  }
 </div>
-

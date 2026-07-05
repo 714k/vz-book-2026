@@ -1,232 +1,232 @@
 [
   {
-     "title":"Home",
-     "href":"/at-the-beginning/",
-     "prefixText":" \"+ [001] HOME +\"",
-     "text":"At the beginning..."
+    "title": "Home",
+    "href": "/at-the-beginning/",
+    "prefixText": " \"+ [001] HOME +\"",
+    "text": "At the beginning..."
   },
   {
-     "title":"Info",
-     "href":"/at-the-beginning/no-one-knows/",
-     "classes":"sub-navigation",
-     "prefixText":" \"+ [002] INFO +\"",
-     "text":"No one knows...",
-     "subsections": [
+    "title": "Info",
+    "href": "/at-the-beginning/no-one-knows/",
+    "classes": "sub-navigation",
+    "prefixText": " \"+ [002] INFO +\"",
+    "text": "No one knows...",
+    "subsections": [
       {
-        "title":"The Profile",
-        "href":"/at-the-beginning/no-one-knows/the-server/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"The Server"
+        "title": "The Profile",
+        "href": "/at-the-beginning/no-one-knows/the-server/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "The Server"
       },
       {
-        "title":"The Work Experience",
-        "href":"/at-the-beginning/no-one-knows/the-navigator/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"The Navigator"
+        "title": "The Work Experience",
+        "href": "/at-the-beginning/no-one-knows/the-navigator/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "The Navigator"
       },
       {
-        "title":"The Skills",
-        "href":"/at-the-beginning/no-one-knows/the-fixer/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"The Fixer"
+        "title": "The Skills",
+        "href": "/at-the-beginning/no-one-knows/the-fixer/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "The Fixer"
       }
     ]
   },
   {
-     "title":"Projects",
-     "href":"/at-the-beginning/nobody-knows-he-worked-on/",
-     "classes":"sub-navigation",
-     "prefixText":" \"+ [003] PROJECTS +\"",
-     "text":"Nobody knows he worked on...",
-     "subsections": [
+    "title": "Projects",
+    "href": "/at-the-beginning/nobody-knows-he-worked-on/",
+    "classes": "sub-navigation",
+    "prefixText": " \"+ [003] PROJECTS +\"",
+    "text": "Nobody knows he worked on...",
+    "subsections": [
       {
-        "title":"See the One Source project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/one-source/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"One Source"
+        "title": "See the One Source project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/one-source/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "One Source"
       },
       {
-        "title":"See the Saffron project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/saffron/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Saffron"
+        "title": "See the Saffron project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/saffron/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Saffron"
       },
       {
-        "title":"See the NextGen project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/next-gen/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"NextGen"
+        "title": "See the NextGen project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/next-gen/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "NextGen"
       },
       {
-        "title":"See the Plastiq project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/plastiq/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Plastiq"
+        "title": "See the Plastiq project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/plastiq/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Plastiq"
       },
       {
-        "title":"See the HBO MAX project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/hbo-max/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"HBO MAX"
+        "title": "See the HBO MAX project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/hbo-max/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "HBO MAX"
       },
       {
-        "title":"See the HBO project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/hbo/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"HBO"
+        "title": "See the HBO project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/hbo/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "HBO"
       },
       {
-        "title":"See the Aeris project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/aeris/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Aeris"
+        "title": "See the Aeris project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/aeris/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Aeris"
       },
       {
-        "title":"See the Citi Banamex project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/citi-banamex/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Citi Banamex"
+        "title": "See the Citi Banamex project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/citi-banamex/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Citi Banamex"
       },
       {
-        "title":"See the Johnson & Johnson project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/johnson-and-johnson/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Johnson & Johnson"
+        "title": "See the Johnson & Johnson project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/johnson-and-johnson/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Johnson & Johnson"
       },
       {
-        "title":"See the American Airlines project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/american-airlines/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"American Airlines"
+        "title": "See the American Airlines project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/american-airlines/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "American Airlines"
       },
       {
-        "title":"See the Cars project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/cars/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Cars"
+        "title": "See the Cars project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/cars/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Cars"
       },
       {
-        "title":"See the Seccion Amarilla project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/seccion-amarilla/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Seccion Amarilla"
+        "title": "See the Seccion Amarilla project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/seccion-amarilla/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Seccion Amarilla"
       },
       {
-        "title":"See the CMLL project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/cmll/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"CMLL"
+        "title": "See the CMLL project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/cmll/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "CMLL"
       },
       {
-        "title":"See the Aventuras Enmascaradas project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/aventuras-enmascaradas/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Aventuras Enmascaradas"
+        "title": "See the Aventuras Enmascaradas project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/aventuras-enmascaradas/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Aventuras Enmascaradas"
       },
       {
-        "title":"See the Club Atletico de Madrid project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/club-atletico-de-madrid/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Club Atletico de Madrid"
+        "title": "See the Club Atletico de Madrid project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/club-atletico-de-madrid/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Club Atletico de Madrid"
       },
       {
-        "title":"See the Skiny project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/skiny/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Skiny"
+        "title": "See the Skiny project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/skiny/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Skiny"
       },
       {
-        "title":"See the Tops & Bottoms project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/tops-and-bottoms/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Tops & Bottoms"
+        "title": "See the Tops & Bottoms project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/tops-and-bottoms/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Tops & Bottoms"
       },
       {
-        "title":"See the Optima Cotton Wear project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/optima-cotton-wear/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Optima Cotton Wear"
+        "title": "See the Optima Cotton Wear project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/optima-cotton-wear/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Optima Cotton Wear"
       },
       {
-        "title":"See the Rutas de Mexico project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/rutas-de-mexico/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Rutas de Mexico"
+        "title": "See the Rutas de Mexico project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/rutas-de-mexico/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Rutas de Mexico"
       },
       {
-        "title":"See the Sonora project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/sonora/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Sonora"
+        "title": "See the Sonora project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/sonora/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Sonora"
       },
       {
-        "title":"See the Nissan Latinoamerica project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/nissan-latinoamerica/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Nissan Latinoamerica"
+        "title": "See the Nissan Latinoamerica project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/nissan-latinoamerica/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Nissan Latinoamerica"
       },
       {
-        "title":"See the Query Technologies project",
-        "href":"/at-the-beginning/nobody-knows-he-worked-on/query-technologies/",
-        "classes":"",
-        "prefixText":"",
-        "sufixText":"",
-        "text":"Query Technologies"
+        "title": "See the Query Technologies project",
+        "href": "/at-the-beginning/nobody-knows-he-worked-on/query-technologies/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "Query Technologies"
       }
-     ]
+    ]
   },
   {
-    "title":"Contact",
-    "href":"/at-the-beginning/nor-where-to-find-him/",
-    "prefixText":" \"+ [004] CONTACT +\"",
-    "text":"Nor where to find him."
- }
+    "title": "Contact",
+    "href": "/at-the-beginning/nor-where-to-find-him/",
+    "prefixText": " \"+ [004] CONTACT +\"",
+    "text": "Nor where to find him."
+  }
 ]

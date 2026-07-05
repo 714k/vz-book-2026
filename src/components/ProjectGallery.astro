@@ -29,36 +29,37 @@ const links = galleriesImages[0]?.links || [];
 ---
 
 <section id="gallery">
-  {galleries.map((gallery) => (
-    <div id={`gallery-${gallery.title.toLowerCase()}`} class="gallery">
-      <h2>{gallery.title} Gallery</h2>
-      {links.map((link) => {
-        const projectSlug = projectsNavigation.current.split(' ').join('-').toLowerCase();
-        return (
-          <figure id={`image-${gallery.title.toLowerCase()}-${link.text}`}>
-            <span class="decorative device">
-              <img
-                src={`/assets/images/projects/${projectSlug}-${gallery.title.toLowerCase()}-${link.text}.jpg`}
-                alt={`Gallery ${gallery.title} image #${link.text}`}
-                width="100%"
-                height="auto"
+  {
+    galleries.map((gallery) => (
+      <div id={`gallery-${gallery.title.toLowerCase()}`} class="gallery">
+        <h2>{gallery.title} Gallery</h2>
+        {links.map((link) => {
+          const projectSlug = projectsNavigation.current.split(' ').join('-').toLowerCase();
+          return (
+            <figure id={`image-${gallery.title.toLowerCase()}-${link.text}`}>
+              <span class="decorative device">
+                <img
+                  src={`/assets/images/projects/${projectSlug}-${gallery.title.toLowerCase()}-${link.text}.jpg`}
+                  alt={`Gallery ${gallery.title} image #${link.text}`}
+                  width="100%"
+                  height="auto"
+                />
+              </span>
+              <br />
+
+              <NavigationLinks
+                classes="images-links"
+                links={links}
+                id={link}
+                type="image"
+                gallery={gallery}
               />
-            </span>
-            <br />
+            </figure>
+          );
+        })}
 
-            <NavigationLinks
-              classes="images-links"
-              links={links}
-              id={link}
-              type="image"
-              gallery={gallery}
-            />
-          </figure>
-        );
-      })}
-
-      <BackToTop />
-    </div>
-  ))}
+        <BackToTop />
+      </div>
+    ))
+  }
 </section>
-

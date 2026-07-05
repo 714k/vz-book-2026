@@ -183,9 +183,7 @@
       "title": "One Source",
       "year": 2023,
       "industry": "Legal; Tax and Accounting; and News & Media",
-      "technologies": [
-        " Design System..."
-      ],
+      "technologies": [" Design System..."],
       "classes": "mobile",
       "link": {
         "href": "one-source",
@@ -203,9 +201,7 @@
       "title": "Saffron",
       "year": "2022 -",
       "industry": "Legal; Tax and Accounting; and News & Media",
-      "technologies": [
-        " Design System..."
-      ],
+      "technologies": [" Design System..."],
       "classes": "mobile",
       "link": {
         "href": "saffron",
@@ -223,10 +219,7 @@
       "title": "NextGen",
       "year": 2022,
       "industry": "Legal; Tax and Accounting; and News & Media",
-      "technologies": [
-        " Leadership",
-        ", Accessibility..."
-      ],
+      "technologies": [" Leadership", ", Accessibility..."],
       "classes": "mobile",
       "link": {
         "href": "next-gen",
@@ -268,12 +261,7 @@
       "title": "<abbr title='Home Box Office'>HBO</abbr> Max",
       "year": 2020,
       "industry": "Entertainment",
-      "technologies": [
-        " ReacjJS",
-        ", NextJS",
-        ", Microservices",
-        ", Design System..."
-      ],
+      "technologies": [" ReacjJS", ", NextJS", ", Microservices", ", Design System..."],
       "classes": "mobile",
       "link": {
         "href": "hbo-max",
@@ -341,12 +329,7 @@
       "title": "Citi Banamex",
       "year": 2017,
       "industry": "Financial Services",
-      "technologies": [
-        "Agile Development",
-        ", AngularJS",
-        ", Java",
-        ", Jasmine..."
-      ],
+      "technologies": ["Agile Development", ", AngularJS", ", Java", ", Jasmine..."],
       "classes": "mobile",
       "link": {
         "href": "citi-banamex",
@@ -364,12 +347,7 @@
       "title": "Johnson & Johnson",
       "year": 2017,
       "industry": "Healthcare Products",
-      "technologies": [
-        " AngularJS",
-        ", Accessibility",
-        ", Symfony",
-        ", Unit Testing ..."
-      ],
+      "technologies": [" AngularJS", ", Accessibility", ", Symfony", ", Unit Testing ..."],
       "classes": "mobile",
       "link": {
         "href": "johnson-and-johnson",

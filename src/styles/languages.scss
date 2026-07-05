@@ -15,7 +15,10 @@ $retro_color: #ff8400;
 
 @mixin retroColor {
   color: $retro_color;
-  text-shadow: 0 0 20px #ff8400, 0 0 5px #ff8400, 0 0 10px #ff8400;
+  text-shadow:
+    0 0 20px #ff8400,
+    0 0 5px #ff8400,
+    0 0 10px #ff8400;
 }
 
 @mixin repeater($item, $count) {
@@ -23,40 +26,50 @@ $retro_color: #ff8400;
   @for $i from 1 through $count {
     $string: $string + $item;
   }
+
   content: $string;
 }
 
 #languages {
-  background-image: url(/assets/images/info/fixer/fixer-languages-mobile.jpg);
+  background-image: url('/assets/images/info/fixer/fixer-languages-mobile.jpg');
   background-position: top center;
   background-size: cover;
   font-family: 'Cascadia Mono', monospace;
+
   h2::after {
     background-position: -1763px -84px;
   }
+
   table {
     margin: 20px;
     width: 100%;
-    @include retroColor();
+    @include retroColor;
+
     &::before {
       content: 'VMware ESX Server 3 Kernel 2.21-3.Elvmnix on an i686 Last login: Mon Sep 3 10:53 on ttypes 714k:~ tlak alias Lang="cd ~/Depurador/Lenguajes/" 714k:~ tlak try to brute-force valid credentials for Lang tlakuilo:~ tlak show --all Lang ๏[ ≖‿•ิ ] ✌';
-      @include retroColor();
+      @include retroColor;
+
       font-size: 13px;
       display: inline-block;
       margin: 40px 50px 60px 0;
     }
+
     thead {
       display: block;
+
       tr {
         display: none;
         background-image: none;
+
         &:first-child {
           display: block;
           width: calc(100% - 40px);
         }
+
         &::before,
         &::after {
           @include repeater('=', 100);
+
           text-align: center;
           display: block;
           width: 100%;
@@ -64,84 +77,104 @@ $retro_color: #ff8400;
           overflow: hidden;
           color: $retro_color;
         }
+
         th {
-          @include columns();
-          @include retroColor();
+          @include columns;
+          @include retroColor;
+
           padding: 4px 0;
+
           &.type,
           &.use,
           &.level {
             display: none;
           }
+
           &.name {
             width: 52%;
           }
+
           &.years {
             width: 17%;
           }
+
           &.percentage {
             width: 10%;
           }
         }
       }
     }
+
     tbody {
       width: 100%;
       font-size: 18px;
       display: block;
+
       &::after {
         @include repeater('-', 100);
+
         text-align: center;
         display: block;
         width: calc(100% - 40px);
         white-space: nowrap;
         overflow: hidden;
       }
+
       tr {
         display: block;
         background-image: none;
         position: relative;
+
         td {
-          @include columns();
+          @include columns;
+
           &::before {
             content: '|';
           }
+
           &.type,
           &.use,
           &.level {
             display: none;
           }
+
           &.name {
             width: 47%;
           }
+
           &.years {
             width: 15%;
           }
+
           &.percentage {
             width: 19%;
           }
         }
+
         &:hover {
           position: sticky;
           top: 0;
           left: 0;
           width: calc(100% - 40px);
-          margin: 0 0 20px 0;
+          margin: 0 0 20px;
+
           // padding-left: 20px;
-          background-color: transparent;
           background-position: center;
           background-size: cover;
           background-attachment: fixed;
           background-color: #ff840020;
+
           &::before,
           &::after {
             display: block;
             width: calc(100vw - 40px);
             @include repeater('=', 100);
+
             // transform: translateX(-20px);
             overflow: hidden;
             white-space: nowrap;
           }
+
           td {
             &.name,
             &.type,
@@ -153,16 +186,16 @@ $retro_color: #ff8400;
               display: block;
               font-size: 30px;
               width: calc(100% - 20px);
-              margin: 0px 0px 20px 0;
+              margin: 0 0 20px;
               word-break: break-word;
               overflow-wrap: break-word;
               line-height: 1;
-              color: $retro_color;
               text-shadow: none;
               background-color: $retro_color;
               color: black;
               padding: 40px 12px 8px 10px;
-              border-radius: 24px 0 24px 0;
+              border-radius: 24px 0;
+
               abbr {
                 padding-top: 8px;
                 padding-bottom: 4px;
@@ -170,6 +203,7 @@ $retro_color: #ff8400;
                 text-indent: 0;
                 color: inherit;
               }
+
               &::before {
                 position: absolute;
                 top: 0;
@@ -181,11 +215,12 @@ $retro_color: #ff8400;
                 text-transform: capitalize;
                 color: $retro_color;
                 padding: 4px 0;
-                border-radius: 20px 0px 12px 0;
+                border-radius: 20px 0 12px;
                 text-shadow: none;
                 background-color: black;
               }
             }
+
             &.type,
             &.years,
             &.use,
@@ -194,33 +229,41 @@ $retro_color: #ff8400;
               &::before {
                 // content: '\A***************';
                 white-space: pre-wrap;
+
                 // @include retroColor();
               }
             }
+
             &.type {
               &::before {
                 content: '/Type/';
               }
             }
+
             &.years {
               &::before {
                 content: '/Time using it/';
               }
+
               &::after {
                 content: 'years';
+
                 // white-space: pre-wrap;
               }
             }
+
             &.use {
               &::before {
                 content: '/Daily use/';
               }
             }
+
             &.level {
               &::before {
                 content: '/Level of mastery/';
               }
             }
+
             &.percentage {
               &::before {
                 content: '/Percentage of Skills/';

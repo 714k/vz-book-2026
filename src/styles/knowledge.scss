@@ -1,15 +1,19 @@
 @use 'partials';
 
 #knowledge {
-  background-image: url(/assets/images/info/fixer/fixer-knowledge-bg.jpg);
+  background-image: url('/assets/images/info/fixer/fixer-knowledge-bg.jpg');
+
   h2::after {
-    background-position: -1763px 0px;
+    background-position: -1763px 0;
   }
+
   table {
     padding-left: 5%;
     margin-top: 60px;
+
     tbody {
       width: 100%;
+
       tr {
         position: relative;
         float: left;
@@ -18,51 +22,61 @@
         margin: 0 16px 16px 0;
         overflow: hidden;
         background-position: -427px -332px;
-        transition: background-position 0.6s;
         transform: scale(1);
         transition: all 0.6s;
+
         &:hover {
           cursor: default;
           transform: scale(1.5);
           transition: all 0.6s;
+
           td {
             transition: all 0.6s;
           }
+
           .name {
             top: 100px;
           }
+
           .type {
             top: 90px;
           }
+
           .years {
             top: 52px;
           }
+
           .level {
             top: -22px;
           }
+
           .use {
             top: 14px;
           }
+
           .percentage {
             top: -58px;
           }
+
           .scroll {
             background-position: -364px -48px;
             transition: background-position 0.6s;
           }
         }
+
         td {
           position: relative;
           z-index: 2;
           width: 100%;
           float: left;
-          color: #550000;
-          font-family: 'Arsenal', Arial, Helvetica, sans-serif;
+          color: #500;
+          font-family: Arsenal, Arial, Helvetica, sans-serif;
           font-size: 16px;
           font-weight: bold;
           line-height: 1.2;
           text-align: center;
           transition: all 0.6s;
+
           &.name {
             position: absolute;
             z-index: 2;
@@ -73,27 +87,34 @@
             line-height: 40px;
             color: #000;
           }
+
           &.type {
             display: block;
             top: -15px;
           }
+
           &.years {
             top: -55px;
           }
+
           &.use {
             display: block;
             top: -90px;
           }
+
           &.level {
             display: block;
             top: -120px;
           }
+
           &.percentage {
             top: -160px;
           }
+
           &.years::after {
             content: ' years';
           }
+
           &.decorative {
             position: absolute;
             top: 0;
@@ -104,11 +125,13 @@
             height: 100%;
             visibility: visible;
           }
+
           .gradient,
           .scroll {
             background-image: partials.$sprite;
             background-repeat: no-repeat;
           }
+
           .gradient {
             position: absolute;
             top: 0;
@@ -118,6 +141,7 @@
             height: 100%;
             background-position: -28px -233px;
           }
+
           .scroll {
             position: absolute;
             top: 0;

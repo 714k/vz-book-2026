@@ -5,11 +5,9 @@ import sitemap from '@astrojs/sitemap';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://victorzamudio.dev',
-  integrations: [
-    sitemap()
-  ],
+  integrations: [sitemap()],
   scopedStyleStrategy: 'where',
   build: {
-    assets: 'assets'
-  }
+    assets: 'assets',
+  },
 });

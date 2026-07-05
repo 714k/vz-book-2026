@@ -78,9 +78,7 @@ const projectLayout = defineCollection({
   loader: file('src/content/project.json', { parser: asSingleEntry }),
   schema: z.object({
     toc: z.array(tocItemSchema),
-    galleries: z.array(
-      z.object({ title: z.string(), links: z.array(galleryLinkSchema) })
-    ),
+    galleries: z.array(z.object({ title: z.string(), links: z.array(galleryLinkSchema) })),
     galleryTypes: z.array(galleryLinkSchema),
   }),
 });
@@ -106,7 +104,7 @@ const mainNavigation = defineCollection({
       prefixText: z.string(),
       classes: z.string().optional(),
       subsections: z.array(mainNavSubsectionSchema).optional(),
-    })
+    }),
   ),
 });
 
@@ -141,7 +139,7 @@ const nobodyKnowsHeWorkedOn = defineCollection({
         classes: z.string(),
         link: linkSchema,
         image: z.object({ id: z.string(), src: z.string(), alt: z.string() }),
-      })
+      }),
     ),
   }),
 });
@@ -171,7 +169,7 @@ const theFixer = defineCollection({
         title: z.string(),
         caption: z.string(),
         data: z.array(ammoRecordSchema),
-      })
+      }),
     ),
   }),
 });
@@ -196,18 +194,16 @@ const theNavigator = defineCollection({
         industry: z.string(),
         role: z.string(),
         summary: z.object({
-          activities: z.array(
-            z.object({ title: z.string(), links: z.array(adventureLinkSchema) })
-          ),
+          activities: z.array(z.object({ title: z.string(), links: z.array(adventureLinkSchema) })),
           accounts: z.array(
             z.object({
               title: z.string(),
               text: z.string(),
               links: z.array(adventureLinkSchema),
-            })
+            }),
           ),
         }),
-      })
+      }),
     ),
   }),
 });

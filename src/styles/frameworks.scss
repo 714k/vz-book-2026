@@ -4,6 +4,7 @@
 
 $targets: #ff003c;
 $targets_b: #ff003c;
+
 // $targets_b: #00c3ff;
 
 @keyframes circularWave {
@@ -11,6 +12,7 @@ $targets_b: #ff003c;
     transform: scale(0);
     opacity: 1;
   }
+
   to {
     transform: scale(1.2);
     opacity: 0;
@@ -21,18 +23,21 @@ $targets_b: #ff003c;
   h2::after {
     background-position: -1748px -252px;
   }
+
   table {
     font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
     overflow-x: auto;
+
     tbody {
       position: relative;
       min-width: 2560px;
       height: 100vh;
       display: block;
       margin: 0 auto;
-      background-image: url(/assets/images/info/fixer/map-of-paris.png);
+      background-image: url('/assets/images/info/fixer/map-of-paris.png');
       background-position: center;
     }
+
     tr {
       position: absolute;
       z-index: 0;
@@ -42,6 +47,7 @@ $targets_b: #ff003c;
       height: 36px;
       cursor: pointer;
       transition: all 0.5s;
+
       &::before {
         content: '';
         position: absolute;
@@ -52,6 +58,7 @@ $targets_b: #ff003c;
         height: 35%;
         border-radius: 50%;
       }
+
       &::after {
         content: '';
         position: absolute;
@@ -65,171 +72,217 @@ $targets_b: #ff003c;
         border-style: solid;
         border-radius: 50%;
       }
+
       &.library {
-        border-color: rgba(255, 255, 255, 0.4);
+        border-color: rgb(255 255 255 / 40%);
+
         &::before {
           background-color: $targets_b;
           animation: circularWaves 2.5s infinite linear;
         }
+
         &::after {
           border-color: $targets_b;
-          box-shadow: 0 0 0 2px black, 0 0 0 3px $targets_b;
+          box-shadow:
+            0 0 0 2px black,
+            0 0 0 3px $targets_b;
           animation: circularWaves 2.5s infinite linear;
         }
       }
+
       &.framework {
-        border-color: rgba(255, 252, 0, 0.4);
+        border-color: rgb(255 252 0 / 40%);
+
         &::before {
           background-color: $targets;
           animation: circularWaves 3s infinite linear;
         }
+
         &::after {
           border-color: $targets;
-          box-shadow: 0 0 0 2px black, 0 0 0 3px $targets;
+          box-shadow:
+            0 0 0 2px black,
+            0 0 0 3px $targets;
           animation: circularWaves 3s infinite linear;
         }
       }
+
       &.reactjs- {
         top: 30px;
         left: 20px;
       }
+
       &.react-testing-library {
         top: 20%;
         left: 10%;
       }
+
       &.redux {
         top: 15%;
         left: 20%;
       }
+
       &.redux-logic {
         top: 25%;
         left: 52%;
       }
+
       &.react-hook-form {
         top: 7%;
         left: 70%;
       }
+
       &.react-bootstrap {
         top: 30%;
         left: 3%;
       }
+
       &.styled-components {
         top: 5%;
         left: 40%;
       }
+
       &.material-ui {
         top: 17%;
         left: 82%;
       }
+
       &.express {
         top: 38%;
         left: 28%;
       }
+
       &.npm {
         top: 38%;
         left: 88%;
       }
+
       &.yarn {
         top: 46%;
         left: 58%;
       }
+
       &.rush {
         top: 50%;
         left: 5%;
       }
+
       &.lerna {
         top: 55%;
         left: 25%;
       }
+
       &.nx {
         top: 53%;
         left: 66%;
       }
+
       &.webpack {
         top: 24%;
         left: 22%;
       }
+
       &.yeoman {
         top: 34%;
         left: 67%;
       }
+
       &.jest {
         top: 1%;
         left: 90%;
       }
+
       &.jasmine {
         top: 15%;
         left: 55%;
       }
+
       &.mocha {
         top: 20%;
         left: 38%;
       }
+
       &.chai {
         top: 28%;
         left: 39%;
       }
+
       &.angular {
         top: 8%;
         left: 9%;
       }
+
       &.vue {
         top: 3%;
         left: 62%;
       }
+
       &.hugo {
         top: 19%;
         left: 4%;
       }
+
       &.jekyll {
         top: 11%;
         left: 38%;
       }
+
       &.nuxt {
         top: 5%;
         left: 25%;
       }
+
       &.gatsby {
         top: 32%;
         left: 25%;
       }
+
       &.nextjs {
         top: 23%;
         left: 68%;
       }
+
       &.django {
         top: 34%;
         left: 51%;
       }
+
       &.rubyonrails {
         top: 27%;
         left: 85%;
       }
+
       &.springboot {
         top: 40%;
         left: 9%;
       }
+
       &.dotnet {
         top: 47%;
         left: 32%;
       }
+
       &.nodejs {
         top: 37%;
         left: 72%;
       }
+
       &.symfony {
         top: 46%;
         left: 79%;
       }
+
       &.cypress {
         top: 55%;
         left: 85%;
       }
+
       &.yeoman,
       &.grunt,
       &.bower {
         display: none;
       }
+
       &:hover {
         position: fixed;
         z-index: 30;
@@ -239,30 +292,35 @@ $targets_b: #ff003c;
         width: calc(100vw - 20px);
         height: 50vh;
         cursor: default;
-        background-color: rgba(12, 12, 19, 0.85);
+        background-color: rgb(12 12 19 / 85%);
         background-color: white;
         color: #2f2f39;
         backdrop-filter: blur(6px);
         box-shadow: 0 0 8px 6px black;
+
         td,
         td.name {
           display: flex;
         }
+
         &::before,
         &::after {
           content: none;
         }
       }
+
       td {
         display: none;
         width: calc(100% - 60px);
         height: 36px;
         padding: 12px 0 12px 60px;
         text-transform: uppercase;
+
         &:hover:not(.name, .percentage) {
           background-color: #7b779b24;
           cursor: pointer;
         }
+
         &.type,
         &.years,
         &.use,
@@ -270,6 +328,7 @@ $targets_b: #ff003c;
           padding-left: 12px;
           width: calc(100% - 12px);
           align-items: center;
+
           &::before {
             content: '';
             display: flex;
@@ -278,21 +337,25 @@ $targets_b: #ff003c;
             height: 32px;
             margin-right: 12px;
             border: solid 2px #2f2f39;
-            background-image: url(/assets/images/info/fixer/type-frameworks-icon.svg);
+            background-image: url('/assets/images/info/fixer/type-frameworks-icon.svg');
             background-repeat: no-repeat;
             background-position: center;
             background-size: 100%;
           }
         }
+
         &.years::before {
-          background-image: url(/assets/images/info/fixer/time-frameworks-icon.svg);
+          background-image: url('/assets/images/info/fixer/time-frameworks-icon.svg');
         }
+
         &.use::before {
-          background-image: url(/assets/images/info/fixer/use-frameworks-icon.svg);
+          background-image: url('/assets/images/info/fixer/use-frameworks-icon.svg');
         }
+
         &.level::before {
-          background-image: url(/assets/images/info/fixer/level-frameworks-icon.svg);
+          background-image: url('/assets/images/info/fixer/level-frameworks-icon.svg');
         }
+
         &.name {
           display: none;
           flex-direction: column;
@@ -305,19 +368,23 @@ $targets_b: #ff003c;
           text-transform: uppercase;
           font-weight: bold;
           padding-left: 76px;
+
           &::before {
             content: attr(data-type);
             display: block;
+
             // height: 40px;
             width: 100%;
             font-weight: normal;
             line-height: 1.8;
             color: var(--type);
+
             // background-image: url(/assets/images/info/fixer/toc-close-icon.png);
             // background-position: right center;
             // background-repeat: no-repeat;
           }
-          &:after {
+
+          &::after {
             content: '';
             position: absolute;
             top: 8px;
@@ -327,9 +394,11 @@ $targets_b: #ff003c;
             background-color: #181822;
           }
         }
+
         &.years::after {
           content: '\00a0years';
         }
+
         &.percentage {
           position: absolute;
           bottom: 0;
@@ -339,6 +408,7 @@ $targets_b: #ff003c;
           line-height: 0;
           justify-content: flex-end;
           transform: translateX(-12px) translateY(-10px);
+
           &::before {
             content: '';
             box-sizing: border-box;
@@ -350,6 +420,7 @@ $targets_b: #ff003c;
             top: 34px;
             left: 12px;
           }
+
           &::after {
             content: '';
             box-sizing: border-box;
@@ -362,10 +433,12 @@ $targets_b: #ff003c;
             background: #149eca;
           }
         }
+
         &.isLibrary,
         &.type {
           padding-top: 18px;
         }
+
         &.isLibrary,
         &.isFramework {
           display: none;
