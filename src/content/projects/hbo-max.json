@@ -1,44 +1,44 @@
 {
   "brief": {
     "title": "<abbr title='Home Box Office'>HBO</abbr> Max",
-    "timeline": "2019 - 2020",
+    "timeline": "2020",
+    "role": "Frontend Engineer",
     "company": "HBO Max",
     "industry": "Entertainment",
     "work": "Design System for Website",
-    "scope": "Streaming platform (Web & TV) within a multi-team product environment, contributing to frontend architecture and design system implementation.",
-    "problem": "The platform needed to scale its interface across multiple teams and devices while maintaining consistency, performance, and accessibility.",
-    "key_challenges": [
-      "Maintaining UI consistency across distributed teams",
-      "Balancing design system constraints with product needs",
-      "Ensuring performance in high-traffic environments"
-    ],
+    "scope": "Contributed to the design system initiative for the HBO Max website, building reusable, scalable UI components used across the streaming platform to ensure visual and functional consistency for a large, multi-team engineering organization.",
+    "problem": "A fast-growing streaming platform needed a unified design language that multiple teams could implement consistently, while supporting rapid feature development, augmented reality experiences, and rendering across different frameworks and rendering strategies (SSR, CMS-driven pages).",
     "product_team": [
-      "Product Managers",
+      "Product Manager",
+      "UX/UI Designers",
       "Frontend Engineers",
       "Backend Engineers",
-      "Designers (Product & Design System)",
-      "QA / Accessibility specialists"
+      "QA Engineers"
     ],
-    "product_team_text": "Worked in a cross-functional environment with shared ownership of UI quality and system consistency.",
+    "key_challenges": [
+      "Building a design system flexible enough to support both React-based components and CMS-driven pages (Drupal).",
+      "Ensuring accessibility and mobile-first standards across a large component library.",
+      "Supporting emerging experiences like Augmented Reality within a traditional web stack."
+    ],
     "key_contributions": [
-      "Implemented and extended design system components within the product",
-      "Defined component composition patterns for scalable UI development",
-      "Improved accessibility across key user flows"
+      "Built and documented reusable UI components in Storybook using React, MUI, and Styled Components.",
+      "Implemented forms and validation logic with React Hook Forms integrated into the broader design system.",
+      "Collaborated across NextJS, Django, and Drupal-driven surfaces to keep component behavior consistent regardless of the rendering layer.",
+      "Supported testing coverage (Jest, Enzyme) to guarantee design system reliability."
     ],
     "technical_focus": [
-      "Design system integration (enterprise → product level)",
-      "Component architecture and composition",
-      "Frontend performance and accessibility"
+      "Design system architecture and component documentation (Storybook).",
+      "Cross-framework consistency (React, NextJS, Drupal, Django).",
+      "Accessibility and mobile-first responsive design."
     ],
+    "suggested_diagrams": "Design system component hierarchy. Component consumption across NextJS/Drupal/Django surfaces. Component library governance and versioning flow.",
     "system_impact": [
-      "Increased consistency across product surfaces",
-      "Reduced UI fragmentation between teams",
-      "Improved maintainability of frontend components"
+      "Reduced UI inconsistency across a large streaming platform by centralizing shared components.",
+      "Improved development velocity for feature teams reusing design system elements.",
+      "Enabled more consistent accessibility compliance across the site."
     ],
     "learnings": [
-      "Design systems only scale when teams align on usage, not just implementation",
-      "Product-level architecture requires balancing system constraints with real user needs",
-      "Reinforced my transition from UI implementation to system-level thinking"
+      "Design systems are as much an organizational challenge as a technical one — success depends on adoption, documentation, and governance, not just component quality. This experience reinforced the importance of designing for consumers of a system, not just for the system itself."
     ],
     "technologies": [
       "Agile",
@@ -81,7 +81,7 @@
   },
   "projectsNavigation": {
     "current": "HBO Max",
-    "next": "Plastiq",
-    "previous": "HBO"
+    "next": "HBO",
+    "previous": "Plastiq"
   }
 }

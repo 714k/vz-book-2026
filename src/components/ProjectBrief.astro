@@ -1,5 +1,7 @@
 ---
 import BackToTop from './BackToTop.astro';
+import BriefField from './BriefField.astro';
+import BriefList from './BriefList.astro';
 
 interface BriefData {
   title: string;
@@ -16,6 +18,7 @@ interface BriefData {
   product_team_text?: string;
   key_contributions?: string[];
   technical_focus?: string[];
+  suggested_diagrams?: string;
   system_impact?: string[];
   learnings?: string[];
   technologies: string[];
@@ -36,132 +39,42 @@ interface Props {
   data: BriefData;
 }
 
-const { data } = Astro.props;
+const {
+  role,
+  company,
+  timeline,
+  scope,
+  problem,
+  product_team,
+  product_team_text,
+  key_challenges,
+  key_contributions,
+  technical_focus,
+  suggested_diagrams,
+  system_impact,
+  learnings,
+} = Astro.props.data;
 ---
 
-<section id="brief">
-  <!-- <h2>Brief</h2> -->
-  <div>
-    <p>
-      <strong>Project</strong><br />
-      {
-        (() => {
-          const containsHTML =
-            typeof data.title === 'string' && data.title.includes('<') && data.title.includes('>');
-          return containsHTML ? (
-            <em class="title" set:html={data.title} />
-          ) : (
-            <em class="title">{data.title}</em>
-          );
-        })()
-      }
-    </p>
-
-    <p>
-      <strong>Year</strong><br />
-      <em>{data.year}</em>
-    </p>
-
-    <p>
-      <strong>Company</strong><br />
-      <em>{data.company}</em>
-    </p>
-
-    <p>
-      <strong>Industry</strong><br />
-      <em>{data.industry}</em>
-    </p>
-
-    <p>
-      <strong>Work</strong><br />
-      <em>{data.work}</em>
-    </p>
-
-    <p>
-      <strong>Technologies</strong><br />
-      {
-        (() => {
-          const techString = Array.isArray(data.technologies)
-            ? data.technologies.join('')
-            : data.technologies;
-          const containsHTML =
-            typeof techString === 'string' && techString.includes('<') && techString.includes('>');
-          return containsHTML ? <em set:html={techString} /> : <em>{techString}</em>;
-        })()
-      }
-    </p>
-
-    {
-      data.status && (
-        <p>
-          <>
-            <strong>Status</strong>
-            <br />
-          </>
-          <em class="status">{data.status}</em>
-        </p>
-      )
-    }
-
-    {
-      data.links && (
-        <p>
-          <>
-            <strong>
-              <abbr title="Uniform Resource Locator">URL</abbr>s
-            </strong>
-            <br />
-          </>
-          <>
-            <em class="url">
-              <span>Visit </span>
-              {data.links.map((link, index) => (
-                <>
-                  <a
-                    href={link.href}
-                    target="_blank"
-                    title={`${link.title} (It will be displayed in another window or tab)`}
-                  >
-                    {link.text}
-                  </a>
-                  {index === (data.links?.length ?? 0) - 1 ? '.' : ','}
-                </>
-              ))}
-            </em>
-            <br class="block" />
-          </>
-        </p>
-      )
-    }
-
-    {
-      data.apps && (
-        <p>
-          <>
-            <strong>
-              <abbr title="Applications">Apps</abbr>
-            </strong>
-            <br />
-          </>
-          <em class="url last">
-            Download
-            {data.apps.map((app, index) => (
-              <>
-                <a
-                  href={app.href}
-                  target="_blank"
-                  title={`${app.title} (It will be displayed in another window or tab)`}
-                >
-                  {app.text}
-                </a>
-                {index === (data.apps?.length ?? 0) - 1 ? '.' : ','}
-              </>
-            ))}
-          </em>
-        </p>
-      )
-    }
-  </div>
+<section>
+  <BriefField title="Role" property={role} />
+  <BriefField title="Company" property={company} />
+  <BriefField title="Timeline" property={timeline} />
+  <BriefField title="Scope" property={scope} />
+  <BriefField title="Problem" property={problem} />
+  <BriefList title="Product Team" text={product_team_text} items={product_team} />
+  <BriefList title="Key Challenges" items={key_challenges} />
+  <BriefList title="Key Contributions" items={key_contributions} />
+  <BriefList title="Technical Focus" items={technical_focus} />
+  <BriefField title="Suggested Diagrams" property={suggested_diagrams} />
+  <BriefList title="System Impact" items={system_impact} />
+  <BriefField title="What I Learned" property={learnings} />
 </section>
 
 <BackToTop />
+
+<style>
+  section {
+    padding: 0 20px 40px 20px;
+  }
+</style>

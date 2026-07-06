@@ -2,11 +2,45 @@
   "brief": {
     "title": "Plastiq",
     "timeline": "2021",
-    "role": "Web UI Developer",
+    "role": "Frontend Engineer",
     "company": "Plastiq",
     "industry": "Digital Payments",
-    "scope": "Web UI Developer",
     "work": "<abbr title='Application Programming Interface'>API</abbr> for Payments",
+    "scope": "Contributed to the customer-facing payment platform, building and improving web experiences that enabled businesses to pay vendors using credit cards, even when those vendors did not directly accept card payments. The work focused on creating intuitive, reliable, and performant user interfaces for complex financial workflows.",
+    "problem": "Business payments involve multiple validation rules, funding sources, payment methods, and compliance requirements. The challenge was to deliver a user experience that simplified these workflows while accurately reflecting the complexity of the underlying financial system.",
+    "product_team": [
+      "Product Manager",
+      "UX/UI Designers",
+      "Frontend Engineers",
+      "Backend Engineers",
+      "QA Engineers"
+    ],
+    "key_challenges": [
+      "Designing interfaces that simplified complex payment workflows without hiding critical financial information.",
+      "Coordinating frontend behavior with evolving backend APIs and business rules.",
+      "Maintaining a responsive and reliable experience for users managing time-sensitive financial transactions."
+    ],
+    "key_contributions": [
+      "Developed and enhanced customer-facing features for the web application using a reusable component library built with React, MUI, and Styled Components.",
+      "Collaborated closely with Product and Design to translate business requirements into intuitive user experiences, contributing to the team's Design System.",
+      "Worked with backend engineers to integrate GraphQL (via Apollo Client) and microservice-based payment APIs, ensuring consistent handling of validation, errors, and transaction states.",
+      "Mentored teammates and contributed to Agile ceremonies, supporting team-level technical decisions."
+    ],
+    "technical_focus": [
+      "Component-based frontend architecture (React, Redux, Storybook).",
+      "API integration and asynchronous data flows (GraphQL, Apollo Client).",
+      "Form validation, state management, and responsive user interfaces.",
+      "Test coverage across unit, integration, and e2e levels (RTL, Postman, Browserstack)."
+    ],
+    "suggested_diagrams": "End-to-end payment workflow. Frontend-to-backend interaction during payment processing. Component architecture for payment forms and transaction management.",
+    "system_impact": [
+      "Improved usability for complex payment scenarios.",
+      "Increased consistency across payment-related user interfaces through shared design system components.",
+      "Contributed to a more maintainable frontend codebase through reusable components and shared patterns."
+    ],
+    "learnings": [
+      "Financial products require balancing usability with precision and transparency. Frontend engineering extends beyond interface implementation; it must accurately represent complex business logic. This experience strengthened my ability to think beyond individual screens and consider how user experience, business rules, and system architecture interact, reinforcing my progression toward product and platform architecture."
+    ],
     "technologies": [
       "Agile",
       " Leadership, Mentoring",
@@ -53,7 +87,7 @@
   ],
   "projectsNavigation": {
     "current": "Plastiq",
-    "next": "Next Gen",
-    "previous": "HBO Max"
+    "next": "HBO Max",
+    "previous": ""
   }
 }

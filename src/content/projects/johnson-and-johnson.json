@@ -1,10 +1,45 @@
 {
   "brief": {
     "title": "Johnson & Johnson",
-    "year": 2017,
+    "timeline": "2017",
+    "role": "Frontend Engineer",
     "company": "Johnson & Johnson",
     "industry": "Healthcare Products",
     "work": "Redesign & Maintenance of the Portal",
+    "scope": "Contributed to the redesign and maintenance of the Johnson & Johnson portal, supporting a healthcare products company's digital presence with a focus on accessibility and responsive design.",
+    "problem": "The portal needed a redesign and ongoing maintenance that met accessibility and responsive design standards appropriate for a healthcare-focused audience, built on a PHP/Symfony backend.",
+    "product_team": [
+      "Product Manager",
+      "UX/UI Designers",
+      "Frontend Engineers",
+      "Backend Engineers",
+      "QA Engineers"
+    ],
+    "key_challenges": [
+      "Delivering an accessible experience appropriate for a healthcare products audience with diverse needs.",
+      "Maintaining and redesigning a portal built on a PHP/Symfony backend.",
+      "Ensuring responsive design consistency across the site."
+    ],
+    "key_contributions": [
+      "Implemented redesigned UI features using AngularJS integrated with a PHP/Symfony backend.",
+      "Maintained responsive, accessible layouts using CSS3 and web standards best practices.",
+      "Supported unit testing (Mocha, Chai) to validate redesign changes.",
+      "Collaborated with backend engineers on MySQL-backed content and data features."
+    ],
+    "technical_focus": [
+      "Frontend-backend integration with PHP/Symfony.",
+      "Responsive and accessible design for a healthcare audience.",
+      "Legacy AngularJS maintenance and enhancement."
+    ],
+    "suggested_diagrams": "Redesign rollout flow across portal sections. Frontend-to-Symfony backend integration. Accessibility considerations mapped to key user flows.",
+    "system_impact": [
+      "Delivered a more accessible and responsive experience for a healthcare products portal.",
+      "Maintained platform stability while modernizing key sections of the site.",
+      "Strengthened frontend-backend collaboration patterns for future maintenance work."
+    ],
+    "learnings": [
+      "Designing for a healthcare audience reinforced how critical accessibility and clarity are — the interface itself becomes part of the product's duty of care. This project strengthened my ability to work within existing backend constraints while still delivering meaningful UX improvements."
+    ],
     "technologies": [
       "Agile",
       " AngularJS",
@@ -40,7 +75,7 @@
   ],
   "projectsNavigation": {
     "current": "Johnson and Johnson",
-    "next": "Citi Banamex",
-    "previous": "American Airlines"
+    "next": "American Airlines",
+    "previous": "Citi Banamex"
   }
 }
