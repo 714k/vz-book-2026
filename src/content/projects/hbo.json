@@ -32,6 +32,11 @@
       "Component-based UI development and state management (Redux)."
     ],
     "suggested_diagrams": "Redesign rollout flow across CMS-managed pages. Frontend-AEM-backend integration architecture. Accessibility audit-to-implementation pipeline.",
+    "suggested_diagrams_charts": [
+      "flowchart TD\n    A[\"Content authored in AEM\"] --> B[\"Apply new component templates\"]\n    B --> C[\"Staging review\"]\n    C --> D{\"Approved?\"}\n    D -- No --> B\n    D -- Yes --> E[\"Phased production rollout\"]\n    E --> F[\"Section: Home\"]\n    E --> G[\"Section: Shows\"]\n    E --> H[\"Section: Movies\"]",
+      "flowchart TD\n    B[\"Browser\"] --> R[\"React Components\"]\n    R --> A[\"AEM Content API\"]\n    R --> G[\"GraphQL and Apollo Client\"]\n    G --> S[\"Spring Boot Microservices\"]\n    A --> S",
+      "flowchart TD\n    A[\"Accessibility audit\"] --> B[\"Findings triaged\"]\n    B --> C[\"Engineering backlog\"]\n    C --> D[\"Implement semantic HTML and ARIA\"]\n    D --> E[\"Regression testing\"]\n    E --> F{\"Passes WCAG checks?\"}\n    F -- No --> D\n    F -- Yes --> G[\"Sign-off and release\"]"
+    ],
     "system_impact": [
       "Improved accessibility compliance across a major entertainment website.",
       "Delivered a modernized visual experience without disrupting existing CMS workflows.",

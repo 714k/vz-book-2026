@@ -43,6 +43,8 @@ const projectBriefSchema = z.object({
   key_contributions: z.array(z.string()).optional(),
   technical_focus: z.array(z.string()).optional(),
   suggested_diagrams: z.string().optional(),
+  // One Mermaid diagram source string per suggested_diagrams idea.
+  suggested_diagrams_charts: z.array(z.string()).optional(),
   system_impact: z.array(z.string()).optional(),
   learnings: z.array(z.string()).optional(),
   technologies: z.array(z.string()),

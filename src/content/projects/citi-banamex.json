@@ -32,6 +32,11 @@
       "Legacy AngularJS architecture maintenance and improvement."
     ],
     "suggested_diagrams": "Portal redesign rollout across CMS-managed sections. Frontend-to-backend data flow for banking features. Responsive layout breakpoints for portal redesign.",
+    "suggested_diagrams_charts": [
+      "flowchart TD\n    A[\"Backbase CMS sections\"] --> B[\"Redesign Phase 1: Accounts\"]\n    A --> C[\"Redesign Phase 2: Payments\"]\n    A --> D[\"Redesign Phase 3: Statements\"]\n    B --> E[\"QA and accessibility review\"]\n    C --> E\n    D --> E\n    E --> F[\"Production rollout\"]",
+      "sequenceDiagram\n    actor Customer\n    participant UI as AngularJS Frontend\n    participant CMS as Backbase CMS\n    participant BE as Java Backend\n    participant DB as MySQL\n\n    Customer->>UI: Request account data\n    UI->>CMS: Fetch widget configuration\n    CMS->>BE: Request account data\n    BE->>DB: Query account records\n    DB-->>BE: Return records\n    BE-->>CMS: Account data response\n    CMS-->>UI: Render widget data\n    UI-->>Customer: Display account details",
+      "flowchart TD\n    A[\"Portal Layout\"] --> B[\"Mobile: below 768px\"]\n    A --> C[\"Tablet: 768px to 1024px\"]\n    A --> D[\"Desktop: above 1024px\"]\n    B --> E[\"Stacked single-column layout\"]\n    C --> F[\"Two-column layout\"]\n    D --> G[\"Full multi-column layout\"]"
+    ],
     "system_impact": [
       "Modernized the customer-facing experience of a major financial services portal.",
       "Improved accessibility and responsiveness for a broad banking customer base.",

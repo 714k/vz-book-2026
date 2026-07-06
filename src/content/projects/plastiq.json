@@ -33,6 +33,11 @@
       "Test coverage across unit, integration, and e2e levels (RTL, Postman, Browserstack)."
     ],
     "suggested_diagrams": "End-to-end payment workflow. Frontend-to-backend interaction during payment processing. Component architecture for payment forms and transaction management.",
+    "suggested_diagrams_charts": [
+      "flowchart TD\n    A[\"Business initiates payment\"] --> B[\"Select vendor and invoice\"]\n    B --> C[\"Choose funding source\"]\n    C --> D[\"Select payment method: Credit Card\"]\n    D --> E{\"Validation passed?\"}\n    E -- No --> F[\"Show validation errors\"]\n    F --> C\n    E -- Yes --> G[\"Process transaction\"]\n    G --> H{\"Vendor accepts cards?\"}\n    H -- Yes --> I[\"Direct card payment to vendor\"]\n    H -- No --> J[\"Plastiq issues alternate payment to vendor\"]\n    I --> K[\"Transaction confirmed\"]\n    J --> K",
+      "sequenceDiagram\n    actor User\n    participant UI as React Frontend\n    participant API as Apollo Client and GraphQL\n    participant SVC as Payment Microservice\n    participant Vendor\n\n    User->>UI: Submit payment form\n    UI->>UI: Validate form fields\n    UI->>API: Send payment mutation\n    API->>SVC: Forward payment request\n    SVC->>SVC: Verify funding source and rules\n    SVC-->>API: Transaction status\n    API-->>UI: Update transaction state\n    UI-->>User: Show confirmation or error\n    SVC->>Vendor: Issue payment",
+      "flowchart TD\n    PF[\"PaymentForm\"] --> FS[\"FundingSourceSelector\"]\n    PF --> PM[\"PaymentMethodSelector\"]\n    PF --> VE[\"ValidationEngine\"]\n    PF --> TS[\"TransactionSummary\"]\n    PF --> SB[\"SubmitButton\"]\n    PF --> RS[(\"Redux Store\")]\n    RS --> TH[\"TransactionHistory\"]\n    RS --> TS"
+    ],
     "system_impact": [
       "Improved usability for complex payment scenarios.",
       "Increased consistency across payment-related user interfaces through shared design system components.",

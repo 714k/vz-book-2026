@@ -32,6 +32,11 @@
       "Legacy AngularJS maintenance and enhancement."
     ],
     "suggested_diagrams": "Redesign rollout flow across portal sections. Frontend-to-Symfony backend integration. Accessibility considerations mapped to key user flows.",
+    "suggested_diagrams_charts": [
+      "flowchart TD\n    A[\"Portal sections\"] --> B[\"Products\"]\n    A --> C[\"Safety Information\"]\n    A --> D[\"About Johnson and Johnson\"]\n    B --> E[\"Accessibility and QA review\"]\n    C --> E\n    D --> E\n    E --> F[\"Production rollout\"]",
+      "sequenceDiagram\n    actor User\n    participant UI as AngularJS Frontend\n    participant API as PHP Symfony API\n    participant DB as MySQL\n\n    User->>UI: Interact with portal page\n    UI->>API: Request page data\n    API->>DB: Query content and records\n    DB-->>API: Return data\n    API-->>UI: JSON response\n    UI-->>User: Render page content",
+      "flowchart TD\n    F1[\"Find product information\"] --> A1[\"Semantic headings and alt text\"]\n    F2[\"Report a safety concern\"] --> A2[\"Accessible form labels and error messages\"]\n    F3[\"Navigate site sections\"] --> A3[\"Keyboard navigable menus\"]\n    A1 --> R[\"Accessibility sign-off\"]\n    A2 --> R\n    A3 --> R"
+    ],
     "system_impact": [
       "Delivered a more accessible and responsive experience for a healthcare products portal.",
       "Maintained platform stability while modernizing key sections of the site.",
