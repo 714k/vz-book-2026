@@ -32,6 +32,11 @@
       "Accessibility and mobile-first responsive design."
     ],
     "suggested_diagrams": "Design system component hierarchy. Component consumption across NextJS/Drupal/Django surfaces. Component library governance and versioning flow.",
+    "suggested_diagrams_charts": [
+      "flowchart TD\n    DS[\"Design System\"] --> F[\"Foundations: Tokens, Typography, Color\"]\n    DS --> C[\"Core Components: Button, Input, Card\"]\n    DS --> P[\"Patterns: Forms, Navigation, Modals\"]\n    F --> C\n    C --> P\n    P --> PR[\"Product Surfaces\"]",
+      "flowchart LR\n    DSP[\"Design System Package\"] --> NJ[\"NextJS App\"]\n    DSP --> DR[\"Drupal Theme\"]\n    DSP --> DJ[\"Django Templates\"]\n    NJ --> U[\"End User\"]\n    DR --> U\n    DJ --> U",
+      "flowchart TD\n    A[\"Propose new component\"] --> B[\"Design review\"]\n    B --> C[\"Engineering review\"]\n    C --> D{\"Approved?\"}\n    D -- No --> A\n    D -- Yes --> E[\"Merge to main\"]\n    E --> F[\"Bump semver version\"]\n    F --> G[\"Publish to package registry\"]\n    G --> H[\"Consuming teams upgrade\"]"
+    ],
     "system_impact": [
       "Reduced UI inconsistency across a large streaming platform by centralizing shared components.",
       "Improved development velocity for feature teams reusing design system elements.",

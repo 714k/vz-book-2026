@@ -33,6 +33,11 @@
       "Legacy AngularJS maintenance and testing practices."
     ],
     "suggested_diagrams": "Redesign rollout flow across portal sections. Frontend-to-Rails-to-MongoDB data flow. Responsive design breakpoints for the portal.",
+    "suggested_diagrams_charts": [
+      "flowchart TD\n    A[\"Portal sections\"] --> B[\"Book a flight\"]\n    A --> C[\"Manage trips\"]\n    A --> D[\"Check-in\"]\n    B --> E[\"QA and regression testing\"]\n    C --> E\n    D --> E\n    E --> F[\"Production rollout\"]",
+      "sequenceDiagram\n    actor Traveler\n    participant UI as AngularJS Frontend\n    participant API as Ruby on Rails\n    participant DB as MongoDB\n\n    Traveler->>UI: Search flights\n    UI->>API: Request flight availability\n    API->>DB: Query flight and fare data\n    DB-->>API: Return matching flights\n    API-->>UI: Flight results\n    UI-->>Traveler: Display available flights",
+      "flowchart TD\n    A[\"Portal Layout\"] --> B[\"Mobile: below 768px\"]\n    A --> C[\"Tablet: 768px to 1024px\"]\n    A --> D[\"Desktop: above 1024px\"]\n    B --> E[\"Single-column stacked layout\"]\n    C --> F[\"Two-column layout\"]\n    D --> G[\"Full navigation with multi-column layout\"]"
+    ],
     "system_impact": [
       "Supported reliable operation of a business-critical portal for a major airline.",
       "Delivered redesigned features without disrupting high-traffic user flows.",

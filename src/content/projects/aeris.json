@@ -32,6 +32,11 @@
       "Component reuse and shared logic across platforms."
     ],
     "suggested_diagrams": "Web-to-mobile shared logic architecture. IoT data flow from vehicle tracking to UI. Component reuse map (React ↔ React Native).",
+    "suggested_diagrams_charts": [
+      "flowchart TD\n    L[\"Shared React Logic\"] --> W[\"Web App: ReactJS\"]\n    L --> M[\"Mobile App: React Native\"]\n    L --> R[(\"Redux Store\")]\n    R --> W\n    R --> M",
+      "flowchart LR\n    V[\"Vehicle GPS and Sensors\"] --> I[\"Ingestion Service\"]\n    I --> DB[(\"MySQL\")]\n    DB --> API[\"Backend API\"]\n    API --> WEB[\"Web UI\"]\n    API --> MOB[\"Aertrak Mobile App\"]",
+      "flowchart LR\n    subgraph Shared\n      Logic[\"React Logic\"]\n      Types[\"Domain Types\"]\n    end\n    Logic --> WebMap[\"Web: Map Component\"]\n    Logic --> MobMap[\"Native: Map Component\"]\n    Logic --> WebList[\"Web: Vehicle List\"]\n    Logic --> MobList[\"Native: Vehicle List\"]"
+    ],
     "system_impact": [
       "Maintained platform reliability for a production IoT tracking product used across web and mobile.",
       "Improved consistency between web and native app experiences.",

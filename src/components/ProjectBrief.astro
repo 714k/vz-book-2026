@@ -2,6 +2,7 @@
 import BackToTop from './BackToTop.astro';
 import BriefField from './BriefField.astro';
 import BriefList from './BriefList.astro';
+import SuggestedDiagrams from './SuggestedDiagrams.astro';
 
 interface BriefData {
   title: string;
@@ -19,6 +20,7 @@ interface BriefData {
   key_contributions?: string[];
   technical_focus?: string[];
   suggested_diagrams?: string;
+  suggested_diagrams_charts?: string[];
   system_impact?: string[];
   learnings?: string[];
   technologies: string[];
@@ -51,6 +53,7 @@ const {
   key_contributions,
   technical_focus,
   suggested_diagrams,
+  suggested_diagrams_charts,
   system_impact,
   learnings,
 } = Astro.props.data;
@@ -67,6 +70,7 @@ const {
   <BriefList title="Key Contributions" items={key_contributions} />
   <BriefList title="Technical Focus" items={technical_focus} />
   <BriefField title="Suggested Diagrams" property={suggested_diagrams} />
+  <SuggestedDiagrams diagrams={suggested_diagrams_charts} />
   <BriefList title="System Impact" items={system_impact} />
   <BriefField title="What I Learned" property={learnings} />
 </section>
