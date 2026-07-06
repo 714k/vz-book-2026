@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  property?: string | string[];
+}
+
+const { title, property } = Astro.props;
+
+const value = Array.isArray(property) ? property.join(', ') : property;
+---
+
+{
+  value && (
+    <p>
+      <strong>{title}</strong>
+      <br />
+      <em>{value}</em>
+    </p>
+  )
+}

@@ -2,10 +2,45 @@
   "title": "<abbr title='American Airlines'>AA</abbr>",
   "brief": {
     "title": "American Airlines",
-    "year": 2015,
+    "timeline": "2015",
+    "role": "Frontend Engineer",
     "company": "American Airlines",
     "industry": "Aviation",
     "work": "Redesign & Maintenance of the Portal",
+    "scope": "Contributed to the redesign and maintenance of the American Airlines portal, an aviation industry platform, working across the full stack alongside Ruby on Rails and MongoDB-backed services.",
+    "problem": "The portal needed a redesign and continued maintenance to support a large volume of users with reliable, responsive functionality, while integrating tightly with a Ruby on Rails backend and MongoDB data layer.",
+    "product_team": [
+      "Product Manager",
+      "UX/UI Designers",
+      "Frontend Engineers",
+      "Backend Engineers",
+      "QA Engineers"
+    ],
+    "key_challenges": [
+      "Maintaining a high-traffic, business-critical aviation portal during redesign efforts.",
+      "Coordinating frontend changes with a Ruby on Rails backend and MongoDB data layer.",
+      "Ensuring responsive design and reliability across a broad user base."
+    ],
+    "key_contributions": [
+      "Implemented redesigned UI features using AngularJS and JavaScript within a Ruby on Rails application.",
+      "Maintained responsive layouts using HTML5, CSS3, and Less.",
+      "Supported unit testing (Jasmine, Mocha, Chai) to validate redesign and maintenance work.",
+      "Collaborated with backend engineers on MongoDB-backed data features (using Robo3T for data inspection)."
+    ],
+    "technical_focus": [
+      "Frontend integration within a Ruby on Rails application.",
+      "Responsive web design for a high-traffic aviation portal.",
+      "Legacy AngularJS maintenance and testing practices."
+    ],
+    "suggested_diagrams": "Redesign rollout flow across portal sections. Frontend-to-Rails-to-MongoDB data flow. Responsive design breakpoints for the portal.",
+    "system_impact": [
+      "Supported reliable operation of a business-critical portal for a major airline.",
+      "Delivered redesigned features without disrupting high-traffic user flows.",
+      "Reinforced testing practices that reduced regression risk during ongoing maintenance."
+    ],
+    "learnings": [
+      "Working on a high-traffic, business-critical platform sharpened my sense of risk management in frontend changes — every deployment needed to consider scale and reliability. This experience reinforced how closely frontend architecture decisions are tied to backend data models in full-stack environments."
+    ],
     "technologies": [
       "Agile",
       " AngularJS",
@@ -39,7 +74,7 @@
   ],
   "projectsNavigation": {
     "current": "American Airlines",
-    "next": "Johnson and Johnson",
-    "previous": "Cars"
+    "next": "",
+    "previous": "Johnson and Johnson"
   }
 }

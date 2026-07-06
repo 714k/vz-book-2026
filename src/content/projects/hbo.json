@@ -1,10 +1,45 @@
 {
   "brief": {
     "title": "<abbr title='Home Box Office'>HBO</abbr>",
-    "year": 2019,
+    "timeline": "2019",
+    "role": "Frontend Engineer",
     "company": "HBO",
     "industry": "Entertainment",
     "work": "Redesign & Accessibility implementation to the Website",
+    "scope": "Contributed to a redesign and accessibility implementation initiative for the HBO website, improving how content was presented while bringing the platform closer to modern web accessibility standards.",
+    "problem": "The existing website needed a visual and structural redesign along with accessibility improvements, all while integrating with an enterprise content management system (AEM) and coordinating with backend microservices.",
+    "product_team": [
+      "Product Manager",
+      "UX/UI Designers",
+      "Frontend Engineers",
+      "Backend Engineers",
+      "QA Engineers"
+    ],
+    "key_challenges": [
+      "Retrofitting accessibility standards into an existing, content-heavy website without disrupting editorial workflows.",
+      "Integrating React-based components within an AEM (Adobe Experience Manager) environment.",
+      "Coordinating frontend changes with GraphQL/Apollo Client data layers and Spring Boot microservices."
+    ],
+    "key_contributions": [
+      "Implemented accessibility improvements across key website flows using semantic HTML5 and ARIA-aligned patterns.",
+      "Built and maintained reusable UI components (React, MUI, React Bootstrap, Redux, Storybook).",
+      "Integrated frontend components with GraphQL/Apollo Client for consistent data fetching.",
+      "Contributed to unit and integration test coverage (Jest, Enzyme) to safeguard the redesign."
+    ],
+    "technical_focus": [
+      "Web accessibility standards implementation.",
+      "CMS-integrated frontend architecture (AEM).",
+      "Component-based UI development and state management (Redux)."
+    ],
+    "suggested_diagrams": "Redesign rollout flow across CMS-managed pages. Frontend-AEM-backend integration architecture. Accessibility audit-to-implementation pipeline.",
+    "system_impact": [
+      "Improved accessibility compliance across a major entertainment website.",
+      "Delivered a modernized visual experience without disrupting existing CMS workflows.",
+      "Strengthened frontend-backend integration patterns for future feature work."
+    ],
+    "learnings": [
+      "Accessibility is most effective when treated as a core design constraint rather than a post-launch fix. This project reinforced how enterprise CMS environments require careful architectural decisions to balance editorial flexibility with engineering best practices."
+    ],
     "technologies": [
       "Agile",
       " Leadership, Mentoring",
@@ -52,7 +87,7 @@
   ],
   "projectsNavigation": {
     "current": "HBO",
-    "next": "HBO Max",
-    "previous": "Aeris"
+    "next": "Aeris",
+    "previous": "HBO Max"
   }
 }

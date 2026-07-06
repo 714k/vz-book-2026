@@ -34,7 +34,7 @@ const projectBriefSchema = z.object({
   company: z.string(),
   industry: z.string(),
   work: z.string(),
-  // Only present on hbo-max.json's longer case-study-style brief.
+  // Only present on the case-study-style briefs (HBO Max, HBO, Aeris, Citi Banamex, Johnson & Johnson, American Airlines).
   scope: z.string().optional(),
   problem: z.string().optional(),
   key_challenges: z.array(z.string()).optional(),
@@ -42,6 +42,7 @@ const projectBriefSchema = z.object({
   product_team_text: z.string().optional(),
   key_contributions: z.array(z.string()).optional(),
   technical_focus: z.array(z.string()).optional(),
+  suggested_diagrams: z.string().optional(),
   system_impact: z.array(z.string()).optional(),
   learnings: z.array(z.string()).optional(),
   technologies: z.array(z.string()),

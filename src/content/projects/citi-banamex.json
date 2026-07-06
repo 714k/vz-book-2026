@@ -1,10 +1,45 @@
 {
   "brief": {
     "title": "Citi <span class='long'>Banamex</span>",
-    "year": 2017,
+    "timeline": "2017",
+    "role": "Frontend Engineer",
     "company": "Citi Banamex",
     "industry": "Financial Services",
     "work": "Redesign & Maintenance of the Portal",
+    "scope": "Contributed to the redesign and maintenance of the Citi Banamex customer portal, a large-scale financial services platform, focused on modernizing the interface while maintaining reliability for banking customers.",
+    "problem": "A legacy banking portal required a redesign and ongoing maintenance while meeting strict standards for accessibility, responsive design, and financial data reliability, all within an established CMS (Backbase).",
+    "product_team": [
+      "Product Manager",
+      "UX/UI Designers",
+      "Frontend Engineers",
+      "Backend Engineers",
+      "QA Engineers"
+    ],
+    "key_challenges": [
+      "Modernizing a legacy banking portal without disrupting critical customer-facing financial functionality.",
+      "Meeting accessibility and responsive design requirements for a broad, diverse user base.",
+      "Working within the constraints of an enterprise CMS platform (Backbase)."
+    ],
+    "key_contributions": [
+      "Implemented redesigned UI components using AngularJS within the Backbase CMS environment.",
+      "Maintained responsive, accessible layouts using HTML5, CSS3, and Sass.",
+      "Supported unit testing (Jasmine, Mocha, Chai) to ensure reliability of banking portal features.",
+      "Collaborated with backend teams using Java and MySQL for data-driven portal features."
+    ],
+    "technical_focus": [
+      "CMS-integrated frontend development (Backbase).",
+      "Responsive, accessible web design for financial services.",
+      "Legacy AngularJS architecture maintenance and improvement."
+    ],
+    "suggested_diagrams": "Portal redesign rollout across CMS-managed sections. Frontend-to-backend data flow for banking features. Responsive layout breakpoints for portal redesign.",
+    "system_impact": [
+      "Modernized the customer-facing experience of a major financial services portal.",
+      "Improved accessibility and responsiveness for a broad banking customer base.",
+      "Maintained platform stability throughout a significant redesign effort."
+    ],
+    "learnings": [
+      "Financial services platforms demand a careful balance between innovation and stability, since even small UI changes can affect customer trust. This experience reinforced the importance of rigorous testing and incremental delivery when modernizing mission-critical systems."
+    ],
     "technologies": [
       "Agile",
       " AngularJS",
@@ -44,7 +79,7 @@
   ],
   "projectsNavigation": {
     "current": "Citi Banamex",
-    "next": "Aeris",
-    "previous": "Johnson and Johnson"
+    "next": "Johnson and Johnson",
+    "previous": "Aeris"
   }
 }

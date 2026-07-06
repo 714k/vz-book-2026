@@ -21,40 +21,16 @@ export async function getStaticPaths() {
   const NEXT_SECTION_URL = '/at-the-beginning/nor-where-to-find-him/';
   const NEXT_SECTION_TITLE = 'Nor where to find him...';
 
+  const plastiqEntry = await getEntry('projects', 'plastiq');
   const hboMaxEntry = await getEntry('projects', 'hbo-max');
   const hboEntry = await getEntry('projects', 'hbo');
-  const cmllEntry = await getEntry('projects', 'cmll');
 
   // Order drives prev/next navigation - keep in sync with the site's chronological project order.
   const projects: ProjectEntry[] = [
     {
-      slug: 'one-source',
-      title: 'One Source',
-      primaryColor: '#d54000',
-      secondaryColor: '#441400',
-      coverBg: '/assets/images/projects/saffron-cover.jpg',
-      projectBg: '/assets/images/projects/saffron-bg.jpg',
-    },
-    {
-      slug: 'saffron',
-      title: 'Saffron',
-      primaryColor: '#fe7200',
-      secondaryColor: '#803900',
-      coverBg: '/assets/images/projects/saffron-cover.jpg',
-      projectBg: '/assets/images/projects/saffron-bg.jpg',
-    },
-    {
-      slug: 'next-gen',
-      title: 'Next Gen',
-      projectTitle: 'NextGen',
-      primaryColor: '#fe7200',
-      secondaryColor: '#803900',
-      coverBg: '/assets/images/projects/saffron-cover.jpg',
-      projectBg: '/assets/images/projects/saffron-bg.jpg',
-    },
-    {
       slug: 'plastiq',
       title: 'Plastiq',
+      projectTitle: plastiqEntry?.data.brief.title,
       primaryColor: '#1daeec',
       secondaryColor: '#00255b',
       coverBg: '/assets/images/projects/plastiq-cover.jpg',
@@ -109,104 +85,6 @@ export async function getStaticPaths() {
       secondaryColor: '#0078d2',
       coverBg: '/assets/images/projects/aa-cover.jpg',
       projectBg: '/assets/images/projects/aa-bg.jpg',
-    },
-    {
-      slug: 'cars',
-      title: 'Cars',
-      primaryColor: '#a443ff',
-      secondaryColor: '#49127d',
-      coverBg: '/assets/images/projects/cars-cover.jpg',
-      projectBg: '/assets/images/projects/cars-bg.jpg',
-    },
-    {
-      slug: 'seccion-amarilla',
-      title: 'Seccion Amarilla',
-      projectTitle: 'Sección Amarilla',
-      primaryColor: '#ffde01',
-      secondaryColor: '#6f6000',
-      coverBg: '/assets/images/projects/seccion-amarilla-cover.jpg',
-      projectBg: '/assets/images/projects/seccion-amarilla-bg.jpg',
-    },
-    {
-      slug: 'cmll',
-      title: 'CMLL',
-      projectTitle: cmllEntry?.data.brief.title,
-      primaryColor: '#9b2424',
-      secondaryColor: '#390000',
-      coverBg: '/assets/images/projects/cmll-cover.jpg',
-      projectBg: '/assets/images/projects/cmll-bg.jpg',
-    },
-    {
-      slug: 'aventuras-enmascaradas',
-      title: 'Aventuras Enmascaradas',
-      primaryColor: '#ffb700',
-      secondaryColor: '#674a00',
-      coverBg: '/assets/images/projects/aventuras-enmascaradas-cover.jpg',
-      projectBg: '/assets/images/projects/aventuras-enmascaradas-bg.jpg',
-    },
-    {
-      slug: 'club-atletico-de-madrid',
-      title: 'Club Atletico de Madrid',
-      primaryColor: '#e20530',
-      secondaryColor: '#610013',
-      coverBg: '/assets/images/projects/club-atletico-de-madrid-cover.jpg',
-      projectBg: '/assets/images/projects/club-atletico-de-madrid-bg.jpg',
-    },
-    {
-      slug: 'skiny',
-      title: 'Skiny',
-      primaryColor: '#ffffff',
-      secondaryColor: '#515151',
-      coverBg: '/assets/images/projects/skiny-cover.jpg',
-      projectBg: '/assets/images/projects/skiny-bg.jpg',
-    },
-    {
-      slug: 'tops-and-bottoms',
-      title: 'Tops & Bottoms',
-      primaryColor: '#f74697',
-      secondaryColor: '#6c0031',
-      coverBg: '/assets/images/projects/tops-and-bottoms-cover.jpg',
-      projectBg: '/assets/images/projects/tops-and-bottoms-bg.jpg',
-    },
-    {
-      slug: 'optima-cotton-wear',
-      title: 'Optima Cotton Wear',
-      primaryColor: '#ffffff',
-      secondaryColor: '#515151',
-      coverBg: '/assets/images/projects/optima-cotton-wear-cover.jpg',
-      projectBg: '/assets/images/projects/optima-cotton-wear-bg.jpg',
-    },
-    {
-      slug: 'rutas-de-mexico',
-      title: 'Rutas de Mexico',
-      primaryColor: '#06ae41',
-      secondaryColor: '#004f1c',
-      coverBg: '/assets/images/projects/rutas-de-mexico-cover.jpg',
-      projectBg: '/assets/images/projects/rutas-de-mexico-bg.jpg',
-    },
-    {
-      slug: 'sonora',
-      title: 'Sonora',
-      primaryColor: '#dc7f37',
-      secondaryColor: '#471f00',
-      coverBg: '/assets/images/projects/sonora-cover.jpg',
-      projectBg: '/assets/images/projects/sonora-bg.jpg',
-    },
-    {
-      slug: 'nissan-latinoamerica',
-      title: 'Nissan Latinoamerica',
-      primaryColor: '#c3002f',
-      secondaryColor: '#470011',
-      coverBg: '/assets/images/projects/nissan-latinoamerica-cover.jpg',
-      projectBg: '/assets/images/projects/nissan-latinoamerica-bg.jpg',
-    },
-    {
-      slug: 'query-technologies',
-      title: 'Query Technologies',
-      primaryColor: '#f38d03',
-      secondaryColor: '#512e00',
-      coverBg: '/assets/images/projects/query-cover.jpg',
-      projectBg: '/assets/images/projects/query-bg.jpg',
     },
   ];
 

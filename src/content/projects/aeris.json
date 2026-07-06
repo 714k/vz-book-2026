@@ -1,10 +1,45 @@
 {
   "brief": {
     "title": "Aeris",
-    "year": 2018,
+    "timeline": "2018",
+    "role": "Frontend Engineer",
     "company": "Aeris",
     "industry": "<abbr title='Internet of Things'>IoT</abbr>",
     "work": "Maintenance of the Website, and Application to track vehicles (Aertrak Connect)",
+    "scope": "Contributed to the maintenance of the Aeris website and the Aertrak Connect application, an IoT-based platform used to track vehicles, spanning both web and mobile (React Native) experiences.",
+    "problem": "Vehicle tracking requires reliable, real-time data representation across web and mobile platforms, with consistent UI behavior and business logic shared across both surfaces.",
+    "product_team": [
+      "Product Manager",
+      "UX/UI Designers",
+      "Frontend Engineers",
+      "Backend Engineers",
+      "QA Engineers"
+    ],
+    "key_challenges": [
+      "Maintaining consistent behavior and business logic across web (ReactJS) and mobile (React Native) applications.",
+      "Ensuring reliable data representation for real-time IoT vehicle tracking.",
+      "Supporting a native Android app (Aertrak) alongside the core web platform."
+    ],
+    "key_contributions": [
+      "Maintained and enhanced UI components across web (React, MUI, Redux, Storybook) and mobile (React Native) codebases.",
+      "Worked with shared \"React Logic\" patterns to keep business rules consistent across platforms.",
+      "Supported testing (Jest, Enzyme) to maintain reliability of tracking features.",
+      "Collaborated with backend services connected to MySQL data sources for vehicle tracking data."
+    ],
+    "technical_focus": [
+      "Cross-platform frontend architecture (Web + React Native).",
+      "Real-time data rendering for IoT vehicle tracking.",
+      "Component reuse and shared logic across platforms."
+    ],
+    "suggested_diagrams": "Web-to-mobile shared logic architecture. IoT data flow from vehicle tracking to UI. Component reuse map (React ↔ React Native).",
+    "system_impact": [
+      "Maintained platform reliability for a production IoT tracking product used across web and mobile.",
+      "Improved consistency between web and native app experiences.",
+      "Contributed to a more maintainable shared logic layer across platforms."
+    ],
+    "learnings": [
+      "Building for IoT products requires designing interfaces that can represent real-time, sometimes imperfect data clearly and reliably. This experience deepened my understanding of maintaining consistency across web and native platforms sharing the same business logic."
+    ],
     "technologies": [
       "Agile",
       " ReactJS",
@@ -57,7 +92,7 @@
   ],
   "projectsNavigation": {
     "current": "Aeris",
-    "next": "HBO",
-    "previous": "Citi Banamex"
+    "next": "Citi Banamex",
+    "previous": "HBO"
   }
 }
