@@ -1,0 +1,130 @@
+---
+
+---
+
+<button
+  id="theme-toggle"
+  class="theme-toggle"
+  type="button"
+  role="switch"
+  aria-checked="false"
+  aria-label="Switch to light theme"
+>
+  <svg
+    class="theme-toggle-icon theme-toggle-icon--moon"
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+  <svg
+    class="theme-toggle-icon theme-toggle-icon--sun"
+    aria-hidden="true"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
+</button>
+
+<script>
+  import { getCurrentTheme, toggleTheme } from '../scripts/theme.js';
+
+  const button = document.getElementById('theme-toggle');
+
+  function reflect(theme: string) {
+    if (!button) return;
+    button.setAttribute('aria-checked', String(theme === 'light'));
+    button.setAttribute(
+      'aria-label',
+      theme === 'light' ? 'Switch to dark theme' : 'Switch to light theme',
+    );
+  }
+
+  reflect(getCurrentTheme());
+
+  button?.addEventListener('click', () => {
+    reflect(toggleTheme());
+  });
+</script>
+
+<style>
+  /*
+   * Matches .menu-icon's box model (content 1.5rem x 1rem + 0.5rem padding =
+   * 2.5rem x 2rem) and its `top`/scale values exactly, so both icons share
+   * the same vertical center at every breakpoint.
+   */
+  .theme-toggle {
+    position: fixed;
+    z-index: 101;
+    top: 2em;
+    right: 5em;
+    width: 2.5rem;
+    height: 2rem;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+    mix-blend-mode: exclusion;
+    transform: scale(1.25);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .theme-toggle-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.5rem;
+    height: 1.5rem;
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  /* Sun: shown while dark is active - click it to switch to light. */
+  .theme-toggle-icon--sun {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+
+  /* Moon: shown while light is active - click it to switch to dark. */
+  .theme-toggle-icon--moon {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(90deg) scale(0.5);
+  }
+
+  .theme-toggle[aria-checked='true'] .theme-toggle-icon--sun {
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-90deg) scale(0.5);
+  }
+
+  .theme-toggle[aria-checked='true'] .theme-toggle-icon--moon {
+    opacity: 1;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1);
+  }
+
+  @media only screen and (width >= 768px) {
+    .theme-toggle {
+      transform: scale(2);
+      right: 6em;
+    }
+  }
+</style>
