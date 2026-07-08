@@ -10,13 +10,9 @@ const { title, text, items } = Astro.props;
 
 {
   (text || (items && items.length > 0)) && (
-    <div>
-      <strong>{title}</strong>
-      {text && (
-        <p>
-          <em>{text}</em>
-        </p>
-      )}
+    <section>
+      <h2>{title}</h2>
+      {text && <p>{text}</p>}
       {items && items.length > 0 && (
         <ul>
           {items.map((item) => (
@@ -24,6 +20,6 @@ const { title, text, items } = Astro.props;
           ))}
         </ul>
       )}
-    </div>
+    </section>
   )
 }

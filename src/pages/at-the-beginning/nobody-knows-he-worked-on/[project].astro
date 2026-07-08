@@ -9,7 +9,6 @@ interface ProjectEntry {
   projectTitle?: string;
   primaryColor: string;
   secondaryColor: string;
-  coverBg: string;
   projectBg: string;
 }
 
@@ -33,8 +32,7 @@ export async function getStaticPaths() {
       projectTitle: plastiqEntry?.data.brief.title,
       primaryColor: '#1daeec',
       secondaryColor: '#00255b',
-      coverBg: '/assets/images/projects/plastiq-cover.jpg',
-      projectBg: '/assets/images/projects/plastiq-bg.jpg',
+      projectBg: '/assets/images/projects/plastiq-cover.jpg',
     },
     {
       slug: 'hbo-max',
@@ -42,8 +40,7 @@ export async function getStaticPaths() {
       projectTitle: hboMaxEntry?.data.brief.title,
       primaryColor: '#7752b1',
       secondaryColor: '#34106d',
-      coverBg: '/assets/images/projects/hbomax-cover.jpg',
-      projectBg: '/assets/images/projects/hbomax-bg.jpg',
+      projectBg: '/assets/images/projects/hbomax-cover.jpg',
     },
     {
       slug: 'hbo',
@@ -51,40 +48,35 @@ export async function getStaticPaths() {
       projectTitle: hboEntry?.data.brief.title,
       primaryColor: '#2bb0d8',
       secondaryColor: '#00394b',
-      coverBg: '/assets/images/projects/hbo-cover.jpg',
-      projectBg: '/assets/images/projects/hbo-bg.jpg',
+      projectBg: '/assets/images/projects/hbo-cover.jpg',
     },
     {
       slug: 'aeris',
       title: 'Aeris',
       primaryColor: '#067cfa',
       secondaryColor: '#002d5d',
-      coverBg: '/assets/images/projects/aeris-cover.jpg',
-      projectBg: '/assets/images/projects/aeris-bg.jpg',
+      projectBg: '/assets/images/projects/aeris-cover.jpg',
     },
     {
       slug: 'citi-banamex',
       title: 'Citi Banamex',
       primaryColor: '#ed1c24',
       secondaryColor: '#630004',
-      coverBg: '/assets/images/projects/citi-banamex-cover.jpg',
-      projectBg: '/assets/images/projects/citi-banamex-bg.jpg',
+      projectBg: '/assets/images/projects/citi-banamex-cover.jpg',
     },
     {
       slug: 'johnson-and-johnson',
       title: 'Johnson & Johnson',
       primaryColor: '#f41e2e',
       secondaryColor: '#630008',
-      coverBg: '/assets/images/projects/johnson-and-johnson-cover.jpg',
-      projectBg: '/assets/images/projects/johnson-and-johnson-bg.jpg',
+      projectBg: '/assets/images/projects/johnson-and-johnson-cover.jpg',
     },
     {
       slug: 'american-airlines',
       title: 'American Airlines',
       primaryColor: '#fff',
       secondaryColor: '#0078d2',
-      coverBg: '/assets/images/projects/aa-cover.jpg',
-      projectBg: '/assets/images/projects/aa-bg.jpg',
+      projectBg: '/assets/images/projects/aa-cover.jpg',
     },
   ];
 
@@ -113,7 +105,6 @@ const { project, previousPage, previousTitle, nextPage, nextTitle } = Astro.prop
   primaryColor={project.primaryColor}
   secondaryColor={project.secondaryColor}
   classNames="project-n "
-  coverBg={project.coverBg}
   projectBg={project.projectBg}
   previousPage={previousPage}
   nextPage={nextPage}

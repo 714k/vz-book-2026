@@ -11,10 +11,9 @@ const value = Array.isArray(property) ? property.join(', ') : property;
 
 {
   value && (
-    <p>
-      <strong>{title}</strong>
-      <br />
-      <em>{value}</em>
-    </p>
+    <section>
+      <h2>{title}</h2>
+      <p>{value}</p>
+    </section>
   )
 }
