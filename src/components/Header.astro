@@ -2,6 +2,7 @@
 import Logo from './Logo.astro';
 import SkipLink from './SkipLink.astro';
 import MainNavigation from './MainNavigation.astro';
+import ThemeToggle from './ThemeToggle.astro';
 
 interface Props {
   currentUrl?: string;
@@ -15,5 +16,6 @@ const { currentUrl, primaryColor, secondaryColor } = Astro.props;
 <header role="banner" id="main-header">
   <Logo primaryColor={primaryColor} secondaryColor={secondaryColor} />
   <SkipLink />
+  <ThemeToggle />
   <MainNavigation currentUrl={currentUrl} />
 </header>

@@ -31,11 +31,37 @@
   --spacing-23: 92px;
   --spacing-24: 96px;
   --spacing-25: 100px;
+
+  // Dark is the default/base theme (the site's original palette).
+  // `[data-theme='light']` below overrides these for the light theme.
+  --theme-bg: #0f1012;
+  --theme-text: #adb6c5;
+  --theme-border: rgb(67 75 91);
+  --theme-heading-muted: #45526c;
+  --theme-table-header-bg: #fff;
+  --theme-table-header-text: #0f1012;
+  --theme-row-alt-bg: #2d3037;
+  --theme-overlay-bg: rgb(0 0 0 / 85%);
+  --theme-overlay-text: #adb6c5;
+  --theme-error: #ef2727;
+}
+
+:root[data-theme='light'] {
+  --theme-bg: #f4f5f7;
+  --theme-text: #1c2230;
+  --theme-border: rgb(200 205 215);
+  --theme-heading-muted: #5b6b8c;
+  --theme-table-header-bg: #1c2230;
+  --theme-table-header-text: #f4f5f7;
+  --theme-row-alt-bg: #e4e6ea;
+  --theme-overlay-bg: rgb(255 255 255 / 85%);
+  --theme-overlay-text: #1c2230;
+  --theme-error: #b91c1c;
 }
 
 body {
-  color: #adb6c5;
-  background-color: #0f1012;
+  color: var(--theme-text);
+  background-color: var(--theme-bg);
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
@@ -145,7 +171,7 @@ body {
 
   hr {
     margin: 0;
-    border: dashed 1px rgb(67 75 91);
+    border: dashed 1px var(--theme-border);
   }
 
   #footer {
@@ -262,7 +288,7 @@ body {
     line-height: 1;
     margin-top: 56px;
     margin-bottom: 0;
-    color: #45526c;
+    color: var(--theme-heading-muted);
   }
 }
 
@@ -325,8 +351,8 @@ body {
     text-align: left;
 
     thead {
-      background-color: #fff;
-      color: #0f1012;
+      background-color: var(--theme-table-header-bg);
+      color: var(--theme-table-header-text);
       font-style: normal;
       font-weight: 400;
 
@@ -348,7 +374,7 @@ body {
     }
 
     tr:nth-child(even) {
-      background-color: #2d3037;
+      background-color: var(--theme-row-alt-bg);
     }
   }
 
@@ -387,9 +413,8 @@ body {
       position: absolute;
       bottom: 0;
       padding-left: 8px;
-      background-color: var(--color-secondary);
-      background-color: rgb(0 0 0 / 85%);
-      color: #adb6c5;
+      background-color: var(--theme-overlay-bg);
+      color: var(--theme-overlay-text);
       backdrop-filter: opacity(0.4);
     }
   }
@@ -496,7 +521,7 @@ body {
     }
 
     .error {
-      color: #ef2727;
+      color: var(--theme-error);
     }
   }
 

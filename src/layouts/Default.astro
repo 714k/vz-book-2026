@@ -96,6 +96,19 @@ const fullImage = image.startsWith('http')
     <meta http-equiv="Content-Type" content="text/html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{titleForPageTitle ? `${titleForPageTitle} | ${siteTitle}` : siteTitle}</title>
+    <script is:inline>
+      // Runs synchronously before first paint so a stored light-theme
+      // preference doesn't flash the default dark theme on load.
+      (function () {
+        try {
+          if (localStorage.getItem('theme') === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+          }
+        } catch {
+          // localStorage unavailable - falls back to the default dark theme.
+        }
+      })();
+    </script>
     <style set:html={cssContent}></style>
     <!-- Basic SEO -->
     <meta name="description" content={description} />
