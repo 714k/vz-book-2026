@@ -1,0 +1,41 @@
+---
+// One headed section of a page, rendered from data. Every section on a book
+// page turned out to share this skeleton — only the body differs — so pages can
+// map their content over this component instead of hand-writing each section.
+//
+// The order below is the contract: statement, paragraphs, body, closing
+// paragraphs, diagram, closing statement. Anything absent from the data is
+// simply skipped. A section that needs a different order or one-off markup
+// should use SectionShell directly rather than growing a flag here.
+import SectionShell from './SectionShell.astro';
+import SectionBody from './SectionBody.astro';
+import ContentDiagram from './ContentDiagram.astro';
+import type { SectionContent } from './types';
+
+interface Props {
+  section: SectionContent;
+}
+
+const { section } = Astro.props;
+---
+
+<SectionShell id={section.id} title={section.title}>
+  {
+    section.statement && (
+      <p>
+        <strong>{section.statement}</strong>
+      </p>
+    )
+  }
+  {section.paragraphs?.map((text) => <p>{text}</p>)}
+  {section.body && <SectionBody body={section.body} />}
+  {section.closingParagraphs?.map((text) => <p>{text}</p>)}
+  {section.diagram && <ContentDiagram diagram={section.diagram} />}
+  {
+    section.closingStatement && (
+      <p>
+        <strong>{section.closingStatement}</strong>
+      </p>
+    )
+  }
+</SectionShell>

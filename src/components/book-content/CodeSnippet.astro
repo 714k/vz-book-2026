@@ -1,0 +1,14 @@
+---
+// A preformatted code block. Exists as its own component because <pre>
+// preserves whitespace: the tags have to stay on one line, or the indentation
+// between them lands in the rendered output. Keeping it here means the
+// formatter exception is one line in one file instead of at every call site.
+interface Props {
+  code: string;
+}
+
+const { code } = Astro.props;
+---
+
+{/* prettier-ignore */}
+<pre><code>{code}</code></pre>

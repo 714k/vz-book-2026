@@ -1,0 +1,30 @@
+---
+// A list of key decisions. Each item may be a plain string or a
+// { title, description } pair. Renders a <ul> to sit inside a section.
+import type { DecisionItem, HeadingLevel } from './types';
+
+interface Props {
+  title?: string;
+  items: DecisionItem[];
+  headingLevel?: HeadingLevel;
+}
+
+const { title, items, headingLevel = 3 } = Astro.props;
+const Heading = `h${headingLevel}` as const;
+---
+
+{title && <Heading>{title}</Heading>}
+<ul class="decision-list">
+  {
+    items.map((item) =>
+      typeof item === 'string' ? (
+        <li>{item}</li>
+      ) : (
+        <li>
+          <h3>{item.title}</h3>
+          {item.description && <p>{item.description}</p>}
+        </li>
+      ),
+    )
+  }
+</ul>

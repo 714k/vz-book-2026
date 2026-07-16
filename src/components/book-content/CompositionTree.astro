@@ -1,0 +1,28 @@
+---
+// Renders a nested composition tree of arbitrary depth. Recurses through
+// `Astro.self`. The root level is an <ol> with emphasized entries; every
+// nested level is a plain <ul>.
+interface Node {
+  name: string;
+  children?: Node[];
+}
+
+interface Props {
+  nodes: Node[];
+  ordered?: boolean;
+}
+
+const { nodes, ordered = false } = Astro.props;
+const List = ordered ? 'ol' : 'ul';
+---
+
+<List>
+  {
+    nodes.map((node) => (
+      <li>
+        {ordered ? <strong>{node.name}</strong> : node.name}
+        {node.children && <Astro.self nodes={node.children} />}
+      </li>
+    ))
+  }
+</List>

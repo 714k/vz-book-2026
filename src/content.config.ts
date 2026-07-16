@@ -1,4 +1,5 @@
 import { defineCollection, z } from 'astro:content';
+import type { ZodType } from 'zod';
 import { file, glob } from 'astro/loaders';
 
 // `file()` loader keys entries by whatever top-level keys the parsed JSON
@@ -247,6 +248,143 @@ const theServer = defineCollection({
   }),
 });
 
+// ---- "The Assembly": a whole page's copy, shaped like the page itself ----
+// Every text on the page lives in the JSON; the .astro file only arranges it.
+// The page's parts are lists of sections, and each section shares one skeleton
+// (see SectionContent in book-content/types.ts) so the page can map over
+// them. `kind` on a section's body picks the component that renders it — the
+// one place where these content files touch presentation.
+
+const focusAreaSchema = z.object({
+  title: z.string(),
+  description: z.string().optional(),
+  iconName: z.string().optional(),
+});
+
+const decisionItemSchema = z.union([
+  z.string(),
+  z.object({ title: z.string(), description: z.string().optional() }),
+]);
+
+const impactMetricSchema = z.union([
+  z.string(),
+  z.object({ value: z.string().optional(), label: z.string() }),
+]);
+
+const relatedWorkItemSchema = z.object({
+  title: z.string(),
+  description: z.string().optional(),
+  href: z.string().optional(),
+  type: z.string().optional(),
+});
+
+// A composition tree of arbitrary depth. Zod needs the explicit annotation +
+// getter because the type refers to itself. `astro:content` re-exports zod as a
+// value only, so the annotation's type comes from the zod package directly.
+type CompositionNode = { name: string; children?: CompositionNode[] };
+const compositionNodeSchema: ZodType<CompositionNode> = z.object({
+  name: z.string(),
+  get children() {
+    return z.array(compositionNodeSchema).optional();
+  },
+});
+
+// Every diagram carries the same copy; only the body varies, so `kind`
+// discriminates it and the union keeps the three bodies from being mixed.
+const diagramMeta = {
+  title: z.string(),
+  description: z.string().optional(),
+  caption: z.string(),
+  summary: z.string().optional(),
+  footnote: z.string().optional(),
+};
+
+const diagramSchema = z.discriminatedUnion('kind', [
+  z.object({
+    ...diagramMeta,
+    kind: z.literal('stages'),
+    stages: z.array(z.object({ name: z.string(), note: z.string() })),
+  }),
+  z.object({ ...diagramMeta, kind: z.literal('code'), code: z.string() }),
+  z.object({ ...diagramMeta, kind: z.literal('tree'), tree: z.array(compositionNodeSchema) }),
+]);
+
+const sectionBodySchema = z.discriminatedUnion('kind', [
+  z.object({ kind: z.literal('focusAreas'), items: z.array(focusAreaSchema) }),
+  z.object({ kind: z.literal('decisions'), items: z.array(decisionItemSchema) }),
+  z.object({ kind: z.literal('metrics'), items: z.array(impactMetricSchema) }),
+  z.object({ kind: z.literal('relatedWork'), items: z.array(relatedWorkItemSchema) }),
+  z.object({ kind: z.literal('list'), items: z.array(z.string()) }),
+  z.object({
+    kind: z.literal('groups'),
+    groups: z.array(z.object({ title: z.string(), items: z.array(z.string()) })),
+  }),
+  z.object({
+    kind: z.literal('topics'),
+    items: z.array(z.object({ title: z.string(), description: z.string() })),
+  }),
+]);
+
+// Mirrors SectionContent: everything but the heading is optional, and
+// ContentSection renders whatever is present in a fixed order.
+const sectionSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+  statement: z.string().optional(),
+  paragraphs: z.array(z.string()).optional(),
+  body: sectionBodySchema.optional(),
+  closingParagraphs: z.array(z.string()).optional(),
+  diagram: diagramSchema.optional(),
+  closingStatement: z.string().optional(),
+});
+
+const theAssembly = defineCollection({
+  loader: file('src/content/the-assembly.json', { parser: asSingleEntry }),
+  schema: z.object({
+    page: z.object({
+      title: z.string(),
+      description: z.string(),
+      primaryColor: z.string(),
+      secondaryColor: z.string(),
+      previousPage: z.string(),
+      previousTitle: z.string(),
+      nextPage: z.string(),
+      nextTitle: z.string(),
+    }),
+    hero: z.object({
+      number: z.string().optional(),
+      title: z.string(),
+      subtitle: z.string().optional(),
+      lead: z.string().optional(),
+      intro: z.string().optional(),
+    }),
+    metadata: z.object({
+      role: z.string().optional(),
+      focus: z.string().optional(),
+      experience: z.string().optional(),
+      scope: z.string().optional(),
+      impact: z.string().optional(),
+    }),
+    labels: z.object({ core: z.string().optional(), impact: z.string().optional() }),
+    primaryContent: z.array(sectionSchema),
+    impact: z.array(sectionSchema),
+    relatedWork: sectionSchema,
+    closingThought: z.object({
+      statement: z.string().optional(),
+      paragraphs: z.array(z.string()),
+    }),
+    footer: z.object({
+      sectionTitle: z.string(),
+      pageTitle: z.string(),
+      fileId: z.string().optional(),
+      version: z.string().optional(),
+      lastUpdated: z.string().optional(),
+      author: z.string().optional(),
+      role: z.string().optional(),
+    }),
+  }),
+});
+
 export const collections = {
   projects,
   projectLayout,
@@ -255,6 +393,7 @@ export const collections = {
   noOneKnows,
   norWhereToFindHim,
   nobodyKnowsHeWorkedOn,
+  theAssembly,
   theFixer,
   theNavigator,
   theServer,

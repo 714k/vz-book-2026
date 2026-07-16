@@ -1,0 +1,30 @@
+---
+// A list of impact statements or metrics. Each item may be a plain string or a
+// { value, label } pair. Renders a <ul> to sit inside a section.
+import type { ImpactMetric, HeadingLevel } from './types';
+
+interface Props {
+  title?: string;
+  metrics: ImpactMetric[];
+  headingLevel?: HeadingLevel;
+}
+
+const { title, metrics, headingLevel = 3 } = Astro.props;
+const Heading = `h${headingLevel}` as const;
+---
+
+{title && <Heading>{title}</Heading>}
+<ul class="impact-list">
+  {
+    metrics.map((metric) =>
+      typeof metric === 'string' ? (
+        <li>{metric}</li>
+      ) : (
+        <li>
+          {metric.value && <strong>{metric.value}</strong>}
+          {metric.label}
+        </li>
+      ),
+    )
+  }
+</ul>

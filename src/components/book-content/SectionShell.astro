@@ -1,0 +1,27 @@
+---
+// Generic titled <section> used for the content areas within a page part.
+// The body is fully slotted so any content components can compose inside it.
+// The parts themselves (core, impact, related work) come from ContentContainer.
+//
+// This is the shell only. Pages that author their sections as data should use
+// ContentSection, which fills this shell from a SectionContent object; reach
+// for this one directly when a section needs one-off markup.
+import type { HeadingLevel } from './types';
+
+interface Props {
+  id: string;
+  title: string;
+  /** Optional intro paragraph shown under the heading. */
+  lead?: string;
+  headingLevel?: HeadingLevel;
+}
+
+const { id, title, lead, headingLevel = 2 } = Astro.props;
+const Heading = `h${headingLevel}` as const;
+---
+
+<section id={id} class="content-section">
+  <Heading>{title}</Heading>
+  {lead && <p>{lead}</p>}
+  <slot />
+</section>

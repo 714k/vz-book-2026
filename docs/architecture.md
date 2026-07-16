@@ -57,6 +57,42 @@ integration tests in `test/integration/` additionally assert the schema
 against every real file so a break is caught in CI before it ever reaches
 `astro build` in production.
 
+## Book page content
+
+Most pages hand-write their markup and pull only data (a list of courses,
+a project brief) from JSON. The "book" pages under
+`no-one-knows/` are the exception: _all_ of their copy - every paragraph,
+heading, list, caption - lives in the page's JSON file, and the `.astro`
+page only arranges it. `the-assembly` is the first page built this way;
+[ADR 0010](adr/0010-book-page-content-as-data.md) covers why, and what it
+costs.
+
+Every section of such a page shares one skeleton - statement, paragraphs,
+body, closing paragraphs, diagram, closing statement - and only the _body_
+differs between them. So a page part is a list of sections that the page
+maps over, and a `kind` tag on each body picks the component that renders
+it.
+
+```mermaid
+flowchart TD
+    JSON["src/content/the-assembly.json<br/>hero · metadata · sections · footer"] --> Page["the-assembly.astro<br/>{primaryContent.map(...)}"]
+
+    Page --> Container["ContentContainer<br/>owns the page anatomy:<br/>hero · metadata · core · impact<br/>related work · closing thought"]
+    Page --> Section["ContentSection<br/>one section, from data"]
+
+    Section --> Shell["SectionShell<br/>&lt;section&gt; + heading + slot"]
+    Section --> Body["SectionBody<br/>dispatches on body.kind"]
+    Section --> Diagram["ContentDiagram<br/>dispatches on diagram.kind"]
+
+    Body --> B1["focusAreas → PrimaryContent<br/>decisions → DecisionList<br/>metrics → ImpactList<br/>relatedWork → RelatedWork<br/>list · groups · topics → plain markup"]
+    Diagram --> D1["stages → ordered pipeline<br/>code → CodeSnippet<br/>tree → CompositionTree"]
+```
+
+The two "shell" components (`SectionShell`, `DiagramFigure`) are slotted
+primitives: reach for them directly when a section needs one-off markup,
+rather than adding a flag to `ContentSection`. `book-content/examples/`
+keeps a hand-written version of the same page as reference.
+
 ## Test strategy
 
 Three layers, each catching a different class of regression - see
@@ -99,8 +135,9 @@ flowchart LR
 | Path                                           | What lives here                                                         | Owned by / validated by                                 |
 | ---------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------- |
 | `src/pages/`                                   | Routes - thin, mostly just wire Content Collection data into components | `astro check`, e2e smoke                                |
-| `src/layouts/`                                 | `Default.astro` - shared `<head>`, `Header`, `Footer`                   | e2e smoke (every page uses it)                          |
+| `src/layouts/`                                 | `BookPage.astro` - shared `<head>`, `Header`, `Footer`, prev/next nav   | e2e smoke (every page uses it)                          |
 | `src/components/`                              | One component per page section                                          | ESLint (incl. jsx-a11y), unit tests where logic-bearing |
+| `src/components/book-content/`                 | The book-page content template - see [below](#book-page-content)        | ESLint (incl. jsx-a11y), e2e smoke + axe                |
 | `src/content/`                                 | JSON content, one file per project/page                                 | Zod schemas in `content.config.ts`, integration tests   |
 | `src/styles/`                                  | One SCSS partial per page/section                                       | Stylelint                                               |
 | `src/scripts/`                                 | Plain JS (not framework components) - form validation, charts           | Vitest unit tests                                       |

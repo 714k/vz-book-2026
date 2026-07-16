@@ -1,0 +1,69 @@
+---
+// "The Assembly — Component Architecture".
+//
+// Every text on this page lives in src/content/the-assembly.json (collection
+// `theAssembly`); this file only arranges it. Each part of the page is a list
+// of sections that all share one skeleton, so they render through ContentSection
+// — to change the copy, the order, or the sections themselves, edit the JSON,
+// not this file.
+//
+// It renders <ContentContainer>, which owns the page anatomy — hero, metadata
+// strip, core section, impact, related work, closing thought — and has no
+// <article> wrapper of its own, so it drops inside the layout's existing
+// <article id="main"> (see BookPage.astro). This page fills the four body parts
+// by name; the order of the parts is the container's business, not this file's.
+//
+// NOTE: the Impact Delivered figures in the JSON (60% / 90%+ / 40% / 3x) are
+// placeholders. Replace them with confirmed metrics before publishing.
+//
+// See src/components/book-content/examples/ExampleContent.astro for the same
+// structure kept as documentation / reference.
+import BookPage from '../../../layouts/BookPage.astro';
+import ContentContainer from '../../../components/book-content/ContentContainer.astro';
+import ContentSection from '../../../components/book-content/ContentSection.astro';
+import ClosingThought from '../../../components/book-content/ClosingThought.astro';
+import { getRequiredEntry } from '../../../lib/content';
+
+const {
+  page,
+  hero,
+  metadata,
+  labels,
+  primaryContent,
+  impact,
+  relatedWork,
+  closingThought,
+  footer,
+} = (await getRequiredEntry('theAssembly', 'data')).data;
+---
+
+<BookPage
+  title={page.title}
+  primaryColor={page.primaryColor}
+  secondaryColor={page.secondaryColor}
+  previousPage={page.previousPage}
+  nextPage={page.nextPage}
+  previousTitle={page.previousTitle}
+  nextTitle={page.nextTitle}
+  currentUrl={Astro.url.pathname}
+  description={page.description}
+>
+  <ContentContainer hero={hero} metadata={metadata} labels={labels} footer={footer}>
+    <Fragment slot="primary-content">
+      {primaryContent.map((section) => <ContentSection section={section} />)}
+    </Fragment>
+
+    <Fragment slot="impact">
+      {impact.map((section) => <ContentSection section={section} />)}
+    </Fragment>
+
+    <Fragment slot="related-work">
+      <ContentSection section={relatedWork} />
+    </Fragment>
+
+    <ClosingThought slot="closing-thought">
+      <p><strong>{closingThought.statement}</strong></p>
+      {closingThought.paragraphs.map((text) => <p>{text}</p>)}
+    </ClosingThought>
+  </ContentContainer>
+</BookPage>

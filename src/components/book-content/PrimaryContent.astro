@@ -1,0 +1,33 @@
+---
+// Primary content block: a grouped list of items. Renders a plain <ul>; when an
+// item has a description it becomes a labelled entry. Designed to sit inside a
+// section.
+import type { FocusArea, HeadingLevel } from './types';
+
+interface Props {
+  title?: string;
+  areas: FocusArea[];
+  headingLevel?: HeadingLevel;
+}
+
+const { title, areas, headingLevel = 3 } = Astro.props;
+const Heading = `h${headingLevel}` as const;
+---
+
+{title && <Heading>{title}</Heading>}
+<ul>
+  {
+    areas.map((area) => (
+      <li data-icon={area.iconName}>
+        {area.description ? (
+          <>
+            <strong>{area.title}</strong>
+            <p>{area.description}</p>
+          </>
+        ) : (
+          area.title
+        )}
+      </li>
+    ))
+  }
+</ul>

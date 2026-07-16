@@ -35,6 +35,22 @@
         "prefixText": "",
         "sufixText": "",
         "text": "The Fixer"
+      },
+      {
+        "title": "The Career Evolution",
+        "href": "/at-the-beginning/no-one-knows/the-evolution/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "The Evolution"
+      },
+      {
+        "title": "The Component Architecture",
+        "href": "/at-the-beginning/no-one-knows/the-assembly/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "The Assembly"
       }
     ]
   },

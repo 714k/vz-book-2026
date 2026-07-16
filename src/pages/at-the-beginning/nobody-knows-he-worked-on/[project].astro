@@ -1,5 +1,5 @@
 ---
-import Default from '../../../layouts/Default.astro';
+import BookPage from '../../../layouts/BookPage.astro';
 import Project from '../../../components/Project.astro';
 import { getEntry } from 'astro:content';
 
@@ -100,7 +100,7 @@ export async function getStaticPaths() {
 const { project, previousPage, previousTitle, nextPage, nextTitle } = Astro.props;
 ---
 
-<Default
+<BookPage
   title={project.title}
   primaryColor={project.primaryColor}
   secondaryColor={project.secondaryColor}
@@ -113,4 +113,4 @@ const { project, previousPage, previousTitle, nextPage, nextTitle } = Astro.prop
   currentUrl={Astro.url.pathname}
 >
   <Project title={project.projectTitle ?? project.title} projectName={project.slug} />
-</Default>
+</BookPage>

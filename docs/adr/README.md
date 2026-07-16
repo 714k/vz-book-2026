@@ -1,8 +1,9 @@
 # Architecture Decision Records
 
-Short records of decisions made while building out the code quality
-strategy (linting, testing, CI, SonarQube, security, performance,
-accessibility) - what was decided, why, and what it costs.
+Short records of decisions with a real tradeoff - what was decided, why,
+and what it costs. Most came out of building the code quality strategy
+(linting, testing, CI, SonarQube, security, performance, accessibility);
+the rest are architecture decisions about the site itself.
 
 Format: lightweight [MADR](https://adr.github.io/madr/)-style - Status,
 Context, Decision, Consequences. New ADRs are numbered sequentially and are
@@ -20,3 +21,4 @@ supersedes the old one and update the old one's Status line.
 | [0007](0007-security-scanning-and-headers.md)        | Security scanning and headers         | Accepted |
 | [0008](0008-accessibility-tooling-and-thresholds.md) | Accessibility tooling and thresholds  | Accepted |
 | [0009](0009-performance-budgets.md)                  | Performance budgets                   | Accepted |
+| [0010](0010-book-page-content-as-data.md)            | Book page content authored as data    | Accepted |

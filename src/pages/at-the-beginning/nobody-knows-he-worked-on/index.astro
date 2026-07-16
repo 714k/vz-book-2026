@@ -1,5 +1,5 @@
 ---
-import Default from '../../../layouts/Default.astro';
+import BookPage from '../../../layouts/BookPage.astro';
 import TOC from '../../../components/TOC.astro';
 import ProjectSummary from '../../../components/ProjectSummary.astro';
 import { getRequiredEntry } from '../../../lib/content';
@@ -7,7 +7,7 @@ import { getRequiredEntry } from '../../../lib/content';
 const nobodyKnowsHeWorkedOn = (await getRequiredEntry('nobodyKnowsHeWorkedOn', 'data')).data;
 ---
 
-<Default
+<BookPage
   title="Nobody knows he worked on..."
   primaryColor="#ffff00"
   secondaryColor="#606200"
@@ -23,4 +23,4 @@ const nobodyKnowsHeWorkedOn = (await getRequiredEntry('nobodyKnowsHeWorkedOn', '
   <TOC data={nobodyKnowsHeWorkedOn.toc} />
 
   <ProjectSummary summaries={nobodyKnowsHeWorkedOn.summaries} />
-</Default>
+</BookPage>

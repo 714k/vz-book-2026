@@ -1,0 +1,28 @@
+---
+// Related work / projects. Each card becomes an accessible link (with the
+// project title as its text) when an `href` is provided; otherwise it renders
+// as plain text. Uses a <ul> of items to sit inside a section.
+import type { RelatedWorkItem, HeadingLevel } from './types';
+
+interface Props {
+  title?: string;
+  items: RelatedWorkItem[];
+  headingLevel?: HeadingLevel;
+}
+
+const { title, items, headingLevel = 3 } = Astro.props;
+const Heading = `h${headingLevel}` as const;
+---
+
+{title && <Heading>{title}</Heading>}
+<ul class="related-work">
+  {
+    items.map((item) => (
+      <li>
+        <h3>{item.href ? <a href={item.href}>{item.title}</a> : item.title}</h3>
+        {item.type && <p>{item.type}</p>}
+        {item.description && <p>{item.description}</p>}
+      </li>
+    ))
+  }
+</ul>

@@ -1,5 +1,5 @@
 ---
-import Default from '../../../layouts/Default.astro';
+import BookPage from '../../../layouts/BookPage.astro';
 import TOC from '../../../components/TOC.astro';
 import Adventures from '../../../components/Adventures.astro';
 import { getRequiredEntry } from '../../../lib/content';
@@ -7,7 +7,7 @@ import { getRequiredEntry } from '../../../lib/content';
 const theNavigator = (await getRequiredEntry('theNavigator', 'data')).data;
 ---
 
-<Default
+<BookPage
   title="The Navigator"
   primaryColor="#7d0069"
   secondaryColor="#280023"
@@ -24,4 +24,4 @@ const theNavigator = (await getRequiredEntry('theNavigator', 'data')).data;
   <TOC data={theNavigator.toc} />
 
   <Adventures adventures={theNavigator.adventures} toc={theNavigator.toc} />
-</Default>
+</BookPage>

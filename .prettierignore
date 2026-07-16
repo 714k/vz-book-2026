@@ -5,4 +5,5 @@ package-lock.json
 
 # prettier-plugin-astro cannot parse the inline JSON-LD <script> block here
 # (parser chokes on `{JSON.stringify({ "@context": ... })}` inside <script>)
-src/layouts/Default.astro
+# Renamed from Default.astro; keep this path in step with the layout's name.
+src/layouts/BookPage.astro

@@ -1,0 +1,25 @@
+---
+// A closing editorial statement rendered as a <blockquote>. Pass `quote` for a
+// simple string, or use the default slot for richer content. `cite` shows an
+// attribution; `citeUrl` populates the blockquote's native cite attribute.
+interface Props {
+  quote?: string;
+  cite?: string;
+  citeUrl?: string;
+}
+
+const { quote, cite, citeUrl } = Astro.props;
+---
+
+<figure class="closing-thought">
+  <blockquote cite={citeUrl}>
+    {quote ? <p>{quote}</p> : <slot />}
+  </blockquote>
+  {
+    cite && (
+      <figcaption>
+        <cite>{cite}</cite>
+      </figcaption>
+    )
+  }
+</figure>
