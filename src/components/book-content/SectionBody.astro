@@ -1,0 +1,52 @@
+---
+// Renders a section's body by dispatching on its `kind`. Every branch is one of
+// the existing content components (or the plain markup they don't cover), so
+// this file holds the mapping from content shape to component and nothing else.
+import PrimaryContent from './PrimaryContent.astro';
+import DecisionList from './DecisionList.astro';
+import ImpactList from './ImpactList.astro';
+import RelatedWork from './RelatedWork.astro';
+import type { SectionBody } from './types';
+
+interface Props {
+  body: SectionBody;
+}
+
+const { body } = Astro.props;
+---
+
+{body.kind === 'focusAreas' && <PrimaryContent areas={body.items} />}
+{body.kind === 'decisions' && <DecisionList items={body.items} />}
+{body.kind === 'metrics' && <ImpactList metrics={body.items} />}
+{body.kind === 'relatedWork' && <RelatedWork items={body.items} />}
+{
+  body.kind === 'list' && (
+    <ul>
+      {body.items.map((item) => (
+        <li>{item}</li>
+      ))}
+    </ul>
+  )
+}
+{
+  body.kind === 'groups' &&
+    body.groups.map((group) => (
+      <>
+        <h3>{group.title}</h3>
+        <ul>
+          {group.items.map((item) => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </>
+    ))
+}
+{
+  body.kind === 'topics' &&
+    body.items.map((topic) => (
+      <>
+        <h3>{topic.title}</h3>
+        <p>{topic.description}</p>
+      </>
+    ))
+}

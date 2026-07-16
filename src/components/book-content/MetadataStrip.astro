@@ -1,0 +1,38 @@
+---
+// At-a-glance page metadata rendered as a labelled <section> containing a <dl>.
+// Each term/value pair is wrapped in a <div> so it can be laid out as a unit.
+// Only provided fields render.
+interface Props {
+  role?: string;
+  focus?: string;
+  experience?: string;
+  scope?: string;
+  impact?: string;
+}
+
+const { role, focus, experience, scope, impact } = Astro.props;
+
+const items = [
+  { term: 'Role', value: role },
+  { term: 'Focus', value: focus },
+  { term: 'Experience', value: experience },
+  { term: 'Scope', value: scope },
+  { term: 'Impact', value: impact },
+].filter((item) => Boolean(item.value));
+---
+
+{
+  items.length > 0 && (
+    <section id="metadata-strip" class="metadata-strip">
+      <h2 class="sr-only">Page Summary</h2>
+      <dl>
+        {items.map((item) => (
+          <div>
+            <dt>{item.term}</dt>
+            <dd>{item.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  )
+}

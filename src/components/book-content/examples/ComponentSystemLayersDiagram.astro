@@ -1,0 +1,26 @@
+---
+// Example diagram graphic for DiagramFigure's slot.
+//
+// This is a semantic, styling-free placeholder: an ordered list expresses the
+// pipeline order (foundations → surfaces) without any CSS or script. Swap the
+// <ol> for an inline SVG, an imported SVG, or an <img> whenever a designed
+// visual is ready — DiagramFigure supplies the caption and text alternative, so
+// a purely decorative graphic can be added with aria-hidden / empty alt.
+const stages = [
+  { name: 'Foundations', note: 'Tokens, primitives, guidelines' },
+  { name: 'Reusable Components', note: 'Accessible, tested building blocks' },
+  { name: 'Feature Composition', note: 'Components assembled into features' },
+  { name: 'Product Surfaces', note: 'Complete product experiences' },
+];
+---
+
+<ol>
+  {
+    stages.map((stage) => (
+      <li>
+        <strong>{stage.name}</strong>
+        <p>{stage.note}</p>
+      </li>
+    ))
+  }
+</ol>

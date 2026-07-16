@@ -1,0 +1,22 @@
+---
+// Editorial hero for a book-content page. Renders the article <header> and the
+// single <h1>. Extra flow content can be slotted after the intro.
+interface Props {
+  number?: string;
+  title: string;
+  subtitle?: string;
+  lead?: string;
+  intro?: string;
+}
+
+const { number, title, subtitle, lead, intro } = Astro.props;
+---
+
+<header id="hero" class="section-hero cover">
+  {number && <p class="page-number">{number}</p>}
+  <h1 class="page-title">{title}</h1>
+  {subtitle && <p class="page-subtitle sr-only">{subtitle}</p>}
+  {lead && <p class="lead">{lead}</p>}
+  {intro && <p class="intro">{intro}</p>}
+  <slot />
+</header>

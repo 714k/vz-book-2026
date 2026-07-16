@@ -1,0 +1,38 @@
+---
+// A DiagramFigure whose body is built from data rather than slotted markup.
+// Wraps DiagramFigure (which owns the figure's copy and text alternative) and
+// dispatches on the body's `kind`.
+import DiagramFigure from './DiagramFigure.astro';
+import CodeSnippet from './CodeSnippet.astro';
+import CompositionTree from './CompositionTree.astro';
+import type { DiagramContent } from './types';
+
+interface Props {
+  diagram: DiagramContent;
+}
+
+const { diagram } = Astro.props;
+---
+
+<DiagramFigure
+  title={diagram.title}
+  description={diagram.description}
+  caption={diagram.caption}
+  summary={diagram.summary}
+>
+  {
+    diagram.kind === 'stages' && (
+      <ol>
+        {diagram.stages.map((stage) => (
+          <li>
+            <strong>{stage.name}</strong>
+            <p>{stage.note}</p>
+          </li>
+        ))}
+      </ol>
+    )
+  }
+  {diagram.kind === 'code' && <CodeSnippet code={diagram.code} />}
+  {diagram.kind === 'tree' && <CompositionTree nodes={diagram.tree} ordered />}
+  {diagram.footnote && <p>{diagram.footnote}</p>}
+</DiagramFigure>

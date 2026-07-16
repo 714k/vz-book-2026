@@ -1,0 +1,250 @@
+---
+// Example page content built on the reusable book-content template:
+// "The Assembly — Component Architecture".
+//
+// It renders <ContentContainer>, which owns the page anatomy — hero, metadata
+// strip, core section, impact, related work, closing thought — and has no
+// <article> wrapper of its own, so it drops inside the layout's existing
+// <article id="main"> (see BookPage.astro). The four body parts are filled by
+// name; the container decides the order they appear in.
+import ContentContainer from '../ContentContainer.astro';
+import SectionShell from '../SectionShell.astro';
+import PrimaryContent from '../PrimaryContent.astro';
+import DiagramFigure from '../DiagramFigure.astro';
+import DecisionList from '../DecisionList.astro';
+import ImpactList from '../ImpactList.astro';
+import RelatedWork from '../RelatedWork.astro';
+import ClosingThought from '../ClosingThought.astro';
+import ComponentSystemLayersDiagram from './ComponentSystemLayersDiagram.astro';
+import type {
+  HeroContent,
+  MetadataItems,
+  PartLabels,
+  FooterMeta,
+  FocusArea,
+  RelatedWorkItem,
+} from '../types';
+
+const hero: HeroContent = {
+  number: '04.2',
+  title: 'The Assembly',
+  subtitle: 'Component Architecture',
+  lead: 'Building blocks. Composed with intent. Designed to scale.',
+  intro:
+    'I design component systems that are predictable, flexible, and easy to adopt. I focus on clear APIs, composition, accessibility, testing, and long-term maintainability.',
+};
+
+const metadata: MetadataItems = {
+  role: 'Staff Software Engineer',
+  focus: 'Component Systems & Frontend Architecture',
+  experience: '7+ years',
+  scope: 'Design Systems, Products, Platforms',
+  impact: 'Scalability, Consistency, Developer Velocity',
+};
+
+// Optional: each grouping part falls back to a generic accessible name when the
+// page does not supply one.
+const labels: PartLabels = {
+  core: 'Component architecture: philosophy, boundaries, API design, and decisions',
+  impact: 'Impact delivered',
+};
+
+const focusAreas: FocusArea[] = [
+  { title: 'Component APIs' },
+  { title: 'Composition' },
+  { title: 'Boundaries' },
+  { title: 'Variants & States' },
+  { title: 'Accessibility' },
+  { title: 'Testing' },
+];
+
+const componentOwns = [
+  'Shared UI behavior',
+  'Accessibility behavior',
+  'Supported variants',
+  'Public API',
+  'Interaction patterns',
+  'Baseline testing expectations',
+];
+
+const productOwns = [
+  'Business rules',
+  'Workflow state',
+  'Product data',
+  'Permissions',
+  'Domain-specific behavior',
+  'Product-specific extensions',
+];
+
+const keyDecisions = [
+  'Prioritize composition over configuration.',
+  'Design APIs for the next team, not just the current one.',
+  'Keep product logic outside shared UI components.',
+  'Make accessibility part of the contract.',
+  'Test components as reusable product infrastructure.',
+  'Document decisions so systems can evolve safely.',
+];
+
+const impactDelivered = [
+  'Faster development with reusable components.',
+  'Better consistency across product surfaces.',
+  'Reduced UI bugs and inconsistencies.',
+  'Increased adoption across products.',
+  'Stronger accessibility coverage.',
+  'Improved developer velocity.',
+];
+
+const relatedWork: RelatedWorkItem[] = [
+  {
+    title: 'HBO Max',
+    type: 'Product',
+    href: '/at-the-beginning/nobody-knows-he-worked-on/hbo-max/',
+  },
+  {
+    title: 'Thomson Reuters Saffron Design System',
+    type: 'Design System',
+  },
+  {
+    title: 'Tax & Accounting Platform',
+    type: 'Platform',
+  },
+  {
+    title: 'Plastiq',
+    type: 'Product',
+    href: '/at-the-beginning/nobody-knows-he-worked-on/plastiq/',
+  },
+];
+
+const footer: FooterMeta = {
+  sectionTitle: 'Nobody knows how he thinks...',
+  pageTitle: 'The Assembly',
+  fileId: 'VC-THE-ASSEMBLY-004',
+  version: '1.0',
+  lastUpdated: '05.2026',
+  author: 'Victor Zamudio',
+  role: 'Staff Software Engineer',
+};
+---
+
+<ContentContainer hero={hero} metadata={metadata} labels={labels} footer={footer}>
+  <Fragment slot="core">
+    <SectionShell id="component-architecture-statement" title="Component Architecture">
+      <p>
+        Component architecture is where design intent becomes engineering contract. It is the layer
+        that turns recurring interface problems into shared, reliable building blocks the whole
+        product can depend on.
+      </p>
+      <p>
+        I treat components as product infrastructure: their value is not how they look in isolation,
+        but how predictably they behave, compose, and scale across every surface that uses them.
+      </p>
+    </SectionShell>
+
+    <SectionShell id="what-i-focus-on" title="What I Focus On">
+      <PrimaryContent areas={focusAreas} />
+    </SectionShell>
+
+    <SectionShell id="architecture-philosophy" title="Architecture Philosophy">
+      <p>
+        A good component system is invisible. It keeps product surfaces consistent without demanding
+        attention, and it turns recurring UI problems into reusable building blocks.
+      </p>
+      <p>
+        The goal is not to lock every product into one-off implementations, but to give teams a
+        shared foundation they can compose, extend, and trust.
+      </p>
+    </SectionShell>
+
+    <SectionShell id="component-system-model" title="Component System Model">
+      <DiagramFigure
+        title="Component System Layers"
+        description="How product UI scales from foundations to product surfaces."
+        caption="Foundations enable reusable components; components enable feature composition; composition enables product surfaces."
+        summary="A four-stage pipeline. Foundations (tokens, primitives, guidelines) feed reusable components; reusable components are assembled into feature composition; feature composition produces complete product surfaces."
+      >
+        <ComponentSystemLayersDiagram />
+      </DiagramFigure>
+    </SectionShell>
+
+    <SectionShell id="atomic-design-baseline" title="Atomic Design Baseline">
+      <p>
+        I use atomic design as a shared vocabulary rather than a rigid rulebook. Atoms, molecules,
+        and organisms give teams a predictable way to reason about scale.
+      </p>
+      <p>
+        The important decisions live in the contracts between those layers — what each level owns,
+        how it composes upward, and where a product is allowed to extend it.
+      </p>
+    </SectionShell>
+
+    <SectionShell id="boundaries-and-contracts" title="Boundaries & Contracts">
+      <p>Clear ownership keeps shared UI reusable and product logic where it belongs.</p>
+
+      <h3>The component owns</h3>
+      <ul>
+        {componentOwns.map((item) => <li>{item}</li>)}
+      </ul>
+
+      <h3>The product owns</h3>
+      <ul>
+        {productOwns.map((item) => <li>{item}</li>)}
+      </ul>
+    </SectionShell>
+
+    <SectionShell id="component-api-design" title="Component API Design">
+      <p>
+        Clear props, slots, and events. Predictable naming, sensible defaults, and typed contracts
+        so the API is discoverable and hard to misuse.
+      </p>
+    </SectionShell>
+
+    <SectionShell id="composition-and-reuse" title="Composition & Reuse">
+      <p>
+        Small, focused components compose into larger features. Composition keeps each piece simple
+        while allowing rich behavior to emerge from combination.
+      </p>
+    </SectionShell>
+
+    <SectionShell id="state-variants-and-extensibility" title="State, Variants & Extensibility">
+      <p>
+        Well-defined variants and states, slot-based extension points, and escape hatches that let
+        products adapt components without forking them.
+      </p>
+    </SectionShell>
+
+    <SectionShell id="testing-strategy" title="Testing Strategy">
+      <p>
+        Unit tests, component tests, and integration tests, backed by accessibility tests and visual
+        regression to protect behavior and appearance as the system evolves.
+      </p>
+    </SectionShell>
+
+    <SectionShell id="accessibility-by-design" title="Accessibility by Design">
+      <p>
+        Semantic HTML first, then keyboard navigation and focus management. ARIA only when native
+        HTML is insufficient, validated with real assistive technology and automated tools.
+      </p>
+    </SectionShell>
+
+    <SectionShell id="key-decisions" title="Key Decisions">
+      <DecisionList items={keyDecisions} />
+    </SectionShell>
+  </Fragment>
+
+  <Fragment slot="impact">
+    <SectionShell id="impact-delivered" title="Impact Delivered">
+      <ImpactList metrics={impactDelivered} />
+    </SectionShell>
+  </Fragment>
+
+  <Fragment slot="related-work">
+    <SectionShell id="related-work" title="Related Work">
+      <RelatedWork items={relatedWork} />
+    </SectionShell>
+  </Fragment>
+
+  <ClosingThought
+    slot="closing-thought"
+    quote="Great components don’t just look right. They make the right thing easy to do, and the wrong thing hard."
+  />
+</ContentContainer>

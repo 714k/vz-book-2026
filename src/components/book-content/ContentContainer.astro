@@ -1,0 +1,66 @@
+---
+// The reusable content container: the anatomy of a book page. It owns the seven
+// main parts and renders them in a fixed order —
+//
+//   1. Hero            2. Metadata Strip   3. Core Section
+//   4. Impact          5. Related Work     6. Closing Thought
+//   7. Book Footer
+//
+// Hero, Metadata Strip and Book Footer are built from props; the four body parts
+// are filled through named slots. The container decides which parts exist and
+// where they go; the page decides what goes inside each one.
+//
+// Core Section and Impact group several headed sections, so each gets a wrapper
+// with an accessible name (a <section> without one is not exposed as a region),
+// and is skipped entirely — wrapper and all — when its slot is empty. Related
+// Work and Closing Thought are each a single element that already carries its
+// own heading, so they pass straight through rather than being double-wrapped.
+//
+// It carries no <article> wrapper of its own, so it drops directly inside the
+// layout's existing <article id="main"> (see BookPage.astro). Do not add
+// another article#main around the page's content on its account.
+import SectionHero from './SectionHero.astro';
+import MetadataStrip from './MetadataStrip.astro';
+import BookFooter from './BookFooter.astro';
+import type { HeroContent, MetadataItems, PartLabels, FooterMeta } from './types';
+
+interface Props {
+  hero: HeroContent;
+  metadata?: MetadataItems;
+  /** Accessible names for the grouping parts. Defaults suit the common case. */
+  labels?: PartLabels;
+  footer: FooterMeta;
+}
+
+const { hero, metadata, labels, footer } = Astro.props;
+---
+
+<SectionHero {...hero} />
+
+{metadata && <MetadataStrip {...metadata} />}
+
+{
+  Astro.slots.has('primary-content') && (
+    <section
+      id="primary-content"
+      class="primary-content"
+      aria-label={labels?.core ?? 'Core content'}
+    >
+      <slot name="primary-content" />
+    </section>
+  )
+}
+
+{
+  Astro.slots.has('impact') && (
+    <section id="impact" class="impact-section" aria-label={labels?.impact ?? 'Impact'}>
+      <slot name="impact" />
+    </section>
+  )
+}
+
+<slot name="related-work" />
+
+<slot name="closing-thought" />
+
+<BookFooter {...footer} />

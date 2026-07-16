@@ -1,5 +1,5 @@
 ---
-import Default from '../../../layouts/Default.astro';
+import BookPage from '../../../layouts/BookPage.astro';
 import TOC from '../../../components/TOC.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 import ContactData from '../../../components/ContactData.astro';
@@ -10,7 +10,7 @@ import { getRequiredEntry } from '../../../lib/content';
 const norWhereToFindHim = (await getRequiredEntry('norWhereToFindHim', 'data')).data;
 ---
 
-<Default
+<BookPage
   title="Nor where to find him."
   primaryColor="#27a7ef"
   secondaryColor="#00436a"
@@ -32,7 +32,7 @@ const norWhereToFindHim = (await getRequiredEntry('norWhereToFindHim', 'data')).
   <BackToTop />
 
   <ContactSocialMedia />
-</Default>
+</BookPage>
 
 <script>
   import '../../../scripts/validation.js';

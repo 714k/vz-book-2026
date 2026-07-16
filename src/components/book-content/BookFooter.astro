@@ -1,0 +1,32 @@
+---
+// Page-level metadata for the article, rendered as a <footer> with a <dl>.
+// Only provided fields render.
+import type { FooterMeta } from './types';
+
+type Props = FooterMeta;
+
+const { sectionTitle, pageTitle, fileId, version, lastUpdated, author, role } = Astro.props;
+
+const items = [
+  { term: 'Section', value: sectionTitle },
+  { term: 'Page', value: pageTitle },
+  { term: 'File ID', value: fileId },
+  { term: 'Version', value: version },
+  { term: 'Last Updated', value: lastUpdated },
+  { term: 'Author', value: author },
+  { term: 'Role', value: role },
+].filter((item) => Boolean(item.value));
+---
+
+<footer class="book-footer">
+  <dl>
+    {
+      items.map((item) => (
+        <div>
+          <dt>{item.term}</dt>
+          <dd>{item.value}</dd>
+        </div>
+      ))
+    }
+  </dl>
+</footer>

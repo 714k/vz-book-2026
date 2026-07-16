@@ -47,6 +47,13 @@ findings discovered along the way are in their own section below.
       mechanisms (`[project].astro`'s hardcoded array vs. per-project
       `projectsNavigation` JSON) is the source of truth and removing the
       other.
+- [ ] **`src/layouts/Base.astro` is dead code.** Noticed while documenting
+      the layouts: nothing in `src/` imports it. `BookPage.astro` (the
+      layout all 11 pages actually use) carries its own
+      `<html>`/`<head>`/`<body>`, so the two overlap rather than compose -
+      `Base.astro` looks like the remains of the Jekyll migration. Either
+      delete it, or make `BookPage` wrap it so the `<head>`/SEO tags live
+      in one place.
 
 ## Correctness / integrity
 

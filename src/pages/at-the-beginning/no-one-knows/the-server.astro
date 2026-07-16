@@ -1,5 +1,5 @@
 ---
-import Default from '../../../layouts/Default.astro';
+import BookPage from '../../../layouts/BookPage.astro';
 import TOC from '../../../components/TOC.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 import Courses from '../../../components/Courses.astro';
@@ -13,7 +13,7 @@ const yearsSince2006 = currentYear - 2006;
 const yearsSince2012 = currentYear - 2012;
 ---
 
-<Default
+<BookPage
   title="The Server"
   primaryColor="#7cff00"
   secondaryColor="#2B6000"
@@ -429,7 +429,7 @@ const yearsSince2012 = currentYear - 2012;
   <BackToTop />
   <Courses courses={theServer.courses} />
   <BackToTop />
-</Default>
+</BookPage>
 
 <script>
   import { initCharts } from '../../../scripts/charts.js';

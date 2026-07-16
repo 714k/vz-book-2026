@@ -1,5 +1,5 @@
 ---
-import Default from '../../../layouts/Default.astro';
+import BookPage from '../../../layouts/BookPage.astro';
 import TOC from '../../../components/TOC.astro';
 import Ammos from '../../../components/Ammos.astro';
 import { getRequiredEntry } from '../../../lib/content';
@@ -7,14 +7,14 @@ import { getRequiredEntry } from '../../../lib/content';
 const theFixer = (await getRequiredEntry('theFixer', 'data')).data;
 ---
 
-<Default
+<BookPage
   title="The Fixer"
   primaryColor="#ff0000"
   secondaryColor="#5b0000"
   previousPage="/at-the-beginning/no-one-knows/the-navigator"
-  nextPage="/at-the-beginning/nobody-knows-he-worked-on/"
+  nextPage="/at-the-beginning/no-one-knows/the-evolution/"
   previousTitle="The Navigator"
-  nextTitle="Nobody knows he worked on..."
+  nextTitle="The Evolution"
   currentUrl={Astro.url.pathname}
 >
   <header class="cover">
@@ -23,4 +23,4 @@ const theFixer = (await getRequiredEntry('theFixer', 'data')).data;
   <TOC data={theFixer.toc} />
 
   <Ammos ammos={theFixer.ammos} toc={theFixer.toc} />
-</Default>
+</BookPage>

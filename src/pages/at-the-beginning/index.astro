@@ -1,5 +1,5 @@
 ---
-import Default from '../../layouts/Default.astro';
+import BookPage from '../../layouts/BookPage.astro';
 import TOC from '../../components/TOC.astro';
 import { getRequiredEntry } from '../../lib/content';
 
@@ -9,7 +9,7 @@ const theNavigator = (await getRequiredEntry('theNavigator', 'data')).data;
 const theFixer = (await getRequiredEntry('theFixer', 'data')).data;
 ---
 
-<Default
+<BookPage
   title="At the Beginning..."
   description="Case study about a design system"
   image="/projects/cover.png"
@@ -183,4 +183,4 @@ const theFixer = (await getRequiredEntry('theFixer', 'data')).data;
       </figure>
     </div>
   </section>
-</Default>
+</BookPage>

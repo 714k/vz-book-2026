@@ -1,5 +1,5 @@
 ---
-import Default from '../../../layouts/Default.astro';
+import BookPage from '../../../layouts/BookPage.astro';
 import TOC from '../../../components/TOC.astro';
 import BackToTop from '../../../components/BackToTop.astro';
 import { getRequiredEntry } from '../../../lib/content';
@@ -10,7 +10,7 @@ const theNavigator = (await getRequiredEntry('theNavigator', 'data')).data;
 const theFixer = (await getRequiredEntry('theFixer', 'data')).data;
 ---
 
-<Default
+<BookPage
   title="No one knows..."
   siteTitle="At the beginning..."
   primaryColor="#ffbc00"
@@ -73,4 +73,4 @@ const theFixer = (await getRequiredEntry('theFixer', 'data')).data;
   </section>
 
   <BackToTop />
-</Default>
+</BookPage>

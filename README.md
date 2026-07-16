@@ -47,8 +47,12 @@ npm run dev           # http://localhost:4321
 src/
   pages/              Astro pages (routes) - mostly thin wrappers around
                       components, fed by Content Collections
-  layouts/            Default.astro (the shared <head>/<Header>/<Footer>)
+  layouts/            BookPage.astro (the shared <head>/<Header>/<Footer>
+                      plus the prev/next page navigation)
   components/         One .astro component per page section
+    book-content/     The book-page content template - renders a page's copy
+                      from JSON rather than from hand-written markup (see
+                      docs/architecture.md#book-page-content)
   content/            JSON content, validated by content.config.ts's Zod
     projects/         One JSON file per portfolio project
   styles/             One .scss partial per page/section

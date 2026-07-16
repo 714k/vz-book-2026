@@ -1,0 +1,38 @@
+---
+// Content-agnostic diagram wrapper. The visual (inline SVG, imported SVG, an
+// Astro SVG component, or an <img> fallback) is provided via the default slot.
+// A required caption and an optional screen-reader summary supply the text
+// alternative, so the slotted graphic can safely be decorative/aria-hidden.
+import type { HeadingLevel } from './types';
+
+interface Props {
+  title?: string;
+  description?: string;
+  /** Required visible caption describing the figure. */
+  caption: string;
+  /** Optional longer text alternative, exposed in a native <details>. */
+  summary?: string;
+  headingLevel?: HeadingLevel;
+}
+
+const { title, description, caption, summary, headingLevel = 3 } = Astro.props;
+const Heading = `h${headingLevel}` as const;
+---
+
+<figure class="content-diagram">
+  {title && <Heading>{title}</Heading>}
+  {description && <p>{description}</p>}
+
+  <slot />
+
+  {
+    summary && (
+      <details>
+        <summary>Diagram description</summary>
+        <p>{summary}</p>
+      </details>
+    )
+  }
+
+  <figcaption>{caption}</figcaption>
+</figure>

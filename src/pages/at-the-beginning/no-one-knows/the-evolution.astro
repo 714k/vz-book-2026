@@ -1,0 +1,239 @@
+---
+import BookPage from '../../../layouts/BookPage.astro';
+import TOC from '../../../components/TOC.astro';
+import BackToTop from '../../../components/BackToTop.astro';
+
+const toc = [
+  { href: 'design', title: 'The Design era', text: 'Design' },
+  { href: 'engineering', title: 'The Engineering era', text: 'Engineering' },
+  {
+    href: 'frontend-architecture',
+    title: 'The Frontend Architecture era',
+    text: 'Frontend Architecture',
+  },
+  {
+    href: 'product-architecture',
+    title: 'The Product Architecture era',
+    text: 'Product Architecture',
+  },
+  { href: 'ai-enabled-systems', title: 'The AI-Enabled Systems era', text: 'AI-Enabled Systems' },
+  { href: 'looking-forward', title: 'Looking forward', text: 'Looking Forward' },
+];
+---
+
+<BookPage
+  title="The Evolution"
+  primaryColor="#2979ff"
+  secondaryColor="#0d2e6b"
+  previousPage="/at-the-beginning/no-one-knows/the-fixer/"
+  nextPage="/at-the-beginning/nobody-knows-he-worked-on/"
+  previousTitle="The Fixer"
+  nextTitle="Nobody knows he worked on..."
+  currentUrl={Astro.url.pathname}
+  description="How my role evolved from designing interfaces to shaping product architecture and exploring AI-enabled systems."
+>
+  <header class="cover">
+    <h1>The Evolution</h1>
+  </header>
+
+  <TOC data={toc} />
+
+  <section id="introduction">
+    <h2>Every project changed the way I think.</h2>
+    <p>Not because of the technologies I learned, but because of the systems I learned to build.</p>
+    <p>
+      Over the years, my role evolved from designing interfaces to shaping product architecture and
+      exploring how <abbr title="Artificial Intelligence">AI</abbr> can enhance software systems. Each
+      stage expanded not only my technical skills, but also the scope of the problems I was able to solve.
+    </p>
+  </section>
+
+  <BackToTop />
+
+  <section id="design">
+    <h2>Design</h2>
+    <p class="dates"><time datetime="2006">2006</time> — <time datetime="2012">2012</time></p>
+
+    <h3>What I Was Solving</h3>
+    <p>
+      Designing interfaces that were intuitive, visually clear, and easy to use. My focus was on
+      communication, usability, and creating consistent user experiences.
+    </p>
+
+    <h3>What I Learned</h3>
+    <ul>
+      <li>Visual communication</li>
+      <li>Information architecture</li>
+      <li>User experience fundamentals</li>
+      <li>Interaction design</li>
+      <li>Design consistency</li>
+    </ul>
+
+    <h3>The Shift</h3>
+    <p>I started asking why interfaces were built the way they were, not just how they looked.</p>
+  </section>
+
+  <BackToTop />
+
+  <section id="engineering">
+    <h2>Engineering</h2>
+    <p class="dates"><time datetime="2012">2012</time> — <time datetime="2018">2018</time></p>
+
+    <h3>What Changed</h3>
+    <p>Design decisions became implementation decisions.</p>
+    <p>
+      I moved from creating interface concepts to building production software, learning how
+      browsers work, how interfaces perform, and how engineering decisions affect user experience.
+    </p>
+
+    <h3>What I Was Solving</h3>
+    <ul>
+      <li>Responsive web applications</li>
+      <li>Cross-browser compatibility</li>
+      <li>Frontend performance</li>
+      <li>Maintainable codebases</li>
+      <li>Reusable UI patterns</li>
+    </ul>
+
+    <h3>What I Learned</h3>
+    <ul>
+      <li>Modern frontend engineering</li>
+      <li>JavaScript application development</li>
+      <li>Performance optimization</li>
+      <li>Software quality</li>
+      <li>Collaboration with engineering teams</li>
+    </ul>
+
+    <h3>The Shift</h3>
+    <p>Building interfaces taught me that software scales through engineering, not visuals.</p>
+  </section>
+
+  <BackToTop />
+
+  <section id="frontend-architecture">
+    <h2>Frontend Architecture</h2>
+    <p class="dates"><time datetime="2018">2018</time> — <time datetime="2022">2022</time></p>
+
+    <h3>What Changed</h3>
+    <p>The challenge was no longer building pages.</p>
+    <p>It became designing component systems that multiple teams could build upon.</p>
+    <p>My focus shifted from individual features to reusable foundations.</p>
+
+    <h3>What I Was Solving</h3>
+    <ul>
+      <li>Component libraries</li>
+      <li>Shared UI foundations</li>
+      <li>Frontend scalability</li>
+      <li>Design system implementation</li>
+      <li>Developer experience</li>
+    </ul>
+
+    <h3>What I Learned</h3>
+    <ul>
+      <li>Component architecture</li>
+      <li>API design</li>
+      <li>Design tokens</li>
+      <li>Frontend scalability</li>
+      <li>System thinking</li>
+    </ul>
+
+    <h3>The Shift</h3>
+    <p>Interfaces don't scale.</p>
+    <p>Architectures do.</p>
+  </section>
+
+  <BackToTop />
+
+  <section id="product-architecture">
+    <h2>Product Architecture</h2>
+    <p class="dates"><time datetime="2022">2022</time> — Present</p>
+
+    <h3>What Changed</h3>
+    <p>Frontend became only one part of a much larger product ecosystem.</p>
+    <p>
+      I started collaborating more closely with backend engineers, product managers, designers, and
+      cross-functional teams to define how products should evolve as complete systems.
+    </p>
+
+    <h3>What I Was Solving</h3>
+    <ul>
+      <li>Product architecture</li>
+      <li>API integration</li>
+      <li>Data flows</li>
+      <li>Cross-functional collaboration</li>
+      <li>Product scalability</li>
+    </ul>
+
+    <h3>What I Learned</h3>
+    <ul>
+      <li>Product-level thinking</li>
+      <li>Architectural trade-offs</li>
+      <li>System boundaries</li>
+      <li>Cross-team collaboration</li>
+      <li>Technical leadership</li>
+    </ul>
+
+    <h3>The Shift</h3>
+    <p>Products evolve faster when architecture enables teams instead of limiting them.</p>
+  </section>
+
+  <BackToTop />
+
+  <section id="ai-enabled-systems">
+    <h2>AI-Enabled Systems</h2>
+    <p class="dates">Current Direction</p>
+
+    <h3>What Changed</h3>
+    <p>
+      The next evolution is understanding how intelligent capabilities integrate into existing
+      product systems.
+    </p>
+    <p>
+      Rather than focusing on model development, my interest is in designing software that uses
+      <abbr title="Artificial Intelligence">AI</abbr> to improve user workflows, decision-making, and
+      product experiences.
+    </p>
+
+    <h3>What I'm Exploring</h3>
+    <ul>
+      <li>AI-assisted workflows</li>
+      <li>LLM integration</li>
+      <li>Retrieval-based systems</li>
+      <li>Context-aware applications</li>
+      <li>AI-enabled product architecture</li>
+    </ul>
+
+    <h3>What I'm Learning</h3>
+    <ul>
+      <li>How AI changes application architecture</li>
+      <li>Designing products around intelligent capabilities</li>
+      <li>Integrating AI responsibly into existing systems</li>
+      <li>Balancing human workflows with AI assistance</li>
+      <li>Preparing for the next generation of enterprise software</li>
+    </ul>
+
+    <h3>The Next Evolution</h3>
+    <ol>
+      <li>From designing interfaces to engineering applications.</li>
+      <li>From engineering applications to architecting systems.</li>
+      <li>From architecting systems to enabling products with intelligence.</li>
+    </ol>
+  </section>
+
+  <BackToTop />
+
+  <section id="looking-forward">
+    <h2>Looking Forward</h2>
+    <p>Technology will continue to evolve.</p>
+    <p>Frameworks will change.</p>
+    <p>Platforms will change.</p>
+    <p>AI will reshape how software is built.</p>
+    <p>
+      What remains constant is the ability to understand complex problems, design scalable systems,
+      and keep learning.
+    </p>
+    <p>That evolution is still in progress.</p>
+  </section>
+
+  <BackToTop />
+</BookPage>
