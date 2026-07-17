@@ -1,0 +1,214 @@
+{
+  "page": {
+    "title": "The Pattern",
+    "description": "Design Systems as shared product infrastructure: tokens, governance, accessibility, and adoption — turning repeated product decisions into shared patterns without removing the flexibility teams need.",
+    "primaryColor": "#8b5cf6",
+    "secondaryColor": "#2a1065",
+    "previousPage": "/at-the-beginning/no-one-knows/the-map/",
+    "previousTitle": "The Map",
+    "nextPage": "/at-the-beginning/no-one-knows/the-signal/",
+    "nextTitle": "The Signal"
+  },
+  "hero": {
+    "number": "04.4",
+    "title": "The Pattern",
+    "subtitle": "Design Systems as Shared Product Infrastructure",
+    "lead": "A design system is not a component shelf. It is the pattern language that helps product teams make consistent decisions without starting from zero every time.",
+    "intro": "This page explains how I think about design systems: as infrastructure for product quality, frontend consistency, accessibility, adoption, and safer change. The value is not only in the components themselves, but in the decisions they remove, the standards they encode, and the product alignment they make easier."
+  },
+  "metadata": {
+    "role": "Staff Software Engineer",
+    "focus": "Design Systems",
+    "scope": "Tokens, governance, accessibility, adoption, quality, and product consistency",
+    "impact": "Shared decisions that reduce fragmentation across product teams"
+  },
+  "labels": {
+    "core": "Design systems as product infrastructure: infrastructure, tokens, governance, accessibility, and adoption",
+    "impact": "The impact of turning repeated product decisions into shared infrastructure"
+  },
+  "primaryContent": [
+    {
+      "id": "design-systems-are-product-infrastructure",
+      "title": "Design Systems Are Product Infrastructure",
+      "paragraphs": [
+        "I treat design systems as product infrastructure because they shape how teams build, not only what they build. A button, form field, modal, or layout primitive carries decisions about behavior, accessibility, interaction, brand, state, and product expectations.",
+        "The system should make the correct path easier than the custom path. When teams need to solve the same UI and interaction problems repeatedly, the design system should turn those repeated decisions into shared patterns.",
+        "This requires a balance between consistency and flexibility. Too little structure creates fragmentation. Too much control creates bottlenecks. The work is to define the right constraints."
+      ]
+    },
+    {
+      "id": "tokens-create-the-shared-language",
+      "title": "Tokens Create the Shared Language",
+      "paragraphs": [
+        "Design tokens are not just visual variables. They are the translation layer between design intent and engineering implementation.",
+        "A useful token system gives teams a common vocabulary for color, spacing, typography, elevation, motion, density, and interaction states. It also protects the product from one-off styling decisions that are difficult to maintain later.",
+        "Good tokens should be understandable, limited, documented, and tied to product meaning. A token should explain a system decision, not hide an arbitrary value behind a name."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Token-to-Experience Flow",
+        "description": "Shows how design intent becomes product implementation through shared system layers.",
+        "caption": "Tokens connect design intent to reusable implementation, while product feedback keeps the system grounded.",
+        "summary": "A flow: a Design Decision becomes a Token, which is used by a Component, which appears on a Product Surface; Feedback from that surface returns to inform the next design decision.",
+        "stages": [
+          { "name": "Design Decision", "note": "The intent behind a system choice." },
+          { "name": "Token", "note": "The shared vocabulary for that decision." },
+          { "name": "Component", "note": "Reusable implementation using the token." },
+          { "name": "Product Surface", "note": "Where the decision reaches users." },
+          { "name": "Feedback", "note": "Real usage keeps the system grounded." }
+        ]
+      }
+    },
+    {
+      "id": "governance-keeps-the-system-usable",
+      "title": "Governance Keeps the System Usable",
+      "paragraphs": [
+        "Governance is how a design system stays coherent as product needs evolve. It should not exist to slow teams down. It should help teams understand when to reuse, when to extend, and when a new pattern is justified.",
+        "The strongest governance models are practical. They define contribution paths, review criteria, documentation standards, accessibility expectations, and versioning discipline.",
+        "Governance works best when it is close to real product work. Product feedback should inform the system, but the system should not become a collection of isolated product exceptions."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Design System Governance Loop",
+        "description": "Shows how product needs enter the system without turning into unmanaged exceptions.",
+        "caption": "Governance keeps the system coherent while allowing real product requirements to shape its evolution.",
+        "summary": "A loop: a Product Need is checked against Review Criteria, resolved into a Pattern Decision, captured in Documentation, released for Adoption, and returns as Feedback that shapes the next need.",
+        "stages": [
+          { "name": "Product Need", "note": "A real requirement from product work." },
+          { "name": "Review Criteria", "note": "Reuse, extend, or justify a new pattern." },
+          { "name": "Pattern Decision", "note": "The coherent system response." },
+          { "name": "Documentation", "note": "Usage, context, and constraints." },
+          { "name": "Adoption", "note": "Teams take the pattern on." },
+          { "name": "Feedback", "note": "Usage shapes the system's evolution." }
+        ]
+      }
+    },
+    {
+      "id": "accessibility-belongs-in-the-baseline",
+      "title": "Accessibility Belongs in the Baseline",
+      "paragraphs": [
+        "Accessibility should not depend on individual implementation discipline in every product team. The design system should encode accessible defaults wherever possible.",
+        "This includes semantic structure, keyboard interaction, focus behavior, state communication, error messaging, contrast, and documentation for correct usage.",
+        "Reusable components create leverage. If accessibility is handled correctly at the system level, every adopting team starts from a better baseline. If it is handled incorrectly, the same issue scales across products."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Accessibility Baseline",
+        "description": "Shows accessibility as part of the system contract rather than a late-stage correction.",
+        "caption": "Accessible defaults scale quality across every product team that adopts the system.",
+        "summary": "A baseline built into the contract: Semantic Structure, then Interaction Behavior, then State Communication, then Testing, then Release.",
+        "stages": [
+          { "name": "Semantic Structure", "note": "Correct elements and roles first." },
+          { "name": "Interaction Behavior", "note": "Keyboard and focus behavior." },
+          { "name": "State Communication", "note": "Status, validation, and errors." },
+          { "name": "Testing", "note": "Verified across supported states." },
+          { "name": "Release", "note": "Accessible defaults every team inherits." }
+        ]
+      }
+    },
+    {
+      "id": "adoption-is-the-real-test",
+      "title": "Adoption Is the Real Test",
+      "paragraphs": [
+        "A design system only creates value when teams can understand it, trust it, and use it under delivery pressure.",
+        "Adoption depends on more than technical correctness. It requires clear documentation, predictable APIs, useful examples, migration support, contribution clarity, and a system that respects product constraints.",
+        "The goal is not to make every team build the same screen. The goal is to give teams enough shared structure to build different product experiences without creating disconnected implementations."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Adoption Model",
+        "description": "Shows the practical path from system availability to product-team usage.",
+        "caption": "A design system succeeds when teams can adopt it, apply it, and improve it through real usage.",
+        "summary": "A practical path: a Component Available becomes a Usage Example, then a Product Integration, then Team Feedback, then System Improvement.",
+        "stages": [
+          { "name": "Component Available", "note": "The system offers a pattern." },
+          { "name": "Usage Example", "note": "How to apply it in practice." },
+          { "name": "Product Integration", "note": "The team uses it in a real surface." },
+          { "name": "Team Feedback", "note": "What worked and what did not." },
+          { "name": "System Improvement", "note": "The system gets better through use." }
+        ]
+      }
+    }
+  ],
+  "impact": [
+    {
+      "id": "impact",
+      "title": "Impact",
+      "body": {
+        "kind": "focusAreas",
+        "items": [
+          {
+            "title": "Consistency",
+            "description": "Shared patterns reduce duplicated decisions and visual or behavioral drift across product surfaces."
+          },
+          {
+            "title": "Maintainability",
+            "description": "Tokens, components, and documented usage rules make future changes safer and easier to coordinate."
+          },
+          {
+            "title": "Accessibility",
+            "description": "Accessible defaults improve quality before product teams reach QA or remediation cycles."
+          },
+          {
+            "title": "Adoption",
+            "description": "Clear contracts and practical documentation make the system easier to use under real delivery constraints."
+          },
+          {
+            "title": "Product Alignment",
+            "description": "A coherent design system helps product, design, and engineering teams work from the same set of decisions."
+          }
+        ]
+      }
+    }
+  ],
+  "relatedWork": {
+    "id": "related-work",
+    "title": "Related Work",
+    "body": {
+      "kind": "relatedWork",
+      "items": [
+        {
+          "title": "The Assembly",
+          "type": "Component Architecture",
+          "href": "/at-the-beginning/no-one-knows/the-assembly/",
+          "description": "Component Architecture connects to this page through reusable contracts, composition, states, testing, and accessibility."
+        },
+        {
+          "title": "The Map",
+          "type": "Product Architecture",
+          "href": "/at-the-beginning/no-one-knows/the-map/",
+          "description": "Product Architecture connects through the way design-system decisions affect frontend boundaries, product flows, and scalable UI behavior."
+        },
+        {
+          "title": "The Integrator",
+          "type": "Staff-Level Integration",
+          "href": "/at-the-beginning/no-one-knows/the-integrator/",
+          "description": "Staff-level integration connects through the work of aligning product needs, design standards, engineering constraints, and team adoption."
+        },
+        {
+          "title": "Thomson Reuters",
+          "type": "Evidence",
+          "description": "Current work connects through design-system contribution, product migration, accessibility mitigation, and shared platform consistency."
+        },
+        {
+          "title": "The Signal",
+          "type": "AI-Enabled Product Systems",
+          "href": "/at-the-beginning/no-one-knows/the-signal/",
+          "description": "AI-enabled product systems connect when documentation, testing, review workflows, and adoption support can be improved with assistive tooling."
+        }
+      ]
+    }
+  },
+  "closingThought": {
+    "statement": "A design system creates leverage when it turns repeated product decisions into shared infrastructure without removing the flexibility teams need to build real products."
+  },
+  "footer": {
+    "sectionTitle": "Nobody knows how he thinks...",
+    "pageTitle": "The Pattern — Design Systems",
+    "fileId": "VC-THE-PATTERN-001",
+    "version": "1.0",
+    "lastUpdated": "07.2026",
+    "author": "Victor Zamudio",
+    "role": "Staff Software Engineer"
+  }
+}

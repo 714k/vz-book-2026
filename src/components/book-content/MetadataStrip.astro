@@ -8,17 +8,23 @@ interface Props {
   experience?: string;
   scope?: string;
   impact?: string;
+  items?: { term: string; value: string }[];
 }
 
-const { role, focus, experience, scope, impact } = Astro.props;
+const { role, focus, experience, scope, impact, items: customItems } = Astro.props;
 
-const items = [
-  { term: 'Role', value: role },
-  { term: 'Focus', value: focus },
-  { term: 'Experience', value: experience },
-  { term: 'Scope', value: scope },
-  { term: 'Impact', value: impact },
-].filter((item) => Boolean(item.value));
+// Custom term/value pairs take precedence; otherwise fall back to the fixed
+// Role/Focus/Experience/Scope/Impact fields, keeping only the ones provided.
+const items =
+  customItems && customItems.length > 0
+    ? customItems
+    : [
+        { term: 'Role', value: role },
+        { term: 'Focus', value: focus },
+        { term: 'Experience', value: experience },
+        { term: 'Scope', value: scope },
+        { term: 'Impact', value: impact },
+      ].filter((item) => Boolean(item.value));
 ---
 
 {

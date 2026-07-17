@@ -1,11 +1,12 @@
 ---
-// Page-level metadata for the article, rendered as a <footer> with a <dl>.
-// Only provided fields render.
+// Page-level metadata for the article, rendered as a <footer> with a <dl>,
+// followed by the sources the copy cites. Only provided fields render.
 import type { FooterMeta } from './types';
 
 type Props = FooterMeta;
 
-const { sectionTitle, pageTitle, fileId, version, lastUpdated, author, role } = Astro.props;
+const { sectionTitle, pageTitle, fileId, version, lastUpdated, author, role, references } =
+  Astro.props;
 
 const items = [
   { term: 'Section', value: sectionTitle },
@@ -29,4 +30,19 @@ const items = [
       ))
     }
   </dl>
+
+  {
+    references && references.length > 0 && (
+      <>
+        <h2>References</h2>
+        <ol class="book-footer-references">
+          {references.map((reference) => (
+            <li id={`reference-${reference.marker}`}>
+              <a href={reference.href}>{reference.title}</a>
+            </li>
+          ))}
+        </ol>
+      </>
+    )
+  }
 </footer>

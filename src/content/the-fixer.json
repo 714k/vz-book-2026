@@ -1,1160 +1,210 @@
 {
-  "toc": [
+  "coverline": "It bugs me that developers don't follow the standards...",
+  "page": {
+    "title": "The Fixer",
+    "description": "Technical depth and human judgment applied together: frontend architecture, component systems, and engineering quality, framed through problem framing, trade-offs, communication, and delivery.",
+    "primaryColor": "#ff0000",
+    "secondaryColor": "#5b0000",
+    "previousPage": "/at-the-beginning/no-one-knows/the-navigator/",
+    "previousTitle": "The Navigator",
+    "nextPage": "/at-the-beginning/no-one-knows/the-evolution/",
+    "nextTitle": "The Evolution"
+  },
+  "hero": {
+    "number": "03",
+    "title": "The Fixer",
+    "lead": "Technical depth. Human judgment. Applied together.",
+    "intro": "I bring a broad frontend engineering foundation, but the stronger signal is how I apply it: framing ambiguous problems, selecting the right intervention, aligning people around trade-offs, and carrying decisions into reliable product delivery."
+  },
+  "metadata": {
+    "items": [
+      { "term": "Role", "value": "Staff Software Engineer" },
+      { "term": "Capabilities", "value": "Architecture, quality, leadership" },
+      { "term": "Operating Range", "value": "Code → systems → teams" },
+      { "term": "Staff Signal", "value": "Judgment under constraints" }
+    ]
+  },
+  "labels": {
+    "core": "Technical depth and human judgment: the core signal, hard skills, soft skills, and those capabilities in combination",
+    "impact": "The impact of applying technical depth through judgment, communication, and delivery"
+  },
+  "primaryContent": [
     {
-      "title": "The Knowledge I have",
-      "href": "knowledge",
-      "classes": "anchor-class",
-      "prefixText": "",
-      "sufixText": "",
-      "text": "<span class='hide-mobile'>Ammo of </span>Knowledge"
+      "id": "core-signal",
+      "title": "Core Signal",
+      "body": {
+        "kind": "list",
+        "items": [
+          "Connects frontend depth with product and system context.",
+          "Separates symptoms from root causes before implementation.",
+          "Makes constraints, risks, and trade-offs visible.",
+          "Combines technical direction with communication, alignment, and delivery."
+        ]
+      }
     },
     {
-      "title": "The languages I type",
-      "href": "languages",
-      "classes": "anchor-class",
-      "prefixText": "",
-      "sufixText": "",
-      "text": "<span class='hide-mobile'>Ammo of </span>Languages"
+      "id": "hard-skills",
+      "title": "Hard Skills",
+      "paragraphs": [
+        "My technical range is centered on the web platform and the systems built above it."
+      ],
+      "body": {
+        "kind": "topics",
+        "items": [
+          {
+            "title": "Frontend Architecture",
+            "description": "Boundaries, state, data flow, API integration, caching, validation, and error handling."
+          },
+          {
+            "title": "Component Systems",
+            "description": "Reusable APIs, composition, tokens, Web Components, accessibility, and documentation."
+          },
+          {
+            "title": "Engineering Quality",
+            "description": "Testing, performance, code standards, maintainability, and prevention."
+          },
+          {
+            "title": "Technical Foundation",
+            "description": "Semantic HTML, CSS, JavaScript, TypeScript, Angular, React, Node.js, REST, and GraphQL."
+          }
+        ]
+      },
+      "diagram": {
+        "kind": "stages",
+        "title": "Technical Capability Stack",
+        "description": "Shows how foundational web expertise supports increasingly broader engineering responsibilities.",
+        "caption": "My technical range grows from durable web foundations rather than isolated framework expertise.",
+        "summary": "A progression from Web Standards and Accessibility, to Component Systems, to Frontend Architecture, to Product Architecture, to AI-Enabled Product Capabilities.",
+        "stages": [
+          { "name": "Web Standards & Accessibility" },
+          { "name": "Component Systems" },
+          { "name": "Frontend Architecture" },
+          { "name": "Product Architecture" },
+          { "name": "AI-Enabled Product Capabilities" }
+        ]
+      }
     },
     {
-      "title": "The programs I use",
-      "href": "programs",
-      "classes": "anchor-class",
-      "prefixText": "",
-      "sufixText": "",
-      "text": "<span class='hide-mobile'>Ammo of </span>Programs"
+      "id": "soft-skills",
+      "title": "Soft Skills",
+      "paragraphs": [
+        "Staff-level execution depends on more than identifying the technically correct answer."
+      ],
+      "body": {
+        "kind": "topics",
+        "items": [
+          {
+            "title": "Problem Framing",
+            "description": "Turning incomplete signals into a problem the team can evaluate."
+          },
+          {
+            "title": "Technical Judgment",
+            "description": "Balancing quality, delivery pressure, risk, and long-term direction."
+          },
+          {
+            "title": "Communication",
+            "description": "Making decisions understandable across engineering, product, and design."
+          },
+          {
+            "title": "Leadership",
+            "description": "Providing technical direction, mentoring engineers, coordinating work, and building alignment without relying on authority alone."
+          }
+        ]
+      }
     },
     {
-      "title": "The Libraries & Frameworks I implement",
-      "href": "frameworks",
-      "classes": "anchor-class",
-      "prefixText": "",
-      "sufixText": "",
-      "text": "<span class='hide-mobile'>Ammo of </span>Frameworks"
-    },
-    {
-      "title": "The CMS I manage",
-      "href": "cms",
-      "classes": "anchor-class",
-      "prefixText": "",
-      "sufixText": "",
-      "text": "<span class='hide-mobile'>Ammo of </span>CMS"
+      "id": "skills-in-combination",
+      "title": "Skills in Combination",
+      "paragraphs": [
+        "These capabilities are most useful together. A component migration can require architectural boundaries, accessibility, test strategy, rollout sequencing, product negotiation, and team guidance—not simply implementation.",
+        "I move between implementation detail and system context so the immediate problem can be resolved without weakening the product around it."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Staff Execution Loop",
+        "description": "Shows how technical and interpersonal capabilities move a problem from uncertainty to sustainable delivery.",
+        "caption": "Hard skills determine what is possible; soft skills turn the decision into shared execution.",
+        "summary": "A loop: Ambiguity, then Diagnosis, then Trade-Off, then Alignment, then Delivery, then Feedback, which informs the next problem.",
+        "stages": [
+          { "name": "Ambiguity" },
+          { "name": "Diagnosis" },
+          { "name": "Trade-Off" },
+          { "name": "Alignment" },
+          { "name": "Delivery" },
+          { "name": "Feedback" }
+        ]
+      }
     }
   ],
-  "ammos": [
+  "impact": [
     {
-      "id": "knowledge",
-      "title": "The Knowledge I have",
-      "caption": "knowledge",
-      "data": [
-        {
-          "name": "Accessibility",
-          "type": "Software Development",
-          "years": "2007",
-          "use": "Frecuent",
-          "level": "Intermediate Advanced",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Leadership",
-          "type": "Software Development",
-          "years": "2018",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Agile methodology",
-          "type": "Software Development",
-          "years": "2015",
-          "use": "Very Frecuent",
-          "level": "Intermediate",
-          "percentage": "80%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Mobile first",
-          "type": "Web Design",
-          "years": "2017",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "95%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Responsive Web Design",
-          "type": "Web Design",
-          "years": "2012",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Web Standards",
-          "type": "Web Development",
-          "years": "2006",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Usability",
-          "type": "Software Development",
-          "years": "2008",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Design Patterns",
-          "type": "Software Development",
-          "years": "2015",
-          "use": "Very Frecuent",
-          "level": "Intermediate",
-          "percentage": "70%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Industry Best Practices",
-          "type": "Software Development",
-          "years": "2016",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Mentoring",
-          "type": "Soft Skills",
-          "years": "2018",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Architectural Design",
-          "type": "Software Development",
-          "years": "2018",
-          "use": "Frecuent",
-          "level": "Intermediate Advanced",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Web Components",
-          "type": "Software Development",
-          "years": "2022",
-          "use": "Frecuent",
-          "level": "Intermediate Advanced",
-          "percentage": "70%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Software testing",
-          "type": "Software Development",
-          "years": "2015",
-          "use": "Frecuent",
-          "level": "Intermediate Advanced",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "<abbr title='User Experience'>UX</abbr>",
-          "type": "Design",
-          "years": "2017",
-          "use": "Frecuent",
-          "level": "Intermediate Advanced",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Web Performance Optimization",
-          "type": "Software Development",
-          "years": "2012",
-          "use": "Frecuent",
-          "level": "Intermediate Advanced",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "<abbr title='Search Engineering Optimization'>SEO</abbr>",
-          "type": "Search Engine",
-          "years": "2013",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "<abbr title='Search Engineering Marketing'>SEM</abbr>",
-          "type": "Search Engine",
-          "years": "2015",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "70%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Design Systems",
-          "type": "Software Development",
-          "years": "2022",
-          "use": "Frecuent",
-          "level": "Intermediate Advanced",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Information Architecture",
-          "type": "User Experience",
-          "years": "2009",
-          "use": "Frecuent",
-          "level": "Intermediate Advanced",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "FullStack",
-          "type": "Web Development",
-          "years": "2016",
-          "use": "Frecuent",
-          "level": "Intermediate Advanced",
-          "percentage": "70%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Microformats",
-          "type": "Semanticity",
-          "years": "2012",
-          "use": "Occasionally",
-          "level": "Intermediate Advanced",
-          "percentage": "90%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Open Graph",
-          "type": "Semanticity",
-          "years": "2012",
-          "use": "Occasionally",
-          "level": "Intermediate Advanced",
-          "percentage": "80%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Editorial Design",
-          "type": "Design",
-          "years": "2005",
-          "use": "Frecuent",
-          "level": "Intermediate Advanced",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        },
-        {
-          "name": "Terminal",
-          "type": "Programming tools",
-          "years": "2015",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "100%",
-          "decorative": "<span class='gradient'></span><span class='scroll'></span>"
-        }
-      ]
-    },
-    {
-      "id": "languages",
-      "title": "The languages I type",
-      "caption": "Languages",
-      "data": [
-        {
-          "name": "<abbr title='HyperText Markup Language'>HTML</abbr>",
-          "type": "Web Markup",
-          "years": "2006",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "100%"
-        },
-        {
-          "name": "<abbr title='Cascading Style Sheets'>CSS</abbr>",
-          "type": "Web Presentation",
-          "years": "2006",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "100%"
-        },
-        {
-          "name": "JavaScript",
-          "type": "Prototype-Based, Multi-Paradigm",
-          "years": "2012",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "90%"
-        },
-        {
-          "name": "C++",
-          "type": "Object-Oriented",
-          "years": "2019",
-          "use": "Very Frecuent",
-          "level": "Beginner",
-          "percentage": "30%"
-        },
-        {
-          "name": "TypeScript",
-          "type": "Superset of JavaScript",
-          "years": "2017",
-          "use": "Frecuent",
-          "level": "Beginner",
-          "percentage": "45%"
-        },
-        {
-          "name": "SasS",
-          "type": "Stylesheet",
-          "years": "2016",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "85%"
-        },
-        {
-          "name": "Less",
-          "type": "Stylesheet",
-          "years": "2016",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "75%"
-        },
-        {
-          "name": "Python",
-          "type": "Object-Oriented",
-          "years": "2018",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "60%"
-        },
-        {
-          "name": "Java",
-          "type": "Object-Oriented",
-          "years": "2014",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "50%"
-        },
-        {
-          "name": "Kotlin",
-          "type": "Object-Oriented",
-          "years": "2016",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "50%"
-        },
-        {
-          "name": "<abbr title='Structured Query Language'>SQL</abbr>",
-          "type": "Standardized Programming",
-          "years": "2010",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "70%"
-        },
-        {
-          "name": "GraphQL",
-          "type": "Schema and Query Language",
-          "years": "2018",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "40%"
-        },
-        {
-          "name": "Apollo client",
-          "type": "Schema and Query Language",
-          "years": "2018",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "75%"
-        },
-        {
-          "name": "Apollo Server",
-          "type": "Schema and Query Language",
-          "years": "2018",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "60%"
-        },
-        {
-          "name": "C#",
-          "type": "Object & Component-Oriented",
-          "years": "2010",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "60%"
-        },
-        {
-          "name": "Objective-C",
-          "type": " High-Level General-Purpose, Object-Oriented",
-          "years": "2011",
-          "use": "Very Frecuent",
-          "level": "Intermediate",
-          "percentage": "50%"
-        },
-        {
-          "name": "Ruby",
-          "type": "Dynamically Typed, Object-Oriented",
-          "years": "2016",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "35%"
-        },
-        {
-          "name": "Dart",
-          "type": "Object-Oriented, Class-Based",
-          "years": "2023",
-          "use": "Very Frecuent",
-          "level": "Beginner",
-          "percentage": "20%"
-        },
-        {
-          "name": "Rust",
-          "type": "Multi-Paradigm, High-Level, General-Purpose",
-          "years": "2023",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "10%"
-        },
-        {
-          "name": "Go",
-          "type": "Post-OOP",
-          "years": "2020",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "15%"
-        }
-      ]
-    },
-    {
-      "id": "programs",
-      "title": "The programs I use",
-      "caption": "Programs",
-      "data": [
-        {
-          "name": "Webstorm",
-          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
-          "years": "2017",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "90%",
-          "decorative": ""
-        },
-        {
-          "name": "VS Code",
-          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
-          "years": "2022",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "60%",
-          "decorative": ""
-        },
-        {
-          "name": "IntelliJ IDEA",
-          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
-          "years": "2014",
-          "use": "Very Frecuent",
-          "level": "Occasionally",
-          "percentage": "60%",
-          "decorative": ""
-        },
-        {
-          "name": "Visual Studio",
-          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
-          "years": "2010",
-          "use": "Very Frecuent",
-          "level": "Occasionally",
-          "percentage": "60%",
-          "decorative": ""
-        },
-        {
-          "name": "Eclipse",
-          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
-          "years": "2009",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "60%",
-          "decorative": ""
-        },
-        {
-          "name": "XCode",
-          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
-          "years": "2010",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "40%",
-          "decorative": ""
-        },
-        {
-          "name": "Apache NetBeans",
-          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
-          "years": "2016",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "40%",
-          "decorative": ""
-        },
-        {
-          "name": "Sublime Text",
-          "type": "<abbr title='Graphical User Interface'>IDE</abbr>",
-          "years": "2015",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "60%",
-          "decorative": ""
-        },
-        {
-          "name": "Atom",
-          "type": "<abbr title='Graphical User Interface'>IDE</abbr>",
-          "years": "2015",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "60%",
-          "decorative": ""
-        },
-        {
-          "name": "Android Studio",
-          "type": "<abbr title='Integrated Development Environment'>IDE</abbr>",
-          "years": "2017",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "55%",
-          "decorative": ""
-        },
-        {
-          "name": "Postman",
-          "type": "API Platform",
-          "years": "2017",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "60%",
-          "decorative": ""
-        },
-        {
-          "name": "Browserstack",
-          "type": "Testing Platform",
-          "years": "2018",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "60%",
-          "decorative": ""
-        },
-        {
-          "name": "GitHub Desktop",
-          "type": "<abbr title='Graphical User Interface'>GUI</abbr>",
-          "years": "2020",
-          "use": "Frecuent",
-          "level": "Beginner",
-          "percentage": "40%",
-          "decorative": ""
-        },
-        {
-          "name": "Docker Desktop",
-          "type": "<abbr title='Graphical User Interface'>GUI</abbr>",
-          "years": "2017",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "40%",
-          "decorative": ""
-        },
-        {
-          "name": "Kubernetes<span class='hide-mobile'> Dashboard</span>",
-          "type": "<abbr title='Graphical User Interface'>GUI</abbr>",
-          "years": "2018",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "40%",
-          "decorative": ""
-        },
-        {
-          "name": "Gimp",
-          "type": "Pixelar",
-          "years": "2017",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "35%",
-          "decorative": ""
-        },
-        {
-          "name": "Inkscape",
-          "type": "Vectorial",
-          "years": "2017",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "75%",
-          "decorative": ""
-        },
-        {
-          "name": "Scribus",
-          "type": "Layout Design",
-          "years": "2017",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "75%",
-          "decorative": ""
-        },
-        {
-          "name": "Figma",
-          "type": "UX/UI",
-          "years": "2022",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "50%",
-          "decorative": ""
-        },
-        {
-          "name": "Photoshop",
-          "type": "Pixelar",
-          "years": "2005",
-          "use": "Frecuent",
-          "level": "Advanced",
-          "percentage": "90%",
-          "decorative": ""
-        },
-        {
-          "name": "Illustrator",
-          "type": "Vectorial",
-          "years": "2005",
-          "use": "Frecuent",
-          "level": "Advanced",
-          "percentage": "90%",
-          "decorative": ""
-        },
-        {
-          "name": "InDesign",
-          "type": "Layots",
-          "years": "2006",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "50%",
-          "decorative": ""
-        },
-        {
-          "name": "LucidChart",
-          "type": "Chart",
-          "years": "2018",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "50%",
-          "decorative": ""
-        },
-        {
-          "name": "MySQL Workbench",
-          "type": "Database Client",
-          "years": "2016",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "65%",
-          "decorative": ""
-        },
-        {
-          "name": "MongoDB Compass",
-          "type": "Database Client",
-          "years": "2016",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "65%",
-          "decorative": ""
-        },
-        {
-          "name": "Robo 3T",
-          "type": "Database Client",
-          "years": "2016",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "65%",
-          "decorative": ""
-        },
-        {
-          "name": "SQuirreL SQL",
-          "type": "Database Client",
-          "years": "2017",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "65%",
-          "decorative": ""
-        },
-        {
-          "name": "SequelPro",
-          "type": "Database Client",
-          "years": "2018",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "75%",
-          "decorative": ""
-        },
-        {
-          "name": "DBeaver",
-          "type": "Database Client",
-          "years": "2017",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "55%",
-          "decorative": ""
-        },
-        {
-          "name": "Libre Office",
-          "type": "Office Automation",
-          "years": "2015",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "55%",
-          "decorative": ""
-        },
-        {
-          "name": "Office 365",
-          "type": "Office Automation",
-          "years": "2010",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "60%",
-          "decorative": ""
-        },
-        {
-          "name": "Teams",
-          "type": "Chat & Meetings",
-          "years": "2022",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "60%",
-          "decorative": ""
-        },
-        {
-          "name": "Slack",
-          "type": "Chat & Meetings",
-          "years": "2017",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "60%",
-          "decorative": ""
-        },
-        {
-          "name": "Zoom",
-          "type": "Chat & Meetings",
-          "years": "2016",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "60%",
-          "decorative": ""
-        }
-      ]
-    },
-    {
-      "id": "frameworks",
-      "title": "The Libraries & Frameworks I implement",
-      "caption": "Libraries & Frameworks",
-      "data": [
-        {
-          "name": "ReactJS",
-          "type": "Frontend",
-          "years": "2016",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "90%",
-          "isLibrary": true
-        },
-        {
-          "name": "Redux",
-          "type": "Frontend",
-          "years": "2016",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "90%",
-          "isLibrary": true
-        },
-        {
-          "name": "Redux Logic",
-          "type": "Frontend",
-          "years": "2016",
-          "use": "Frecuent",
-          "level": "Advanced",
-          "percentage": "85%",
-          "isLibrary": true
-        },
-        {
-          "name": "React Hook Form",
-          "type": "Frontend",
-          "years": "2016",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "70%",
-          "isLibrary": true
-        },
-        {
-          "name": "React Bootstrap",
-          "type": "Frontend",
-          "years": "2016",
-          "use": "Occasionally",
-          "level": "Advanced",
-          "percentage": "90%",
-          "isLibrary": true
-        },
-        {
-          "name": "Styled Components",
-          "type": "Frontend",
-          "years": "2018",
-          "use": "Frecuent",
-          "level": "Advanced",
-          "percentage": "100%",
-          "isLibrary": true
-        },
-        {
-          "name": "Material UI",
-          "type": "Frontend",
-          "years": "2017",
-          "use": "Frecuent",
-          "level": "Advanced",
-          "percentage": "100%",
-          "isLibrary": true
-        },
-        {
-          "name": "Angular",
-          "type": "Frontend",
-          "years": "2020",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "75%",
-          "isFramework": true
-        },
-        {
-          "name": "Vue",
-          "type": "Frontend",
-          "years": "2019",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "70%",
-          "isFramework": true
-        },
-        {
-          "name": "Hugo",
-          "type": "Frontend",
-          "years": "2022",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "30%",
-          "isFramework": true
-        },
-        {
-          "name": "Jekyll",
-          "type": "Frontend",
-          "years": "2022",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "25%",
-          "isFramework": true
-        },
-        {
-          "name": "Nuxt",
-          "type": "Frontend",
-          "years": "2022",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "30%",
-          "isFramework": true
-        },
-        {
-          "name": "Gatsby",
-          "type": "Frontend",
-          "years": "2020",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "40%",
-          "isFramework": true
-        },
-        {
-          "name": "NextJS",
-          "type": "Frontend",
-          "years": "2018",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "70%",
-          "isFramework": true
-        },
-        {
-          "name": "Django",
-          "type": "Backend",
-          "years": "2017",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "40%",
-          "isFramework": true
-        },
-        {
-          "name": "Ruby on Rails",
-          "type": "Backend",
-          "years": "2017",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "35%",
-          "isFramework": true
-        },
-        {
-          "name": "Spring Boot",
-          "type": "Frontend",
-          "years": "2016",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "50%",
-          "isFramework": true
-        },
-        {
-          "name": "DotNet",
-          "type": "Backend",
-          "years": "2012",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "65%",
-          "isFramework": true
-        },
-        {
-          "name": "NodeJS",
-          "type": "Backend",
-          "years": "2018",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "90%",
-          "isFramework": true
-        },
-        {
-          "name": "Express",
-          "type": "Backend",
-          "years": "2018",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "75%",
-          "isLibrary": true
-        },
-        {
-          "name": "Symfony",
-          "type": "Backend",
-          "years": "2015",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "70%",
-          "isFramework": true
-        },
-        {
-          "name": "NPM",
-          "type": "Package Manager",
-          "years": "2015",
-          "use": "Very Frecuent",
-          "level": "Advanced",
-          "percentage": "95%",
-          "isLibrary": true
-        },
-        {
-          "name": "Yarn",
-          "type": "Package Manager",
-          "years": "2018",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "75%",
-          "isLibrary": true
-        },
-        {
-          "name": "Rush",
-          "type": "Package Manager",
-          "years": "2022",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "45%",
-          "isLibrary": true
-        },
-        {
-          "name": "Lerna",
-          "type": "Build System",
-          "years": "2019",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "50%",
-          "isLibrary": true
-        },
-        {
-          "name": "Nx",
-          "type": "Architect, Test, and Build System",
-          "years": "2022",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "30%",
-          "isLibrary": true
-        },
-        {
-          "name": "Webpack",
-          "type": "Module Bundler",
-          "years": "2016",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "70%",
-          "isLibrary": true
-        },
-        {
-          "name": "Yeoman",
-          "type": "Scaffolding tool",
-          "years": "2015",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "80%",
-          "isLibrary": true
-        },
-        {
-          "name": "Grunt",
-          "type": "Task Manager",
-          "years": "2015",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "70%",
-          "isLibrary": true
-        },
-        {
-          "name": "Bower",
-          "type": "Package Manager",
-          "years": "2015",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "70%",
-          "isLibrary": true
-        },
-        {
-          "name": "React Testing Library",
-          "type": "Testing Platform",
-          "years": "2016",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "<span>75%</span>",
-          "isLibrary": true
-        },
-        {
-          "name": "Jest",
-          "type": "Testing Platform",
-          "years": "2016",
-          "use": "Frecuent",
-          "level": "Intermediate",
-          "percentage": "70%",
-          "isLibrary": true
-        },
-        {
-          "name": "Cypress",
-          "type": "Testing Platform",
-          "years": "2018",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "20%",
-          "isFramework": true
-        },
-        {
-          "name": "Jasmine",
-          "type": "Testing Platform",
-          "years": "2015",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "70%",
-          "isLibrary": true
-        },
-        {
-          "name": "Mocha",
-          "type": "Testing Platform",
-          "years": "2015",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "70%",
-          "isLibrary": true
-        },
-        {
-          "name": "Chai",
-          "type": "Testing Platform",
-          "years": "2015",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "65%",
-          "isLibrary": true
-        }
-      ]
-    },
-    {
-      "id": "cms",
-      "title": "The CMS I manage",
-      "caption": "<abbr title='Content Management System'>CMS</abbr>",
-      "data": [
-        {
-          "name": "Joomla",
-          "type": "<abbr title='Content Management System'>CMS</abbr>",
-          "years": "2009",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "65%"
-        },
-        {
-          "name": "WordPress",
-          "type": "CMS",
-          "years": "2008",
-          "use": "Occasionally",
-          "level": "Advanced",
-          "percentage": "85%"
-        },
-        {
-          "name": "Orchard",
-          "type": "<abbr title='Content Management System'>CMS</abbr>",
-          "years": "2010",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "60%"
-        },
-        {
-          "name": "Magento",
-          "type": "CMS",
-          "years": "2010",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "55%"
-        },
-        {
-          "name": "Drupal",
-          "type": "CMS",
-          "years": "2010",
-          "use": "Occasionally",
-          "level": "Advanced",
-          "percentage": "85%"
-        },
-        {
-          "name": "OS Commerce",
-          "type": "CMS",
-          "years": "2010",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "35%"
-        },
-        {
-          "name": "OpenCart",
-          "type": "CMS",
-          "years": "2011",
-          "use": "Occasionally",
-          "level": "Beginner",
-          "percentage": "30%"
-        },
-        {
-          "name": "Web Builder",
-          "type": "CMS",
-          "years": "2009",
-          "use": "Occasionally",
-          "level": "Intermediate",
-          "percentage": "75%"
-        },
-        {
-          "name": "Backbase",
-          "type": "CMS",
-          "years": "2016",
-          "use": "Occasionally",
-          "level": "Advanced",
-          "percentage": "90%"
+      "id": "impact",
+      "title": "Impact",
+      "body": {
+        "kind": "focusAreas",
+        "items": [
+          {
+            "title": "Clearer Decisions",
+            "description": "Technical options are evaluated through explicit constraints, risks, and consequences."
+          },
+          {
+            "title": "Stronger Quality",
+            "description": "Accessibility, testing, performance, and maintainability are treated as part of engineering—not final checks."
+          },
+          {
+            "title": "Cross-Team Leverage",
+            "description": "Clear communication helps product, design, and engineering act on the same technical model."
+          },
+          {
+            "title": "Safer Product Evolution",
+            "description": "Immediate delivery remains connected to stronger boundaries, reusable patterns, and future change."
+          }
+        ]
+      }
+    }
+  ],
+  "relatedWork": {
+    "id": "related-work",
+    "title": "Related Work",
+    "body": {
+      "kind": "relatedWork",
+      "items": [
+        {
+          "title": "The Server",
+          "type": "Engineering Identity",
+          "href": "/at-the-beginning/no-one-knows/the-server/",
+          "description": "Provides the broader operating model behind how I think, collaborate, and take responsibility."
+        },
+        {
+          "title": "The Integrator",
+          "type": "Staff-Level Scope",
+          "href": "/at-the-beginning/no-one-knows/the-integrator/",
+          "description": "Shows how these capabilities connect systems, teams, product needs, and execution at Staff scope."
+        },
+        {
+          "title": "The Assembly",
+          "type": "Component Architecture",
+          "href": "/at-the-beginning/no-one-knows/the-assembly/",
+          "description": "Examines the component contracts, composition, testing, and accessibility behind my frontend work."
+        },
+        {
+          "title": "Thomson Reuters",
+          "type": "Evidence",
+          "description": "Provides current evidence of applying technical depth and leadership within established product and platform constraints."
         }
       ]
     }
-  ],
-  "coverline": "It bugs me that developers don't follow the standards..."
+  },
+  "closingThought": {
+    "statement": "The strongest skill is not knowing every tool; it is knowing which capability, decision, and collaboration pattern the problem requires."
+  },
+  "footer": {
+    "sectionTitle": "No one knows...",
+    "pageTitle": "The Fixer — Skills and Judgment",
+    "fileId": "VC-THE-FIXER-001",
+    "version": "2.0",
+    "lastUpdated": "07.2026",
+    "author": "Victor Zamudio",
+    "role": "Staff Software Engineer"
+  }
 }

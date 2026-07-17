@@ -1,0 +1,199 @@
+{
+  "page": {
+    "title": "The Map",
+    "description": "Product Architecture from the frontend boundary: making product behavior legible — workflows, frontend boundaries, API collaboration, data flow, validation, and scalability through cross-team alignment.",
+    "primaryColor": "#2b7fff",
+    "secondaryColor": "#0b2a63",
+    "previousPage": "/at-the-beginning/no-one-knows/the-assembly/",
+    "previousTitle": "The Assembly",
+    "nextPage": "/at-the-beginning/no-one-knows/the-pattern/",
+    "nextTitle": "The Pattern"
+  },
+  "hero": {
+    "number": "04.3",
+    "title": "The Map",
+    "subtitle": "Product Architecture",
+    "lead": "Product Architecture is the practice of making product behavior legible.",
+    "intro": "I approach it from a frontend-oriented systems perspective: how workflows are structured, where frontend boundaries sit, how APIs support the experience, how data and validation move through the product, and how teams align around decisions that need to survive beyond the first implementation. This page is not about backend ownership or distributed systems architecture. It is about the product-facing layer where user behavior, technical constraints, and delivery decisions meet."
+  },
+  "metadata": {
+    "role": "Staff Software Engineer",
+    "focus": "Product Architecture from the frontend boundary",
+    "scope": "Frontend boundaries, API collaboration, data flow, validation, scalability, and cross-team alignment",
+    "impact": "Clearer product behavior, safer change, reduced ambiguity, and stronger product-system alignment"
+  },
+  "labels": {
+    "core": "Product architecture: product behavior, frontend boundaries, API collaboration, data flow and validation, and scalability through alignment",
+    "impact": "The impact of making product behavior legible from the frontend boundary"
+  },
+  "primaryContent": [
+    {
+      "id": "product-behavior-before-screens",
+      "title": "Product Behavior Before Screens",
+      "paragraphs": [
+        "A product is not just a set of pages. It is a system of workflows, rules, states, permissions, errors, and decisions.",
+        "When I think about Product Architecture, I start by mapping how the product behaves before deciding how the interface should be assembled. The screen is the output. The architecture is the set of choices that determine what the screen can safely represent, validate, recover from, and scale into.",
+        "This keeps the work grounded in product behavior instead of visual structure alone."
+      ]
+    },
+    {
+      "id": "frontend-boundaries",
+      "title": "Frontend Boundaries",
+      "paragraphs": [
+        "Frontend boundaries clarify what the user-facing layer owns and what must be aligned with other parts of the system.",
+        "The frontend can own interaction state, routing, UI composition, client-side feedback, loading behavior, local form state, and presentation logic. It should not quietly absorb unclear business rules, duplicate server authority without intent, or hide weak contracts behind complex UI workarounds.",
+        "The boundary matters because it protects maintainability. When responsibilities are explicit, teams can change the product with less confusion and fewer hidden dependencies."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Frontend Product Boundary Map",
+        "description": "Shows where the frontend owns behavior and where it needs alignment with APIs, product rules, and backend-owned authority.",
+        "caption": "Product Architecture begins by clarifying what the frontend owns, what the API must express, and where product behavior crosses system boundaries.",
+        "summary": "A left-to-right flow crossing a boundary: User Workflow, Frontend Experience, and Feature Boundary sit on the frontend side; State and Validation is the shared contract; API Contract and Backend Services sit on the backend-owned side.",
+        "stages": [
+          { "name": "User Workflow", "note": "The behavior the product must support." },
+          { "name": "Frontend Experience", "note": "Interaction, routing, and UI composition." },
+          { "name": "Feature Boundary", "note": "What the user-facing layer owns." },
+          { "name": "State and Validation", "note": "Where frontend and backend must agree." },
+          { "name": "API Contract", "note": "What the API must express clearly." },
+          { "name": "Backend Services", "note": "Authoritative rules and data." }
+        ]
+      }
+    },
+    {
+      "id": "api-collaboration",
+      "title": "API Collaboration",
+      "paragraphs": [
+        "API collaboration is a core part of frontend-oriented Product Architecture.",
+        "I contribute by helping define what the frontend needs from API contracts to support clear product behavior: data shape, validation responses, permissions, error semantics, loading states, filtering, pagination, and edge cases.",
+        "The frontend often reveals architectural gaps because it is where users encounter the system directly. If a contract cannot express a product state clearly, the UI usually becomes the place where ambiguity accumulates.",
+        "The goal is not to control the backend. The goal is to align early enough that the product experience does not depend on fragile assumptions."
+      ]
+    },
+    {
+      "id": "data-flow-state-and-validation",
+      "title": "Data Flow, State, and Validation",
+      "paragraphs": [
+        "Product behavior becomes difficult to maintain when all state is treated the same.",
+        "I separate concerns such as server state, form state, UI state, derived state, validation state, permission state, loading state, and error state. Each type has different ownership, timing, failure modes, and testing needs.",
+        "Validation follows the same principle. Client-side validation can guide the user quickly, but server-side validation remains authoritative. A strong flow makes both visible: immediate feedback where useful, authoritative feedback where required, and clear recovery paths when something fails."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Data and Validation Flow",
+        "description": "Shows how user input moves from interface feedback to authoritative validation and back into product state.",
+        "caption": "Validation is strongest when fast frontend feedback and authoritative server responses are designed as one product flow.",
+        "summary": "A flow: User Input updates UI State, which produces immediate Client Feedback; an API Request triggers authoritative Server Validation, returning a Product Response that leads to Recovery or Completion.",
+        "stages": [
+          { "name": "User Input", "note": "The action the user takes." },
+          { "name": "UI State", "note": "Local, immediate representation." },
+          { "name": "Client Feedback", "note": "Fast guidance where useful." },
+          { "name": "API Request", "note": "Sent for authoritative checks." },
+          { "name": "Server Validation", "note": "The authoritative decision." },
+          { "name": "Product Response", "note": "Result returned to the product." },
+          { "name": "Recovery or Completion", "note": "Clear path on failure or success." }
+        ]
+      }
+    },
+    {
+      "id": "scalability-through-alignment",
+      "title": "Scalability Through Alignment",
+      "paragraphs": [
+        "Product scalability is not only about traffic or infrastructure. From the frontend boundary, scalability means the product can grow across features, workflows, teams, and releases without becoming harder to understand.",
+        "That requires reusable patterns, stable contracts, clear states, consistent validation behavior, performance awareness, and agreement across disciplines.",
+        "The question I try to answer is not only, “Can this feature be built?” It is, “Can this product area keep changing without every new requirement increasing risk?”"
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Product Scalability Decision Path",
+        "description": "Shows how a requirement becomes maintainable when workflow, boundaries, contracts, patterns, states, and performance are considered early.",
+        "caption": "Product scalability improves when architectural decisions are made before implementation hardens into accidental structure.",
+        "summary": "A decision path: a Product Requirement leads to Workflow Analysis, then a Boundary Decision, then API Alignment, then a Reusable Pattern, then Explicit States, ending in Maintainable Delivery.",
+        "stages": [
+          { "name": "Product Requirement", "note": "The new need to support." },
+          { "name": "Workflow Analysis", "note": "How the product should behave." },
+          { "name": "Boundary Decision", "note": "What is local and what is shared." },
+          { "name": "API Alignment", "note": "Contracts that express the behavior." },
+          { "name": "Reusable Pattern", "note": "Structure that survives reuse." },
+          { "name": "Explicit States", "note": "Loading, error, empty, and recovery." },
+          { "name": "Maintainable Delivery", "note": "Change without increasing risk." }
+        ]
+      }
+    }
+  ],
+  "impact": [
+    {
+      "id": "impact",
+      "title": "Impact",
+      "body": {
+        "kind": "focusAreas",
+        "items": [
+          {
+            "title": "Reduced Ambiguity",
+            "description": "Making frontend responsibilities, API expectations, and product states easier to discuss before implementation."
+          },
+          {
+            "title": "Safer Change",
+            "description": "Separating product workflows, validation behavior, state ownership, and UI composition concerns."
+          },
+          {
+            "title": "Stronger Collaboration",
+            "description": "Translating between product intent, design behavior, frontend constraints, API contracts, and QA scenarios."
+          },
+          {
+            "title": "Better Maintainability",
+            "description": "Helping product areas avoid one-off workarounds that become long-term architectural debt."
+          },
+          {
+            "title": "Clearer Product-System Alignment",
+            "description": "Treating user workflows as systems of behavior, not isolated screens."
+          }
+        ]
+      }
+    }
+  ],
+  "relatedWork": {
+    "id": "related-work",
+    "title": "Related Work",
+    "body": {
+      "kind": "relatedWork",
+      "items": [
+        {
+          "title": "The Assembly",
+          "type": "Component Architecture",
+          "href": "/at-the-beginning/no-one-knows/the-assembly/",
+          "description": "Component Architecture connects to this page through reusable contracts, composition, state handling, testing, and accessibility at the UI building-block level."
+        },
+        {
+          "title": "The Pattern",
+          "type": "Design Systems",
+          "href": "/at-the-beginning/no-one-knows/the-pattern/",
+          "description": "Design Systems connect to this page as shared product infrastructure that supports consistency, adoption, and reliable interface patterns."
+        },
+        {
+          "title": "The Integrator",
+          "type": "Staff-Level Integration",
+          "href": "/at-the-beginning/no-one-knows/the-integrator/",
+          "description": "Staff-level integration connects to this page through alignment across product, frontend architecture, APIs, teams, and execution."
+        },
+        {
+          "title": "Thomson Reuters",
+          "type": "Evidence",
+          "description": "Current product work provides the strongest context for how these ideas show up in real product systems, cross-team constraints, and platform-level delivery."
+        }
+      ]
+    }
+  },
+  "closingThought": {
+    "statement": "The Map is about making product behavior visible enough that teams can build, change, and extend it with less guesswork."
+  },
+  "footer": {
+    "sectionTitle": "Nobody knows how he thinks...",
+    "pageTitle": "The Map — Product Architecture",
+    "fileId": "VC-THE-MAP-001",
+    "version": "1.0",
+    "lastUpdated": "07.2026",
+    "author": "Victor Zamudio",
+    "role": "Staff Software Engineer"
+  }
+}

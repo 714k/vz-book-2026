@@ -1,11 +1,11 @@
 ---
-// "The Navigator — Career Progression".
+// "The Map — Product Architecture".
 //
-// Every text on this page lives in src/content/the-navigator.json (collection
-// `theNavigator`); this file only arranges it. Each part of the page is a list
-// of sections that all share one skeleton, so they render through ContentSection
-// — to change the copy, the order, or the sections themselves, edit the JSON,
-// not this file.
+// Every text on this page lives in src/content/the-map.json (collection
+// `theMap`); this file only arranges it. Each part of the page is a list of
+// sections that all share one skeleton, so they render through ContentSection —
+// to change the copy, the order, or the sections themselves, edit the JSON, not
+// this file.
 //
 // It renders <ContentContainer>, which owns the page anatomy — hero, metadata
 // strip, core section, impact, related work, closing thought — and has no
@@ -13,8 +13,8 @@
 // <article id="main"> (see BookPage.astro). This page fills the four body parts
 // by name; the order of the parts is the container's business, not this file's.
 //
-// The JSON also carries `coverline`, which is not part of the page anatomy: it
-// is the cover blurb the two index pages read from this same file.
+// See src/components/book-content/examples/ExampleContent.astro for the same
+// structure kept as documentation / reference.
 import BookPage from '../../../layouts/BookPage.astro';
 import ContentContainer from '../../../components/book-content/ContentContainer.astro';
 import ContentSection from '../../../components/book-content/ContentSection.astro';
@@ -31,7 +31,7 @@ const {
   relatedWork,
   closingThought,
   footer,
-} = (await getRequiredEntry('theNavigator', 'data')).data;
+} = (await getRequiredEntry('theMap', 'data')).data;
 ---
 
 <BookPage

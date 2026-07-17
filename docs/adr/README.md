@@ -22,3 +22,4 @@ supersedes the old one and update the old one's Status line.
 | [0008](0008-accessibility-tooling-and-thresholds.md) | Accessibility tooling and thresholds  | Accepted |
 | [0009](0009-performance-budgets.md)                  | Performance budgets                   | Accepted |
 | [0010](0010-book-page-content-as-data.md)            | Book page content authored as data    | Accepted |
+| [0011](0011-roll-out-book-content-template.md)       | Roll out the book-content template    | Accepted |

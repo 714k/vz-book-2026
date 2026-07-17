@@ -51,6 +51,38 @@
         "prefixText": "",
         "sufixText": "",
         "text": "The Assembly"
+      },
+      {
+        "title": "The Product Architecture",
+        "href": "/at-the-beginning/no-one-knows/the-map/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "The Map"
+      },
+      {
+        "title": "The Design Systems",
+        "href": "/at-the-beginning/no-one-knows/the-pattern/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "The Pattern"
+      },
+      {
+        "title": "The AI Integration",
+        "href": "/at-the-beginning/no-one-knows/the-signal/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "The Signal"
+      },
+      {
+        "title": "The Technical Integration",
+        "href": "/at-the-beginning/no-one-knows/the-integrator/",
+        "classes": "",
+        "prefixText": "",
+        "sufixText": "",
+        "text": "The Integrator"
       }
     ]
   },

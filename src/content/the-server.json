@@ -1,995 +1,189 @@
 {
-  "toc": [
+  "coverline": "Hello friend, my name is Víctor Zamudio, I live at Mexico City...",
+  "page": {
+    "title": "The Server",
+    "description": "Personal introduction and professional overview: the engineer behind the portfolio — how editorial design became web structure, and how that foundation shows up in frontend architecture, design systems, and product platforms.",
+    "primaryColor": "#7cff00",
+    "secondaryColor": "#2B6000",
+    "previousPage": "/at-the-beginning/no-one-knows/",
+    "previousTitle": "No one knows...",
+    "nextPage": "/at-the-beginning/no-one-knows/the-navigator/",
+    "nextTitle": "The Navigator"
+  },
+  "hero": {
+    "number": "02.1",
+    "title": "The Server",
+    "subtitle": "Personal Introduction / Professional Overview",
+    "lead": "Hi, my name is Victor Zamudio. I’ll be your server from here.",
+    "intro": "In Spanish, tu servidor means at your service. This is the personal introduction to the engineer behind the portfolio—and the starting point for understanding the work, judgment, and systems presented throughout it."
+  },
+  "metadata": {
+    "items": [
+      { "term": "Role", "value": "Staff Software Engineer" },
+      { "term": "Current Company", "value": "Thomson Reuters · Since September 2022" },
+      { "term": "Based In", "value": "Mexico City, Mexico" },
+      { "term": "Building for the Web", "value": "Since June 2006" }
+    ]
+  },
+  "labels": {
+    "core": "Personal introduction and professional overview: the summary view, the person, how editorial structure became web structure, and the engineer behind the portfolio",
+    "impact": "The impact of an engineering practice founded on editorial structure, design–engineering fluency, and system-level thinking"
+  },
+  "primaryContent": [
     {
-      "title": "The profile of Victor Zamudio",
-      "href": "profile",
-      "classes": "anchor-class",
-      "prefixText": "01",
-      "sufixText": "",
-      "text": "has a pitch"
+      "id": "in-one-view",
+      "title": "In One View",
+      "body": {
+        "kind": "list",
+        "items": [
+          "Editorial design established the structural foundation of my web practice.",
+          "I work across frontend architecture, design systems, product platforms, and technical alignment.",
+          "I combine visual judgment, semantic structure, engineering quality, and system-level thinking.",
+          "This portfolio separates that identity into evolution, evidence, methods, and direction."
+        ]
+      }
     },
     {
-      "title": "The professional interests of Victor Zamudio",
-      "href": "professional-interest",
-      "classes": "anchor-class",
-      "prefixText": "02",
-      "sufixText": "",
-      "text": "has passion"
+      "id": "hello-friend",
+      "title": "Hello, Friend",
+      "paragraphs": [
+        "I was born and raised in Mexico and remain based in Mexico City—my home, my context, and my beloved country.",
+        "I am a Staff Software Engineer at Thomson Reuters, where I have worked since September 2022. I have been building for the web since June 2006, contributing across enterprise, media, fintech, healthcare, and aviation product environments.",
+        "The complete career progression belongs to The Navigator. What matters here is the connection between where I started and how I operate today."
+      ]
     },
     {
-      "title": "My academic formation",
-      "href": "academic-formation",
-      "classes": "anchor-class",
-      "prefixText": "03",
-      "sufixText": "",
-      "text": "has credentials"
+      "id": "editorial-structure-became-web-structure",
+      "title": "Editorial Structure Became Web Structure",
+      "paragraphs": [
+        "I studied Graphic Communication Design at Universidad Autónoma Metropolitana, specializing in Editorial Design. During my final year, I worked on the university’s design publication with grids, prototypes, indexes, covers, headers, footers, articles, content hierarchy, and editorial markup. Those practices became the first foundations of my work on the web. [1]",
+        "The relationship is literal at the level of document structure.",
+        "Editorial markup identifies the role of content before deciding how it should look: title, heading, article, paragraph, caption, list, or reference. HTML applies the same structural principle to web documents. The W3C describes HTML as semantic markup created to describe documents, and historically defines it as an SGML application for structured document types. [2]"
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Diagram 01 — From Editorial Markup to Product Architecture",
+        "description": "Shows how an editorial foundation expanded into increasingly complex engineering systems.",
+        "caption": "The medium changed, but the core discipline remained: identify meaning, establish hierarchy, and create a structure others can navigate.",
+        "summary": "A top-to-bottom progression: Editorial Markup, then Semantic HTML, then Accessible Interfaces, then Reusable Components, then Design Systems, then Product Architecture.",
+        "stages": [
+          { "name": "Editorial Markup" },
+          { "name": "Semantic HTML" },
+          { "name": "Accessible Interfaces" },
+          { "name": "Reusable Components" },
+          { "name": "Design Systems" },
+          { "name": "Product Architecture" }
+        ]
+      },
+      "closingStatement": "Editorial design taught me the principle before I learned the syntax: structure gives content meaning; presentation gives that meaning form."
     },
     {
-      "title": "My hard training",
-      "href": "courses",
-      "classes": "anchor-class",
-      "prefixText": "04",
-      "sufixText": "",
-      "text": "has training"
+      "id": "the-engineer-behind-the-portfolio",
+      "title": "The Engineer Behind the Portfolio",
+      "paragraphs": [
+        "Today, I work where interface decisions become shared product systems.",
+        "My scope includes frontend architecture, component systems, design-system integration, accessibility, engineering standards, API collaboration, and technical direction across teams. I connect product intent with implementation constraints and help turn individual decisions into patterns that others can understand, adopt, and extend.",
+        "The portfolio presents that professional identity through distinct forms of evidence rather than repeating it on every page."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Diagram 02 — The Professional Picture",
+        "description": "Shows how the portfolio reveals one engineering identity through separate but connected perspectives.",
+        "caption": "The Server introduces the person; the rest of the portfolio demonstrates the engineer.",
+        "summary": "A top-to-bottom progression through the portfolio: The Server, then The Navigator, then Selected Work, then The Pattern, The Assembly, The Map and The Signal, then Future Direction.",
+        "stages": [
+          { "name": "The Server", "note": "Personal and engineering identity" },
+          { "name": "The Navigator", "note": "Career evolution" },
+          { "name": "Selected Work", "note": "Evidence in products and platforms" },
+          {
+            "name": "The Pattern · The Assembly · The Map · The Signal",
+            "note": "Technical thinking"
+          },
+          { "name": "Future Direction", "note": "What comes next" }
+        ]
+      }
     }
   ],
-  "courses": [
+  "impact": [
     {
-      "title": "Mastering the Eight Paradoxes of Effective Leaders",
-      "instructor": "Pete Mockaitis",
-      "country": "English, Bulgarian",
-      "role": "AWS certified",
-      "nationality": "English, Bulgarian",
-      "academy": "LinkedIn Learning",
-      "short-description": "Dive in and learn React from scratch",
-      "year": "Feb 2023",
-      "type": "Online",
-      "language": "English",
-      "last-updated": "Apr, 2015",
-      "students": "963,948",
-      "duration": "39h 12m",
-      "rating": "4.6 of 5",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "UX Foundations: Information Architecture",
-      "Instructor": "Chris Noder",
-      "academy": "LinkedIn Learning",
-      "year": "Jan 2023",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Fundamentals of Web Components",
-      "Instructor": "Basar Buyukkahraman",
-      "academy": "Udemy",
-      "year": "Dec 2022",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Building Angular and Node Apps with Authentication",
-      "Instructor": "Pete Mockaitis",
-      "academy": "LinkedIn Learning",
-      "year": "Nov 2022",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Accessibility for Web Design",
-      "Instructor": "Pete Mockaitis",
-      "academy": "LinkedIn Learning",
-      "year": "Oct 2022",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "UX Foundations: Accessibility",
-      "Instructor": "Pete Mockaitis",
-      "academy": "LinkedIn Learning",
-      "year": "Oct 2022",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "User Experience for Web Design",
-      "Instructor": "Pete Mockaitis",
-      "academy": "LinkedIn Learning",
-      "year": "Sep 2022",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Design Thinking: Customer Experience",
-      "Instructor": "Pete Mockaitis",
-      "academy": "LinkedIn Learning",
-      "year": "Sep 2022",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Angular Esential",
-      "Instructor": "Pete Mockaitis",
-      "academy": "LinkedIn Learning",
-      "year": "Aug 2022",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Complete Angular Developer in 2022: Zero to Mastery",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udemy",
-      "year": "Jun 2022",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Leadership. Practical leadership skills",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udemy",
-      "year": "Apr 2022",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Tactics for tackle difficult people in life and work",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udemy",
-      "year": "Feb 2022",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "PNL for Leaderships and Management",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udemy",
-      "year": "Jan 2022",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Think like a Leader with Brian Tracy",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udemy",
-      "year": "Nov 2021",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "NodeJS: Advanced concepts",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udemy",
-      "year": "May 2021",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "All about NodeJS",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udemy",
-      "year": "Feb 2021",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Node.js: The complete guide to build restful APIs",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udemy",
-      "year": "Nov 2020",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Learn and understand NodeJS",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udemy",
-      "year": "Aug 2020",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "The modern GraphQL Bootcamp (with NodeJs and Apollo)",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udemy",
-      "year": "Apr 2020",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Modern React with Redux",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udemy",
-      "year": "Mar 2019",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Testing Library with React & React Hooks",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udemy",
-      "year": "Mar 2019",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Python Advanced",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Globant University",
-      "year": "Jul 2018",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Functional Programming",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Globant University",
-      "year": "Feb 2018",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Docker",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Globant University",
-      "year": "May 2017",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Kuberbetes",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Globant University",
-      "year": "Sep 2016",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Mongo DB",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Acamica",
-      "year": "Jun 2016",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Advanced debugging",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Acamica",
-      "year": "Apr 2016",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "ES6 Fundamentals",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Acamica",
-      "year": "Jan 2016",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Code Quality and Refactoring",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Acamica",
-      "year": "Oct 2015",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "AngularJS",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Acamica",
-      "year": "Jul 2015",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Git Essentials",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Acamica",
-      "year": "May 2015",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Introduction to Systems Engineering",
-      "Instructor": "Pete Mockaitis",
-      "academy": "<abbr title='The University of new south wales'>UNSW</abbr> Australia",
-      "year": "Mar 2015",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Tools of The Modern Web Developer",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Tutsplus",
-      "year": "Oct 2014",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Mobile Web development",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udacity",
-      "year": "Jun 2014",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Browser Rendering Optimization",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Udacity",
-      "year": "Apr 2014",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Developing in .Net with Visual Studio",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Microsoft Virtual Academy",
-      "year": "Jul 2013",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Development of Videogames for Windows 8",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Microsoft Mexico",
-      "year": "May 2013",
-      "type": "Microsoft Mexico Headquarters",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Development of Applications for Windows Phone 8",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Microsoft Mexico",
-      "year": "Feb 2013",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Development of Applications for Windows 8",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Microsoft Mexico",
-      "year": "Nov 2012",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Programming in C# Jump Start",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Microsoft Virtual Academy",
-      "year": "Sep 2012",
-      "type": "Online",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Google Analytics",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Codice",
-      "year": "Aug 2012",
-      "type": "Codice Headquarters",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Google AdWords",
-      "Instructor": "Pete Mockaitis",
-      "academy": "Codice",
-      "year": "Jun 2012",
-      "type": "Codice Headquarters",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
-    },
-    {
-      "title": "Accessibility in the Web",
-      "Instructor": "Pete Mockaitis",
-      "academy": "CTIC Fundation W3C",
-      "year": "Jun 2009",
-      "type": "Infotec Headquarters",
-      "where": "Infotec Headquarters",
-      "certificateHref": "/docs/certificates/01.pdf",
-      "categories": [
-        "Soft skills",
-        "Leadership",
-        "Communication",
-        "UX",
-        "Agile",
-        "Fullstack",
-        "Frameworks",
-        "Angular",
-        "React",
-        "Bundlers",
-        "NodeJS",
-        "Accessibility"
-      ]
+      "id": "impact",
+      "title": "Impact",
+      "body": {
+        "kind": "focusAreas",
+        "items": [
+          {
+            "title": "Structural Clarity",
+            "description": "Editorial hierarchy and semantic markup help me organize interfaces around meaning rather than visual treatment alone."
+          },
+          {
+            "title": "Design–Engineering Fluency",
+            "description": "I connect product and visual intent with accessibility, component behavior, architecture, and implementation quality."
+          },
+          {
+            "title": "Product-System Awareness",
+            "description": "I evaluate interface decisions through their effects on shared capabilities, teams, adoption, and future change."
+          },
+          {
+            "title": "Engineering Leverage",
+            "description": "I turn individual contributions into reusable patterns, preserved reasoning, and clearer technical direction."
+          }
+        ]
+      }
     }
   ],
-  "coverline": "Hello friend, my name is Víctor Zamudio, I live at Mexico City..."
+  "relatedWork": {
+    "id": "related-work",
+    "title": "Related Work",
+    "body": {
+      "kind": "relatedWork",
+      "items": [
+        {
+          "title": "The Navigator",
+          "type": "Career Progression",
+          "href": "/at-the-beginning/no-one-knows/the-navigator/",
+          "description": "Traces the progression from editorial design and early web practice to Staff Software Engineering."
+        },
+        {
+          "title": "The Integrator",
+          "type": "Staff-Level Scope",
+          "href": "/at-the-beginning/no-one-knows/the-integrator/",
+          "description": "Shows how I connect product needs, design intent, frontend architecture, APIs, and engineering teams."
+        },
+        {
+          "title": "Thomson Reuters",
+          "type": "Evidence",
+          "description": "Provides current evidence across product platforms, shared UI systems, accessibility, quality, and AI-enabled initiatives."
+        },
+        {
+          "title": "Nobody Knows How He Thinks...",
+          "type": "Capability Model",
+          "description": "Introduces the technical models behind my work in design systems, component architecture, product architecture, and AI integration."
+        }
+      ]
+    }
+  },
+  "closingThought": {
+    "statement": "Before I engineered product systems, editorial design taught me their first principle: structure makes meaning visible."
+  },
+  "footer": {
+    "sectionTitle": "No one knows...",
+    "pageTitle": "The Server — Personal Introduction",
+    "fileId": "VC-THE-SERVER-001",
+    "version": "3.0",
+    "lastUpdated": "07.2026",
+    "author": "Victor Zamudio",
+    "role": "Staff Software Engineer",
+    "references": [
+      {
+        "marker": "1",
+        "title": "The Server | Victor Zamudio",
+        "href": "https://victorzamudio.dev/at-the-beginning/no-one-knows/the-server/"
+      },
+      {
+        "marker": "2",
+        "title": "1 Introduction — HTML5",
+        "href": "https://www.w3.org/TR/2011/WD-html5-20110525/introduction.html"
+      }
+    ]
+  }
 }

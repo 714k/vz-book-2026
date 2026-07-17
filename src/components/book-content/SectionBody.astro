@@ -50,3 +50,48 @@ const { body } = Astro.props;
       </>
     ))
 }
+{
+  body.kind === 'table' && (
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            {body.columns.map((column) => (
+              <th scope="col">{column}</th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {body.rows.map((row) => (
+            <tr>
+              {row.map((cell) => (
+                <td>{cell}</td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+<style>
+  /* Wide tables scroll inside their own box instead of forcing the page to. */
+  .table-scroll {
+    overflow-x: auto;
+  }
+  .table-scroll table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .table-scroll th,
+  .table-scroll td {
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid currentColor;
+    vertical-align: top;
+  }
+  .table-scroll th {
+    font-weight: 700;
+  }
+</style>

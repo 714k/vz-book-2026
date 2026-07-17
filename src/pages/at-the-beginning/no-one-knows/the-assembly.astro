@@ -63,7 +63,7 @@ const {
 
     <ClosingThought slot="closing-thought">
       <p><strong>{closingThought.statement}</strong></p>
-      {closingThought.paragraphs.map((text) => <p>{text}</p>)}
+      {closingThought.paragraphs?.map((text) => <p>{text}</p>)}
     </ClosingThought>
   </ContentContainer>
 </BookPage>
