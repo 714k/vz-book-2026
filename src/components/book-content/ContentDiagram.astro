@@ -26,7 +26,7 @@ const { diagram } = Astro.props;
         {diagram.stages.map((stage) => (
           <li>
             <strong>{stage.name}</strong>
-            <p>{stage.note}</p>
+            {stage.note && <p>{stage.note}</p>}
           </li>
         ))}
       </ol>

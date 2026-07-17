@@ -6,6 +6,10 @@
 //   4. Impact          5. Related Work     6. Closing Thought
 //   7. Book Footer
 //
+// The order is fixed for every page: Closing Thought always follows Related Work
+// and precedes the Book Footer. It is the container's business, not the page's,
+// so a page that wants a different order does not get one.
+//
 // Hero, Metadata Strip and Book Footer are built from props; the four body parts
 // are filled through named slots. The container decides which parts exist and
 // where they go; the page decides what goes inside each one.

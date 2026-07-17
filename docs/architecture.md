@@ -59,13 +59,18 @@ against every real file so a break is caught in CI before it ever reaches
 
 ## Book page content
 
-Most pages hand-write their markup and pull only data (a list of courses,
-a project brief) from JSON. The "book" pages under
-`no-one-knows/` are the exception: _all_ of their copy - every paragraph,
-heading, list, caption - lives in the page's JSON file, and the `.astro`
-page only arranges it. `the-assembly` is the first page built this way;
+Most pages hand-write their markup and pull only data (a project brief)
+from JSON. The "book" pages under `no-one-knows/` are the exception: _all_
+of their copy - every paragraph, heading, list, caption - lives in the
+page's JSON file, and the `.astro` page only arranges it.
 [ADR 0010](adr/0010-book-page-content-as-data.md) covers why, and what it
-costs.
+costs; [ADR 0011](adr/0011-roll-out-book-content-template.md) covers the
+rollout.
+
+All eight book sections now use this template - `the-assembly`,
+`the-server`, `the-navigator`, `the-fixer`, `the-map`, `the-pattern`,
+`the-signal`, and `the-integrator` (`the-server`, `the-navigator` and
+`the-fixer` also carry a `coverline` for the index covers).
 
 Every section of such a page shares one skeleton - statement, paragraphs,
 body, closing paragraphs, diagram, closing statement - and only the _body_
@@ -75,7 +80,7 @@ it.
 
 ```mermaid
 flowchart TD
-    JSON["src/content/the-assembly.json<br/>hero · metadata · sections · footer"] --> Page["the-assembly.astro<br/>{primaryContent.map(...)}"]
+    JSON["src/content/&lt;page&gt;.json<br/>hero · metadata · sections · footer"] --> Page["&lt;page&gt;.astro<br/>{primaryContent.map(...)}"]
 
     Page --> Container["ContentContainer<br/>owns the page anatomy:<br/>hero · metadata · core · impact<br/>related work · closing thought"]
     Page --> Section["ContentSection<br/>one section, from data"]
@@ -84,7 +89,7 @@ flowchart TD
     Section --> Body["SectionBody<br/>dispatches on body.kind"]
     Section --> Diagram["ContentDiagram<br/>dispatches on diagram.kind"]
 
-    Body --> B1["focusAreas → PrimaryContent<br/>decisions → DecisionList<br/>metrics → ImpactList<br/>relatedWork → RelatedWork<br/>list · groups · topics → plain markup"]
+    Body --> B1["focusAreas → PrimaryContent<br/>decisions → DecisionList<br/>metrics → ImpactList<br/>relatedWork → RelatedWork<br/>list · groups · topics · table → plain markup"]
     Diagram --> D1["stages → ordered pipeline<br/>code → CodeSnippet<br/>tree → CompositionTree"]
 ```
 
@@ -92,6 +97,13 @@ The two "shell" components (`SectionShell`, `DiagramFigure`) are slotted
 primitives: reach for them directly when a section needs one-off markup,
 rather than adding a flag to `ContentSection`. `book-content/examples/`
 keeps a hand-written version of the same page as reference.
+
+Two body/metadata shapes were added as the template rolled out (see
+[ADR 0011](adr/0011-roll-out-book-content-template.md)): a `table` body
+`kind` (`{ columns, rows }`) for tabular sections like `the-navigator`'s
+career route, and an optional `items` array on `metadata` (term/value
+pairs) for pages whose labels do not fit the fixed Role / Focus /
+Experience / Scope / Impact set, such as `the-server`.
 
 ## Test strategy
 

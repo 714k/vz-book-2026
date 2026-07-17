@@ -1,0 +1,260 @@
+{
+  "page": {
+    "title": "The Signal",
+    "description": "AI Integration as a product capability layer: bringing AI into real product experiences through clear boundaries, useful context, retrieval, guardrails, and human oversight — not model training or infrastructure ownership.",
+    "primaryColor": "#ff7a1a",
+    "secondaryColor": "#5a2600",
+    "previousPage": "/at-the-beginning/no-one-knows/the-pattern/",
+    "previousTitle": "The Pattern",
+    "nextPage": "/at-the-beginning/no-one-knows/the-integrator/",
+    "nextTitle": "The Integrator"
+  },
+  "hero": {
+    "number": "04.5",
+    "title": "The Signal",
+    "subtitle": "AI Integration as a product capability layer.",
+    "lead": "AI should help product systems interpret context, support decisions, and reduce workflow friction without replacing architecture, validation, or human responsibility.",
+    "intro": "This page defines how I think about AI Integration: not as model training, research, or infrastructure ownership, but as the pragmatic work of bringing AI capabilities into real product experiences through clear boundaries, useful context, retrieval, guardrails, and human oversight."
+  },
+  "metadata": {
+    "role": "Staff Software Engineer",
+    "focus": "AI-Enabled Product Systems",
+    "scope": "Workflows, context, retrieval, interface patterns, guardrails",
+    "impact": "Better decision support, reduced ambiguity, safer AI-assisted interactions"
+  },
+  "labels": {
+    "core": "AI Integration: AI as a product capability, workflow-first integration, context, retrieval and grounding, and guardrails",
+    "impact": "The impact of treating AI as a bounded product capability layer"
+  },
+  "primaryContent": [
+    {
+      "id": "ai-as-a-product-capability",
+      "title": "AI as a Product Capability",
+      "paragraphs": [
+        "I treat AI as one capability inside a product system, not as a separate layer of magic and not as a replacement for the product itself.",
+        "That means AI must respect the same constraints as any serious product capability: user intent, permissions, workflow state, validation, error handling, accessibility, performance, and trust.",
+        "The useful question is not “Where can we add AI?” The useful question is “Where can AI improve a specific workflow without making the system less understandable?”"
+      ]
+    },
+    {
+      "id": "workflow-first-integration",
+      "title": "Workflow-First Integration",
+      "paragraphs": [
+        "AI is most valuable when it is attached to a clear user task.",
+        "I think about AI-assisted workflows as structured interactions: the user has an intent, the product provides context, the AI generates or suggests something, and the user decides what happens next.",
+        "Useful patterns include:"
+      ],
+      "body": {
+        "kind": "list",
+        "items": [
+          "summarizing long records or documents",
+          "drafting from structured product data",
+          "reviewing content for gaps or inconsistencies",
+          "helping users navigate complex information",
+          "suggesting next steps inside a defined workflow"
+        ]
+      },
+      "closingParagraphs": [
+        "The AI output should not silently become product truth. It should enter the workflow through visible, reviewable, and reversible interaction points."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "AI-Assisted Product Workflow",
+        "description": "Shows how AI enters a product workflow without taking control away from the user.",
+        "caption": "The AI suggests, the user decides, and the product records the trusted outcome.",
+        "summary": "A flow: User Intent gathers Product Context, which forms an AI Request, producing an AI Response, which goes through User Review before a Final System Action is recorded.",
+        "stages": [
+          { "name": "User Intent", "note": "The task the user is trying to complete." },
+          { "name": "Product Context", "note": "The state and data the workflow provides." },
+          { "name": "AI Request", "note": "A bounded, intentional call." },
+          { "name": "AI Response", "note": "A suggestion, not product truth." },
+          { "name": "User Review", "note": "Visible, reviewable, reversible." },
+          { "name": "Final System Action", "note": "The trusted outcome is recorded." }
+        ]
+      }
+    },
+    {
+      "id": "context-as-architecture",
+      "title": "Context as Architecture",
+      "paragraphs": [
+        "Context management is one of the most important parts of AI Integration.",
+        "The quality of the output depends on what the system chooses to include, exclude, structure, constrain, and expose. Too little context creates generic responses. Too much context creates noise, latency, cost, and risk.",
+        "Good context design asks:"
+      ],
+      "body": {
+        "kind": "list",
+        "items": [
+          "What is the user trying to do?",
+          "What product state matters?",
+          "What records or sources are relevant?",
+          "What permissions apply?",
+          "What should not be sent?",
+          "What format does the interface need back?"
+        ]
+      },
+      "closingParagraphs": [
+        "Context should be assembled intentionally. It should reflect the workflow, not simply forward all available data into an AI request."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Context Boundary Model",
+        "description": "Shows how context is assembled before reaching the AI capability.",
+        "caption": "Useful AI behavior depends on intentional, permission-aware context.",
+        "summary": "Context inputs — task intent, product state, user role, permissions, and relevant sources — are combined by a Context Builder into a Bounded AI Context, which returns a Structured Response.",
+        "stages": [
+          {
+            "name": "Context Inputs",
+            "note": "Task intent, product state, user role, permissions, and relevant sources."
+          },
+          { "name": "Context Builder", "note": "Assembles the inputs intentionally." },
+          { "name": "Bounded AI Context", "note": "Only what the workflow needs." },
+          { "name": "Structured Response", "note": "In the format the interface needs back." }
+        ]
+      }
+    },
+    {
+      "id": "retrieval-and-grounding",
+      "title": "Retrieval and Grounding",
+      "paragraphs": [
+        "Retrieval-based systems help AI responses become more useful by connecting them to relevant source material: documents, product records, support content, policies, structured data, or domain-specific knowledge.",
+        "Retrieval improves grounding, but it does not remove the need for review.",
+        "The product still needs to show where an answer came from, make uncertainty visible when needed, and give the user a way to validate or refine the result. Grounded output is more useful, but it is not automatically trusted output."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Retrieval-Based Interaction",
+        "description": "Shows how source material grounds AI output inside a product experience.",
+        "caption": "Retrieval improves grounding, but review and source visibility preserve trust.",
+        "summary": "A flow: a User Question goes through Query Understanding, then Source Retrieval, then Context Filtering, producing an AI Response with Source Visibility, ending in User Validation.",
+        "stages": [
+          { "name": "User Question", "note": "What the user is asking." },
+          { "name": "Query Understanding", "note": "Interpreting the real intent." },
+          { "name": "Source Retrieval", "note": "Relevant source material." },
+          { "name": "Context Filtering", "note": "Keep only what grounds the answer." },
+          { "name": "AI Response", "note": "Grounded, not automatically trusted." },
+          { "name": "Source Visibility", "note": "Show where the answer came from." },
+          { "name": "User Validation", "note": "Validate or refine the result." }
+        ]
+      }
+    },
+    {
+      "id": "guardrails-and-human-oversight",
+      "title": "Guardrails and Human Oversight",
+      "paragraphs": [
+        "AI reliability is not only a model concern. It is a product architecture concern.",
+        "A safer AI-enabled workflow needs boundaries around what the AI can access, what it can suggest, what it can modify, and when a user must approve the result.",
+        "Important guardrails include:"
+      ],
+      "body": {
+        "kind": "list",
+        "items": [
+          "permission-aware context",
+          "constrained prompts",
+          "structured responses",
+          "validation before save or submit",
+          "fallback paths when AI fails",
+          "clear error states",
+          "review before applying changes"
+        ]
+      },
+      "closingParagraphs": [
+        "The safest path should be the default path. AI should assist the user, not bypass them."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Responsibility Separation",
+        "description": "Shows the boundary between product logic, AI suggestion, user judgment, and system record.",
+        "caption": "AI Integration works best when every layer has a clear responsibility.",
+        "summary": "A layered separation: the Product System exposes an AI Capability, whose output passes through Human Review before becoming an Application Record, which sustains Organizational Trust.",
+        "stages": [
+          { "name": "Product System", "note": "Owns product logic and workflow." },
+          { "name": "AI Capability", "note": "Suggests within clear boundaries." },
+          { "name": "Human Review", "note": "User judgment before it counts." },
+          { "name": "Application Record", "note": "The trusted system state." },
+          { "name": "Organizational Trust", "note": "Sustained by clear responsibility." }
+        ]
+      }
+    }
+  ],
+  "impact": [
+    {
+      "id": "impact",
+      "title": "Impact",
+      "body": {
+        "kind": "focusAreas",
+        "items": [
+          {
+            "title": "Reduced Ambiguity",
+            "description": "Clear boundaries make it easier to understand what the AI suggests, what the product controls, and what the user approves."
+          },
+          {
+            "title": "Better Workflow Support",
+            "description": "AI can help users summarize, draft, review, classify, or navigate information when it is connected to a specific task."
+          },
+          {
+            "title": "Safer Product Behavior",
+            "description": "Guardrails, validation, and human review reduce the risk of unsupported output becoming system state."
+          },
+          {
+            "title": "Stronger Product-System Alignment",
+            "description": "AI becomes more useful when it works with existing workflows, permissions, data flows, and interface patterns."
+          },
+          {
+            "title": "More Maintainable AI Experiences",
+            "description": "Bounded context, predictable responses, and clear fallback paths make AI features easier for teams to reason about and evolve."
+          }
+        ]
+      }
+    }
+  ],
+  "relatedWork": {
+    "id": "related-work",
+    "title": "Related Work",
+    "body": {
+      "kind": "relatedWork",
+      "items": [
+        {
+          "title": "The Pattern",
+          "type": "Design Systems",
+          "href": "/at-the-beginning/no-one-knows/the-pattern/",
+          "description": "Design Systems connect to this page through reusable interaction patterns, accessibility, consistency, and product-wide adoption."
+        },
+        {
+          "title": "The Assembly",
+          "type": "Component Architecture",
+          "href": "/at-the-beginning/no-one-knows/the-assembly/",
+          "description": "Component Architecture connects through AI interface states: loading, streaming, source display, regeneration, editing, validation, and fallback behavior."
+        },
+        {
+          "title": "The Map",
+          "type": "Product Architecture",
+          "href": "/at-the-beginning/no-one-knows/the-map/",
+          "description": "Product Architecture connects through workflows, data flow, API collaboration, validation, permissions, and system boundaries."
+        },
+        {
+          "title": "The Integrator",
+          "type": "Staff-Level Integration",
+          "href": "/at-the-beginning/no-one-knows/the-integrator/",
+          "description": "Staff-level integration connects through the alignment work required to bring AI capabilities into product systems responsibly."
+        },
+        {
+          "title": "Thomson Reuters — AI Initiatives",
+          "type": "Evidence",
+          "description": "Current work connects to this page as evidence of AI-enabled product direction, workflow support, and practical integration concerns."
+        }
+      ]
+    }
+  },
+  "closingThought": {
+    "statement": "AI should amplify product value, not replace architectural thinking or human responsibility."
+  },
+  "footer": {
+    "sectionTitle": "Nobody knows how he thinks...",
+    "pageTitle": "The Signal — AI Integration",
+    "fileId": "VC-THE-SIGNAL-001",
+    "version": "1.0",
+    "lastUpdated": "07.2026",
+    "author": "Victor Zamudio",
+    "role": "Staff Software Engineer"
+  }
+}

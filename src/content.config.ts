@@ -150,105 +150,7 @@ const nobodyKnowsHeWorkedOn = defineCollection({
 
 // ---- "no one knows" detail pages ----
 
-const ammoRecordSchema = z.object({
-  name: z.string(),
-  type: z.string(),
-  years: z.string(),
-  use: z.string(),
-  level: z.string(),
-  percentage: z.string(),
-  decorative: z.string().optional(),
-  isLibrary: z.boolean().optional(),
-  isFramework: z.boolean().optional(),
-});
-
-const theFixer = defineCollection({
-  loader: file('src/content/the-fixer.json', { parser: asSingleEntry }),
-  schema: z.object({
-    toc: z.array(tocItemSchema),
-    coverline: z.string(),
-    ammos: z.array(
-      z.object({
-        id: z.string(),
-        title: z.string(),
-        caption: z.string(),
-        data: z.array(ammoRecordSchema),
-      }),
-    ),
-  }),
-});
-
-const adventureLinkSchema = z.object({
-  title: z.string().optional(),
-  text: z.string(),
-  href: z.string().optional(),
-});
-
-const theNavigator = defineCollection({
-  loader: file('src/content/the-navigator.json', { parser: asSingleEntry }),
-  schema: z.object({
-    toc: z.array(tocItemSchema),
-    coverline: z.string(),
-    adventures: z.array(
-      z.object({
-        adventureNumber: z.number(),
-        title: z.string(),
-        period: z.string(),
-        company: z.string(),
-        industry: z.string(),
-        role: z.string(),
-        summary: z.object({
-          activities: z.array(z.object({ title: z.string(), links: z.array(adventureLinkSchema) })),
-          accounts: z.array(
-            z.object({
-              title: z.string(),
-              text: z.string(),
-              links: z.array(adventureLinkSchema),
-            }),
-          ),
-        }),
-      }),
-    ),
-  }),
-});
-
-// the-server.json's `courses` array was hand-authored over time and is
-// ragged: only these fields are consistently present across all entries,
-// plus one legacy entry that also carries a batch of one-off fields
-// (including a stray lowercase `instructor` alongside every other entry's
-// `Instructor`). Modeled as optional rather than cleaned up here to avoid
-// touching content as part of a schema migration.
-const courseSchema = z.object({
-  title: z.string(),
-  academy: z.string(),
-  year: z.string(),
-  type: z.string(),
-  certificateHref: z.string(),
-  categories: z.array(z.string()),
-  Instructor: z.string().optional(),
-  instructor: z.string().optional(),
-  country: z.string().optional(),
-  role: z.string().optional(),
-  nationality: z.string().optional(),
-  'short-description': z.string().optional(),
-  language: z.string().optional(),
-  'last-updated': z.string().optional(),
-  students: z.string().optional(),
-  duration: z.string().optional(),
-  rating: z.string().optional(),
-  where: z.string().optional(),
-});
-
-const theServer = defineCollection({
-  loader: file('src/content/the-server.json', { parser: asSingleEntry }),
-  schema: z.object({
-    toc: z.array(tocItemSchema),
-    coverline: z.string(),
-    courses: z.array(courseSchema),
-  }),
-});
-
-// ---- "The Assembly": a whole page's copy, shaped like the page itself ----
+// ---- book-content pages: a whole page's copy, shaped like the page itself ----
 // Every text on the page lives in the JSON; the .astro file only arranges it.
 // The page's parts are lists of sections, and each section shares one skeleton
 // (see SectionContent in book-content/types.ts) so the page can map over
@@ -303,7 +205,7 @@ const diagramSchema = z.discriminatedUnion('kind', [
   z.object({
     ...diagramMeta,
     kind: z.literal('stages'),
-    stages: z.array(z.object({ name: z.string(), note: z.string() })),
+    stages: z.array(z.object({ name: z.string(), note: z.string().optional() })),
   }),
   z.object({ ...diagramMeta, kind: z.literal('code'), code: z.string() }),
   z.object({ ...diagramMeta, kind: z.literal('tree'), tree: z.array(compositionNodeSchema) }),
@@ -323,6 +225,11 @@ const sectionBodySchema = z.discriminatedUnion('kind', [
     kind: z.literal('topics'),
     items: z.array(z.object({ title: z.string(), description: z.string() })),
   }),
+  z.object({
+    kind: z.literal('table'),
+    columns: z.array(z.string()),
+    rows: z.array(z.array(z.string())),
+  }),
 ]);
 
 // Mirrors SectionContent: everything but the heading is optional, and
@@ -338,51 +245,114 @@ const sectionSchema = z.object({
   closingStatement: z.string().optional(),
 });
 
+// The shape every book-content page shares. `theAssembly` and `theServer` are
+// both exactly this; a page that needs extra keys of its own `.extend()`s it.
+const bookContentPageSchema = z.object({
+  page: z.object({
+    title: z.string(),
+    description: z.string(),
+    primaryColor: z.string(),
+    secondaryColor: z.string(),
+    previousPage: z.string(),
+    previousTitle: z.string(),
+    nextPage: z.string(),
+    nextTitle: z.string(),
+  }),
+  hero: z.object({
+    number: z.string().optional(),
+    title: z.string(),
+    subtitle: z.string().optional(),
+    lead: z.string().optional(),
+    intro: z.string().optional(),
+  }),
+  metadata: z.object({
+    role: z.string().optional(),
+    focus: z.string().optional(),
+    experience: z.string().optional(),
+    scope: z.string().optional(),
+    impact: z.string().optional(),
+    // Custom term/value pairs, rendered in order instead of the fixed fields
+    // when present (see MetadataStrip).
+    items: z.array(z.object({ term: z.string(), value: z.string() })).optional(),
+  }),
+  labels: z.object({ core: z.string().optional(), impact: z.string().optional() }),
+  primaryContent: z.array(sectionSchema),
+  impact: z.array(sectionSchema),
+  relatedWork: sectionSchema,
+  closingThought: z.object({
+    statement: z.string().optional(),
+    // A closing thought can be a bare statement, so the prose is optional.
+    paragraphs: z.array(z.string()).optional(),
+  }),
+  footer: z.object({
+    sectionTitle: z.string(),
+    pageTitle: z.string(),
+    fileId: z.string().optional(),
+    version: z.string().optional(),
+    lastUpdated: z.string().optional(),
+    author: z.string().optional(),
+    role: z.string().optional(),
+    // Sources the copy cites. The copy carries the bare marker ("[2]"); the
+    // footer lists the sources in the same order (see BookFooter).
+    references: z
+      .array(z.object({ marker: z.string(), title: z.string(), href: z.string() }))
+      .optional(),
+  }),
+});
+
 const theAssembly = defineCollection({
   loader: file('src/content/the-assembly.json', { parser: asSingleEntry }),
-  schema: z.object({
-    page: z.object({
-      title: z.string(),
-      description: z.string(),
-      primaryColor: z.string(),
-      secondaryColor: z.string(),
-      previousPage: z.string(),
-      previousTitle: z.string(),
-      nextPage: z.string(),
-      nextTitle: z.string(),
-    }),
-    hero: z.object({
-      number: z.string().optional(),
-      title: z.string(),
-      subtitle: z.string().optional(),
-      lead: z.string().optional(),
-      intro: z.string().optional(),
-    }),
-    metadata: z.object({
-      role: z.string().optional(),
-      focus: z.string().optional(),
-      experience: z.string().optional(),
-      scope: z.string().optional(),
-      impact: z.string().optional(),
-    }),
-    labels: z.object({ core: z.string().optional(), impact: z.string().optional() }),
-    primaryContent: z.array(sectionSchema),
-    impact: z.array(sectionSchema),
-    relatedWork: sectionSchema,
-    closingThought: z.object({
-      statement: z.string().optional(),
-      paragraphs: z.array(z.string()),
-    }),
-    footer: z.object({
-      sectionTitle: z.string(),
-      pageTitle: z.string(),
-      fileId: z.string().optional(),
-      version: z.string().optional(),
-      lastUpdated: z.string().optional(),
-      author: z.string().optional(),
-      role: z.string().optional(),
-    }),
-  }),
+  schema: bookContentPageSchema,
+});
+
+const theServer = defineCollection({
+  loader: file('src/content/the-server.json', { parser: asSingleEntry }),
+  // `coverline` is the cover blurb the two index pages pull from this file
+  // (see at-the-beginning/index.astro and no-one-knows/index.astro). It belongs
+  // to those covers rather than to this page's anatomy, so it sits outside it.
+  schema: bookContentPageSchema.extend({ coverline: z.string() }),
+});
+
+const theNavigator = defineCollection({
+  loader: file('src/content/the-navigator.json', { parser: asSingleEntry }),
+  // Same shape as theServer: a book-content page plus the `coverline` blurb the
+  // two index pages read (see at-the-beginning/index.astro and
+  // no-one-knows/index.astro).
+  schema: bookContentPageSchema.extend({ coverline: z.string() }),
+});
+
+const theFixer = defineCollection({
+  loader: file('src/content/the-fixer.json', { parser: asSingleEntry }),
+  // Same shape as theServer and theNavigator: a book-content page plus the
+  // `coverline` blurb the two index covers read. It held the older `toc` +
+  // `ammos` skills matrix until the section was rewritten as written copy
+  // (see ADR 0011).
+  schema: bookContentPageSchema.extend({ coverline: z.string() }),
+});
+
+const theMap = defineCollection({
+  loader: file('src/content/the-map.json', { parser: asSingleEntry }),
+  // A plain book-content page, like theAssembly: no `coverline`, since no index
+  // cover reads from it.
+  schema: bookContentPageSchema,
+});
+
+const thePattern = defineCollection({
+  loader: file('src/content/the-pattern.json', { parser: asSingleEntry }),
+  // A plain book-content page, like theAssembly and theMap: no `coverline`.
+  schema: bookContentPageSchema,
+});
+
+const theSignal = defineCollection({
+  loader: file('src/content/the-signal.json', { parser: asSingleEntry }),
+  // A plain book-content page, like theAssembly, theMap, and thePattern.
+  schema: bookContentPageSchema,
+});
+
+const theIntegrator = defineCollection({
+  loader: file('src/content/the-integrator.json', { parser: asSingleEntry }),
+  // A plain book-content page, like the other "how he thinks" architecture pages.
+  schema: bookContentPageSchema,
 });
 
 export const collections = {
@@ -397,4 +367,8 @@ export const collections = {
   theFixer,
   theNavigator,
   theServer,
+  theMap,
+  thePattern,
+  theSignal,
+  theIntegrator,
 };

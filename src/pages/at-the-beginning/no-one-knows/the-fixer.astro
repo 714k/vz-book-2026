@@ -1,26 +1,69 @@
 ---
+// "The Fixer — Skills and Judgment".
+//
+// Every text on this page lives in src/content/the-fixer.json (collection
+// `theFixer`); this file only arranges it. Each part of the page is a list of
+// sections that all share one skeleton, so they render through ContentSection —
+// to change the copy, the order, or the sections themselves, edit the JSON, not
+// this file.
+//
+// It renders <ContentContainer>, which owns the page anatomy — hero, metadata
+// strip, core section, impact, related work, closing thought — and has no
+// <article> wrapper of its own, so it drops inside the layout's existing
+// <article id="main"> (see BookPage.astro). This page fills the four body parts
+// by name; the order of the parts is the container's business, not this file's.
+//
+// The JSON also carries `coverline`, which is not part of the page anatomy: it
+// is the cover blurb the two index pages read from this same file.
+//
+// See src/components/book-content/examples/ExampleContent.astro for the same
+// structure kept as documentation / reference.
 import BookPage from '../../../layouts/BookPage.astro';
-import TOC from '../../../components/TOC.astro';
-import Ammos from '../../../components/Ammos.astro';
+import ContentContainer from '../../../components/book-content/ContentContainer.astro';
+import ContentSection from '../../../components/book-content/ContentSection.astro';
+import ClosingThought from '../../../components/book-content/ClosingThought.astro';
 import { getRequiredEntry } from '../../../lib/content';
 
-const theFixer = (await getRequiredEntry('theFixer', 'data')).data;
+const {
+  page,
+  hero,
+  metadata,
+  labels,
+  primaryContent,
+  impact,
+  relatedWork,
+  closingThought,
+  footer,
+} = (await getRequiredEntry('theFixer', 'data')).data;
 ---
 
 <BookPage
-  title="The Fixer"
-  primaryColor="#ff0000"
-  secondaryColor="#5b0000"
-  previousPage="/at-the-beginning/no-one-knows/the-navigator"
-  nextPage="/at-the-beginning/no-one-knows/the-evolution/"
-  previousTitle="The Navigator"
-  nextTitle="The Evolution"
+  title={page.title}
+  primaryColor={page.primaryColor}
+  secondaryColor={page.secondaryColor}
+  previousPage={page.previousPage}
+  nextPage={page.nextPage}
+  previousTitle={page.previousTitle}
+  nextTitle={page.nextTitle}
   currentUrl={Astro.url.pathname}
+  description={page.description}
 >
-  <header class="cover">
-    <h1>The Fixer</h1>
-  </header>
-  <TOC data={theFixer.toc} />
+  <ContentContainer hero={hero} metadata={metadata} labels={labels} footer={footer}>
+    <Fragment slot="primary-content">
+      {primaryContent.map((section) => <ContentSection section={section} />)}
+    </Fragment>
 
-  <Ammos ammos={theFixer.ammos} toc={theFixer.toc} />
+    <Fragment slot="impact">
+      {impact.map((section) => <ContentSection section={section} />)}
+    </Fragment>
+
+    <Fragment slot="related-work">
+      <ContentSection section={relatedWork} />
+    </Fragment>
+
+    <ClosingThought slot="closing-thought">
+      <p><strong>{closingThought.statement}</strong></p>
+      {closingThought.paragraphs?.map((text) => <p>{text}</p>)}
+    </ClosingThought>
+  </ContentContainer>
 </BookPage>

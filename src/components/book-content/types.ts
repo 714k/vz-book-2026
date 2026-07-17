@@ -25,6 +25,12 @@ export interface MetadataItems {
   experience?: string;
   scope?: string;
   impact?: string;
+  /**
+   * Custom term/value pairs. When present, these are rendered in order instead
+   * of the fixed fields above — for pages whose metadata does not fit the common
+   * Role/Focus/Experience/Scope/Impact labels.
+   */
+  items?: { term: string; value: string }[];
 }
 
 /**
@@ -74,10 +80,17 @@ export interface Topic {
   description: string;
 }
 
+/** A simple data table: a header row of column names and rows of cells. */
+export interface TableBody {
+  columns: string[];
+  rows: string[][];
+}
+
 /** One step of a diagram that reads as an ordered pipeline. */
 export interface DiagramStage {
   name: string;
-  note: string;
+  /** Optional gloss. Omit for a pipeline whose stage names speak for themselves. */
+  note?: string;
 }
 
 /** A node of a composition tree. Nests to arbitrary depth. */
@@ -118,7 +131,8 @@ export type SectionBody =
   | { kind: 'relatedWork'; items: RelatedWorkItem[] }
   | { kind: 'list'; items: string[] }
   | { kind: 'groups'; groups: LabelledGroup[] }
-  | { kind: 'topics'; items: Topic[] };
+  | { kind: 'topics'; items: Topic[] }
+  | ({ kind: 'table' } & TableBody);
 
 /**
  * One headed section of a page, as data. Every field is optional except the
@@ -139,6 +153,17 @@ export interface SectionContent {
   closingStatement?: string;
 }
 
+/**
+ * A source cited in the page copy. The copy carries the marker (e.g. "[2]") as
+ * plain text, and the footer lists the sources in order.
+ */
+export interface FooterReference {
+  /** The marker used in the copy, without brackets, e.g. "2". */
+  marker: string;
+  title: string;
+  href: string;
+}
+
 /** Page-level metadata rendered in the article <footer>. */
 export interface FooterMeta {
   sectionTitle: string;
@@ -148,4 +173,6 @@ export interface FooterMeta {
   lastUpdated?: string;
   author?: string;
   role?: string;
+  /** Sources cited in the copy. Omitted by pages that cite nothing. */
+  references?: FooterReference[];
 }

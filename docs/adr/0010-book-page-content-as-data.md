@@ -2,7 +2,9 @@
 
 ## Status
 
-Accepted
+Accepted (extended by [ADR 0011](0011-roll-out-book-content-template.md),
+which rolls the template out to the remaining book sections and resolves the
+"only `the-assembly` uses this today" open question below)
 
 ## Context
 
@@ -21,8 +23,8 @@ rendering bug rather than a build failure.
 
 The existing collections were no template to copy. They pair a `toc` with
 one array of records (`courses`, `ammos`, `adventures`) - a shape that fits
-a page which is essentially a table, and not one that is essentially an
-essay.
+a page which is essentially a table, and not one that is essentially a
+written book section.
 
 ## Decision
 

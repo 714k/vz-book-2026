@@ -1,477 +1,245 @@
 {
   "page": {
     "title": "The Assembly",
-    "description": "Component architecture: building blocks composed with intent, designed to scale — clear APIs, composition, accessibility, testing, and long-term maintainability across product teams.",
+    "description": "Component architecture: reliable building blocks designed around explicit contracts — clear responsibilities, predictable states, composable structures, and behavior that can be tested in isolation.",
     "primaryColor": "#12b5a5",
     "secondaryColor": "#083b35",
     "previousPage": "/at-the-beginning/no-one-knows/the-evolution/",
     "previousTitle": "The Evolution",
-    "nextPage": "/at-the-beginning/nobody-knows-he-worked-on/",
-    "nextTitle": "Nobody knows he worked on..."
+    "nextPage": "/at-the-beginning/no-one-knows/the-map/",
+    "nextTitle": "The Map"
   },
   "hero": {
     "number": "04.2",
     "title": "The Assembly",
     "subtitle": "Component Architecture",
-    "lead": "Building blocks. Composed with intent. Designed to scale.",
-    "intro": "I design component systems that are predictable, flexible, and easy to adopt. My focus is on clear APIs, composition, accessibility, testing, and long-term maintainability across product teams. I approach components as product-level contracts: what the system owns, what product teams control, and how shared patterns can evolve without becoming rigid, fragmented, or over-abstracted."
+    "lead": "Components are where product intent becomes an executable interface.",
+    "intro": "I design component architectures around explicit contracts: clear responsibilities, predictable states, composable structures, and behavior that can be tested in isolation. The goal is not to produce more reusable components. It is to create reliable building blocks that remain understandable as products, requirements, and teams evolve."
   },
   "metadata": {
     "role": "Staff Software Engineer",
-    "focus": "Component Systems & Frontend Architecture",
-    "scope": "Design system integration, product surfaces, and shared frontend patterns",
-    "impact": "Consistency, scalability, maintainability, and delivery velocity"
+    "focus": "Component APIs, composition, state modeling, testing, and accessibility",
+    "scope": "Frontend components used across product features and shared interface systems",
+    "impact": "Safer reuse, clearer implementation decisions, and more maintainable interfaces"
   },
   "labels": {
-    "core": "Component architecture: philosophy, principles, boundaries, API design, and practices",
-    "impact": "Impact delivered, qualitative impact, evidence in practice, and technology"
+    "core": "Component architecture: contracts, boundaries, composition, state, and quality at the component boundary",
+    "impact": "The impact of treating components as architectural contracts"
   },
   "primaryContent": [
     {
-      "id": "architecture-statement",
-      "title": "Component Architecture Statement",
+      "id": "contracts-before-implementation",
+      "title": "Contracts Before Implementation",
       "paragraphs": [
-        "Component architecture is the layer where interface implementation becomes reusable frontend infrastructure.",
-        "It connects design system foundations with real product workflows through clear boundaries, stable APIs, accessible behavior, and tested composition.",
-        "The goal is not only to create reusable UI. The goal is to make reuse predictable, safe, and maintainable across product teams."
-      ]
-    },
-    {
-      "id": "what-i-focus-on",
-      "title": "What I Focus On",
+        "A component is an agreement between the system that provides it and the product code that consumes it.",
+        "Before implementation, I clarify what the component owns, what callers control, and which assumptions should remain internal. Inputs should communicate intent rather than expose implementation details. Outputs should be deliberate. Defaults should support the common case without making exceptional cases impossible.",
+        "A useful component contract answers four questions:"
+      ],
       "body": {
-        "kind": "focusAreas",
+        "kind": "list",
         "items": [
-          {
-            "title": "Component APIs",
-            "description": "Clear, typed, consistent APIs that are easy to use and difficult to misuse."
-          },
-          {
-            "title": "Composition",
-            "description": "Small, focused components that can be assembled into reusable product patterns."
-          },
-          {
-            "title": "Boundaries",
-            "description": "Clear separation between reusable UI behavior and product-specific logic."
-          },
-          {
-            "title": "Variants & States",
-            "description": "Predictable patterns for visual variants, interaction states, validation, loading, and feedback."
-          },
-          {
-            "title": "Accessibility",
-            "description": "Semantic structure, keyboard behavior, focus management, and accessible state communication from the start."
-          },
-          {
-            "title": "Testing",
-            "description": "Layered testing that protects behavior, accessibility, visual consistency, and product integration."
-          }
+          "What responsibility belongs to the component?",
+          "What responsibility remains with the consumer?",
+          "Which states are supported?",
+          "How can the contract evolve without creating unnecessary breakage?"
         ]
-      }
-    },
-    {
-      "id": "architecture-philosophy",
-      "title": "Architecture Philosophy",
-      "statement": "A good component system is invisible.",
-      "paragraphs": [
-        "It lets teams move faster while keeping the product experience consistent, accessible, and maintainable.",
-        "I think of components as contracts, not just UI fragments. A component should make clear what it owns, what the product owns, what can be customized, what behavior is fixed, and where extension is allowed.",
-        "The goal is not to abstract every difference. The goal is to create reusable building blocks that preserve flexibility without allowing every product surface to become a one-off implementation."
-      ]
-    },
-    {
-      "id": "core-principles",
-      "title": "Core Principles",
-      "body": {
-        "kind": "decisions",
-        "items": [
-          {
-            "title": "Small pieces, big impact",
-            "description": "Components should solve focused responsibilities."
-          },
-          {
-            "title": "Public API, private complexity",
-            "description": "Consumers should not need to understand internal implementation details."
-          },
-          {
-            "title": "Composed, not coupled",
-            "description": "Product interfaces should be assembled from reusable parts without creating hidden dependencies."
-          },
-          {
-            "title": "Predictable by design",
-            "description": "States, variants, events, and behaviors should follow consistent patterns."
-          },
-          {
-            "title": "Evolve without breaking trust",
-            "description": "Changes should preserve the contracts teams already depend on."
-          }
-        ]
-      }
-    },
-    {
-      "id": "component-system-model",
-      "title": "Component System Model",
-      "paragraphs": [
-        "A scalable component architecture separates foundations, reusable components, product patterns, and product feedback into a connected system."
+      },
+      "closingParagraphs": [
+        "Clear contracts reduce interpretation. They also make reviews more productive because decisions can be evaluated against defined responsibilities rather than personal preference."
       ],
       "diagram": {
         "kind": "stages",
-        "title": "Component System Layers",
-        "description": "From foundations to product experiences, with feedback flowing back.",
-        "caption": "Component systems scale by separating foundations, reusable components, product patterns, and feedback loops.",
-        "summary": "A five-stage pipeline: Foundations feed Base Components, which are combined into Composite Components, assembled into Templates and Patterns, and delivered as Product Experiences. Feedback from product usage loops back into the foundations.",
+        "title": "The Component Contract",
+        "description": "Shows the responsibilities exchanged between a component and its consumer.",
+        "caption": "A stable component hides implementation decisions while making supported behavior explicit.",
+        "summary": "A left-to-right flow: Consumer Intent passes through the Public API into Component Behavior, which produces an Observable Result.",
         "stages": [
-          { "name": "Foundations", "note": "Tokens, primitives, and guidelines." },
-          { "name": "Base Components", "note": "Accessible, tested building blocks." },
-          { "name": "Composite Components", "note": "Base components combined into richer parts." },
-          { "name": "Templates / Patterns", "note": "Reusable product patterns and layouts." },
-          { "name": "Product Experiences", "note": "Complete surfaces teams ship." }
-        ],
-        "footnote": "Feedback from product usage loops back into the foundations."
+          { "name": "Consumer Intent", "note": "What the caller is trying to express." },
+          { "name": "Public API", "note": "The stable surface that communicates supported usage." },
+          { "name": "Component Behavior", "note": "Implementation decisions kept internal." },
+          { "name": "Observable Result", "note": "The deliberate output callers can rely on." }
+        ]
       }
     },
     {
       "id": "atomic-design-baseline",
-      "title": "Atomic Design Baseline",
+      "title": "Atomic Design as a Baseline",
       "paragraphs": [
-        "Atomic Design gives me a useful baseline for organizing component systems, but I do not treat it as a rigid hierarchy.",
-        "It helps define levels of reuse, while composition, contracts, accessibility, and real product constraints determine how components actually scale."
+        "Atomic Design provides a useful vocabulary for organizing component systems, but I do not treat it as a rigid hierarchy or an architectural rule.",
+        "Its value is in making levels of reuse visible, from foundational decisions to complete product experiences. The model helps classify what is being built, while component contracts, composition, accessibility, ownership, and real product constraints determine how each part should behave and scale."
       ],
-      "diagram": {
-        "kind": "stages",
-        "title": "Atomic Design Levels",
-        "description": "Levels of reuse, from foundations to product experiences.",
-        "caption": "Atomic Design organizes the system. Component contracts make it scalable.",
-        "summary": "Foundations feed Atoms, which combine into Molecules, then Organisms, then Templates, and finally Product Experiences. Feedback from product experiences informs the foundation layer.",
-        "stages": [
-          { "name": "Foundations", "note": "Tokens, primitives, and guidelines." },
-          { "name": "Atoms", "note": "Buttons, inputs, icons, and labels." },
-          { "name": "Molecules", "note": "Small groups of atoms working together." },
-          { "name": "Organisms", "note": "Composed, self-contained UI sections." },
-          { "name": "Templates", "note": "Page-level structure and layout." },
-          { "name": "Product Experiences", "note": "Real product surfaces in use." }
-        ],
-        "footnote": "Feedback from product experiences informs the foundation layer."
-      },
-      "closingStatement": "Atomic Design organizes the system. Component contracts make it scalable."
-    },
-    {
-      "id": "boundaries-and-contracts",
-      "title": "Boundaries & Contracts",
-      "paragraphs": [
-        "Reusable components scale when ownership is explicit.",
-        "The component owns shared behavior. The product owns product context."
-      ],
-      "body": {
-        "kind": "groups",
-        "groups": [
-          {
-            "title": "The Component Owns",
-            "items": [
-              "Shared UI behavior",
-              "Accessibility behavior",
-              "Supported variants",
-              "Public API",
-              "Interaction patterns",
-              "Baseline testing expectations"
-            ]
-          },
-          {
-            "title": "The Product Owns",
-            "items": [
-              "Business rules",
-              "Workflow state",
-              "Product data",
-              "Permissions",
-              "Domain-specific behavior",
-              "Product-specific extensions"
-            ]
-          }
-        ]
-      },
-      "closingParagraphs": [
-        "This boundary prevents shared components from absorbing product logic, while still giving teams enough flexibility to build real product experiences."
-      ],
-      "diagram": {
-        "kind": "stages",
-        "title": "Component and Product Responsibility Boundaries",
-        "description": "Where shared behavior ends and product ownership begins.",
-        "caption": "Reusable components own shared behavior and supported variants. Product teams own workflow logic, product data, and product-specific extensions.",
-        "summary": "From Design System Foundations to a Reusable Component, exposed through a Public Component API, and consumed by a Product Implementation. On the component side: shared UI behavior, accessibility behavior, and supported variants. On the product side: product logic, product data, workflow state, and product-specific extensions.",
-        "stages": [
-          { "name": "Design System Foundations", "note": "Tokens, primitives, and guidelines." },
-          { "name": "Reusable Component", "note": "Shared behavior, accessibility, and variants." },
-          { "name": "Public Component API", "note": "The stable contract teams build on." },
-          { "name": "Product Implementation", "note": "Product logic, data, and extensions." }
-        ]
-      }
-    },
-    {
-      "id": "component-api-design",
-      "title": "Component API Design",
-      "paragraphs": [
-        "A component API should make the correct path obvious.",
-        "It should be stable enough to reuse, but narrow enough to maintain.",
-        "I focus on:"
-      ],
-      "body": {
-        "kind": "list",
-        "items": [
-          "Consistent naming and patterns.",
-          "Typed inputs, outputs, variants, and events.",
-          "Slots and extension points.",
-          "Predictable events and explicit state handling.",
-          "Sensible defaults that reduce unnecessary configuration.",
-          "Stable contracts across components."
-        ]
-      },
-      "diagram": {
-        "kind": "code",
-        "title": "Component API Contract",
-        "description": "A component API should express intent through variants, size, slots, events, and explicit state.",
-        "caption": "The public API should make supported usage clear without exposing internal implementation details.",
-        "summary": "A Button component declares its contract as: variant primary, size medium, icon-left arrow, on-click handle action, disabled loading state, and label Continue.",
-        "code": "Button\n  variant: primary\n  size: medium\n  icon-left: arrow\n  on-click: handle action\n  disabled: loading state\n  label: Continue"
-      }
-    },
-    {
-      "id": "composition-and-reuse",
-      "title": "Composition & Reuse",
-      "paragraphs": [
-        "I prefer composition over configuration-heavy components.",
-        "Instead of building large components with many flags, I favor smaller primitives and reusable patterns that can be combined intentionally.",
-        "Composition allows product teams to assemble interfaces from tested parts while supporting local requirements through slots, wrappers, adapters, or product-level composition."
-      ],
-      "diagram": {
-        "kind": "tree",
-        "title": "Composition From Page to Component Parts",
-        "description": "A feature composed from reusable parts, down to the smallest pieces.",
-        "caption": "Composition keeps interfaces flexible while preserving shared structure, behavior, and maintainability.",
-        "summary": "A page or feature is composed of Header, Filters, Content, Sidebar, and Footer. Content is composed of a Card, a Table, and Pagination. The Card is composed of an Avatar, a Title, and Actions.",
-        "tree": [
-          {
-            "name": "Page / Feature",
-            "children": [
-              { "name": "Header" },
-              { "name": "Filters" },
-              {
-                "name": "Content",
-                "children": [
-                  {
-                    "name": "Card",
-                    "children": [{ "name": "Avatar" }, { "name": "Title" }, { "name": "Actions" }]
-                  },
-                  { "name": "Table" },
-                  { "name": "Pagination" }
-                ]
-              },
-              { "name": "Sidebar" },
-              { "name": "Footer" }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "id": "state-variants-and-extensibility",
-      "title": "State, Variants & Extensibility",
-      "paragraphs": ["Designing components means designing for the ways they behave."],
       "body": {
         "kind": "topics",
         "items": [
           {
-            "title": "Variants",
-            "description": "Visual styles such as primary, secondary, and ghost."
+            "title": "Foundations",
+            "description": "Design tokens, semantic conventions, interaction principles, and implementation guidelines that establish shared constraints."
           },
           {
-            "title": "States",
-            "description": "Default, hover, focused, disabled, loading, success, and error behavior."
+            "title": "Atoms",
+            "description": "Focused interface primitives such as buttons, inputs, icons, and labels."
           },
           {
-            "title": "Slots",
-            "description": "Flexible composition areas such as icon-left, label, and icon-right."
+            "title": "Molecules",
+            "description": "Small combinations of primitives that perform a recognizable interaction or communicate a specific piece of information."
           },
           {
-            "title": "Extensibility",
-            "description": "Room to extend, customize, and compose without breaking existing contracts."
+            "title": "Organisms",
+            "description": "Self-contained interface sections that coordinate multiple components around a broader product responsibility."
+          },
+          {
+            "title": "Templates",
+            "description": "Page-level structures that define hierarchy, regions, and composition without owning every product behavior."
+          },
+          {
+            "title": "Product Experiences",
+            "description": "Real product surfaces where components encounter data, workflows, edge cases, accessibility requirements, and operational constraints."
           }
         ]
       },
       "closingParagraphs": [
-        "The intent is to support product-specific needs without fragmenting the shared component model."
-      ]
+        "The relationship is not only bottom-up. Product experiences expose missing states, weak assumptions, and recurring needs that should inform component contracts and, when appropriate, improve the foundation layer."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Atomic Design Feedback Model",
+        "description": "Shows how levels of reuse move from shared foundations into real products and return as system feedback.",
+        "caption": "Atomic Design organizes levels of reuse; contracts, composition, and product feedback make them scalable.",
+        "summary": "Foundations feed Atoms, which combine into Molecules, then Organisms, then Templates, and finally Product Experiences. Product experiences return Foundation Feedback that informs the foundation layer.",
+        "stages": [
+          { "name": "Foundations", "note": "Shared constraints and guidelines." },
+          { "name": "Atoms", "note": "Focused interface primitives." },
+          { "name": "Molecules", "note": "Recognizable combinations of primitives." },
+          { "name": "Organisms", "note": "Self-contained interface sections." },
+          { "name": "Templates", "note": "Page-level structure and regions." },
+          { "name": "Product Experiences", "note": "Real surfaces under real constraints." },
+          { "name": "Foundation Feedback", "note": "Missing states and needs loop back." }
+        ]
+      },
+      "closingStatement": "Atomic Design organizes the system conceptually. Component architecture determines whether that system remains usable under change."
     },
     {
-      "id": "testing-strategy",
-      "title": "Testing Strategy",
+      "id": "boundaries-that-protect-change",
+      "title": "Boundaries That Protect Change",
       "paragraphs": [
-        "Testing is part of the component contract.",
-        "For shared components, tests do more than verify rendering. They protect the behavior other teams depend on.",
-        "I focus on:"
+        "Good boundaries prevent a local decision from spreading through the interface.",
+        "I separate presentation, interaction behavior, product state, and external data concerns when they change for different reasons. A component should not quietly become responsible for API orchestration, business workflows, global state, and visual rendering at the same time.",
+        "The appropriate boundary depends on context. A product-specific component may reasonably contain more behavior than a shared primitive. A component intended for broad reuse requires tighter constraints, fewer assumptions, and a more stable public surface."
+      ],
+      "closingStatement": "The objective is not maximum abstraction. It is to place the boundary where change can remain understandable and contained."
+    },
+    {
+      "id": "composition-over-configuration",
+      "title": "Composition Over Configuration",
+      "paragraphs": [
+        "Configuration is useful until a component attempts to describe every possible product requirement through an expanding set of properties.",
+        "I prefer composition when consumers need meaningful structural control. Slots, child components, controlled regions, and explicit extension points allow variation without turning one component into a conditional system.",
+        "Configuration remains appropriate for finite choices such as size, emphasis, orientation, or interaction mode. Composition is stronger when content hierarchy or behavior must differ.",
+        "The decision depends on the type of variability:"
       ],
       "body": {
         "kind": "list",
         "items": [
-          "Unit tests for logic, hooks, and utilities.",
-          "Component tests for rendering, props, states, and behavior.",
-          "Accessibility tests for semantic structure, ARIA usage, and keyboard behavior.",
-          "Visual tests for layout and styling consistency.",
-          "Integration tests for composed product usage.",
-          "E2E tests for critical user journeys."
+          "Use configuration for bounded variants.",
+          "Use composition for structural differences.",
+          "Use separate components when responsibilities no longer belong together.",
+          "Avoid extension points that bypass the original contract."
+        ]
+      },
+      "closingParagraphs": [
+        "This keeps component APIs smaller while allowing product teams to assemble complex experiences from understandable parts."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Choosing the Extension Model",
+        "description": "Clarifies when variability should be handled through configuration, composition, or separation.",
+        "caption": "The type of variation should determine the architecture of the extension point.",
+        "summary": "A required variation is classified as a bounded choice, a structural difference, or a new responsibility. A bounded choice becomes configuration, a structural difference becomes composition, and a new responsibility becomes a separate component.",
+        "stages": [
+          { "name": "Required Variation", "note": "Start by naming the kind of variability." },
+          { "name": "Bounded Choice", "note": "→ Configuration" },
+          { "name": "Structural Difference", "note": "→ Composition" },
+          { "name": "New Responsibility", "note": "→ Separate Component" }
         ]
       }
     },
     {
-      "id": "accessibility-by-design",
-      "title": "Accessibility by Design",
+      "id": "states-are-part-of-the-architecture",
+      "title": "States Are Part of the Architecture",
       "paragraphs": [
-        "Accessible components create better product foundations.",
-        "Shared components can encode common accessibility behavior once, then make it available across product surfaces.",
-        "I focus on:"
+        "A component is not complete when only its default state works.",
+        "Loading, empty, disabled, invalid, selected, expanded, partial, and error states affect behavior, accessibility, testing, and product expectations. I model these states intentionally rather than allowing them to emerge from unrelated flags and conditional rendering.",
+        "When several properties can create contradictory combinations, the API is usually exposing implementation mechanics instead of valid states. In those cases, explicit variants, state models, or separate components can make the contract safer.",
+        "State design should define:"
       ],
       "body": {
         "kind": "list",
         "items": [
-          "Semantic HTML first.",
-          "Keyboard navigation and predictable focus management.",
-          "ARIA only when native semantics are not enough.",
-          "Clear labels, descriptions, validation states, and visible interaction states.",
-          "Testing with real tools and real usage patterns."
+          "valid and invalid transitions",
+          "controlled and uncontrolled behavior",
+          "asynchronous feedback",
+          "focus management",
+          "recovery from failure"
+        ]
+      },
+      "closingParagraphs": [
+        "Treating states as architecture prevents visual correctness from hiding behavioral ambiguity."
+      ],
+      "diagram": {
+        "kind": "stages",
+        "title": "Component Quality Loop",
+        "description": "Connects implementation decisions to verification and continued use.",
+        "caption": "Component quality is maintained through repeated validation of the public contract, not only through the initial implementation.",
+        "summary": "A loop moving from Contract to States to Interaction to Accessibility and Tests to Consumer Feedback, and finally to Contract Refinement, which returns to the contract.",
+        "stages": [
+          { "name": "Contract", "note": "The agreement under validation." },
+          { "name": "States", "note": "Supported behavior modeled explicitly." },
+          { "name": "Interaction", "note": "How consumers exercise the component." },
+          { "name": "Accessibility and Tests", "note": "Guarantees verified at the boundary." },
+          { "name": "Consumer Feedback", "note": "Real usage exposes gaps." },
+          { "name": "Contract Refinement", "note": "The contract improves and repeats." }
         ]
       }
     },
     {
-      "id": "core-practices",
-      "title": "Core Practices",
-      "body": {
-        "kind": "decisions",
-        "items": [
-          { "title": "Clear APIs", "description": "Predictable and developer-friendly." },
-          {
-            "title": "Consistent Design",
-            "description": "Aligned with tokens, accessibility rules, and product guidelines."
-          },
-          { "title": "Composable", "description": "Built to be combined, not duplicated." },
-          {
-            "title": "Accessible by Default",
-            "description": "Keyboard, screen reader, semantic structure, and visible states."
-          },
-          {
-            "title": "Tested Everywhere",
-            "description": "Unit, interaction, visual, accessibility, and integration coverage."
-          },
-          {
-            "title": "Documented",
-            "description": "Usage, context, examples, limits, and trade-offs."
-          }
-        ]
-      }
-    },
-    {
-      "id": "key-decisions",
-      "title": "Key Decisions",
-      "body": {
-        "kind": "decisions",
-        "items": [
-          {
-            "title": "Composition over configuration",
-            "description": "Avoid large components with too many flags."
-          },
-          {
-            "title": "Atomic Design as baseline, not constraint",
-            "description": "Use it to organize levels of reuse, but let product constraints and component contracts drive architecture."
-          },
-          {
-            "title": "Product logic outside reusable UI",
-            "description": "Keep domain rules at the product layer."
-          },
-          {
-            "title": "Consistent APIs across components",
-            "description": "Make usage predictable across the system."
-          },
-          {
-            "title": "Accessibility from the start",
-            "description": "Build inclusive behavior into the foundation."
-          },
-          { "title": "Tests as contract", "description": "Protect the behavior teams rely on." }
-        ]
-      }
+      "id": "quality-at-the-component-boundary",
+      "title": "Quality at the Component Boundary",
+      "paragraphs": [
+        "Testing and accessibility are part of the contract, not final-stage verification.",
+        "I test observable behavior: rendered output, interaction, state transitions, emitted events, keyboard support, and failure conditions. Tests should protect important guarantees without reproducing internal implementation line by line.",
+        "Accessibility receives the same treatment. Semantic structure, accessible names, keyboard interaction, focus order, status communication, and error association must remain correct across supported states and compositions.",
+        "Automated checks provide a baseline, but they do not replace architectural judgment. A component can pass static checks while still creating confusing navigation, hidden state, or an unusable interaction model."
+      ],
+      "closingStatement": "The component boundary is where these guarantees can be established once and preserved across repeated use."
     }
   ],
   "impact": [
     {
-      "id": "impact-delivered",
-      "title": "Impact Delivered",
-      "body": {
-        "kind": "metrics",
-        "items": [
-          { "value": "60%", "label": "Faster development with reusable components." },
-          { "value": "90%+", "label": "Accessibility coverage in core components." },
-          { "value": "40%", "label": "Reduction in UI bugs and inconsistencies." },
-          { "value": "3x", "label": "Increase in adoption across products." }
-        ]
-      }
-    },
-    {
-      "id": "qualitative-impact",
-      "title": "Qualitative Impact",
+      "id": "impact",
+      "title": "Impact",
       "body": {
         "kind": "focusAreas",
         "items": [
           {
-            "title": "Consistency",
-            "description": "Teams build from shared patterns instead of recreating UI behavior."
+            "title": "Reduced Ambiguity",
+            "description": "Explicit responsibilities and state models give engineers a shared interpretation of how a component should behave."
           },
           {
-            "title": "Velocity",
-            "description": "Reusable components reduce repeated implementation work across product surfaces."
+            "title": "Safer Change",
+            "description": "Contained boundaries allow internal implementation to evolve without forcing unnecessary changes across consuming products."
           },
           {
-            "title": "Maintainability",
-            "description": "Clear boundaries reduce hidden coupling and regression risk."
+            "title": "More Effective Reuse",
+            "description": "Purposeful APIs and composition points support recurring product needs without accumulating unrelated options."
           },
           {
-            "title": "Accessibility",
-            "description": "Common behaviors are encoded once and reused across teams."
+            "title": "Stronger Quality",
+            "description": "Testing and accessibility requirements become repeatable guarantees rather than responsibilities recreated by every implementation team."
           },
           {
-            "title": "Scalability",
-            "description": "Product teams can extend shared patterns without fragmenting the system."
+            "title": "Better Engineering Decisions",
+            "description": "Teams spend less time debating local conventions and more time evaluating behavior, constraints, and product-specific trade-offs."
           }
-        ]
-      }
-    },
-    {
-      "id": "evidence-in-practice",
-      "title": "Evidence in Practice",
-      "paragraphs": [
-        "Component architecture scales teams, improves quality, and accelerates delivery."
-      ],
-      "body": {
-        "kind": "list",
-        "items": [
-          "Used across multiple product surfaces.",
-          "Adopted through shared patterns and documentation.",
-          "Supported by accessibility and testing practices.",
-          "Designed for maintainability across teams.",
-          "Connected to design system foundations and product-specific needs."
-        ]
-      }
-    },
-    {
-      "id": "technology-and-tools",
-      "title": "Technology & Tools",
-      "body": {
-        "kind": "list",
-        "items": [
-          "Angular",
-          "TypeScript",
-          "Storybook",
-          "Design Tokens",
-          "Jest",
-          "Playwright",
-          "Accessibility testing",
-          "Component documentation"
         ]
       }
     }
@@ -479,45 +247,36 @@
   "relatedWork": {
     "id": "related-work",
     "title": "Related Work",
-    "paragraphs": [
-      "These principles and patterns are applied across product platforms, design system integration, and reusable frontend architecture work."
-    ],
     "body": {
       "kind": "relatedWork",
       "items": [
         {
+          "title": "The Pattern",
+          "type": "Design Systems",
+          "href": "/at-the-beginning/no-one-knows/the-pattern/",
+          "description": "Design systems provide the governance, shared language, and distribution model through which component architecture can scale across teams."
+        },
+        {
+          "title": "The Map",
+          "type": "Product Architecture",
+          "href": "/at-the-beginning/no-one-knows/the-map/",
+          "description": "Product architecture determines where shared components end and where feature state, data flow, and application responsibilities begin."
+        },
+        {
+          "title": "The Fixer",
+          "type": "Diagnosis & Prevention",
+          "description": "Diagnosis and prevention connect to component work when unclear ownership, invalid states, or fragile contracts create recurring defects."
+        },
+        {
           "title": "Thomson Reuters",
-          "type": "Enterprise",
-          "description": "Component migration, design system integration, and product UI consistency across enterprise product surfaces."
-        },
-        {
-          "title": "Saffron Design System",
-          "type": "Design System",
-          "description": "Design system contribution through reusable components, accessibility expectations, and shared implementation patterns."
-        },
-        {
-          "title": "Tax & Accounting Platform",
-          "type": "Platform",
-          "description": "Product-level component adoption, frontend structure, and UI modernization across complex workflows."
-        },
-        {
-          "title": "HBO Max",
-          "type": "Product",
-          "href": "/at-the-beginning/nobody-knows-he-worked-on/hbo-max/",
-          "description": "Frontend platform and design system work connected to reusable interface patterns at product scale."
-        },
-        {
-          "title": "Plastiq",
-          "type": "Product",
-          "href": "/at-the-beginning/nobody-knows-he-worked-on/plastiq/",
-          "description": "Component library architecture and reusable frontend patterns for product delivery."
+          "type": "Practice",
+          "description": "Current product and design-system work provides practical evidence of extending components, defining integration boundaries, improving accessibility, and supporting adoption across product contexts."
         }
       ]
     }
   },
   "closingThought": {
-    "statement": "Great components do not just look right.",
-    "paragraphs": ["They make the right thing easy to do, and the wrong thing hard."]
+    "statement": "A component becomes architectural when its contract makes change easier to understand, contain, and verify."
   },
   "footer": {
     "sectionTitle": "Nobody knows how he thinks...",
